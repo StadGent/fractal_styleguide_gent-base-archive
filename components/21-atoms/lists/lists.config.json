@@ -1,0 +1,36 @@
+{
+  "title": "Lists",
+  "status": "wip",
+  "default": "default",
+  "context": {
+    "items": [
+      "item 1",
+      "item 2"
+    ]
+  },
+  "variants": [
+    {
+      "name": "default"
+    },
+    {
+      "name": "No styling",
+      "context": {
+        "items": [
+          "<i class='icon-twitter'></i> item 1",
+          "item 2"
+        ],
+        "class": "no-style"
+      }
+    },
+    {
+      "name": "links",
+      "context": {
+        "items": [
+          "<a href='#'>item 1</a>",
+          "<a href='#'>item 2</a>"
+        ],
+        "class": "links"
+      }
+    }
+  ]
+}

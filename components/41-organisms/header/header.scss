@@ -1,0 +1,25 @@
+header {
+  padding: .35rem 0;
+  .content-container > * {
+    float: left;
+    margin: 0 1rem 0 0;
+
+    &.right {
+      float: right;
+      margin: 0 0 0 1rem;
+    }
+
+    p {
+      font-size: .7rem;
+      line-height: 2rem;
+    }
+
+    a {
+      text-decoration: none;
+      &:hover,
+      &:active {
+        text-decoration: underline;
+      }
+    }
+  }
+}

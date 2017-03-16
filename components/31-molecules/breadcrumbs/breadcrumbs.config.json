@@ -1,0 +1,13 @@
+{
+  "title": "Breadcrumbs",
+  "status": "wip",
+  "default": "default",
+  "context": {
+    "items": [
+      "<a href='#'>Stad.gent</a>",
+      "<a href='#'>Overview</a>",
+      "<span>Overview</span>",
+      "<span>Page title</span>"
+    ]
+  }
+}

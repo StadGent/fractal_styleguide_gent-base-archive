@@ -1,0 +1,20 @@
+{
+  "title": "Colors",
+  "status": "ready",
+  "context": {
+    "colors": {
+      "darkest-blue": "#2C3F48",
+      "dark-blue": "#00597A",
+      "blue": "#007DB3",
+      "light-blue": "#D0DDE0",
+      "lightest-blue": "#ECF5F7",
+      "darkest-gray": "#404546",
+      "dark-gray": "#595f60",
+      "gray": "#9DA8AF",
+      "light-gray": "#E2E2E2",
+      "lightest-gray": "#F4F4F4",
+      "orange": "#F39200",
+      "white": "#FFFFFF"
+    }
+  }
+}

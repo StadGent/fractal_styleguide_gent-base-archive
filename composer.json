@@ -1,0 +1,35 @@
+{
+    "name": "gent-styleguide/gent",
+    "homepage": "https://github.com/StadGent/fractal_styleguide_gent-base",
+    "description": "The styleguide for the house style for the city of Ghent",
+    "keywords": ["gent", "fractal", "styleguide"],
+    "type": "library",
+    "license": "ISC",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "authors": [
+        {
+            "name": "Jeroen Goossens",
+            "email": "jeroen.goossens@digipolis.gent"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packagist.gentgrp.gent.be"
+        }
+    ],
+    "require": {
+    },
+    "require-dev": {
+    },
+    "scripts": {
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-8.x-1.x-dev": "8.1.x-dev"
+        }
+    },
+    "autoload": {
+    }
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Buttons",
+  "status": "ready",
+  "default": "default",
+  "context": {
+    "text": "Button"
+  },
+  "variants": [
+    {
+      "name": "default",
+      "context": {
+        "modifier": ""
+      }
+    },
+    {
+      "name": "inverse",
+      "context": {
+        "modifier": "btn--inverse"
+      }
+    },
+    {
+      "name": "highlighted",
+      "context": {
+        "modifier": "btn--highlighted"
+      }
+    }
+  ]
+}
