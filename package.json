@@ -1,0 +1,19 @@
+{
+  "name": "gent_base",
+  "version": "1.0.0",
+  "description": "Styleguide Stad.Gent",
+  "devDependencies": {
+    "@frctl/fractal": "^1.0",
+    "grunt": "^1.0.0",
+    "grunt-concurrent": "^2.3.1",
+    "grunt-contrib-compass": "^1.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0"
+  },
+  "scripts": {},
+  "author": "Jeroen Goossfens",
+  "license": "ISC",
+  "dependencies": {
+    "@frctl/twig": "git+https://github.com/tnottu/fractal-twig-adapter.git"
+  }
+}
