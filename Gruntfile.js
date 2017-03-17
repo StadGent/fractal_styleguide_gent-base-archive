@@ -93,7 +93,14 @@ module.exports = function (grunt) {
         cwd: 'components/',
         src: ['**/*.scss'],
         dest:'scss/'
-      }
+      },
+      js: {
+        expand: true,
+        src: ['components/**/*.js'],
+        dest:'public/js/',
+        flatten: true, filter: 'isFile',
+
+}
     }
   });
 

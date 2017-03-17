@@ -1,5 +1,9 @@
 ul, ol {
   &.breadcrumb {
+    display: none;
+    @media (min-width: $bp-tablet) {
+      display: block;
+    }
     list-style: none;
     padding: 0;
     margin-top: .5rem;
@@ -36,6 +40,12 @@ ul, ol {
           display: none;
         }
       }
+    }
+  }
+  &.nav--mobile-breadcrumb {
+    display: block;
+    @media (min-width: $bp-tablet) {
+      display: none;
     }
   }
 }
