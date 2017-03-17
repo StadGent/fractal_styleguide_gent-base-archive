@@ -15,15 +15,15 @@
    * @param settings
    *   Object of additional settings.
    */
-  GentBe.prototype.attach = function(context, settings)  {
+  $.fn.attach = function(context, settings)  {
     this.updateMobileBreadcrumb();
   };
 
   /**
    * Replace the mobile breadcrumb of Gent base by our own.
    */
-  GentBe.prototype.updateMobileBreadcrumb = function() {
-    var breadcrumb = $('ol.breadcrumb, ul.nav--breadcrumb');
+  function updateMobileBreadcrumb() {
+    var breadcrumb = $('ol.breadcrumb, ul.nav--breadcrumb, ul.breadcrumb');
 
     if (breadcrumb.length && !breadcrumb.hasClass('gentbe-processed')) {
       // Prevent duplicate processing by us or Gent base.
@@ -39,12 +39,12 @@
       breadcrumb.after(mobile);
 
       // Truncate the labels.
-      this.truncateBreadcrumbLabels(breadcrumb, 150);
-      this.truncateBreadcrumbLabels(mobile, 100);
+      truncateBreadcrumbLabels(breadcrumb, 150);
+      truncateBreadcrumbLabels(mobile, 100);
 
       // Collapse the trail.
-      this.collapseBreadcrumbTrail(breadcrumb, 6);
-      this.collapseBreadcrumbTrail(mobile, 5, 1, 2);
+      collapseBreadcrumbTrail(breadcrumb, 6);
+      collapseBreadcrumbTrail(mobile, 5, 1, 2);
     }
   };
 
@@ -58,7 +58,7 @@
    * @param [ellipsis]
    *   Wether an elipsis should be added, defaults to true.
    */
-  GentBe.prototype.truncateBreadcrumbLabels = function(breadcrumb, length, ellipsis) {
+  function truncateBreadcrumbLabels (breadcrumb, length, ellipsis) {
     $('a, span', breadcrumb).each(function() {
       var element = $(this);
       var text = element.text().trim();
@@ -90,7 +90,7 @@
    * @param [text]
    *   Text to use as link to show the collapsed items, defaults to "...".
    */
-  GentBe.prototype.collapseBreadcrumbTrail = function(breadcrumb, min_length, head, tail, text) {
+  function collapseBreadcrumbTrail(breadcrumb, min_length, head, tail, text) {
     // Set the default head and tail.
     if (head == null) {
       head = 2;
@@ -136,9 +136,7 @@
     }
   };
 
-  /*
-   * Attach ourself as a behaviour.
-   */
-  Drupal.behaviors.gentBe = new GentBe();
+
+  $( window ).on( "load", updateMobileBreadcrumb );
 
 })(jQuery);
