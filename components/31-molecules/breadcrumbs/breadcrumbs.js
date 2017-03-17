@@ -1,13 +1,6 @@
 (function($) {
 
   /**
-   * Object constructor.
-   */
-  var GentBe = function() {
-
-  };
-
-  /**
    * Invoked after after loading the initial page and after each AJAX request.
    *
    * @param context
@@ -15,9 +8,8 @@
    * @param settings
    *   Object of additional settings.
    */
-  $.fn.attach = function(context, settings)  {
-    this.updateMobileBreadcrumb();
-  };
+  $(window).on("load", updateMobileBreadcrumb );
+
 
   /**
    * Replace the mobile breadcrumb of Gent base by our own.
@@ -137,6 +129,5 @@
   };
 
 
-  $( window ).on( "load", updateMobileBreadcrumb );
 
 })(jQuery);
