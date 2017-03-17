@@ -130,7 +130,7 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('sasslib', 'Compiles the sass lib.', ['copy']);
-  grunt.registerTask('styleguide', 'Compiles the styleguide.', ['concurrent:build', 'copy']);
+  grunt.registerTask('styleguide', 'Compiles the styleguide.', ['concurrent:build', 'sasslib']);
   grunt.registerTask('default', 'Default watch task', ['concurrent']);
 
   grunt.loadNpmTasks('grunt-contrib-watch');
