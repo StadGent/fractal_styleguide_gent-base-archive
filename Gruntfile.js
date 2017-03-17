@@ -52,6 +52,29 @@ module.exports = function (grunt) {
       }
     },
 
+    copy: {
+      main: {
+        expand: true,
+        cwd: 'components/',
+        src: ['**/*.scss'],
+        dest:'scss/'
+      },
+      js_dist: {
+        expand: true,
+        src: ['components/**/*.js'],
+        dest:'public/js/',
+        flatten: true, filter: 'isFile',
+
+      },
+      js_build: {
+        expand: true,
+        src: ['components/**/*.js'],
+        dest:'build/js/',
+        flatten: true, filter: 'isFile',
+
+      }
+    },
+
     compass: {
       dist: {
         options: {
@@ -85,23 +108,8 @@ module.exports = function (grunt) {
       build: {
         tasks: ["compass:build", "fractal:build"]
       }
-    },
-
-    copy: {
-      main: {
-        expand: true,
-        cwd: 'components/',
-        src: ['**/*.scss'],
-        dest:'scss/'
-      },
-      js: {
-        expand: true,
-        src: ['components/**/*.js'],
-        dest:'public/js/',
-        flatten: true, filter: 'isFile',
-
-}
     }
+
   });
 
   grunt.registerTask('fractal:watch', 'Run fractal server', function () {
@@ -130,7 +138,7 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('sasslib', 'Compiles the sass lib.', ['copy']);
-  grunt.registerTask('styleguide', 'Compiles the styleguide.', ['concurrent:build', 'sasslib']);
+  grunt.registerTask('styleguide', 'Compiles the styleguide.', ['concurrent:build', 'copy']);
   grunt.registerTask('default', 'Default watch task', ['concurrent']);
 
   grunt.loadNpmTasks('grunt-contrib-watch');
