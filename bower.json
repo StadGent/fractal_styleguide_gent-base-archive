@@ -3,7 +3,8 @@
   "description": "The styleguide used as the basis for Stad.Gent and related sites.",
   "main": "components/main.scss",
   "authors": [
-    "Jeroen Goossens"
+    "Jeroen Goossens",
+    "Freya Van Daele"
   ],
   "license": "MIT",
   "keywords": [

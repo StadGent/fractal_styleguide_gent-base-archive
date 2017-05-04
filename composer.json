@@ -11,6 +11,10 @@
         {
             "name": "Jeroen Goossens",
             "email": "jeroen.goossens@digipolis.gent"
+        },
+        {
+            "name": "Freya Van Daele",
+            "email": "freya.vandaele@digipolis.gent"
         }
     ],
     "repositories": [
