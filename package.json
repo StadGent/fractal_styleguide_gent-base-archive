@@ -11,7 +11,10 @@
     "grunt-contrib-watch": "^1.0.0"
   },
   "scripts": {},
-  "author": "Jeroen Goossfens",
+  "authors": [
+    "Jeroen Goossens",
+    "Freya Van Daele"
+  ],
   "license": "ISC",
   "dependencies": {
     "@frctl/twig": "git+https://github.com/tnottu/fractal-twig-adapter.git"

@@ -1,0 +1,31 @@
+{
+  "name": "styleguide_gent-base",
+  "description": "The styleguide used as the basis for Stad.Gent and related sites.",
+  "main": "components/main.scss",
+  "authors": [
+    "Jeroen Goossens",
+    "Freya Van Daele"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "css",
+    "sass",
+    "responsive",
+    "front-end",
+    "fractal",
+    "web"
+  ],
+  "homepage": "https://github.com/StadGent/fractal_styleguide_gent-base",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "composer.json",
+    "CHANGELOG.md",
+    "docs",
+    "Gruntfile.js",
+    "package.json",
+    "Gemfile",
+    "Gemfile.lock",
+  ]
+}
