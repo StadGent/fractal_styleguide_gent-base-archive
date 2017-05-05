@@ -26,6 +26,6 @@
     "Gruntfile.js",
     "package.json",
     "Gemfile",
-    "Gemfile.lock",
+    "Gemfile.lock"
   ]
 }
