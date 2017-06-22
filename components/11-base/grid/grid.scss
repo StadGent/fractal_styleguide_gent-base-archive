@@ -3,8 +3,8 @@
   @media (min-width: $bp-container) {
     width: $bp-container;
     margin: 0 auto;
-    border-left: $border-outside-container; //smaller width
     border-right: $border-outside-container; //smaller width
+    border-left: $border-outside-container; //smaller width
   }
 }
 

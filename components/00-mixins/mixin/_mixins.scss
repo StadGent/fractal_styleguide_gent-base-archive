@@ -2,16 +2,12 @@
 // @include border-box;
 
 @mixin border-box() {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 // @include border-content;
 
 @mixin border-content() {
-  -webkit-box-sizing: border-content;
-  -moz-box-sizing: border-content;
   box-sizing: border-content;
 }
 
@@ -28,12 +24,13 @@
 // Source: http://nicolasgallagher.com/micro-clearfix-hack/
 
 @mixin clearfix() {
-  &:before,
-  &:after {
-    content: " "; // 1
+  &::before,
+  &::after {
     display: table; // 2
+    content: ' '; // 1
   }
-  &:after {
+
+  &::after {
     clear: both;
   }
 }

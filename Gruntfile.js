@@ -38,20 +38,23 @@ module.exports = function (grunt) {
   fractal.web.set('static.mount', '');
   fractal.web.set('builder.dest', __dirname + '/build');
 
+
   grunt.initConfig({
+    // Watch commands.
     watch: {
       options: {
         livereload: true
       },
       sass: {
-        files: ['components/{,**/}*.{scss,sass}'],
-        tasks: ['compass:dist'],
+        files: 'components/{,**/}*.{scss,sass}',
+        tasks: ['sasslint', 'compass:dist', 'postcss:dist'],
         options: {
           livereload: false
         }
       }
     },
 
+    // Copy SCSS and JS files to the correct directories.
     copy: {
       main: {
         expand: true,
@@ -63,18 +66,21 @@ module.exports = function (grunt) {
         expand: true,
         src: ['components/**/*.js'],
         dest:'public/js/',
-        flatten: true, filter: 'isFile',
+        flatten: true,
+        filter: 'isFile'
 
       },
       js_build: {
         expand: true,
         src: ['components/**/*.js'],
         dest:'build/js/',
-        flatten: true, filter: 'isFile',
+        flatten: true,
+        filter: 'isFile'
 
       }
     },
 
+    // Compass.
     compass: {
       dist: {
         options: {
@@ -98,6 +104,40 @@ module.exports = function (grunt) {
       }
     },
 
+    // Sass linting task.
+    sasslint: {
+      options: {
+        configFile: '.sass-lint.yml'
+      },
+      target: ['components/**/*.s+(a|c)ss']
+    },
+
+    // All postCSS tasks.
+    postcss: {
+      dist: {
+        options: {
+          processors: [
+            require('autoprefixer')({
+              browsers: 'last 5 versions'
+            })
+          ]
+        },
+        src: 'public/css/main.css'
+      },
+      build: {
+        options: {
+          processors: [
+            require('autoprefixer')({
+              browsers: 'last 5 versions'
+            }),
+            require('cssnano')()
+          ]
+        },
+        src: 'build/css/components/main.css'
+      }
+    },
+
+    // Run Fractal and Grunt at the same time.
     concurrent: {
       options: {
         logConcurrentOutput: true
@@ -106,11 +146,11 @@ module.exports = function (grunt) {
         tasks: ["watch:sass", "fractal:watch"]
       },
       build: {
-        tasks: ["compass:build", "fractal:build"]
+        tasks: ["compass:build", "postcss:build", "fractal:build"]
       }
     }
-
   });
+
 
   grunt.registerTask('fractal:watch', 'Run fractal server', function () {
     this.async();
@@ -141,8 +181,10 @@ module.exports = function (grunt) {
   grunt.registerTask('styleguide', 'Compiles the styleguide.', ['concurrent:build', 'copy']);
   grunt.registerTask('default', 'Default watch task', ['concurrent']);
 
+  grunt.loadNpmTasks('grunt-postcss');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-sass-lint');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-concurrent');
 };

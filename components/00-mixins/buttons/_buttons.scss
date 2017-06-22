@@ -1,26 +1,26 @@
 // Button sizes
 @mixin btn-l {
-  font-size: 1rem;
-  line-height: 1.5rem;
+  height: 2.9rem;
   padding-top: .7rem;
   padding-bottom: .7rem;
-  height: 2.9rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 @mixin btn-m {
-  font-size: 1rem;
-  line-height: 1.5rem;
+  height: 2.4rem;
   padding-top: .45rem;
   padding-bottom: .45rem;
-  height: 2.4rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 @mixin btn-s {
-  font-size: .8rem;
-  line-height: 1.4rem;
+  height: 1.8rem;
   padding-top: .2rem;
   padding-bottom: .2rem;
-  height: 1.8rem;
+  font-size: .8rem;
+  line-height: 1.4rem;
 }
 
 // Button display
@@ -29,29 +29,26 @@
   width: auto;
 }
 
-@mixin btn-scheme($text-color, $background-color, $border,
-                  $text-color-hover: $text-color, $background-color-hover: $background-color, $border-hover: $border,
-                  $text-color-focus: $text-color, $background-color-focus: $background-color, $border-focus: $border) {
-
-  color: $text-color;
-  background: $background-color;
+@mixin btn-scheme($text-color, $background-color, $border, $text-color-hover: $text-color, $background-color-hover: $background-color, $border-hover: $border, $text-color-focus: $text-color, $background-color-focus: $background-color, $border-focus: $border) {
   border: $border;
+  background: $background-color;
+  color: $text-color;
 
   &:hover {
-    color: $text-color-hover;
-    background: $background-color-hover;
     border: $border-hover;
+    background: $background-color-hover;
+    color: $text-color-hover;
   }
 
   &:focus,
   &:active {
-    color: $text-color-focus;
-    background: $background-color-focus;
     border: $border-focus;
+    background: $background-color-focus;
+    color: $text-color-focus;
   }
 
   // Overrule section definitions.
   &:visited {
-    color: $text-color !important;
+    color: $text-color !important; // sass-lint:disable-line no-important
   }
 }
