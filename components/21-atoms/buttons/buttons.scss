@@ -1,3 +1,4 @@
+%btn,
 .btn,
 a.btn {
   @extend %btn--default;
@@ -28,6 +29,7 @@ a.btn {
 // Button sizes
 .small.btn,
 .btn--small,
+%btn--small,
 a.btn--small,
 input[type='submit'].btn--small {
   @include btn-s;
@@ -35,6 +37,7 @@ input[type='submit'].btn--small {
 
 .medium.btn,
 .btn--medium,
+%btn--medium,
 a.btn--medium,
 input[type='submit'].btn--medium {
   @include btn-m;
@@ -42,6 +45,7 @@ input[type='submit'].btn--medium {
 
 .large.btn,
 .btn--large,
+%btn--large,
 a.btn--large,
 input[type='submit'].btn--large {
   @include btn-l;
@@ -49,6 +53,7 @@ input[type='submit'].btn--large {
 
 .inline.btn,
 .btn--inline,
+%btn--inline,
 a.btn--inline,
 input[type='submit'].btn--inline {
   @include btn-inlineblock

@@ -7,11 +7,13 @@ a.btn-default,
 }
 
 a.btn--inverse,
-.btn--inverse {
+.btn--inverse,
+%btn--inverse {
   @include btn-scheme($color-darkest-blue, $color-white, none);
 }
 
 a.btn--highlighted,
-.btn--highlighted {
+.btn--highlighted,
+%btn--highlighted {
   @include btn-scheme($color-white, $color-orange, none, $background-color-hover: darken($color-orange, 5), $background-color-focus: darken($color-orange, 5));
 }
