@@ -46,8 +46,12 @@ module.exports = function (grunt) {
         livereload: true
       },
       sass: {
-        files: 'components/{,**/}*.{scss,sass}',
-        tasks: ['sasslint', 'compass:dist', 'postcss:dist'],
+        files: ['components/{,**/}*.{scss,sass}'],
+        tasks: [
+          'sasslint',
+          'compass:dist',
+          'postcss:dist'
+        ],
         options: {
           livereload: false
         }
@@ -143,10 +147,17 @@ module.exports = function (grunt) {
         logConcurrentOutput: true
       },
       default: {
-        tasks: ["watch:sass", "fractal:watch"]
+        tasks: [
+          "watch:sass",
+          "fractal:watch"
+        ]
       },
       build: {
-        tasks: ["compass:build", "postcss:build", "fractal:build"]
+        tasks: [
+          "compass:build",
+          "postcss:build",
+          "fractal:build"
+        ]
       }
     }
   });
