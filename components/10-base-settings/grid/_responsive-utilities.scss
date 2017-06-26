@@ -1,3 +1,5 @@
+// sass-lint:disable no-important
+
 //
 // Responsive: Utility classes
 // --------------------------------------------------
@@ -17,13 +19,6 @@
 // Docs: http://getbootstrap.com/getting-started/#support-ie10-width
 // Source: http://timkadlec.com/2013/01/windows-phone-8-and-device-width/
 // Source: http://timkadlec.com/2012/10/ie10-snap-mode-and-responsive-design/
-
-@at-root {
-  @-ms-viewport {
-    width: device-width;
-  }
-}
-
 
 // Visibility utilities
 
@@ -46,16 +41,19 @@
 @media (max-width: $bp-tablet - 1) {
   @include responsive-visibility('.visible-mobile');
 }
+
 .visible-mobile-block {
   @media (max-width: $bp-tablet - 1) {
     display: block !important;
   }
 }
+
 .visible-mobile-inline {
   @media (max-width: $bp-tablet - 1) {
     display: inline !important;
   }
 }
+
 .visible-mobile-inline-block {
   @media (max-width: $bp-tablet - 1) {
     display: inline-block !important;
@@ -65,16 +63,19 @@
 @media (min-width: $bp-tablet) and (max-width: $bp-desktop - 1) {
   @include responsive-visibility('.visible-tablet');
 }
+
 .visible-tablet-block {
   @media (min-width: $bp-tablet) and (max-width: $bp-desktop - 1) {
     display: block !important;
   }
 }
+
 .visible-tablet-inline {
   @media (min-width: $bp-tablet) and (max-width: $bp-desktop - 1) {
     display: inline !important;
   }
 }
+
 .visible-tablet-inline-block {
   @media (min-width: $bp-tablet) and (max-width: $bp-desktop - 1) {
     display: inline-block !important;
@@ -84,16 +85,19 @@
 @media (min-width: $bp-desktop) {
   @include responsive-visibility('.visible-desktop');
 }
+
 .visible-desktop-block {
   @media (min-width: $bp-desktop) {
     display: block !important;
   }
 }
+
 .visible-desktop-inline {
   @media (min-width: $bp-desktop) {
     display: inline !important;
   }
 }
+
 .visible-desktop-inline-block {
   @media (min-width: $bp-desktop) {
     display: inline-block !important;

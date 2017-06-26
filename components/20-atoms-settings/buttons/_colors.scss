@@ -1,7 +1,8 @@
 
 // Default button color scheme
 a.btn-default,
-.btn--default {
+.btn--default,
+%btn--default {
   @include btn-scheme($color-white, $color-blue, none, $background-color-hover: lighten($color-blue, 5));
 }
 
