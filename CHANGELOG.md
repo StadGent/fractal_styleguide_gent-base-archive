@@ -9,7 +9,7 @@ All Notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 * DTGB-53: Added SASS linting.
 
 ### Changed
-*
+* Refactored font paths to comply with file structure starterkit.
 
 ### Fixed
 *
