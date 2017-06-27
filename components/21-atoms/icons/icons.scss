@@ -1,12 +1,11 @@
 @font-face {
   font-family: 'gent-icons';
-  src:url('../fonts/gent-icons.eot?n03rbzy');
-  src:url('../fonts/gent-icons.eot?#iefixn03rbzy') format('embedded-opentype'),
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/gent-icons.eot?#iefixn03rbzy') format('embedded-opentype'),
   url('../fonts/gent-icons.woff?n03rbzy') format('woff'),
   url('../fonts/gent-icons.ttf?n03rbzy') format('truetype'),
   url('../fonts/gent-icons.svg?n03rbzy#gent-icons') format('svg');
-  font-weight: normal;
-  font-style: normal;
 }
 
 // IMPORTANT: KEEP 'icon-base-css' class. Can be used to extend, to set base gent-icons css.
