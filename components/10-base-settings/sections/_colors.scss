@@ -15,7 +15,7 @@
 
 %section--accent,
 .section--accent {
-  @include new-section($bg-color: $color-blue, $text-color: $color-white, $link-color-hover: $color-white-blue);
+  @include new-section($bg-color: $color-blue, $text-color: $color-white);
 }
 
 %section--wrapper,
