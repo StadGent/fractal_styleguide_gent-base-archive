@@ -49,7 +49,7 @@ module.exports = function (grunt) {
         files: ['components/{,**/}*.{scss,sass}'],
         tasks: [
           'sasslint',
-          'compass:dist',
+          'sass:dist',
           'postcss:dist'
         ],
         options: {
@@ -84,26 +84,26 @@ module.exports = function (grunt) {
       }
     },
 
-    // Compass.
-    compass: {
-      dist: {
+    // Transpilation with LibSASS 
+    sass:{
+      dist:{
         options: {
-          sassDir: 'components',
-          cssDir: 'public/css',
-          specify: 'components/main.scss',
-          raw: 'preferred_syntax = :sass\n', // Use `raw` since it's not directly available
-          require: 'sass-globbing',
-          outputStyle: 'compressed'
+          style: 'nested',
+          sourcemap: true,
+          importer: require('node-sass-globbing')
+        },
+        files: {
+          'public/css/main.css' : 'components/main.scss'
         }
       },
       build: {
         options: {
-          sassDir: 'components',
-          cssDir: 'build/css',
-          specify: 'components/main.scss',
-          raw: 'preferred_syntax = :sass\n', // Use `raw` since it's not directly available
-          require: 'sass-globbing',
-          outputStyle: 'compressed'
+          style: 'compressed',
+          sourcemap: 'none',
+          importer: require('node-sass-globbing')
+        },
+        files: {
+          'public/css/main.css' : 'components/main.scss'
         }
       }
     },
@@ -154,7 +154,7 @@ module.exports = function (grunt) {
       },
       build: {
         tasks: [
-          "compass:build",
+          "sass:build",
           "postcss:build",
           "fractal:build"
         ]
@@ -188,13 +188,13 @@ module.exports = function (grunt) {
     });
   });
 
-  grunt.registerTask('sasslib', 'Compiles the sass lib.', ['copy']);
+  // grunt.registerTask('sasslib', 'Compiles the sass lib.', ['copy']);
   grunt.registerTask('styleguide', 'Compiles the styleguide.', ['concurrent:build', 'copy']);
   grunt.registerTask('default', 'Default watch task', ['concurrent']);
 
+  grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-postcss');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-sass-lint');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-concurrent');
