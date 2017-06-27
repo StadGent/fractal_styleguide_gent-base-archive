@@ -20,9 +20,12 @@ ol {
     }
   }
 
-  %list-no-style,
   &.no-style {
-    padding-left: 0;
-    list-style: none;
+    @extend %list-no-style;
   }
+}
+
+%list-no-style {
+  padding-left: 0;
+  list-style: none;
 }
