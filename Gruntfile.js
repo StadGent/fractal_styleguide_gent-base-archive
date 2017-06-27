@@ -84,7 +84,7 @@ module.exports = function (grunt) {
       }
     },
 
-    // Transpilation with LibSASS 
+    // Transpilation with LibSASS
     sass:{
       dist:{
         options: {
@@ -188,8 +188,7 @@ module.exports = function (grunt) {
     });
   });
 
-  // grunt.registerTask('sasslib', 'Compiles the sass lib.', ['copy']);
-  grunt.registerTask('styleguide', 'Compiles the styleguide.', ['concurrent:build', 'copy']);
+  grunt.registerTask('build', 'Compiles the styleguide.', ['concurrent:build', 'copy']);
   grunt.registerTask('default', 'Default watch task', ['concurrent']);
 
   grunt.loadNpmTasks('grunt-sass');
