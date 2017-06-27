@@ -2,7 +2,8 @@ p + ul {
   margin-top: -1rem;
 }
 
-ul, ol {
+ul,
+ol {
   padding-left: 1rem;
 
   &.links {
@@ -11,13 +12,15 @@ ul, ol {
 
     li {
       padding-left: 15px;
-      &:before {
-        @extend .icon-base-css;
-        @extend .icon-caret:before;
+
+      &::before {
+        @extend %icon-base-css;
+        @extend %icon-caret;
       }
     }
   }
 
+  %list-no-style,
   &.no-style {
     padding-left: 0;
     list-style: none;

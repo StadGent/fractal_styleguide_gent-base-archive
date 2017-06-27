@@ -1,13 +1,15 @@
+%container,
 .container {
   @include clearfix();
   @media (min-width: $bp-container) {
     width: $bp-container;
     margin: 0 auto;
-    border-left: $border-outside-container; //smaller width
     border-right: $border-outside-container; //smaller width
+    border-left: $border-outside-container; //smaller width
   }
 }
 
+%content-container,
 .content-container {
   max-width: $bp-max-content;
   margin: 0 auto;
@@ -18,6 +20,7 @@
   }
 }
 
+%row,
 .row {
   @include make-row();
 }

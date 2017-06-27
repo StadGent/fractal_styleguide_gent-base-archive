@@ -1,55 +1,60 @@
+%btn,
 .btn,
 a.btn {
-  border: none;
-  border-radius: $radius-1;
-  position: relative;
+  @extend %btn--default;
   display: block;
+  position: relative;
   width: 100%;
-  text-align: center;
-  padding: 0 1rem;
   margin: 0;
-  overflow: hidden;
+  padding: 0 1rem;
+  transition: .11s ease-in-out;
+  transition-property: background, color, border;
+  border: 0;
+  border-radius: $radius-1;
+  outline: none;
   font-family: $primary-font-family;
   font-weight: $primary-font-weight + 300;
-  cursor: pointer;
+  text-align: center;
   text-decoration: none;
-  transition: all .11s ease-in-out;
-  transition-property: background, color, border;
-  outline: none;
-  -webkit-appearance: none;
+  cursor: pointer;
+  overflow: hidden;
+
   &:hover {
     text-decoration: none;
   }
 
   @include btn-m;
-  @extend .btn--default;
 }
 
 // Button sizes
 .small.btn,
 .btn--small,
+%btn--small,
 a.btn--small,
-input[type="submit"].btn--small {
+input[type='submit'].btn--small {
   @include btn-s;
 }
 
 .medium.btn,
 .btn--medium,
+%btn--medium,
 a.btn--medium,
-input[type="submit"].btn--medium {
+input[type='submit'].btn--medium {
   @include btn-m;
 }
 
 .large.btn,
 .btn--large,
+%btn--large,
 a.btn--large,
-input[type="submit"].btn--large {
+input[type='submit'].btn--large {
   @include btn-l;
 }
 
 .inline.btn,
 .btn--inline,
+%btn--inline,
 a.btn--inline,
-input[type="submit"].btn--inline {
+input[type='submit'].btn--inline {
   @include btn-inlineblock
 }

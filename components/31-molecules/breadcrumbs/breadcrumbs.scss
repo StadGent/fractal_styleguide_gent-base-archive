@@ -1,18 +1,20 @@
-ul, ol {
+ul,
+ol {
   &.breadcrumb {
     display: none;
+    margin-top: .5rem;
+    padding: 0;
+    list-style: none;
+
     @media (min-width: $bp-tablet) {
       display: block;
     }
-    list-style: none;
-    padding: 0;
-    margin-top: .5rem;
 
     li {
       display: inline;
+      margin-left: -.7rem;
       padding: .4rem .7rem;
       font-size: .7rem;
-      margin-left: -0.7rem;
 
       > * {
         padding: .4rem .7rem;
@@ -21,29 +23,34 @@ ul, ol {
       a {
         border-radius: $radius-1;
         text-decoration: none;
+
         &:hover {
           background-color: $bg-hover-breadcrumb;
         }
       }
 
-      &:after {
+      &::after {
+        @extend %icon-base-css;
+        @extend %icon-caret;
         position: absolute;
         margin: .4rem .1rem;
         font-size: .8rem;
         font-weight: 700;
-        @extend .icon-base-css;
-        @extend .icon-caret:before;
       }
+
       &:last-of-type {
         font-weight: bold;
-        &:after {
+
+        &::after {
           display: none;
         }
       }
     }
   }
+
   &.nav--mobile-breadcrumb {
     display: block;
+
     @media (min-width: $bp-tablet) {
       display: none;
     }

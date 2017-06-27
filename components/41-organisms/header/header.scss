@@ -1,12 +1,13 @@
 header {
   padding: .35rem 0;
+
   .content-container > * {
-    float: left;
     margin: 0 1rem 0 0;
+    float: left;
 
     &.right {
-      float: right;
       margin: 0 0 0 1rem;
+      float: right;
     }
 
     p {
@@ -16,6 +17,7 @@ header {
 
     a {
       text-decoration: none;
+
       &:hover,
       &:active {
         text-decoration: underline;

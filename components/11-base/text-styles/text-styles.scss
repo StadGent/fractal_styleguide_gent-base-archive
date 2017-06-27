@@ -5,51 +5,76 @@ dl,
 table,
 address,
 pre {
+  margin-bottom: .5rem;
   font-size: 1rem;
   line-height: 1.4rem;
-  margin-bottom: .5rem;
 }
 
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6 {
+h1,
+.h1,
+%h1,
+h2,
+.h2,
+%h2,
+h3,
+.h3,
+%h3,
+h4,
+.h4,
+%h4,
+h5,
+.h5,
+%h5,
+h6,
+.h6,
+%h6 {
   margin: 0;
 }
 
-h1, .h1 {
-  font-family: $secondary-font-family;
-  font-weight: 700;
-  font-size: 1.6rem;
-  line-height: 1.1em;
+h1,
+.h1,
+%h1 {
   padding-bottom: 1.5rem;
+  font-family: $secondary-font-family;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.1em;
 }
 
-h2, .h2 {
-  font-size: 1.2rem;
-  line-height: 1.4em;
+h2,
+.h2,
+%h2 {
   padding-top: 2rem;
   padding-bottom: .3rem;
-}
-
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6 {
-  font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.4em;
 }
 
+h3,
+.h3,
+%h3,
+h4,
+.h4,
+%h4,
+h5,
+.h5,
+%h5,
+h6,
+.h6,
+%h6 {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.4em;
+}
+
+%small,
 .small {
   font-size: .8rem;
   line-height: 1.5em;
 }
 
 .caption {
-  @extend .small;
+  @extend %small;
   color: $color-gray;
 }
 
