@@ -14,7 +14,8 @@
       "light-gray": "#E2E2E2",
       "lightest-gray": "#F4F4F4",
       "orange": "#F39200",
-      "white": "#FFFFFF"
+      "white": "#FFFFFF",
+      "color-white-blue": "#c2e2f0"
     }
   }
 }
