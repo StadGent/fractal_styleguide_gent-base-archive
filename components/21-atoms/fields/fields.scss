@@ -6,12 +6,13 @@ input[type='datetime'],
 input[type='datetime-local'],
 input[type='time'],
 input[type='email'],
+input[type='url'],
 textarea,
 select {
   display: block;
   width: 100%;
   height: 2.4rem;
-  margin: 0;
+  margin: 0 0 1rem;
   border: 1px solid $color-light-gray;
   border-radius: $radius-1;
   background: $color-white;
@@ -39,8 +40,13 @@ input[type='datetime'],
 input[type='datetime-local'],
 input[type='time'],
 input[type='email'],
+input[type='url'],
 textarea {
   padding: .4rem .7rem;
+}
+
+textarea {
+  min-height: 7.2rem;
 }
 
 // Since padding doesn't work whit appearance on menulist we need to make use of height and text-indent.
@@ -63,6 +69,7 @@ select {
 
 label {
   display: block;
+  margin: 0 0 .5rem;
   color: $color-darkest-blue;
   font-size: 1rem;
   font-weight: bold;
@@ -75,6 +82,10 @@ label {
 }
 
 // Radios and checkboxes shouldn't start on a new line.
-input + label {
-  display: inline;
+input[type='radio'],
+input[type='checkbox'] {
+  + label {
+    display: inline-block;
+    margin: 0 0 .5rem;
+  }
 }
