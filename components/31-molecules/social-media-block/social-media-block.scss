@@ -1,0 +1,48 @@
+.dg-blocks-social {
+  h3 {
+    line-height: 1.5em;
+  }
+
+  a {
+    text-decoration: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    word-wrap: break-word;
+
+    &::before {
+      @extend %icon-base-css;
+      padding-right: .5rem;
+    }
+  }
+
+  .dg-facebook {
+    &::before {
+      @extend %icon-facebook;
+    }
+  }
+
+  .dg-twitter {
+    &::before {
+      @extend %icon-twitter;
+    }
+  }
+
+  .dg-linkedin {
+    &::before {
+      @extend %icon-linkedin;
+    }
+  }
+
+  .dg-youtube {
+    &::before {
+      @extend %icon-youtube;
+    }
+  }
+
+  .dg-instagram {
+    &::before {
+      @extend %icon-instagram;
+    }
+  }
+}
