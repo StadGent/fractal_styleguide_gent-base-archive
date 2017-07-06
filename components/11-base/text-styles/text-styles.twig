@@ -1,9 +1,13 @@
 {% for i in 1..6 %}
     <h{{ i }}>Heading {{ i }}</h{{ i }}>
+    <p>Normal text below an heading {{ i }}.</p>
 {% endfor %}
-<p>Normal text paragraph</p>
-<p class="small">Small text paragraph</p>
-<p class="caption">Caption text</p>
+<p>
+    A text paragraph can contain <a href="#">links</a>, <strong>bold</strong>, <em>italic</em>, <u>underlined</u> and <s>striked</s> text.<br>
+    Soft breaks are also possible.
+</p>
+<p class="small">Small text paragraph.</p>
+<p class="caption">Caption text.</p>
 <p class="text-center">Center text</p>
 <p class="text-right">Right text</p>
 <p class="text-left">Left text</p>
