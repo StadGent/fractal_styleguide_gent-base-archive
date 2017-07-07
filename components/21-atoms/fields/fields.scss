@@ -45,6 +45,10 @@ textarea {
   padding: .4rem .7rem;
 }
 
+input[type='file'] {
+  margin: 0 0 1rem;
+}
+
 textarea {
   min-height: 7.2rem;
 }
@@ -84,6 +88,8 @@ label {
 // Radios and checkboxes shouldn't start on a new line.
 input[type='radio'],
 input[type='checkbox'] {
+  outline: none;
+
   + label {
     display: inline-block;
     margin: 0 0 .5rem;
