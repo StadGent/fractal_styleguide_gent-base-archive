@@ -13,18 +13,15 @@ select {
   width: 100%;
   height: 2.4rem;
   margin: 0 0 1rem;
-  border: 1px solid $color-light-gray;
+  border-width: 1px;
+  border-style: solid;
   border-radius: $radius-1;
-  background: $color-white;
-  color: $color-gray;
   font-size: 1rem;
   line-height: 1.5em;
   box-sizing: border-box;
 
   &:focus {
-    border-color: $color-gray;
     outline: none;
-    color: $color-dark-gray;
   }
 
   &.inline {
@@ -74,15 +71,17 @@ select {
 label {
   display: block;
   margin: 0 0 .5rem;
-  color: $color-darkest-blue;
   font-size: 1rem;
   font-weight: bold;
 
   .label-optional {
-    color: $color-gray;
     font-size: .8rem;
     font-weight: normal;
   }
+}
+
+input + .description {
+  margin: -1rem 0 1rem;
 }
 
 // Radios and checkboxes shouldn't start on a new line.

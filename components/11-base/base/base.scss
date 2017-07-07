@@ -13,7 +13,8 @@
 html {
   @include border-box;
   background: $bg-outside-container;
-  font: $default-font-weight $default-font-size/#{$default-line-height} $default-font-family;
+  font: $default-font-weight $default-font-size $default-font-family;
+  line-height: $default-line-height;
 
   @media (min-width: $bp-tablet-fonts) {
     font-size: $default-font-size + 2;
@@ -36,7 +37,7 @@ body {
 }
 
 hr {
-  margin: 0 0 $default-line-height * 1em;
+  margin: 0 0 $default-line-height;
   clear: both;
   border: 1px 0 0 solid lighten($default-text-color, 60);
 }

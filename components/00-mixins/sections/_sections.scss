@@ -1,4 +1,4 @@
-@mixin new-section($bg-color, $text-color, $title-color: $text-color, $link-color: $text-color, $link-color-hover: $link-color, $link-color-focus: $link-color, $link-color-visited: $link-color) {
+@mixin new-section($bg-color, $text-color, $title-color: $text-color, $caption-color: $text-color, $link-color: $text-color, $link-color-hover: $link-color, $link-color-focus: $link-color, $link-color-visited: $link-color, $field-text-color: $text-color, $field-placeholder-color: $field-text-color, $field-bg-color: $bg-color, $field-border-color: $field-bg-color) {
   @include clearfix();
   background-color: $bg-color;
   color: $text-color;
@@ -18,6 +18,11 @@
     color: $title-color;
   }
 
+  .caption,
+  .description {
+    color: $caption-color;
+  }
+
   a {
     color: $link-color;
 
@@ -31,6 +36,34 @@
 
     &:focus {
       color: $link-color-focus;
+    }
+  }
+
+  label {
+    color: $text-color;
+
+    .label-optional {
+      color: $caption-color;
+    }
+  }
+
+  input[type='text'],
+  input[type='search'],
+  input[type='password'],
+  input[type='date'],
+  input[type='datetime'],
+  input[type='datetime-local'],
+  input[type='time'],
+  input[type='email'],
+  input[type='url'],
+  textarea,
+  select {
+    border-color: $field-border-color;
+    background: $field-bg-color;
+    color: $field-text-color;
+
+    &::placeholder {
+      color: $field-placeholder-color;
     }
   }
 }

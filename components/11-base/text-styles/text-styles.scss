@@ -5,9 +5,9 @@ dl,
 table,
 address,
 pre {
-  margin-bottom: .5rem;
-  font-size: 1rem;
-  line-height: 1.4rem;
+  margin-bottom: .5em;
+  font-size: inherit;
+  line-height: inherit;
 }
 
 h1,
@@ -77,14 +77,11 @@ h6,
 }
 
 %small,
-.small {
+.small,
+.caption,
+.description {
   font-size: .8rem;
   line-height: 1.5em;
-}
-
-.caption {
-  @extend %small;
-  color: $color-gray;
 }
 
 .text-center {
