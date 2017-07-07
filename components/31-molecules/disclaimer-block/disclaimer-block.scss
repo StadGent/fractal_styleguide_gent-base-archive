@@ -1,11 +1,9 @@
 .dg-block-links {
   a {
     color: $color-orange-light;
+    text-decoration: underline;
 
-    &:hover {
-      color: $color-orange-lighter;
-    }
-
+    &:hover,
     &:focus {
       color: $color-orange-lighter;
     }
