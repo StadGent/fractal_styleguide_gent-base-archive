@@ -1,4 +1,8 @@
-@mixin new-section($bg-color, $text-color, $title-color: $text-color, $caption-color: $text-color, $link-color: $text-color, $link-color-hover: $link-color, $link-color-focus: $link-color-hover, $link-color-visited: $link-color, $field-text-color: $text-color, $field-placeholder-color: $field-text-color, $field-bg-color: $bg-color, $field-border-color: $field-bg-color) {
+@mixin new-section(
+  $bg-color, $text-color, $title-color: $text-color, $caption-color: $text-color,
+  $link-color: $text-color, $link-color-hover: $link-color, $link-color-focus: $link-color-hover, $link-color-visited: $link-color,
+  $field-text-color: $text-color, $field-placeholder-color: $field-text-color, $field-bg-color: $bg-color, $field-border-color: $field-bg-color
+) {
   @include clearfix();
   background-color: $bg-color;
   color: $text-color;
