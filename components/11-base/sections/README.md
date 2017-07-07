@@ -5,13 +5,13 @@ In the style guide of Ghent there are 5 color sections (or schemes) available. T
 
 - **Default:** The default content region (white background, gray text)
 - **Inverse:** An inverse region to visualise a different content region (light blue background, gray text)
-- **Highlighted:** An content regions that gets the attention from the end-user. Like for example an emergency warning. (orange background, gray text)
+- **Highlighted:** A content region in need of the attention of the end-user. For example an emergency warning. (orange background, gray text)
 - **Accent:** An accent region mostly used for Stad Gent branded services like Ghent info. (blue background, white text)
-- **Wrapper:** The most top and bottom content regions. So actually the header and footer. (dark blue background, white text)
+- **Wrapper:** Used as header and footer. (dark blue background, white text)
 
 ## Custom color sections
 
-It's possible to create custom color sections for you subtheme with following mixin: `new-section($bg-color, $text-color)`. A breakdown for all available parameters below:
+It's possible to create custom color sections for your subtheme with following mixin: `new-section($bg-color, $text-color)`. A breakdown for all available parameters below:
 
 ### Text styles
 - `$bg-color`: The background color.
