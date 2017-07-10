@@ -1,4 +1,6 @@
 .dg-block-links {
+  list-style: none;
+
   a {
     color: $color-orange-light;
     text-decoration: underline;
@@ -11,5 +13,6 @@
     &:visited {
       color: $color-orange-light;
     }
+
   }
 }
