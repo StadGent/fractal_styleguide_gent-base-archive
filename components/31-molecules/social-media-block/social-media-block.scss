@@ -5,11 +5,16 @@
   }
 
   a {
+    color: $color-gray;
     text-decoration: none;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
     word-wrap: break-word;
+
+    &:hover {
+      color: $color-medium-lighter-gray;
+    }
 
     &::before {
       @extend %icon-base-css;
