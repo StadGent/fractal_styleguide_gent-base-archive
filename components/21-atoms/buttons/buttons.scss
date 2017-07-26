@@ -1,6 +1,7 @@
 %btn,
 .btn,
-a.btn {
+a.btn,
+button {
   @extend %btn--default;
   display: block;
   position: relative;
