@@ -96,8 +96,10 @@ h6,
   text-align: left;
 }
 
+%a,
 a {
   transition: .11s ease-in-out;
+  text-decoration: underline;
 
   &:hover {
     text-decoration: none;
