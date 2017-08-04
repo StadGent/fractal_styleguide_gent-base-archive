@@ -47,6 +47,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var cssnano = require('gulp-cssnano');
 var copy = require('gulp-contrib-copy');
 var rename = require('gulp-rename');
+var jshint = require('gulp-jshint');
 
 /*
  *
@@ -55,7 +56,7 @@ var rename = require('gulp-rename');
  *  Sass globbing
  *  SCSS linting
  *  Nested output style
- *  Sourcemaps
+ *  Sourcemaps (dev only!)
  *  Autoprefixer
  */
 gulp.task('styles:dist', function() {
@@ -91,8 +92,43 @@ gulp.task('styles:build', function() {
       'config': './.scss-lint.yml'
     }))
     .pipe(sass({outputStyle: 'compressed'})).on('error', sass.logError)
+    .pipe(autoprefixer({
+        browsers: ['last 5 versions']
+    }))
     .pipe(cssnano())
     .pipe(gulp.dest('./build/css/'))
+});
+
+/*
+ *
+ * Validate SCSS files.
+ *
+ */
+gulp.task('styles:validate', function() {
+  return gulp.src('components/**/*.scss')
+  .pipe(scsslint({
+    'config': './.scss-lint.yml'
+  }))
+});
+
+/*
+ *
+ * Watch SCSS files For Changes.
+ *
+ */
+gulp.task('styles:watch', function() {
+  gulp.watch('./components/**/*.scss', ['styles:dist', 'styles:validate']);
+});
+
+/*
+ *
+ * Copy JS files during development.
+ *
+ */
+gulp.task('js:dist', ['styles:dist'], function() {
+  gulp.src('components/**/*.js')
+    .pipe(rename({dirname: ''}))
+    .pipe(gulp.dest('./public/js/'));
 });
 
 /*
@@ -108,13 +144,22 @@ gulp.task('js:build', ['fractal:build'], function() {
 
 /*
  *
- * Copy JS files during development.
+ * Validate JS files.
  *
  */
-gulp.task('js:dist', ['styles:dist'], function() {
-  gulp.src('components/**/*.js')
-    .pipe(rename({dirname: ''}))
-    .pipe(gulp.dest('./public/js/'));
+gulp.task('js:validate', function() {
+  return gulp.src('components/**/*.js')
+    .pipe(jshint())
+    .pipe(jshint.reporter('default'));
+});
+
+/*
+ *
+ * Watch JS files For Changes.
+ *
+ */
+gulp.task('js:watch', function() {
+  gulp.watch('./components/**/*.js', ['js:validate']);
 });
 
 /*
@@ -154,11 +199,51 @@ gulp.task('fractal:build', function(){
   });
 });
 
-// Watch Files For Changes
-gulp.task('watch', function() {
-  gulp.watch('./components/*.scss', ['styles:dist']);
-});
+/*
+ *
+ * Default tasks:
+ * Usage:
+ *  gulp
+ *  gullp watch
+ *
+ * Used for local development to compile and validate after every change.
+ *
+ */
+gulp.task('default', ['fractal:start', 'styles:watch', 'js:watch']);
+gulp.task('watch', ['default']);
 
-// default task
-gulp.task('default', ['fractal:start', 'styles:dist', 'watch', 'js:dist']);
-gulp.task('build', ['fractal:build', 'styles:build', 'js:build']);
+/*
+ *
+ * Validate task:
+ * Usage:
+ *  gulp validate
+ *
+ *  Used to only validate the SCSS and JS code.
+ *
+ */
+gulp.task('validate', ['styles:validate', 'js:validate']);
+
+/*
+ *
+ * Compile task:
+ * Usage:
+ *  gulp compile
+ *  gulp compile:dev
+ *    Add sourcemaps to the CSS files.
+ *
+ *  Used to compile production ready SCSS and JS code.
+ *
+ */
+gulp.task('compile', ['fractal:build', 'styles:build', 'js:build']);
+gulp.task('compile:dev', ['fractal:build', 'styles:dist', 'js:build']);
+
+/*
+ *
+ * Build task:
+ * Usage:
+ *  gulp build
+ *
+ *  Used to validate and build production ready code.
+ *
+ */
+gulp.task('build', ['validate', 'compile']);
