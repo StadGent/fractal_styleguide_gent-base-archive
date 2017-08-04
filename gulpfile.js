@@ -9,6 +9,7 @@ const path = require('path');
 * Require the Fractal module
 */
 const fractal = module.exports = require('@frctl/fractal').create();
+const logger = fractal.cli.console; // keep a reference to the fractal CLI console utility
 
 /*
 * Give your project a title.
@@ -36,11 +37,6 @@ fractal.web.set('static.path', path.join(__dirname, 'public'));
 fractal.web.set('static.mount', '');
 fractal.web.set('builder.dest', __dirname + '/build');
 
-
-const logger = fractal.cli.console; // keep a reference to the fractal CLI console utility
-
-
-
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var sassGlob = require('gulp-sass-glob');
@@ -51,9 +47,6 @@ var autoprefixer = require('gulp-autoprefixer');
 var cssnano = require('gulp-cssnano');
 var copy = require('gulp-contrib-copy');
 var rename = require('gulp-rename');
-
-
-
 
 /*
  *
@@ -80,7 +73,6 @@ gulp.task('styles:dist', function() {
     .pipe(gulp.dest('./public/css/'))
 });
 
-
 /*
  *
  * Build settings for your styles.
@@ -102,7 +94,6 @@ gulp.task('styles:build', function() {
     .pipe(cssnano())
     .pipe(gulp.dest('./build/css/'))
 });
-
 
 /*
  *
@@ -126,7 +117,6 @@ gulp.task('js:dist', ['styles:dist'], function() {
     .pipe(gulp.dest('./public/js/'));
 });
 
-
 /*
  * Start the Fractal server
  *
@@ -136,17 +126,15 @@ gulp.task('js:dist', ['styles:dist'], function() {
  *
  * This task will also log any errors to the console.
  */
-
 gulp.task('fractal:start', function(){
-    const server = fractal.web.server({
-        sync: true
-    });
-    server.on('error', err => logger.error(err.message));
-    return server.start().then(() => {
-        logger.success(`Fractal server is now running at ${server.url}`);
-    });
+  const server = fractal.web.server({
+    sync: true
+  });
+  server.on('error', err => logger.error(err.message));
+  return server.start().then(() => {
+    logger.success(`Fractal server is now running at ${server.url}`);
+  });
 });
-
 
 /*
  * Run a static export of the project web UI.
@@ -157,21 +145,19 @@ gulp.task('fractal:start', function(){
  * The build destination will be the directory specified in the 'builder.dest'
  * configuration option set above.
  */
-
 gulp.task('fractal:build', function(){
-    const builder = fractal.web.builder();
-    builder.on('progress', (completed, total) => logger.update(`Exported ${completed} of ${total} items`, 'info'));
-    builder.on('error', err => logger.error(err.message));
-    return builder.build().then(() => {
-        logger.success('Fractal build completed!');
-    });
+  const builder = fractal.web.builder();
+  builder.on('progress', (completed, total) => logger.update(`Exported ${completed} of ${total} items`, 'info'));
+  builder.on('error', err => logger.error(err.message));
+  return builder.build().then(() => {
+      logger.success('Fractal build completed!');
+  });
 });
 
 // Watch Files For Changes
 gulp.task('watch', function() {
   gulp.watch('./components/*.scss', ['styles:dist']);
 });
-
 
 // default task
 gulp.task('default', ['fractal:start', 'styles:dist', 'watch', 'js:dist']);
