@@ -1,4 +1,5 @@
-(function($) {
+(function ($) {
+  'use strict';
 
   /**
    * Invoked after after loading the initial page and after each AJAX request.
@@ -8,8 +9,7 @@
    * @param settings
    *   Object of additional settings.
    */
-  $(window).on("load", updateMobileBreadcrumb );
-
+  $(window).on('load', updateMobileBreadcrumb);
 
   /**
    * Replace the mobile breadcrumb of Gent base by our own.
@@ -43,20 +43,20 @@
   /**
    * Truncate the breadcrumb labels to a maximum length.
    *
-   * @param breadcrumb
+   * @param {Object} breadcrumb
    *   The breadcrumb element as jQuery object.
-   * @param length
+   * @param {int} length
    *   Maximum length of a label.
-   * @param [ellipsis]
+   * @param {boolean} [ellipsis]
    *   Wether an elipsis should be added, defaults to true.
    */
-  function truncateBreadcrumbLabels (breadcrumb, length, ellipsis) {
-    $('a, span', breadcrumb).each(function() {
+  function truncateBreadcrumbLabels(breadcrumb, length, ellipsis) {
+    $('a, span', breadcrumb).each(function () {
       var element = $(this);
       var text = element.text().trim();
 
       if (text.length > length) {
-        if (ellipsis != false) {
+        if (ellipsis !== false) {
           text = text.substr(0, (length - 3)).trim() + '...';
         }
         else {
@@ -71,15 +71,15 @@
   /**
    * Collapse the breadcrumb trail by hiding some elements.
    *
-   * @param breadcrumb
+   * @param {Object} breadcrumb
    *   The breadcrumb element as jQuery object.
-   * @param min_length
+   * @param {int} min_length
    *   Only collapse if the trail has at least this many items.
-   * @param [head]
+   * @param {int} [head]
    *   Number of items to show at the start of the trail, defaults to 2.
-   * @param [tail]
+   * @param {int} [tail]
    *   Number of items to show at the end of the trail, defaults to the same value as head.
-   * @param [text]
+   * @param {string} [text]
    *   Text to use as link to show the collapsed items, defaults to "...".
    */
   function collapseBreadcrumbTrail(breadcrumb, min_length, head, tail, text) {
@@ -110,7 +110,7 @@
         $('<a>')
           .text(text ? text : '...')
           .attr('href', '#')
-          .click(function(e) {
+          .click(function (e) {
             e.preventDefault();
 
             $(this).parent().remove();
