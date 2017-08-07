@@ -64,8 +64,7 @@ var csscomb =require('gulp-csscomb');
  *  Autoprefixer
  */
 gulp.task('styles:dist', function() {
-
-  var components = gulp.src('components/**/*.s+(a|c)ss')
+  gulp.src('components/**/*.s+(a|c)ss')
     .pipe(sassGlob())
     .pipe(sassLint({
       configFile: './.sass-lint.yml',
@@ -79,17 +78,7 @@ gulp.task('styles:dist', function() {
     .pipe(autoprefixer({
         browsers: ['last 5 versions']
     }))
-
-  var main = gulp.src('components/main.scss')
-    .pipe(sassGlob())
-    .pipe(sourcemaps.init())
-    .pipe(sass({outputStyle: 'nested'})).on('error', sass.logError)
-    .pipe(sourcemaps.write())
     .pipe(gulp.dest('./public/css/'))
-
-    return es.merge(
-      components, main
-    );
 });
 
 /*
