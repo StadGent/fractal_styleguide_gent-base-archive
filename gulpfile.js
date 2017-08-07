@@ -50,6 +50,8 @@ var rename = require('gulp-rename');
 var  eslint = require('gulp-eslint');
 var imageop = require('gulp-image-optimization');
 var es = require('event-stream');
+var minify = require('gulp-minify');
+var rename = require('gulp-rename');
 
 /*
  *
@@ -97,11 +99,10 @@ gulp.task('styles:dist', function() {
  *  SCSS linting
  *  Compresssed output style
  *  Autoprefixer
- *  Minify  CSS (with cssnano)
  *
  */
-gulp.task('styles:build', function() {
-  gulp.src('components/*.s+(a|c)ss')
+gulp.task('styles:build', ['fractal:build'], function() {
+  gulp.src('components/**/*.s+(a|c)ss')
     .pipe(sassGlob())
     .pipe(sassLint({
       configFile: './.sass-lint.yml',
@@ -113,6 +114,7 @@ gulp.task('styles:build', function() {
     .pipe(autoprefixer({
         browsers: ['last 5 versions']
     }))
+    .pipe(gulp.dest('./build/css/'))
     .pipe(cssnano())
     .pipe(gulp.dest('./build/css/'))
 });
@@ -158,6 +160,9 @@ gulp.task('js:dist', ['styles:dist'], function() {
 gulp.task('js:build', ['fractal:build'], function() {
   gulp.src('components/**/*.js')
     .pipe(rename({dirname: ''}))
+    .pipe(minify({
+      noSource: true
+    }))
     .pipe(gulp.dest('./build/js/'));
 });
 
@@ -268,8 +273,8 @@ gulp.task('validate', ['styles:validate', 'js:validate']);
  *  Used to compile production ready SCSS and JS code.
  *
  */
-gulp.task('compile', ['fractal:build', 'styles:build', 'js:build', 'images:minify']);
-gulp.task('compile:dev', ['fractal:build', 'styles:dist', 'js:build', 'images:minify']);
+gulp.task('compile', ['fractal:build', 'styles:build', 'styles:dist', 'js:build', 'js:dist', 'images:minify']);
+gulp.task('compile:dev', ['fractal:build', 'styles:dist', 'js:dist', 'images:minify']);
 
 /*
  *
