@@ -72,12 +72,12 @@ gulp.task('styles:dist', function() {
     }))
     .pipe(sassLint.format())
     .pipe(sourcemaps.init())
-    .pipe(csscomb())
-    .pipe(sass({outputStyle: 'nested'})).on('error', sass.logError)
-    .pipe(sourcemaps.write())
     .pipe(autoprefixer({
         browsers: ['last 5 versions']
     }))
+    .pipe(csscomb())
+    .pipe(sass({outputStyle: 'nested'})).on('error', sass.logError)
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('./public/css/'))
 });
 
@@ -100,11 +100,13 @@ gulp.task('styles:build', ['fractal:build'], function() {
       'merge-default-rules': false
     }))
     .pipe(sassLint.format())
-    .pipe(sass({outputStyle: 'compressed'})).on('error', sass.logError)
     .pipe(autoprefixer({
         browsers: ['last 5 versions']
     }))
-    .pipe(gulp.dest('./build/css/'))
+    .pipe(sass({outputStyle: 'compressed'})).on('error', sass.logError)
+    .pipe(rename({
+      suffix: '-min'
+    }))
     .pipe(cssnano())
     .pipe(gulp.dest('./build/css/'))
 });
