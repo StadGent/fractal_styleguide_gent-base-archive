@@ -169,11 +169,11 @@ gulp.task('js:watch', function() {
  *
  */
 gulp.task('images:minify', function(cb) {
-    gulp.src(['components/**/*.png','components/**/*.jpg','components/**/*.gif','components/**/*.jpeg']).pipe(imageop({
-        optimizationLevel: 5,
-        progressive: true,
-        interlaced: true
-    })).pipe(gulp.dest('public/images')).on('end', cb).on('error', cb);
+  gulp.src(['components/**/*.png','components/**/*.jpg','components/**/*.gif','components/**/*.jpeg']).pipe(imageop({
+    optimizationLevel: 5,
+    progressive: true,
+    interlaced: true
+  })).pipe(gulp.dest('public/images')).on('end', cb).on('error', cb);
 });
 
 /*
