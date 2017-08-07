@@ -51,7 +51,7 @@ var  eslint = require('gulp-eslint');
 var imageop = require('gulp-image-optimization');
 var es = require('event-stream');
 var minify = require('gulp-minify');
-var rename = require('gulp-rename');
+var csscomb =require('gulp-csscomb');
 
 /*
  *
@@ -73,6 +73,7 @@ gulp.task('styles:dist', function() {
     }))
     .pipe(sassLint.format())
     .pipe(sourcemaps.init())
+    .pipe(csscomb())
     .pipe(sass({outputStyle: 'nested'})).on('error', sass.logError)
     .pipe(sourcemaps.write())
     .pipe(autoprefixer({
