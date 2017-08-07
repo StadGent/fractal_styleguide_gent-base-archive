@@ -42,13 +42,14 @@ var sass = require('gulp-sass');
 var sassGlob = require('gulp-sass-glob');
 var watch = require('gulp-watch');
 var sourcemaps = require('gulp-sourcemaps');
-var scsslint = require('gulp-scss-lint');
+var sassLint = require('gulp-sass-lint');
 var autoprefixer = require('gulp-autoprefixer');
 var cssnano = require('gulp-cssnano');
 var copy = require('gulp-contrib-copy');
 var rename = require('gulp-rename');
 var jshint = require('gulp-jshint');
 var imageop = require('gulp-image-optimization');
+var es = require('event-stream');
 
 /*
  *
@@ -61,18 +62,31 @@ var imageop = require('gulp-image-optimization');
  *  Autoprefixer
  */
 gulp.task('styles:dist', function() {
-  gulp.src('components/main.scss')
+
+  var components = gulp.src('components/**/*.s+(a|c)ss')
     .pipe(sassGlob())
-    .pipe(scsslint({
-      'config': './.scss-lint.yml'
+    .pipe(sassLint({
+      configFile: './.sass-lint.yml',
+      formatter: 'stylish',
     }))
+    .pipe(sassLint.format())
     .pipe(sourcemaps.init())
     .pipe(sass({outputStyle: 'nested'})).on('error', sass.logError)
     .pipe(sourcemaps.write())
     .pipe(autoprefixer({
         browsers: ['last 5 versions']
     }))
+
+  var main = gulp.src('components/main.scss')
+    .pipe(sassGlob())
+    .pipe(sourcemaps.init())
+    .pipe(sass({outputStyle: 'nested'})).on('error', sass.logError)
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('./public/css/'))
+
+    return es.merge(
+      components, main
+    );
 });
 
 /*
@@ -87,11 +101,14 @@ gulp.task('styles:dist', function() {
  *
  */
 gulp.task('styles:build', function() {
-  gulp.src('components/main.scss')
+  gulp.src('components/*.s+(a|c)ss')
     .pipe(sassGlob())
-    .pipe(scsslint({
-      'config': './.scss-lint.yml'
+    .pipe(sassLint({
+      configFile: './.sass-lint.yml',
+      formatter: 'stylish',
+      'merge-default-rules': false
     }))
+    .pipe(sassLint.format())
     .pipe(sass({outputStyle: 'compressed'})).on('error', sass.logError)
     .pipe(autoprefixer({
         browsers: ['last 5 versions']
@@ -106,10 +123,11 @@ gulp.task('styles:build', function() {
  *
  */
 gulp.task('styles:validate', function() {
-  return gulp.src('components/**/*.scss')
-  .pipe(scsslint({
-    'config': './.scss-lint.yml'
+  return gulp.src('components/**/*.s+(a|c)ss')
+  .pipe(sassLint({
+    configFile: './.sass-lint.yml'
   }))
+  .pipe(sassLint.format())
 });
 
 /*
@@ -170,9 +188,9 @@ gulp.task('js:watch', function() {
  */
 gulp.task('images:minify', function(cb) {
   gulp.src(['components/**/*.png','components/**/*.jpg','components/**/*.gif','components/**/*.jpeg']).pipe(imageop({
-    optimizationLevel: 5,
-    progressive: true,
-    interlaced: true
+      optimizationLevel: 5,
+      progressive: true,
+      interlaced: true
   })).pipe(gulp.dest('public/images')).on('end', cb).on('error', cb);
 });
 
