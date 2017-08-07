@@ -47,7 +47,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var cssnano = require('gulp-cssnano');
 var copy = require('gulp-contrib-copy');
 var rename = require('gulp-rename');
-var jshint = require('gulp-jshint');
+var  eslint = require('gulp-eslint');
 var imageop = require('gulp-image-optimization');
 var es = require('event-stream');
 
@@ -168,8 +168,10 @@ gulp.task('js:build', ['fractal:build'], function() {
  */
 gulp.task('js:validate', function() {
   return gulp.src('components/**/*.js')
-    .pipe(jshint())
-    .pipe(jshint.reporter('default'));
+    .pipe(eslint({
+      configFile: './.eslintrc'
+    }))
+    .pipe(eslint.format())
 });
 
 /*
