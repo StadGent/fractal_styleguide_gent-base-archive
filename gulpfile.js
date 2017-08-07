@@ -48,6 +48,7 @@ var cssnano = require('gulp-cssnano');
 var copy = require('gulp-contrib-copy');
 var rename = require('gulp-rename');
 var jshint = require('gulp-jshint');
+var imageop = require('gulp-image-optimization');
 
 /*
  *
@@ -163,6 +164,19 @@ gulp.task('js:watch', function() {
 });
 
 /*
+ *
+ * Minify images.
+ *
+ */
+gulp.task('images:minify', function(cb) {
+    gulp.src(['components/**/*.png','components/**/*.jpg','components/**/*.gif','components/**/*.jpeg']).pipe(imageop({
+        optimizationLevel: 5,
+        progressive: true,
+        interlaced: true
+    })).pipe(gulp.dest('public/images')).on('end', cb).on('error', cb);
+});
+
+/*
  * Start the Fractal server
  *
  * In this example we are passing the option 'sync: true' which means that it will
@@ -234,8 +248,8 @@ gulp.task('validate', ['styles:validate', 'js:validate']);
  *  Used to compile production ready SCSS and JS code.
  *
  */
-gulp.task('compile', ['fractal:build', 'styles:build', 'js:build']);
-gulp.task('compile:dev', ['fractal:build', 'styles:dist', 'js:build']);
+gulp.task('compile', ['fractal:build', 'styles:build', 'js:build', 'images:minify']);
+gulp.task('compile:dev', ['fractal:build', 'styles:dist', 'js:build', 'images:minify']);
 
 /*
  *
