@@ -38,7 +38,7 @@
       collapseBreadcrumbTrail(breadcrumb, 6);
       collapseBreadcrumbTrail(mobile, 5, 1, 2);
     }
-  };
+  }
 
   /**
    * Truncate the breadcrumb labels to a maximum length.
@@ -66,7 +66,7 @@
         element.text(text);
       }
     });
-  };
+  }
 
   /**
    * Collapse the breadcrumb trail by hiding some elements.
@@ -126,8 +126,6 @@
         breadcrumb.prepend(link);
       }
     }
-  };
-
-
+  }
 
 })(jQuery);
