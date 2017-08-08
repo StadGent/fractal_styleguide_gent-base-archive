@@ -1,34 +1,22 @@
-/*
- * This file is a customization of the styleguide application.
- * This file is only applicable on stijlgids.stad.gent
- */
-
 .color {
-  width: 125px;
-  height: 125px;
   display: block;
   float: left;
+  width: 125px;
+  height: 125px;
   margin: 0 10px 10px 0;
-  color: rgba(0, 0, 0, 0.5);
   text-align: center;
-  border: #E1E1E1 1px solid;
-}
-
-/*
- * Grid examples
- *
- * Highlight the grid columns within the docs so folks can see their padding,
- * alignment, sizing, etc.
- */
+  color: rgba(0, 0, 0, 0.5);
+  border: #e1e1e1 1px solid; }
 
 .show-grid {
-  margin-bottom: 15px;
-}
-.show-grid [class^="col-"] {
+  margin-bottom: 15px; }
+
+.show-grid [class^='col-'] {
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: #eee;
-  background-color: rgba(0, 125, 179, .15);
   border: 1px solid #ddd;
-  border: 1px solid rgba(0, 125, 179, .2);
-}
+  border: 1px solid rgba(0, 125, 179, 0.2);
+  background-color: #eee;
+  background-color: rgba(0, 125, 179, 0.15); }
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic3R5bGVndWlkZS5jc3MiLCJzb3VyY2VzIjpbInN0eWxlZ3VpZGUuc2NzcyJdLCJzb3VyY2VzQ29udGVudCI6WyIvL1xuLy8gVGhpcyBmaWxlIGlzIGEgY3VzdG9taXphdGlvbiBvZiB0aGUgc3R5bGVndWlkZSBhcHBsaWNhdGlvbi5cbi8vIFRoaXMgZmlsZSBpcyBvbmx5IGFwcGxpY2FibGUgb24gc3RpamxnaWRzLnN0YWQuZ2VudFxuLy9cblxuLmNvbG9yXG57XG4gICAgZGlzcGxheTogYmxvY2s7XG4gICAgZmxvYXQ6IGxlZnQ7XG5cbiAgICB3aWR0aDogMTI1cHg7XG4gICAgaGVpZ2h0OiAxMjVweDtcbiAgICBtYXJnaW46IDAgMTBweCAxMHB4IDA7XG5cbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG5cbiAgICBjb2xvcjogcmdiYSgwLCAwLCAwLCAuNSk7XG4gICAgYm9yZGVyOiAjZTFlMWUxIDFweCBzb2xpZDtcbn1cblxuLy9cbi8vIEdyaWQgZXhhbXBsZXNcbi8vXG4vLyBIaWdobGlnaHQgdGhlIGdyaWQgY29sdW1ucyB3aXRoaW4gdGhlIGRvY3Mgc28gZm9sa3MgY2FuIHNlZSB0aGVpciBwYWRkaW5nLFxuLy8gYWxpZ25tZW50LCBzaXppbmcsIGV0Yy5cbi8vXG5cbi5zaG93LWdyaWRcbntcbiAgICBtYXJnaW4tYm90dG9tOiAxNXB4O1xufVxuXG4uc2hvdy1ncmlkIFtjbGFzc149J2NvbC0nXVxue1xuICAgIHBhZGRpbmctdG9wOiAxMHB4O1xuICAgIHBhZGRpbmctYm90dG9tOiAxMHB4O1xuXG4gICAgYm9yZGVyOiAxcHggc29saWQgI2RkZDtcbiAgICBib3JkZXI6IDFweCBzb2xpZCByZ2JhKDAsIDEyNSwgMTc5LCAuMik7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2VlZTtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDAsIDEyNSwgMTc5LCAuMTUpO1xufVxuIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUtBLEFBQUEsTUFBTSxDQUNOO0VBQ0ksT0FBTyxFQUFFLEtBQUs7RUFDZCxLQUFLLEVBQUUsSUFBSTtFQUVYLEtBQUssRUFBRSxLQUFLO0VBQ1osTUFBTSxFQUFFLEtBQUs7RUFDYixNQUFNLEVBQUUsYUFBYTtFQUVyQixVQUFVLEVBQUUsTUFBTTtFQUVsQixLQUFLLEVBQUUsa0JBQWlCO0VBQ3hCLE1BQU0sRUFBRSxpQkFBaUIsR0FDNUI7O0FBU0QsQUFBQSxVQUFVLENBQ1Y7RUFDSSxhQUFhLEVBQUUsSUFBSSxHQUN0Qjs7QUFFRCxBQUFXLFVBQUQsRUFBQyxBQUFBLEtBQUMsRUFBTyxNQUFNLEFBQWIsRUFDWjtFQUNJLFdBQVcsRUFBRSxJQUFJO0VBQ2pCLGNBQWMsRUFBRSxJQUFJO0VBRXBCLE1BQU0sRUFBRSxjQUFjO0VBQ3RCLE1BQU0sRUFBRSxHQUFHLENBQUMsS0FBSyxDQUFDLHNCQUFxQjtFQUN2QyxnQkFBZ0IsRUFBRSxJQUFJO0VBQ3RCLGdCQUFnQixFQUFFLHVCQUFzQixHQUMzQyJ9 */
