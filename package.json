@@ -1,9 +1,10 @@
 {
   "name": "gent_base",
-  "version": "1.0.6",
+  "version": "1.0.8",
   "description": "Styleguide Stad.Gent",
   "devDependencies": {
     "@frctl/fractal": "^1.0",
+    "@frctl/twig": "git+https://github.com/tnottu/fractal-twig-adapter.git",
     "event-stream": "^3.3.4",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
@@ -29,7 +30,5 @@
     "Freya Van Daele"
   ],
   "license": "ISC",
-  "dependencies": {
-    "@frctl/twig": "git+https://github.com/tnottu/fractal-twig-adapter.git"
-  }
+  "dependencies": {}
 }
