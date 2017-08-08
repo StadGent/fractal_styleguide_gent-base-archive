@@ -23,8 +23,8 @@ $ gulp compile:dev
 These commands depending on the one you use execute a certain amount of tasks:
 - It builds the Fractal theme with all CSS and JS code.
 - It minifies the images used in the styleguide.
-- (compile: dev only!) Minification of the compiled CSS code.
-- (compile: dev only!) Minification of the JS code
+- (`compile only!`) Minification of the compiled CSS code.
+- (`compile only!`) Minification of the JS code
 - A plugin called CSSComb check for syntax order inside your SCSS files.
 
 ```

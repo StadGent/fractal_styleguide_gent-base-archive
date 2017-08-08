@@ -3,4 +3,4 @@ This repository contains an styleguide based on the Fractal build tool. You can 
 
 
 ## Installation
-Run `grunt` and go to [localhost:3000](http://localhost:3000).
+Run `gulp` or `gulp watch` and go to [localhost:3000](http://localhost:3000).
