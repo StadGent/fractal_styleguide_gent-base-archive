@@ -357,7 +357,7 @@ gulp.task('bump', function(callback){
  * Default tasks:
  * Usage:
  *  gulp
- *  gullp watch
+ *  gulp watch
  *
  * Used for local development to compile and validate after every change.
  *
