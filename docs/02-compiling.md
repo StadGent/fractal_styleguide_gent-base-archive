@@ -31,9 +31,3 @@ These commands depending on the one you use execute a certain amount of tasks:
 $ gulp build
 ```
 This command combines the gulp validate and gulp compile commands. It is used to build a final version of the styleguide, ready to be published to NPM.
-
-```
-$ gulp publish --username=XXX --password=XXX --email=XXX
-```
-This command is used to publish an extract of the styleguide to the NPM registry.
-It is then supposed to be used inside a Drupal 8 theme.
