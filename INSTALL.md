@@ -1,10 +1,11 @@
 # Functionality
 This repository contains an styleguide based on the Fractal build tool. You can compile the styleguide into static HTML/CSS and export the used defined components into an SASS library that can be used into other projects.
 
-
 ## Installation
-Run `gulp` or `gulp watch` and go to [localhost:3000](http://localhost:3000).
+Run `npm install`.
 
+## Development
+Run `gulp` or `gulp watch` and go to [localhost:3000](http://localhost:3000).
 
 ## Publishing (Digipolis only)
 ```
