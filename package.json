@@ -1,6 +1,6 @@
 {
-  "name": "gent_base",
-  "version": "1.0.8",
+  "name": "gent_styleguide",
+  "version": "1.0.0",
   "description": "Styleguide Stad.Gent",
   "devDependencies": {
     "@frctl/fractal": "^1.0",
@@ -27,7 +27,8 @@
   "scripts": {},
   "authors": [
     "Jeroen Goossens",
-    "Freya Van Daele"
+    "Freya Van Daele",
+    "Gert-Jan Meire"
   ],
   "license": "ISC",
   "dependencies": {}
