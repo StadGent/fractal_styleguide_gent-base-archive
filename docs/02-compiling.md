@@ -2,14 +2,38 @@
 title: Compiling
 ---
 
-There are 2 build operations available for this style guide.
-One for compiling an web version of the style guide, another to compile a
-SASS library that you can include in any other project.
+There are a few different operations available for this style guide.
 
-- To compile a web version of the style guide you can run `grunt styleguide`.
-  This command will build a website in the `build` folder of this project, 
-  after the build you can copy this directory to your web root of your hosting.
-- To compile the sass library you can run the `grunt sasslib` command.
-  This command will create a `scss` folder in the root of this project. 
-  After compiling you can copy this folder to your own project to include or 
-  adapt these SASS files.
+### Gulp commands
+```
+$ gulp
+$ gulp watch
+```
+These commands allow you to work on the styleguide by enabling the Fractal server and watching for changes in SCSS and JS files. Validation of these files is also done when editing and saving them.
+
+```
+$ gulp validate
+```
+This command validates all SCSS and JS files and reports back when syntax errors have been found.
+
+```
+$ gulp compile
+$ gulp compile:dev
+```
+These commands depending on the one you use execute a certain amount of tasks:
+- It builds the Fractal theme with all CSS and JS code.
+- It minifies the images used in the styleguide.
+- (compile: dev only!) Minification of the compiled CSS code.
+- (compile: dev only!) Minification of the JS code
+- A plugin called CSSComb check for syntax order inside your SCSS files.
+
+```
+$ gulp build
+```
+This command combines the gulp validate and gulp compile commands. It is used to build a final version of the styleguide, ready to be published to NPM.
+
+```
+$ gulp publish --username=XXX --password=XXX --email=XXX
+```
+This command is used to publish an extract of the styleguide to the NPM registry.
+It is then supposed to be used inside a Drupal 8 theme.
