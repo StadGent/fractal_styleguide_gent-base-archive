@@ -195,12 +195,12 @@ gulp.task('js:watch', function() {
  * Minify images.
  *
  */
-gulp.task('images:minify', function(cb) {
+gulp.task('images:minify', ['fractal:build', 'styles:build', 'styles:dist'], function(cb) {
   gulp.src(['components/**/*.png','components/**/*.jpg','components/**/*.gif','components/**/*.jpeg']).pipe(imageop({
       optimizationLevel: 5,
       progressive: true,
       interlaced: true
-  })).pipe(gulp.dest('public/images')).on('end', cb).on('error', cb);
+  })).pipe(gulp.dest('build/sass')).on('end', cb).on('error', cb);
 });
 
 /*
