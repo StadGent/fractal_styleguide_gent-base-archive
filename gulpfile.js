@@ -52,6 +52,10 @@ var imageop = require('gulp-image-optimization');
 var es = require('event-stream');
 var minify = require('gulp-minify');
 var csscomb =require('gulp-csscomb');
+var npm = require('npm');
+var fs = require('fs');
+var argv = require('yargs').argv;
+var bump = require('gulp-bump');
 
 /*
  *
@@ -132,6 +136,14 @@ gulp.task('styles:watch', function() {
 });
 
 /*
+ * Extract SCSS files from components folder.
+ */
+gulp.task('styles:extract', ['fractal:build', 'styles:build', 'styles:dist'], function() {
+  gulp.src('components/**/*.s+(a|c)ss')
+    .pipe(gulp.dest('./build/sass/'))
+});
+
+/*
  *
  * Copy JS files during development.
  *
@@ -153,7 +165,7 @@ gulp.task('js:build', ['fractal:build'], function() {
     .pipe(minify({
       noSource: true
     }))
-    .pipe(gulp.dest('./build/js/'));
+    .pipe(gulp.dest('./build/styleguide/js/'));
 });
 
 /*
@@ -229,6 +241,118 @@ gulp.task('fractal:build', function(){
 });
 
 /*
+ * Publish to the NPM public registry.
+ */
+gulp.task('publish:npm', function(callback){
+  var username = argv.username;
+  var password = argv.password;
+  var email = argv.email;
+
+  if (!username) {
+      var usernameError = new Error("Username is required as an argument --username exampleUsername");
+      return callback(usernameError);
+  }
+  if (!password) {
+      var passwordError = new Error("Password is required as an argument --password  examplepassword");
+      return callback(passwordError);
+  }
+  if (!email) {
+      var emailError = new Error("Email is required as an argument --email example@email.com");
+      return callback(emailError);
+  }
+
+  var uri = "http://registry.npmjs.org/";
+
+  npm.load(null, function (loadError) {
+      if (loadError) {
+          return callback(loadError);
+      }
+      var auth = {
+          username: username,
+          password: password,
+          email: email,
+          alwaysAuth: true
+      };
+      var addUserParams = {
+          auth: auth
+      };
+
+    npm.registry.adduser(uri, addUserParams, function (addUserError, data, raw, res) {
+      if (addUserError) {
+          return callback(addUserError);
+      }
+      var metadata = require('./package.json');
+      metadata = JSON.parse(JSON.stringify(metadata));
+      npm.commands.pack([], function (packError) {
+        if (packError) {
+            return callback(packError);
+        }
+        var fileName = metadata.name + '-' + metadata.version + '.tgz';
+        var bodyPath = require.resolve('./' + fileName);
+        var body = fs.createReadStream(bodyPath);
+        var publishParams = {
+            metadata: metadata,
+            access: 'public',
+            body: body,
+            auth: auth
+        };
+        npm.registry.publish(uri, publishParams, function (publishError, resp) {
+            if (publishError) {
+                return callback(publishError);
+            }
+            console.log("Publish succesfull: " + JSON.stringify(resp));
+            return callback();
+        });
+      })
+    });
+
+  });
+});
+
+
+/*
+ * Bump the version number of the package.
+ */
+gulp.task('bump', function(callback){
+  var type = argv.type;
+  var bumpType = '';
+
+  // Validation of the gulp arguments.
+  if (!type) {
+    var typeError = new Error("Type is required as an argument --type minor");
+      return callback(typeError);
+  }
+
+  // Determine type of versioning.
+  switch(type) {
+    case 'prerelease':
+      bumpType = 'prerelease';
+    break;
+    case 'patch':
+      bumpType = 'patch';
+    break;
+    case 'minor':
+      bumpType = 'minor';
+    break;
+    case 'major':
+      bumpType = 'major';
+    break;
+    default:
+      var typeError = new Error("Type is a requires one of four options: prerelease, patch, minor, major");
+      return callback(typeError);
+  }
+
+  // Change version number of package.json file.
+  gulp.src('./package.json')
+    .pipe(bump({
+      type: bumpType
+    }))
+    .pipe(gulp.dest('./'));
+
+  return callback();
+});
+
+/*
  *
  * Default tasks:
  * Usage:
@@ -263,7 +387,7 @@ gulp.task('validate', ['styles:validate', 'js:validate']);
  *  Used to compile production ready SCSS and JS code.
  *
  */
-gulp.task('compile', ['fractal:build', 'styles:build', 'styles:dist', 'js:build', 'js:dist', 'images:minify']);
+gulp.task('compile', ['fractal:build', 'styles:build', 'styles:dist', 'styles:extract', 'js:build', 'js:dist', 'images:minify']);
 gulp.task('compile:dev', ['fractal:build', 'styles:dist', 'js:dist', 'images:minify']);
 
 /*
@@ -276,3 +400,14 @@ gulp.task('compile:dev', ['fractal:build', 'styles:dist', 'js:dist', 'images:min
  *
  */
 gulp.task('build', ['validate', 'compile']);
+
+/*
+ *
+ * Publish task:
+ * Usage:
+ *  gulp publish
+ *
+ *  Used to publish to the public NPM registry.
+ *
+ */
+gulp.task('publish', ['publish:npm']);
