@@ -142,8 +142,8 @@ gulp.task('styles:watch', function() {
  *
  */
 gulp.task('styles:extract', ['fractal:build', 'styles:build', 'styles:dist'], function() {
-  gulp.src(['components/**/*.s+(a|c)ss', 'components/**/*.eot', 'components/**/*.svg', 'components/**/*.woff', 'components/**/*.ttf'])
-    .pipe(gulp.dest('./build/sass/'))
+  gulp.src('components/**/*.s+(a|c)ss')
+    .pipe(gulp.dest('./build/styleguide/sass/'))
 });
 
 /*
@@ -199,11 +199,11 @@ gulp.task('js:watch', function() {
  *
  */
 gulp.task('images:minify', ['fractal:build', 'styles:build', 'styles:dist'], function(cb) {
-  gulp.src(['components/**/*.png','components/**/*.jpg','components/**/*.gif','components/**/*.jpeg', globalConfig.img_src_dir + '/**/*.svg'])
+  gulp.src(['components/**/*.png','components/**/*.jpg','components/**/*.gif','components/**/*.jpeg', 'components/**/*.svg'])
     .pipe(imagemin({
       progressive: true,
       use: [pngquant()]
-    })).pipe(gulp.dest('build/sass')).on('end', cb).on('error', cb);
+    })).pipe(gulp.dest('build/styleguide/sass')).on('end', cb).on('error', cb);
 });
 
 /*
