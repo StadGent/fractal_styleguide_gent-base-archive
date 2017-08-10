@@ -137,10 +137,12 @@ gulp.task('styles:watch', function() {
 });
 
 /*
- * Extract SCSS files from components folder.
+ *
+ * Extract SCSS and their assets (like fonts) from the components folder.
+ *
  */
 gulp.task('styles:extract', ['fractal:build', 'styles:build', 'styles:dist'], function() {
-  gulp.src('components/**/*.s+(a|c)ss')
+  gulp.src(['components/**/*.s+(a|c)ss', 'components/**/*.eot', 'components/**/*.svg', 'components/**/*.woff', 'components/**/*.ttf'])
     .pipe(gulp.dest('./build/sass/'))
 });
 
@@ -197,7 +199,7 @@ gulp.task('js:watch', function() {
  *
  */
 gulp.task('images:minify', ['fractal:build', 'styles:build', 'styles:dist'], function(cb) {
-  gulp.src(['components/**/*.png','components/**/*.jpg','components/**/*.gif','components/**/*.jpeg'])
+  gulp.src(['components/**/*.png','components/**/*.jpg','components/**/*.gif','components/**/*.jpeg', globalConfig.img_src_dir + '/**/*.svg'])
     .pipe(imagemin({
       progressive: true,
       use: [pngquant()]
