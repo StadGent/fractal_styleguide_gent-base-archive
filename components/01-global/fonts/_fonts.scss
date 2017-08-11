@@ -2,11 +2,11 @@
   font-family: 'expresswayextrabold';
   font-style: normal;
   font-weight: 700;
-  src: url('../styleguide/fonts/expressway_xb-webfont.eot?#iefix') format('embedded-opentype'),
-  url('../styleguide/fonts/expressway_xb-webfont.woff2') format('woff2'),
-  url('../styleguide/fonts/expressway_xb-webfont.woff') format('woff'),
-  url('../styleguide/fonts/expressway_xb-webfont.ttf') format('truetype'),
-  url('../styleguide/fonts/expressway_xb-webfont.svg#expresswayextrabold') format('svg');
+  src: url('#{$styleguide-dir}/fonts/expressway_xb-webfont.eot?#iefix') format('embedded-opentype'),
+  url('#{$styleguide-dir}/fonts/expressway_xb-webfont.woff') format('woff'),
+  url('#{$styleguide-dir}/fonts/expressway_xb-webfont.woff2') format('woff2'),
+  url('#{$styleguide-dir}/fonts/expressway_xb-webfont.ttf') format('truetype'),
+  url('#{$styleguide-dir}/fonts/expressway_xb-webfont.svg#expresswayextrabold') format('svg');
 }
 
 
