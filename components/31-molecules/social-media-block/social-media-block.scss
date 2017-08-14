@@ -1,14 +1,25 @@
 .dg-blocks-social {
   h3 {
+    margin: 0;
     line-height: 1.5em;
   }
 
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
   a {
+    color: $color-gray;
     text-decoration: none;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
     word-wrap: break-word;
+
+    &:hover {
+      color: $color-medium-lighter-gray;
+    }
 
     &::before {
       @extend %icon-base-css;

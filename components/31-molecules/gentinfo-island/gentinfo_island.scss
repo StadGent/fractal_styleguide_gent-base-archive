@@ -30,5 +30,21 @@
       padding-right: .5rem;
     }
   }
+
+  .textballoon {
+    margin-top: 1rem;
+
+    &:hover {
+      color: $color-blue;
+    }
+
+    &::before {
+      @extend %icon-base-css;
+      @extend %icon-textballoon-fill-right;
+      padding-right: .5rem;
+    }
+
+  }
+
 }
 
