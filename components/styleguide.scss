@@ -1,0 +1,33 @@
+//
+// This file is a customization of the styleguide application.
+// This file is only applicable on stijlgids.stad.gent
+//
+
+.color {
+  display: block;
+  width: 125px;
+  height: 125px;
+  margin: 0 10px 10px 0;
+  float: left;
+  border: #e1e1e1 1px solid;
+  color: rgba(0, 0, 0, .5);
+  text-align: center;
+}
+
+//
+// Grid examples
+//
+// Highlight the grid columns within the docs so folks can see their padding,
+// alignment, sizing, etc.
+//
+
+.show-grid {
+  margin-bottom: 15px;
+}
+
+.show-grid [class^="col-"] {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid rgba(0, 125, 179, .2);
+  background-color: rgba(0, 125, 179, .15);
+}

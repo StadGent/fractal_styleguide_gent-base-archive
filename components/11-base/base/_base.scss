@@ -36,6 +36,10 @@ body {
   text-shadow: none;
 }
 
+th > * {
+  margin: 0;
+}
+
 hr {
   margin: 0 0 $default-line-height;
   clear: both;

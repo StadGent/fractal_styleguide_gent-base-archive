@@ -27,6 +27,11 @@ select {
   &.inline {
     @include btn-inlineblock();
   }
+
+  &.error {
+    border-color: #a31b00;
+    background-color: #ff8770;
+  }
 }
 
 input[type='text'],

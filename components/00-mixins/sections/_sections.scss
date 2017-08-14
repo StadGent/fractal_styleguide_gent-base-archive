@@ -18,7 +18,9 @@
   h5,
   .h5,
   h6,
-  .h6 {
+  .h6,
+  th,
+  th > * {
     color: $title-color;
   }
 
