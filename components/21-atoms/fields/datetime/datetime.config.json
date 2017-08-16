@@ -4,6 +4,6 @@
   "handle": "datetime",
   "context": {
     "label": "Datetime",
-    "placeholder": "Placeholder text"
+    "placeholder": "Placeholder tekst"
   }
 }

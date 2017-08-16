@@ -1,4 +1,4 @@
 <div class="form-item">
-    <label for="date">{{ label }}</label>
-    <input type="date" name="date" id="date" placeholder="{{ placeholder }}" />
+    <label for="date">{{ label|default('Date') }}</label>
+    <input type="date" name="date" id="date" placeholder="{{ placeholder|default('Placeholder tekst') }}" />
 </div>

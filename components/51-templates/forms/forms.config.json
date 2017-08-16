@@ -1,8 +1,9 @@
 {
-  "title": "Breadcrumbs",
+  "title": "Forms",
   "status": "wip",
-  "default": "default",
-  "preview": "",
+  "handle": "forms",
+  "preview": "@preview",
+  "order": 6,
   "context": {
     "items": [
       "<a href='#'>Stad.gent</a>",

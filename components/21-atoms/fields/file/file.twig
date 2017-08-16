@@ -1,4 +1,4 @@
 <div class="form-item">
-    <label for="file">{{ label }}</label>
-    <input type="file" name="File" id="file" placeholder="{{ placeholder }}" />
+    <label for="file">{{ label|default('File') }}</label>
+    <input type="file" name="File" id="file" placeholder="{{ placeholder|default('Placeholder tekst') }}" />
 </div>

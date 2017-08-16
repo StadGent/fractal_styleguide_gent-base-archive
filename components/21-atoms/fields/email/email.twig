@@ -1,4 +1,4 @@
 <div class="form-item">
-    <label for="email">{{ label }}</label>
-    <input type="email" name="email" id="email" placeholder="{{ placeholder }}" class="inline" />
+    <label for="email">{{ label|default('E-mail') }}</label>
+    <input type="email" name="email" id="email" placeholder="{{ placeholder|default('Placeholder tekst') }}" class="inline" />
 </div>

@@ -1,6 +1,8 @@
 {
   "title": "Gent Icons",
   "status": "ready",
+  "order": "5",
+  "preview": "@preview",
   "context": {
     "items": [
       "<a href='#'>Stad.gent</a>",

@@ -1,0 +1,63 @@
+{% include '@header' %}
+{% include '@breadcrumbs' %}
+
+<div class="container section--default">
+  <div class="content-container {{ section }}">
+    <h1>Forms</h1>
+
+    <div class="container">
+      {% include '@textfield' %}
+      {% include '@password' %}
+      {% include '@date' %}
+      {% include '@datetime' %}
+      {% include '@email' %}
+      {% include '@file' %}
+      {% include '@textarea' %}
+      {% include '@checkbox' %}
+      {% include '@radio' %}
+      {% include '@select'
+        with {
+          "options": [
+            {
+              "label": "Option 1"
+            },
+            {
+              "label": "Option 2"
+            },
+            {
+              "optgroup": true,
+              "label": "Option group",
+              "optgroupoptions": [
+                {
+                  "label": "Option 3"
+                },
+                {
+                  "label": "Option 4"
+                }
+              ]
+            }
+          ]
+        }
+      %}
+      {% include '@multiselect'
+        with {
+          "options": [
+            {
+              "label": "Option 1"
+            },
+            {
+              "label": "Option 2"
+            },
+            {
+              "label": "Option 3"
+            },
+            {
+              "label": "Option 4"
+            }
+          ]
+        }
+      %}
+    </div>
+
+  </div>
+</div>

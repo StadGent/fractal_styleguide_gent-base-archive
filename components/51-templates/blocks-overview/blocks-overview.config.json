@@ -1,9 +1,8 @@
 {
-  "title": "Buttons",
+  "title": "Section overview",
   "status": "wip",
-  "handle": "buttons",
+  "order": 10,
   "preview": "@preview",
-  "order": 3,
   "context": {
     "items": [
       "<a href='#'>Stad.gent</a>",
@@ -11,7 +10,6 @@
       "<span>Overview</span>",
       "<span>Overview</span>",
       "<span>Page title</span>"
-    ],
-    "text": "Button"
+    ]
   }
 }

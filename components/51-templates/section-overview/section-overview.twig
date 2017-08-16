@@ -1,0 +1,34 @@
+{% include '@header' %}
+{% include '@breadcrumbs' %}
+
+<div class="container section--default">
+  <div class="content-container {{ section }}">
+    <h1>Section styles</h1>
+
+    <div class="container">
+      <h2>Section basic: default</h2>
+      {% include '@section-basic' %}
+    </div>
+
+    <div class="container">
+      <h2>Section basic: Inverse</h2>
+      {% include '@section-basic' with { 'modifier': 'section--inverse' } %}
+    </div>
+
+    <div class="container">
+      <h2>Section basic: Highlighted</h2>
+      {% include '@section-basic' with { 'modifier': 'section--highlighted' } %}
+    </div>
+
+    <div class="container">
+      <h2>Section basic: Accent</h2>
+      {% include '@section-basic' with { 'modifier': 'section--accent' } %}
+    </div>
+
+    <div class="container">
+      <h2>Section basic: Wrapper</h2>
+      {% include '@section-basic' with { 'modifier': 'section--wrapper' } %}
+    </div>
+
+  </div>
+</div>
