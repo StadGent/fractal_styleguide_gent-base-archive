@@ -4,6 +4,6 @@
   "handle": "file",
   "context": {
     "label": "File",
-    "placeholder": "Placeholder text"
+    "placeholder": "Placeholder tekst"
   }
 }

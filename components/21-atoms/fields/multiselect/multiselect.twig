@@ -1,5 +1,5 @@
 <div class="form-item">
-    <label for="multiselect">{{ label }}</label>
+    <label for="multiselect">{{ label|default('Multiselect') }}</label>
     <select name="selectfield" multiple="multiple" id="multiselect">
     {% for option in options %}
       <option>{{ option.label }}</option>

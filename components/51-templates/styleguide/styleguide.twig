@@ -29,12 +29,182 @@
     </div>
 
     <div class="container">
+      <h2>Headings</h2>
       {% include '@h1' %}
       {% include '@h2' %}
       {% include '@h3' %}
       {% include '@h4' %}
       {% include '@h5' %}
       {% include '@h6' %}
+    </div>
+
+    <div class="container">
+      <h3>Small buttons</h3>
+      {% include '@button-sm--default' with { 'text': 'Button' } %}
+      {% include '@button-sm--inverse' with { "modifier": "btn--inverse", 'text': 'Button' } %}
+      {% include '@button-sm--highlighted' with { "modifier": "btn--highlighted", 'text': 'Button' } %}
+
+      <h3>Medium buttons</h3>
+      {% include '@button-md--default' with { 'text': 'Button' } %}
+      {% include '@button-md--inverse' with { "modifier": "btn--inverse", 'text': 'Button' } %}
+      {% include '@button-md--highlighted' with { "modifier": "btn--highlighted", 'text': 'Button' } %}
+
+      <h3>Large buttons</h3>
+      {% include '@button-lg--default' with { 'text': 'Button' } %}
+      {% include '@button-lg--inverse' with { "modifier": "btn--inverse", 'text': 'Button' } %}
+      {% include '@button-lg--highlighted' with { "modifier": "btn--highlighted", 'text': 'Button' } %}
+    </div>
+
+    <div class="container">
+      <h2>Images</h2>
+
+      <h3>Default image</h3>
+      {% include '@image' %}
+
+      <h3>Image without styling</h3>
+      {% include '@image-no-styling' %}
+
+      <h3>Image as a circle (only usable with square images)</h3>
+      {% include '@image-circle' %}
+    </div>
+
+    <div class="container">
+      <h2>Stad Gent Icons</h2>
+      {% for unicode, icon in icons %}
+          <p><i class="icon-{{ icon }}"></i> .icon-{{ icon }}</p>
+      {% endfor %}
+    </div>
+
+    <div class="container">
+      <h2>Form fields</h2>
+      {% include '@textfield' %}
+      {% include '@password' %}
+      {% include '@date' %}
+      {% include '@datetime' %}
+      {% include '@email' %}
+      {% include '@file' %}
+      {% include '@textarea' %}
+      {% include '@checkbox' %}
+      {% include '@radio' %}
+      {% include '@select'
+        with {
+          "options": [
+            {
+              "label": "Option 1"
+            },
+            {
+              "label": "Option 2"
+            },
+            {
+              "optgroup": true,
+              "label": "Option group",
+              "optgroupoptions": [
+                {
+                  "label": "Option 3"
+                },
+                {
+                  "label": "Option 4"
+                }
+              ]
+            }
+          ]
+        }
+      %}
+      {% include '@multiselect'
+        with {
+          "options": [
+            {
+              "label": "Option 1"
+            },
+            {
+              "label": "Option 2"
+            },
+            {
+              "label": "Option 3"
+            },
+            {
+              "label": "Option 4"
+            }
+          ]
+        }
+      %}
+    </div>
+
+    <div class="container">
+    <h2>Grid usage</h2>
+      <div class="row show-grid">
+          <div class="col-mobile-12">.col-mobile-12</div>
+      </div>
+      <div class="row show-grid">
+          <div class="col-mobile-12 col-tablet-3 col-desktop-9">.col-mobile-12 .col-tablet-3 .col-desktop-9</div>
+          <div class="col-mobile-12 col-tablet-9 col-desktop-3">.col-mobile-12 .col-tablet-9 .col-desktop-3</div>
+      </div>
+      <div class="row show-grid">
+          <div class="col-mobile-12 col-tablet-3 col-desktop-push-9">.col-mobile-12 .col-tablet-3 .col-desktop-push-9</div>
+          <div class="col-mobile-12 col-tablet-9 col-desktop-pull-3">.col-mobile-12 .col-tablet-9 .col-desktop-pull-3</div>
+      </div>
+      <div class="row show-grid">
+          <div class="col-mobile-6 col-mobile-offset-3">.col-mobile-offset-3 .col-mobile-6</div>
+      </div>
+      <div class="row show-grid">
+          <div class="col-mobile-6">
+              <div class="row show-grid">
+                  <div class="col-mobile-6">.col-mobile-6</div>
+                  <div class="col-mobile-6">.col-mobile-6</div>
+              </div>
+          </div>
+          <div class="col-mobile-6">.col-mobile-6</div>
+      </div>
+      <div class="row show-grid">
+          <div class="col-mobile-12 hidden-desktop">
+              .hidden-desktop
+          </div>
+          <div class="col-mobile-12 hidden-tablet">
+              .hidden-tablet
+          </div>
+          <div class="col-mobile-12 hidden-mobile">
+              .hidden-mobile
+          </div>
+          <div class="col-mobile-12 visible-desktop">
+              .visible-desktop
+          </div>
+          <div class="col-mobile-12 visible-tablet">
+              .visible-tablet
+          </div>
+          <div class="col-mobile-12 visible-mobile">
+              .visible-mobile
+          </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2>Disclaimer block</h2>
+      {% include '@disclaimer-block' %}
+    </div>
+
+    <div class="container">
+      <h2>Disclaimer block</h2>
+      {% include '@post-address-block' %}
+    </div>
+
+    <div class="container">
+      <h2>Disclaimer block</h2>
+      {% include '@social-media-block' %}
+    </div>
+
+    <div class="container">
+      <h2>Disclaimer block</h2>
+      {% include '@header' %}
+    </div>
+
+    <div class="container">
+      <h2>Disclaimer block</h2>
+      {% include '@breadcrumbs' %}
+    </div>
+
+    <div class="container">
+      <h2>Disclaimer block</h2>
+      {% include '@search' %}
     </div>
 
   </div>

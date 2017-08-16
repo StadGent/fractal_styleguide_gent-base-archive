@@ -5,7 +5,7 @@
   "context": {
     "label": "Textfield",
     "label_optional": "Optioneel",
-    "placeholder": "Placeholder text",
+    "placeholder": "Placeholder tekst",
     "description": "Dit is een leuke beschrijving bij het veld."
   }
 }

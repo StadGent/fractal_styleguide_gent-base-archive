@@ -1,9 +1,7 @@
 {
-  "title": "Buttons",
+  "title": "Breadcrumbs",
   "status": "wip",
-  "handle": "buttons",
-  "preview": "@preview",
-  "order": 3,
+  "handle": "breadcrumbs",
   "context": {
     "items": [
       "<a href='#'>Stad.gent</a>",
@@ -11,7 +9,6 @@
       "<span>Overview</span>",
       "<span>Overview</span>",
       "<span>Page title</span>"
-    ],
-    "text": "Button"
+    ]
   }
 }

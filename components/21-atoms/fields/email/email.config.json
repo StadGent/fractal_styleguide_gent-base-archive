@@ -4,6 +4,6 @@
   "handle": "email",
   "context": {
     "label": "Email",
-    "placeholder": "Placeholder text"
+    "placeholder": "Placeholder tekst"
   }
 }

@@ -1,8 +1,9 @@
 {
-  "title": "Buttons",
+  "title": "Image styles",
   "status": "wip",
-  "handle": "buttons",
-  "order": 3,
+  "handle": "image-styles",
+  "preview": "@preview",
+  "order": 4,
   "context": {
     "items": [
       "<a href='#'>Stad.gent</a>",

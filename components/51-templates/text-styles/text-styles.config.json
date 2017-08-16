@@ -2,6 +2,7 @@
   "title": "Text styles",
   "status": "wip",
   "handle": "text-styles",
+  "preview": "@preview",
   "order": 2,
   "context": {
     "items": [

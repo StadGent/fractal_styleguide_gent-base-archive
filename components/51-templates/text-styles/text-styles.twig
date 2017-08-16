@@ -1,16 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Preview Layout</title>
-    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,400italic" rel="stylesheet" type="text/css" />
-    <link media="all" rel="stylesheet" href="{{ '/css/main.css' | path }}">
-    <link media="all" rel="stylesheet" href="{{ '/css/styleguide.css'| path }}">
-    <meta name="MobileOptimized" content="320">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-
 {% include '@header' %}
 {% include '@breadcrumbs' %}
 
@@ -49,8 +36,9 @@
       %}
 
       <h3>list without styling</h3>
-      {% include '@list-no-styling'
+      {% include '@list'
         with {
+          "class": "no-style",
           "items": [
             "item 1",
             "<i class='icon-twitter'></i> item 2",
@@ -61,8 +49,9 @@
       %}
 
       <h3>Normal list</h3>
-      {% include '@list-links'
+      {% include '@list'
         with {
+          "class": "links",
           "items": [
             "<a href='#'>item 1</a>",
             "<a href='#'>item 2</a>",
@@ -76,6 +65,3 @@
 
   </div>
 </div>
-
-</body>
-</html>

@@ -1,0 +1,34 @@
+{
+  "title": "Section",
+  "status": "ready",
+  "handle": "section-basic",
+  "context": {
+    "modifier": "section--default"
+  },
+  "variants": [
+    {
+      "name": "Inverse",
+      "context": {
+        "modifier": "section--inverse"
+      }
+    },
+    {
+      "name": "Highlighted",
+      "context": {
+        "modifier": "section--highlighted"
+      }
+    },
+    {
+      "name": "Accent",
+      "context": {
+        "modifier": "section--accent"
+      }
+    },
+    {
+      "name": "Wrapper",
+      "context": {
+        "modifier": "section--wrapper"
+      }
+    }
+  ]
+}
