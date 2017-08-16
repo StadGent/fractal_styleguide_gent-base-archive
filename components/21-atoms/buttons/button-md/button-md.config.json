@@ -1,0 +1,30 @@
+{
+  "title": "Button medium",
+  "name": "Button medium",
+  "status": "ready",
+  "handle": "button-md",
+  "order": 2,
+  "context": {
+    "text": "Button"
+  },
+  "variants": [
+    {
+      "name": "default",
+      "context": {
+        "modifier": ""
+      }
+    },
+    {
+      "name": "inverse",
+      "context": {
+        "modifier": "btn--inverse"
+      }
+    },
+    {
+      "name": "highlighted",
+      "context": {
+        "modifier": "btn--highlighted"
+      }
+    }
+  ]
+}

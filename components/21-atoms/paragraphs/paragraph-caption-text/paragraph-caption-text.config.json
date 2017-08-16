@@ -1,0 +1,9 @@
+{
+  "title": "Paragraph caption text",
+  "status": "ready",
+  "handle": "paragraph-caption-text",
+  "order": 3,
+  "context": {
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam fringilla turpis et mauris lacinia, id sodales turpis consectetur. Vestibulum quis sem lectus. Sed feugiat justo risus, eget porta est pellentesque in. Morbi et enim ut dui ultricies rhoncus. Aliquam maximus varius metus, non convallis libero blandit in. In quis libero at urna accumsan aliquet eu eu ipsum. Nunc tempus neque et lorem tristique, eu accumsan dolor hendrerit. Donec elementum, diam vel elementum vestibulum, mauris mi posuere dolor, at pretium elit est vitae erat. Aliquam et justo id erat cursus finibus. Maecenas congue congue efficitur. Nullam non auctor quam. Fusce sit amet magna lorem. Integer ut tincidunt tortor, at eleifend ligula."
+  }
+}

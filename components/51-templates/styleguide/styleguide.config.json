@@ -2,6 +2,7 @@
   "title": "Styleguide",
   "status": "wip",
   "handle": "styleguide",
+  "order": 1,
   "context": {
     "colors": {
       "darkest-blue": "#2C3F48",

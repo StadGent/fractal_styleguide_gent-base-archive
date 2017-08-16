@@ -3,8 +3,7 @@
   "version": "1.1.5",
   "description": "Styleguide Stad.Gent",
   "devDependencies": {
-    "@frctl/fractal": "^1.0",
-    "@frctl/twig": "git+https://github.com/tnottu/fractal-twig-adapter.git",
+    "@frctl/fractal": "^1.1.x",
     "event-stream": "^3.3.4",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
@@ -32,5 +31,7 @@
     "Gert-Jan Meire"
   ],
   "license": "ISC",
-  "dependencies": {}
+  "dependencies": {
+    "@frctl/twig": "git+https://github.com/tnottu/fractal-twig-adapter.git"
+  }
 }

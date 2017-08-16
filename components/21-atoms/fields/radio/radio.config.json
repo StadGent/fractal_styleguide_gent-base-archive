@@ -1,0 +1,8 @@
+{
+  "title": "Radio",
+  "status": "ready",
+  "handle": "radio",
+  "context": {
+    "label": "Radio"
+  }
+}

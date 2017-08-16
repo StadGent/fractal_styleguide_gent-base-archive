@@ -1,0 +1,11 @@
+  {
+    "title": "List without styling",
+    "status": "wip",
+    "handle": "list-no-styling",
+    "context": {
+      "items": [
+        "<i class='icon-twitter'></i> item 1",
+        "item 2"
+      ]
+    }
+  }

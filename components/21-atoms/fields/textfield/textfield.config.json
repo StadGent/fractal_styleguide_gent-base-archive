@@ -1,0 +1,11 @@
+{
+  "title": "Textfield",
+  "status": "ready",
+  "handle": "textfield",
+  "context": {
+    "label": "Textfield",
+    "label_optional": "Optioneel",
+    "placeholder": "Placeholder text",
+    "description": "Dit is een leuke beschrijving bij het veld."
+  }
+}

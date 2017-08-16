@@ -1,0 +1,11 @@
+{
+  "title": "List with links",
+  "status": "wip",
+  "handle": "list-links",
+  "context": {
+    "items": [
+      "<a href='#'>item 1</a>",
+      "<a href='#'>item 2</a>"
+    ]
+  }
+}
