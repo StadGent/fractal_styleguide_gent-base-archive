@@ -2,6 +2,7 @@
   "title": "Buttons",
   "status": "ready",
   "default": "default",
+  "order": "4",
   "context": {
     "text": "Button"
   },

@@ -1,7 +1,7 @@
 {
-  "title": "Colors",
-  "status": "ready",
-  "handle": "colors",
+  "title": "Styleguide",
+  "status": "wip",
+  "handle": "styleguide",
   "context": {
     "colors": {
       "darkest-blue": "#2C3F48",
@@ -18,8 +18,20 @@
       "white": "#FFFFFF",
       "color-white-blue": "#c2e2f0",
       "color-orange-light": "#ffa927",
-      "color-orange-lighter": "#ffbd5a",
-      "color-medium-lighter-gray": "#d5dadd"
-    }
+      "color-orange-lighter": "#ffbd5a"
+    },
+    "items": [
+      "<a href='#'>Stad.gent</a>",
+      "<a href='#'>Overview</a>",
+      "<span>Overview</span>",
+      "<span>Overview</span>",
+      "<span>Page title</span>"
+    ],
+    "h1_text": "heading 1",
+    "h2_text": "heading 2",
+    "h3_text": "heading 3",
+    "h4_text": "heading 4",
+    "h5_text": "heading 5",
+    "h6_text": "heading 6"
   }
 }
