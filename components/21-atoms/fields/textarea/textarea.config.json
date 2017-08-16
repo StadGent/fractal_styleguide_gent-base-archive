@@ -1,0 +1,8 @@
+{
+  "title": "Textarea",
+  "status": "ready",
+  "handle": "textarea",
+  "context": {
+    "label": "Textarea"
+  }
+}

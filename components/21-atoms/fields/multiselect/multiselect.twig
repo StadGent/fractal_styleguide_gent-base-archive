@@ -1,0 +1,8 @@
+<div class="form-item">
+    <label for="multiselect">{{ label }}</label>
+    <select name="selectfield" multiple="multiple" id="multiselect">
+    {% for option in options %}
+      <option>{{ option.label }}</option>
+    {% endfor %}
+    </select>
+</div>

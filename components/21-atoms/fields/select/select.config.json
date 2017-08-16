@@ -1,0 +1,28 @@
+{
+  "title": "Select",
+  "status": "ready",
+  "handle": "select",
+  "context": {
+    "label": "Select",
+    "options": [
+      {
+        "label": "Option 1"
+      },
+      {
+        "label": "Option 2"
+      },
+      {
+        "optgroup": true,
+        "label": "Option group",
+        "optgroupoptions": [
+          {
+            "label": "Option 3"
+          },
+          {
+            "label": "Option 4"
+          }
+        ]
+      }
+    ]
+  }
+}

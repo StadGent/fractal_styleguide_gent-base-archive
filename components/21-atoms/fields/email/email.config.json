@@ -1,0 +1,9 @@
+{
+  "title": "Email",
+  "status": "ready",
+  "handle": "email",
+  "context": {
+    "label": "Email",
+    "placeholder": "Placeholder text"
+  }
+}

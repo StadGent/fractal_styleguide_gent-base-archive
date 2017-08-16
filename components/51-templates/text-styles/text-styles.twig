@@ -20,12 +20,57 @@
 
     <div class="container">
       <h2>Paragraphs</h2>
-      {% include '@paragraph--default' %}
-      {% include '@paragraph--small-text' %}
-      {% include '@paragraph--caption-text' %}
-      {% include '@paragraph--centered-text' %}
-      {% include '@paragraph--left-text' %}
-      {% include '@paragraph--right-text' %}
+      <h3>Normal paragraph</h3>
+      {% include '@paragraph' %}
+      <h3>Small text paragraph</h3>
+      {% include '@paragraph-small-text' %}
+      <h3>Caption text paragraph</h3>
+      {% include '@paragraph-caption-text' %}
+      <h3>Centered paragraph</h3>
+      {% include '@paragraph-centered-text' %}
+      <h3>Left aligned paragraph</h3>
+      {% include '@paragraph-left-text' %}
+      <h3>Right aligned paragraph</h3>
+      {% include '@paragraph-right-text' %}
+    </div>
+
+    <div class="container">
+      <h2>Lists</h2>
+      <h3>Normal list</h3>
+      {% include '@list'
+        with {
+          "items": [
+            "item 1",
+            "item 2",
+            "item 3",
+            "item 4"
+          ]
+        }
+      %}
+
+      <h3>list without styling</h3>
+      {% include '@list-no-styling'
+        with {
+          "items": [
+            "item 1",
+            "<i class='icon-twitter'></i> item 2",
+            "item 3",
+            "item 4"
+          ]
+        }
+      %}
+
+      <h3>Normal list</h3>
+      {% include '@list-links'
+        with {
+          "items": [
+            "<a href='#'>item 1</a>",
+            "<a href='#'>item 2</a>",
+            "<a href='#'>item 3</a>",
+            "<a href='#'>item 4</a>"
+          ]
+        }
+      %}
     </div>
 
 

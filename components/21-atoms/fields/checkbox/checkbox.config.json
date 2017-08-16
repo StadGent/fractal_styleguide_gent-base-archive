@@ -1,0 +1,8 @@
+{
+  "title": "Checkbox§",
+  "status": "ready",
+  "handle": "checkbox",
+  "context": {
+    "label": "Checkbox"
+  }
+}

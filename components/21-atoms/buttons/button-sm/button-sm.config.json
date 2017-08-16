@@ -1,0 +1,30 @@
+{
+  "title": "Button small",
+  "name": "Button small",
+  "status": "ready",
+  "handle": "button-sm",
+  "order": 1,
+  "context": {
+    "text": "Button"
+  },
+  "variants": [
+    {
+      "name": "default",
+      "context": {
+        "modifier": ""
+      }
+    },
+    {
+      "name": "inverse",
+      "context": {
+        "modifier": "btn--inverse"
+      }
+    },
+    {
+      "name": "highlighted",
+      "context": {
+        "modifier": "btn--highlighted"
+      }
+    }
+  ]
+}
