@@ -1,0 +1,65 @@
+// Styleguide general settings.
+$styleguide-dir: '../styleguide' !default;
+
+// Styleguide colors.
+$color-darkest-blue: #2c3f48 !default;
+$color-dark-blue: #00597a !default;
+$color-blue: #007db3 !default;
+$color-light-blue: #d0dde0 !default;
+$color-lightest-blue: #ecf5f7 !default;
+$color-darkest-gray: #404546 !default;
+$color-dark-gray: #595f60 !default;
+$color-gray: #9da8af !default;
+$color-light-gray: #e2e2e2 !default;
+$color-lightest-gray: #f4f4f4 !default;
+$color-orange: #f39200 !default;
+$color-white: #fff !default;
+
+// Extra colors (currently used on stad.gent drupal 7 => to be standardized)
+// @TODO: Refactor?
+$color-white-blue: #c2e2f0 !default;
+$color-orange-light: #ffa927 !default;
+$color-orange-lighter: #ffbd5a !default;
+
+// Breakpoints for fonts.
+$bp-tablet-fonts: 640px !default;
+$bp-desktop-fonts: 1360px !default;
+
+// Visual breakpoints.
+$bp-tablet: 640px !default;
+$bp-desktop: 960px !default;
+
+// Font settings.
+$default-font-family: 'Source Sans Pro', arial, sans-serif !default;
+$default-font-weight: 400 !default;
+$default-font-size: 16px !default; //px
+$default-line-height: 1.4em !default; //em
+$primary-font-family: $default-font-family !default;
+$primary-font-weight: $default-font-weight !default;
+$primary-font-size: $default-font-size !default; //px
+$primary-line-height: $default-line-height !default; //em
+$secondary-font-family: 'expresswayextrabold', sans-serif !default;
+
+$bg-outside-container: $color-lightest-gray !default;
+$border-outside-container: 1px solid $color-light-gray !default;
+$default-text-color: $color-dark-gray !default;
+
+// Grid settings
+$grid-columns: 12 !default;
+$gutter-width: 20px !default;
+
+// Max content width.
+$bp-max-content: 1440px !default;
+
+// Max viewport.
+$bp-container: 1600px !default;
+
+// Border radius.
+$radius-0: 0 !default;
+$radius-1: 8px !default;
+$radius-2: 10px !default;
+$radius-3: 18px !default;
+$radius-4: 30px !default;
+
+// Breadcrumb settings.
+$bg-hover-breadcrumb: $color-lightest-blue !default;
