@@ -9,8 +9,8 @@ When installing this package, you will get a directory structure like this.
 ├── LICENSE
 ├── README.md
 ├── build
-│   ├── sass
 │   └── styleguide
+│       └── sass
 └── package.json
 ```
 The build directory contains all sass source files and all asset files needed for the styleguide.
