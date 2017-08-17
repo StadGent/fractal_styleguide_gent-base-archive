@@ -1,13 +1,8 @@
-@import '00-mixins/**/*';
-@import '01-global-settings/**/*';
-@import '01-global/**/*';
-@import '10-base-settings/**/*';
+@import '00-settings/reset';
+@import '00-settings/vars';
+@import '01-mixins/**/*';
 @import '11-base/**/*';
-@import '20-atoms-settings/**/*';
 @import '21-atoms/**/*';
-@import '30-molecules-settings/**/*';
 @import '31-molecules/**/*';
-@import '40-organisms-settings/**/*';
 @import '41-organisms/**/*';
-@import '50-templates-settings/**/*';
-@import '51-templates/**/*';
+@import '51-tempates/**/*';
