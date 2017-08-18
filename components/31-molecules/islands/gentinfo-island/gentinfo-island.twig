@@ -2,20 +2,16 @@
   <div class="col-tablet-3">
     <div class="island dg-default-block section--accent">
       {% include '@h2'with { 'h2_text': 'Gentinfo' } %}
-      <ul class="no-style">
-        <li>
-          <a class="telephone" href="tel:+3288888888">08 888 88 88 - ma -za van 8-19u</a>
-        </li>
-        <li>
-          <a class="e-mail" href="mailto:gentinfo@stad.gent">gentinfo@stad.gent</a>
-        </li>
-        <li>
-          <a class="link" href="">Contactformulier</a>
-        </li>
-        <li>
-          <a class="btn btn--medium btn--inverse textballoon">Online Chat</a>
-        </li>
-      </ul>
+      {% include '@list'with {
+        'h2_text': 'Gentinfo',
+        'modifier': 'no-style',
+        'items': [
+          '<a class="telephone" href="tel:+3288888888">08 888 88 88 - ma -za van 8-19u</a>',
+          '<a class="e-mail" href="mailto:gentinfo@stad.gent">gentinfo@stad.gent</a>',
+          '<a class="link" href="">Contactformulier</a>',
+          '<a class="btn btn--medium btn--inverse textballoon">Online Chat</a>'
+        ]
+      } %}
     </div>
   </div>
 </div>
