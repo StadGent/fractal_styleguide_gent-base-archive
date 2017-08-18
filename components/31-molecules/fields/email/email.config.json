@@ -1,0 +1,10 @@
+{
+  "title": "Email",
+  "status": "ready",
+  "handle": "email",
+  "context": {
+    "label": "Label email",
+    "placeholder": "Placeholder tekst",
+    "description": "Beschrijving email"
+  }
+}

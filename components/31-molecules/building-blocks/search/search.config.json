@@ -1,0 +1,10 @@
+{
+  "title": "Search",
+  "status": "ready",
+  "handle": "search",
+  "context": {
+    "placeholder": "Placeholder search",
+    "modifier": "inline",
+    "text": "Search"
+  }
+}

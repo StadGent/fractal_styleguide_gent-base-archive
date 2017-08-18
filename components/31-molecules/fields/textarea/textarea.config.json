@@ -1,0 +1,11 @@
+{
+  "title": "Textarea",
+  "status": "ready",
+  "handle": "textarea",
+  "order": 3,
+  "context": {
+    "label": "Label textarea",
+    "placeholder": "Textarea placeholder",
+    "description": "Beschrijving textarea"
+  }
+}

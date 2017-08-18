@@ -9,21 +9,9 @@
   },
   "variants": [
     {
-      "name": "default",
+      "name": "inline",
       "context": {
-        "modifier": ""
-      }
-    },
-    {
-      "name": "inverse",
-      "context": {
-        "modifier": "btn--inverse"
-      }
-    },
-    {
-      "name": "highlighted",
-      "context": {
-        "modifier": "btn--highlighted"
+        "modifier": "btn--inline"
       }
     }
   ]

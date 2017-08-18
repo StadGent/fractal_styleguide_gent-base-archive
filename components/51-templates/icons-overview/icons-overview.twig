@@ -1,14 +1,8 @@
-{% include '@header' %} {% include '@breadcrumbs' %}
+<h1>Icons</h1>
 
-<div class="container section--default">
-  <div class="content-container {{ section }}">
-    <h1>Icons</h1>
-
-    <div class="container">
-      <h2>Stad Gent Icons</h2>
-      {% for unicode, icon in icons %}
-          <p><i class="icon-{{ icon }}"></i> .icon-{{ icon }}</p>
-      {% endfor %}
-    </div>
-  </div>
+<div class="preview-inner-container">
+  <h2>Stad Gent Icons</h2>
+  {% for unicode, icon in icons %}
+      <p><i class="icon-{{ icon }}"></i> .icon-{{ icon }}</p>
+  {% endfor %}
 </div>

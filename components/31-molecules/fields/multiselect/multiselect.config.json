@@ -1,0 +1,23 @@
+{
+  "title": "Multiselect",
+  "status": "ready",
+  "handle": "multiselect",
+  "context": {
+    "label": "Label multiselect",
+    "description": "Beschrijving multiselect",
+    "options": [
+      {
+        "label": "Option 1"
+      },
+      {
+        "label": "Option 2"
+      },
+      {
+        "label": "Option 3"
+      },
+      {
+        "label": "Option 4"
+      }
+    ]
+  }
+}

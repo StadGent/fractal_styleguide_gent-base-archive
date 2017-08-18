@@ -1,0 +1,10 @@
+{
+  "title": "Date",
+  "status": "ready",
+  "handle": "date",
+  "context": {
+    "label": "Label date",
+    "placeholder": "Placeholder text",
+    "description": "Beschrijving date."
+  }
+}

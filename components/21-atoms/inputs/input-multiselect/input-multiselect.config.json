@@ -1,0 +1,22 @@
+{
+  "title": "Input Multiselect",
+  "status": "ready",
+  "handle": "input-multiselect",
+  "context": {
+    "label": "Multiselect",
+    "options": [
+      {
+        "label": "Option 1"
+      },
+      {
+        "label": "Option 2"
+      },
+      {
+        "label": "Option 3"
+      },
+      {
+        "label": "Option 4"
+      }
+    ]
+  }
+}

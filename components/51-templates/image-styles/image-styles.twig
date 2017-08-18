@@ -1,21 +1,16 @@
-{% include '@header' %}
-{% include '@breadcrumbs' %}
+<h1>Image styles</h1>
 
-<div class="container section--default">
-  <div class="content-container {{ section }}">
-    <h1>Image styles</h1>
+<div class="preview-inner-container">
+  <h3>Default image</h3>
+  {% include '@image' with { 'src': 'https://beeldbank.stad.gent/index.php/embed/fcff26dc04c440ba9dd94f03c4624d95fc4f48995bbb4c13a783974a462709acf64b2beobytnw5u1znubxpb38f658hue' } %}
+</div>
 
-    <div class="container">
-      <h2>Images</h2>
-      <h3>Default image</h3>
-      {% include '@image' %}
+<div class="preview-inner-container">
+  <h3>Image without styling</h3>
+  {% include '@image' with { 'src': 'https://beeldbank.stad.gent/index.php/embed/87f7244ef93344b4a48085cc1425d8cdcfc121b79c3941738799eaa27b0944afaa658dd10fc94d5a8b415749a0e48635', 'modifier': 'no-style' } %}
+</div>
 
-      <h3>Image without styling</h3>
-      {% include '@image-no-styling' %}
-
-      <h3>Image as a circle (only usable with square images)</h3>
-      {% include '@image-circle' %}
-    </div>
-
-  </div>
+<div class="preview-inner-container">
+  <h3>Image as a circle (only usable with square images)</h3>
+  {% include '@image' with { 'src': 'https://beeldbank.stad.gent/index.php/embed/822966366b3a448ea0e719e98480a06826adcea0856a4c4abcdbdf0c877465e18789b500d4cf4f619860611fe083cf4c?w=400&h=400', 'modifier': 'circle' } %}
 </div>

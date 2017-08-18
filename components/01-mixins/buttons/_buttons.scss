@@ -29,7 +29,30 @@
   width: auto;
 }
 
-@mixin btn-scheme($text-color, $background-color, $border, $text-color-hover: $text-color, $background-color-hover: $background-color, $border-hover: $border, $text-color-focus: $text-color, $background-color-focus: $background-color, $border-focus: $border) {
+//
+//
+// @param $text-color
+// @param $background-color
+// @param $border
+// @param $text-color-hover [$text-color]
+// @param $background-color-hover [$background-color]
+// @param $border-hover [$border]
+// @param $text-color-focus [$text-color]
+// @param $background-color-focus [$background-color]
+// @param $border-focus [$border]
+//
+//
+@mixin btn-scheme(
+  $text-color,
+  $background-color,
+  $border,
+  $text-color-hover: $text-color,
+  $background-color-hover: $background-color,
+  $border-hover: $border,
+  $text-color-focus: $text-color,
+  $background-color-focus: $background-color,
+  $border-focus: $border
+) {
   border: $border;
   background: $background-color;
   color: $text-color;

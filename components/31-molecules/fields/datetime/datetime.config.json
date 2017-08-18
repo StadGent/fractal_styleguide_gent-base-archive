@@ -1,0 +1,10 @@
+{
+  "title": "Datetime",
+  "status": "ready",
+  "handle": "datetime",
+  "context": {
+    "label": "Label datetime",
+    "placeholder": "Placeholder datetime",
+    "description": "Beschrijving datetime"
+  }
+}
