@@ -1,15 +1,6 @@
 {
   "title": "Section overview",
-  "status": "wip",
+  "status": "ready",
   "order": 10,
-  "preview": "@preview",
-  "context": {
-    "items": [
-      "<a href='#'>Stad.gent</a>",
-      "<a href='#'>Overview</a>",
-      "<span>Overview</span>",
-      "<span>Overview</span>",
-      "<span>Page title</span>"
-    ]
-  }
+  "preview": "@preview"
 }
