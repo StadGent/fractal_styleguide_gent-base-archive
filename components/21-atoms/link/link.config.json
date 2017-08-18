@@ -1,0 +1,9 @@
+{
+  "title": "Link",
+  "name": "Link",
+  "handle": "link",
+  "context": {
+    "link": "javascript:(void);",
+    "text": "Link text"
+  }
+}

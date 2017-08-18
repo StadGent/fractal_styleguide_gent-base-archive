@@ -1,9 +1,0 @@
-{
-  "title": "File",
-  "status": "ready",
-  "handle": "file",
-  "context": {
-    "label": "File",
-    "placeholder": "Placeholder tekst"
-  }
-}

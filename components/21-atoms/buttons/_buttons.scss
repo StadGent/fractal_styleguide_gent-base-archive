@@ -27,31 +27,6 @@ button {
   @include btn-m;
 }
 
-// Button sizes
-.small.btn,
-.btn--small,
-%btn--small,
-a.btn--small,
-input[type='submit'].btn--small {
-  @include btn-s;
-}
-
-.medium.btn,
-.btn--medium,
-%btn--medium,
-a.btn--medium,
-input[type='submit'].btn--medium {
-  @include btn-m;
-}
-
-.large.btn,
-.btn--large,
-%btn--large,
-a.btn--large,
-input[type='submit'].btn--large {
-  @include btn-l;
-}
-
 .inline.btn,
 .btn--inline,
 %btn--inline,
@@ -68,14 +43,15 @@ a.btn-default,
   @include btn-scheme($color-white, $color-blue, none, $background-color-hover: lighten($color-blue, 5));
 }
 
-a.btn--inverse,
-.btn--inverse,
-%btn--inverse {
-  @include btn-scheme($color-darkest-blue, $color-white, none);
-}
+// @TODO not necessary anymore?
+//a.btn--inverse,
+//.btn--inverse,
+//%btn--inverse {
+//@include btn-scheme($color-darkest-blue, $color-white, none);
+//}
 
-a.btn--highlighted,
-.btn--highlighted,
-%btn--highlighted {
-  @include btn-scheme($color-white, $color-orange, none, $background-color-hover: darken($color-orange, 5), $background-color-focus: darken($color-orange, 5));
-}
+//a.btn--highlighted,
+//.btn--highlighted,
+//%btn--highlighted {
+//@include btn-scheme($color-white, $color-orange, none, $background-color-hover: darken($color-orange, 5), $background-color-focus: darken($color-orange, 5));
+//}

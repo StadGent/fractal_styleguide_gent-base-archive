@@ -1,0 +1,10 @@
+{
+  "title": "File",
+  "status": "ready",
+  "handle": "file",
+  "context": {
+    "label": "Label file",
+    "placeholder": "Placeholder tekst",
+    "description": "Beschrijving file upload"
+  }
+}

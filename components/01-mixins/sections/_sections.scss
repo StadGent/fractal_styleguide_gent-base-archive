@@ -1,12 +1,63 @@
-@mixin new-section(
-  $bg-color, $text-color, $title-color: $text-color, $caption-color: $text-color,
-  $link-color: $text-color, $link-color-hover: $link-color, $link-color-focus: $link-color-hover, $link-color-visited: $link-color,
-  $field-text-color: $text-color, $field-placeholder-color: $field-text-color, $field-bg-color: $bg-color, $field-border-color: $field-bg-color
-) {
-  @include clearfix();
-  background-color: $bg-color;
-  color: $text-color;
+//
+//
+// @param $section-bg-color,
+// @param $section-text-color,
 
+// @param $section-btn-border,
+// @param $section-btn-bg-color,
+// @param $section-btn-text-color,
+
+// @param $section-btn-bg-color-hover,
+// @param $section-btn-text-color-hover,
+
+// @param $section-caption-color           [$section-text-color},
+
+// @param $section-title-color             [$section-text-color},
+
+// @param $section-link-color              [$section-text-color},
+// @param $section-link-color-hover        [$section-link-color},
+// @param $section-link-color-focus        [$section-link-color-hover},
+// @param $section-link-color-visited      [$section-link-color},
+
+// @param $section-field-text-color        [$section-text-color},
+// @param $section-field-placeholder-color [$section-field-text-color},
+// @param $section-field-bg-color          [$section-bg-color},
+// @param $section-field-border-color      [$section-field-bg-color]
+//
+//
+@mixin new-section(
+  $section-bg-color,
+  $section-text-color,
+
+  $section-btn-border,
+  $section-btn-bg-color,
+  $section-btn-text-color,
+
+  $section-btn-bg-color-hover,
+  $section-btn-text-color-hover,
+
+  $section-caption-color: $section-text-color,
+
+  $section-title-color: $section-text-color,
+
+  $section-link-color: $section-text-color,
+  $section-link-color-hover: $section-link-color,
+  $section-link-color-focus: $section-link-color-hover,
+  $section-link-color-visited: $section-link-color,
+
+  $section-field-text-color: $section-text-color,
+  $section-field-placeholder-color: $section-field-text-color,
+  $section-field-bg-color: $section-bg-color,
+  $section-field-border-color: $section-field-bg-color
+) {
+  // General clearfix.
+  @include clearfix();
+
+  // Section container settings.
+  background-color: $section-bg-color;
+  color: $section-text-color;
+
+  // Headings.
   h1,
   .h1,
   h2,
@@ -21,27 +72,29 @@
   .h6,
   th,
   th > * {
-    color: $title-color;
+    color: $section-title-color;
   }
 
+  // Captions & description.
   .caption,
   .description {
-    color: $caption-color;
+    color: $section-caption-color;
   }
 
+  // Links.
   a {
-    color: $link-color;
+    color: $section-link-color;
 
     &:visited {
-      color: $link-color-visited;
+      color: $section-link-color-visited;
     }
 
     &:hover {
-      color: $link-color-hover;
+      color: $section-link-color-hover;
     }
 
     &:focus {
-      color: $link-color-focus;
+      color: $section-link-color-focus;
     }
 
     &.btn {
@@ -49,14 +102,28 @@
     }
   }
 
+  // Labels
   label {
-    color: $text-color;
+    color: $section-text-color;
 
     .label-optional {
-      color: $caption-color;
+      color: $section-caption-color;
     }
   }
 
+  // Button styling.
+  .btn,
+  a.btn {
+    @include btn-scheme(
+      $section-btn-text-color,
+      $section-btn-bg-color,
+      $section-btn-border,
+      $section-btn-text-color-hover,
+      $section-btn-bg-color-hover
+  );
+  }
+
+  // Form input styling.
   input[type='text'],
   input[type='search'],
   input[type='password'],
@@ -68,12 +135,12 @@
   input[type='url'],
   textarea,
   select {
-    border-color: $field-border-color;
-    background: $field-bg-color;
-    color: $field-text-color;
+    border-color: $section-field-border-color;
+    background: $section-field-bg-color;
+    color: $section-field-text-color;
 
     &::placeholder {
-      color: $field-placeholder-color;
+      color: $section-field-placeholder-color;
     }
   }
 }

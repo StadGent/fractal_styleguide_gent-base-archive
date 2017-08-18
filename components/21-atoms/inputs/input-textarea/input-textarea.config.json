@@ -1,0 +1,8 @@
+{
+  "title": "Input textarea",
+  "status": "ready",
+  "handle": "input-textarea",
+  "context": {
+    "placeholder": "Placeholder input tekstarea"
+  }
+}

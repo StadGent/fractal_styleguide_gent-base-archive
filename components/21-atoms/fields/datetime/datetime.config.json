@@ -1,9 +1,0 @@
-{
-  "title": "Datetime",
-  "status": "ready",
-  "handle": "datetime",
-  "context": {
-    "label": "Datetime",
-    "placeholder": "Placeholder tekst"
-  }
-}

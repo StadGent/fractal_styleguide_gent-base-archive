@@ -1,0 +1,7 @@
+.large.btn,
+.btn--large,
+%btn--large,
+a.btn--large,
+input[type='submit'].btn--large {
+  @include btn-l;
+}

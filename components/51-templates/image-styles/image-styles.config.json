@@ -1,17 +1,7 @@
 {
   "title": "Image styles",
-  "status": "wip",
+  "status": "ready",
   "handle": "image-styles",
   "preview": "@preview",
-  "order": 4,
-  "context": {
-    "items": [
-      "<a href='#'>Stad.gent</a>",
-      "<a href='#'>Overview</a>",
-      "<span>Overview</span>",
-      "<span>Overview</span>",
-      "<span>Page title</span>"
-    ],
-    "text": "Button"
-  }
+  "order": 4
 }

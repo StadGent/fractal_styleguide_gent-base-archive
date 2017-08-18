@@ -1,0 +1,8 @@
+{
+  "title": "Input email",
+  "status": "ready",
+  "handle": "input-email",
+  "context": {
+    "placeholder": "Placeholder input email"
+  }
+}

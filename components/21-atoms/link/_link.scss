@@ -1,0 +1,19 @@
+a {
+  color: $color-blue;
+
+  &:visited {
+    color: $color-dark-blue;
+  }
+
+  &:hover {
+    color: $color-dark-blue;
+  }
+
+  &:focus {
+    color: $color-dark-blue;
+  }
+
+  &.btn {
+    color: $color-white;
+  }
+}
