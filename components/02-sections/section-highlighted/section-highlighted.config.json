@@ -1,5 +1,8 @@
 {
   "title": "Section highlighted",
   "status": "ready",
-  "handle": "section-highlighted"
+  "handle": "section-highlighted",
+  "context": {
+    "label_optional": "Optional"
+  }
 }

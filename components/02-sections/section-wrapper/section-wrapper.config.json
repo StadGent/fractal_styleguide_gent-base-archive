@@ -2,5 +2,8 @@
   "title": "Section wrapper",
   "status": "ready",
   "order": 3,
-  "handle": "section-wrapper"
+  "handle": "section-wrapper",
+  "context": {
+    "label_optional": "Optional"
+  }
 }

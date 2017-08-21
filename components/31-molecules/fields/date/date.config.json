@@ -4,6 +4,7 @@
   "handle": "date",
   "context": {
     "label": "Label date",
+    "label_optional": "Optional",
     "placeholder": "Placeholder text",
     "description": "Description date."
   }

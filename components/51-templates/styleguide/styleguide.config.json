@@ -5,6 +5,7 @@
   "order": 1,
   "preview": "@preview",
   "context": {
+    "label_optional": "Optional",
     "colors": {
       "darkest-blue": "#2C3F48",
       "dark-blue": "#00597A",

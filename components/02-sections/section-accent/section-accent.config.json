@@ -2,5 +2,8 @@
   "title": "Section accent",
   "status": "ready",
   "order": 2,
-  "handle": "section-accent"
+  "handle": "section-accent",
+  "context": {
+    "label_optional": "Optional"
+  }
 }

@@ -3,6 +3,7 @@
   "status": "ready",
   "handle": "radio",
   "context": {
-    "label": "Label radio"
+    "label": "Label radio",
+    "label_optional": "Optional"
   }
 }

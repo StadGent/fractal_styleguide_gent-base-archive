@@ -4,6 +4,7 @@
   "handle": "datetime",
   "context": {
     "label": "Label datetime",
+    "label_optional": "Optional",
     "placeholder": "Placeholder datetime",
     "description": "Description datetime"
   }

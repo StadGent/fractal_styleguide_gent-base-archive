@@ -4,6 +4,7 @@
   "handle": "multiselect",
   "context": {
     "label": "Label multiselect",
+    "label_optional": "Optional",
     "description": "Description multiselect",
     "options": [
       {

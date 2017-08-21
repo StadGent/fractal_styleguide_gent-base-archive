@@ -3,6 +3,7 @@
   "status": "ready",
   "handle": "checkbox",
   "context": {
-    "label": "Label checkbox"
+    "label": "Label checkbox",
+    "label_optional": "Optional"
   }
 }
