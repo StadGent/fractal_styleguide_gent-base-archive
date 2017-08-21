@@ -1,5 +1,6 @@
 {
   "title": "Section wrapper",
   "status": "ready",
+  "order": 3,
   "handle": "section-wrapper"
 }

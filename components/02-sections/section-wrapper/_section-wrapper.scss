@@ -1,0 +1,20 @@
+%section--wrapper,
+.section--wrapper {
+  &,
+  *[class^="section--"] & {
+    @include new-section(
+      $section-bg-color: $color-darkest-blue,
+      $section-text-color: $color-white,
+
+      $section-btn-border: none,
+      $section-btn-bg-color: $color-blue,
+      $section-btn-text-color: $color-white,
+
+      $section-btn-bg-color-hover: lighten($color-blue, 5),
+      $section-btn-text-color-hover: $color-white,
+
+      $section-field-bg-color: rgba(255, 255, 255, .2),
+      $section-field-border-color: transparent
+    );
+  }
+}

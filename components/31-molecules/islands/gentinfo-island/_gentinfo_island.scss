@@ -1,10 +1,16 @@
 .dg-default-block {
+  background: $color-blue;
+
   h2 {
     font-size: 1.94872rem;
   }
 
   li {
     padding: .2rem 0;
+  }
+
+  a {
+    color: $color-white;
   }
 
   .telephone {

@@ -1,5 +1,6 @@
 {
   "title": "Section accent",
   "status": "ready",
+  "order": 2,
   "handle": "section-accent"
 }

@@ -1,0 +1,23 @@
+%section--highlighted,
+.section--highlighted {
+  &,
+  *[class^="section--"] & {
+    @include new-section(
+      $section-bg-color: $color-orange,
+      $section-text-color: $color-darkest-gray,
+
+      $section-btn-border: none,
+      $section-btn-bg-color: $color-white,
+      $section-btn-text-color: $color-darkest-blue,
+
+      $section-btn-bg-color-hover: $color-white,
+      $section-btn-text-color-hover: $color-blue,
+
+      $section-title-color: $color-white,
+      $section-link-color: $color-white,
+
+      $section-field-text-color: $color-darkest-gray,
+      $section-field-bg-color: $color-white
+    );
+  }
+}
