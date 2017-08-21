@@ -1,3 +1,56 @@
+// Button display
+@mixin btn-inlineblock {
+  display: inline-block;
+  width: auto;
+}
+
+//
+//
+// @param $text-color
+// @param $background-color
+// @param $border
+// @param $text-color-hover [$text-color]
+// @param $background-color-hover [$background-color]
+// @param $border-hover [$border]
+// @param $text-color-focus [$text-color]
+// @param $background-color-focus [$background-color]
+// @param $border-focus [$border]
+//
+//
+@mixin btn-scheme(
+  $text-color,
+  $background-color,
+  $border,
+  $text-color-hover: $text-color,
+  $background-color-hover: $background-color,
+  $border-hover: $border,
+  $text-color-focus: $text-color,
+  $background-color-focus: $background-color,
+  $border-focus: $border
+) {
+  border: $border;
+  background: $background-color;
+  color: $text-color;
+
+  &:hover {
+    border: $border-hover;
+    background: $background-color-hover;
+    color: $text-color-hover;
+  }
+
+  &:focus,
+  &:active {
+    border: $border-focus;
+    background: $background-color-focus;
+    color: $text-color-focus;
+  }
+
+  // Overrule section definitions.
+  &:visited {
+    color: $text-color !important; // sass-lint:disable-line no-important
+  }
+}
+
 %btn,
 .btn,
 a.btn,
