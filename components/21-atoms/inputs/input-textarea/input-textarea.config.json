@@ -3,6 +3,6 @@
   "status": "ready",
   "handle": "input-textarea",
   "context": {
-    "placeholder": "Placeholder input tekstarea"
+    "placeholder": "Placeholder input textarea"
   }
 }

@@ -6,6 +6,6 @@
   "context": {
     "label": "Label textfield",
     "placeholder": "Placeholder textfield",
-    "description": "Beschrijving textfield."
+    "description": "Description textfield."
   }
 }

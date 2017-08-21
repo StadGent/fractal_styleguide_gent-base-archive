@@ -4,7 +4,7 @@
   "handle": "select",
   "context": {
     "label": "Label select",
-    "description": "Beschrijving select",
+    "description": "Description select",
     "options": [
       {
         "label": "Option 1"

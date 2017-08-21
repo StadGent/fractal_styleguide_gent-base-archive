@@ -4,7 +4,7 @@
   "handle": "multiselect",
   "context": {
     "label": "Label multiselect",
-    "description": "Beschrijving multiselect",
+    "description": "Description multiselect",
     "options": [
       {
         "label": "Option 1"

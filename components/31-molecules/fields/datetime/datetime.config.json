@@ -5,6 +5,6 @@
   "context": {
     "label": "Label datetime",
     "placeholder": "Placeholder datetime",
-    "description": "Beschrijving datetime"
+    "description": "Description datetime"
   }
 }

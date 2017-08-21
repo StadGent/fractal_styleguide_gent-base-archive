@@ -5,6 +5,6 @@
   "order": 11,
   "context": {
     "label": "Label",
-    "label_optional": "Optioneel"
+    "label_optional": "Optional"
   }
 }

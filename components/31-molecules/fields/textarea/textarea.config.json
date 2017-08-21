@@ -6,6 +6,6 @@
   "context": {
     "label": "Label textarea",
     "placeholder": "Textarea placeholder",
-    "description": "Beschrijving textarea"
+    "description": "Description textarea"
   }
 }
