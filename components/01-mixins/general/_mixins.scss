@@ -1,16 +1,19 @@
+//
 // Border-box polyfill helper.
 // @include border-box;
-
+//
 @mixin border-box() {
   box-sizing: border-box;
 }
 
+//
 // @include border-content;
-
+//
 @mixin border-content() {
   box-sizing: border-content;
 }
 
+//
 // Clearfix
 //
 // For modern browsers
@@ -22,7 +25,7 @@
 //    `:before` to contain the top-margins of child elements.
 //
 // Source: http://nicolasgallagher.com/micro-clearfix-hack/
-
+//
 @mixin clearfix() {
   &::before,
   &::after {

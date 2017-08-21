@@ -1,14 +1,14 @@
 //
 //
-// @param $text-color
-// @param $background-color
-// @param $border
-// @param $text-color-hover [$text-color]
-// @param $background-color-hover [$background-color]
-// @param $border-hover [$border]
-// @param $text-color-focus [$text-color]
-// @param $background-color-focus [$background-color]
-// @param $border-focus [$border]
+// @param $text-color The text color.
+// @param $background-color The background color.
+// @param $border The border type.
+// @param $text-color-hover [$text-color] The text color on hover.
+// @param $background-color-hover [$background-color] The background color on hover.
+// @param $border-hover [$border] The border type on hover.
+// @param $text-color-focus [$text-color] The text color on focus.
+// @param $background-color-focus [$background-color] The background color on focus.
+// @param $border-focus [$border] The border type on focus.
 //
 //
 @mixin btn-scheme(
