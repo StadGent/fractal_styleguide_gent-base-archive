@@ -1,34 +1,3 @@
-// Button sizes
-@mixin btn-l {
-  height: 2.9rem;
-  padding-top: .7rem;
-  padding-bottom: .7rem;
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
-
-@mixin btn-m {
-  height: 2.4rem;
-  padding-top: .45rem;
-  padding-bottom: .45rem;
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
-
-@mixin btn-s {
-  height: 1.8rem;
-  padding-top: .2rem;
-  padding-bottom: .2rem;
-  font-size: .8rem;
-  line-height: 1.4rem;
-}
-
-// Button display
-@mixin btn-inlineblock {
-  display: inline-block;
-  width: auto;
-}
-
 //
 //
 // @param $text-color
