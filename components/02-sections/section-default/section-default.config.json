@@ -1,0 +1,9 @@
+{
+  "title": "Section default",
+  "status": "ready",
+  "order": 1,
+  "handle": "section-default",
+  "context": {
+    "label_optional": "Optional"
+  }
+}

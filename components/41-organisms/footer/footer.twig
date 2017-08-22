@@ -1,32 +1,16 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>Preview Layout</title>
-  <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,400italic" rel="stylesheet" type="text/css" />
-  <link media="all" rel="stylesheet" href="{{ '/css/main.css' | path }}">
-  <link media="all" rel="stylesheet" href="{{ '/css/styleguide.css'| path }}">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-
 <footer class="section--wrapper" role="contentinfo">
   <div class="content-container">
     <div class="row">
       <div class="col-tablet-3">
-        {% include '../../31-molecules/gentinfo-island/gentinfo-island.twig' %}
+        {% include '@gentinfo-island' %}
       </div>
       <div class="col-tablet-3">
-        {% include '../../31-molecules/post-address-block/post-address-block.twig' %}
-        {% include '../../31-molecules/disclaimer-block/disclaimer-block.twig' %}
+        {% include '@post-address-block' %}
+        {% include '@disclaimer-block' %}
       </div>
       <col-tablet-3>
-        {% include '../../31-molecules/social-media-block/social-media-block.twig' %}
+      {% include '@social-media-block' %}
       </col-tablet-3>
     </div>
   </div>
 </footer>
-
-</body>
-</html>

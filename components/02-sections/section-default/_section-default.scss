@@ -1,0 +1,23 @@
+%section--default,
+.section--default {
+  @include new-section(
+    $section-bg-color: $color-white,
+    $section-text-color: $color-dark-gray,
+
+    $section-btn-border: none,
+    $section-btn-bg-color: $color-blue,
+    $section-btn-text-color: $color-white,
+
+    $section-btn-bg-color-hover: lighten($color-blue, 5),
+    $section-btn-text-color-hover: $color-white,
+
+    $section-title-color: $color-darkest-blue,
+
+    $section-caption-color: $color-gray,
+
+    $section-link-color-visited: $color-blue,
+
+    $section-field-placeholder-color: $color-light-gray,
+    $section-field-border-color: $color-light-gray
+  );
+}

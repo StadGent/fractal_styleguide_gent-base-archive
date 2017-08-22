@@ -1,0 +1,10 @@
+{
+  "title": "Label",
+  "status": "ready",
+  "handle": "label",
+  "order": 11,
+  "context": {
+    "label": "Label",
+    "label_optional": "Optional"
+  }
+}

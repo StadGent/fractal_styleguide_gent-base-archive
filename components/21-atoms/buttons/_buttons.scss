@@ -1,3 +1,39 @@
+//
+// Button size mixins.
+//
+@mixin btn-l {
+  height: 2.9rem;
+  padding-top: .7rem;
+  padding-bottom: .7rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+@mixin btn-m {
+  height: 2.4rem;
+  padding-top: .45rem;
+  padding-bottom: .45rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+@mixin btn-s {
+  height: 1.8rem;
+  padding-top: .2rem;
+  padding-bottom: .2rem;
+  font-size: .8rem;
+  line-height: 1.4rem;
+}
+
+//
+// Button display
+//
+@mixin btn-inlineblock {
+  display: inline-block;
+  width: auto;
+}
+
+//
+// General button styling.
+//
 %btn,
 .btn,
 a.btn,
@@ -27,31 +63,9 @@ button {
   @include btn-m;
 }
 
-// Button sizes
-.small.btn,
-.btn--small,
-%btn--small,
-a.btn--small,
-input[type='submit'].btn--small {
-  @include btn-s;
-}
-
-.medium.btn,
-.btn--medium,
-%btn--medium,
-a.btn--medium,
-input[type='submit'].btn--medium {
-  @include btn-m;
-}
-
-.large.btn,
-.btn--large,
-%btn--large,
-a.btn--large,
-input[type='submit'].btn--large {
-  @include btn-l;
-}
-
+//
+// Inline button styling.
+//
 .inline.btn,
 .btn--inline,
 %btn--inline,
@@ -59,3 +73,14 @@ a.btn--inline,
 input[type='submit'].btn--inline {
   @include btn-inlineblock
 }
+
+
+//
+// Default button color scheme
+//
+a.btn-default,
+.btn--default,
+%btn--default {
+  @include btn-scheme($color-white, $color-blue, none, $background-color-hover: lighten($color-blue, 5));
+}
+

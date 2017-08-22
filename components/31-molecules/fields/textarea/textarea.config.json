@@ -1,0 +1,12 @@
+{
+  "title": "Textarea",
+  "status": "ready",
+  "handle": "textarea",
+  "order": 3,
+  "context": {
+    "label": "Label textarea",
+    "label_optional": "Optional",
+    "placeholder": "Textarea placeholder",
+    "description": "Description textarea"
+  }
+}

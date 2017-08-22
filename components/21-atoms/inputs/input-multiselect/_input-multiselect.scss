@@ -1,0 +1,9 @@
+select {
+  border-color: $color-light-gray;
+  background: $color-white;
+  color: $color-dark-gray;
+
+  &::placeholder {
+    color: $color-light-gray;
+  }
+}

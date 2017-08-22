@@ -1,0 +1,9 @@
+{
+  "title": "Radio",
+  "status": "ready",
+  "handle": "radio",
+  "context": {
+    "label": "Label radio",
+    "label_optional": "Optional"
+  }
+}

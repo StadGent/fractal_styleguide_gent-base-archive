@@ -1,0 +1,7 @@
+.medium.btn,
+.btn--medium,
+%btn--medium,
+a.btn--medium,
+input[type='submit'].btn--medium {
+  @include btn-m;
+}

@@ -1,0 +1,135 @@
+<div class="container section--wrapper">
+    <div class="content-container">
+      {% include '@h1' with { 'h1_text': 'Heading 1' } %}
+      {% include '@paragraph' with { 'text': 'Normal text below an heading 1.'} %}
+      {% include '@h2' with { 'h2_text': 'Heading 2' } %}
+      {% include '@paragraph' with { 'text': 'Normal text below an heading 2.'} %}
+      {% include '@h3' with { 'h3_text': 'Heading 3' } %}
+      {% include '@paragraph' with { 'text': 'Normal text below an heading 3.'} %}
+      {% include '@h4' with { 'h4_text': 'Heading 4' } %}
+      {% include '@paragraph' with { 'text': 'Normal text below an heading 4.'} %}
+      {% include '@h5' with { 'h5_text': 'Heading 5' } %}
+      {% include '@paragraph' with { 'text': 'Normal text below an heading 5.'} %}
+      {% include '@h6' with { 'h6_text': 'Heading 6' } %}
+      {% include '@paragraph' with { 'text': 'Normal text below an heading 6.'} %}
+      {% include '@paragraph' with { 'text': 'Paragraphs <a href="#">link</a>'} %}
+      <p>{% include '@button-sm' with { 'text': 'Button'} %}</p>
+      <p>{% include '@button-md' with { 'text': 'Button'} %}</p>
+      <p>{% include '@button-lg' with { 'text': 'Button'} %}</p>
+
+      {% include '@textfield'
+        with {
+          'label': 'Textfield',
+          'placeholder': 'Placeholder',
+          'description': 'Lorem ipsum dolor set.',
+        }
+      %}
+      {% include '@password'
+        with {
+          'label': 'Password',
+          'placeholder': 'Placeholder',
+          'description': 'Lorem ipsum dolor set.',
+        }
+      %}
+      {% include '@date'
+        with {
+          'label': 'Date',
+          'placeholder': 'Placeholder',
+          'description': 'Lorem ipsum dolor set.',
+        }
+      %}
+      {% include '@datetime'
+        with {
+          'label': 'Datetime',
+          'placeholder': 'Placeholder',
+          'description': 'Lorem ipsum dolor set.',
+        }
+      %}
+      {% include '@email'
+        with {
+          'label': 'Email',
+          'placeholder': 'Placeholder',
+          'description': 'Lorem ipsum dolor set.',
+        }
+      %}
+      {% include '@file'
+        with {
+          'label': 'File',
+          'description': 'Lorem ipsum dolor set.',
+        }
+      %}
+      {% include '@textarea'
+        with {
+          'label': 'Textarea',
+          'placeholder': 'Placeholder',
+          'description': 'Lorem ipsum dolor set.',
+        }
+      %}
+      {% include '@checkbox'
+        with {
+         'label': 'Checkbox',
+        }
+      %}
+      {% include '@checkbox'
+        with {
+         'label': 'Checkbox',
+        }
+      %}
+      {% include '@radio'
+        with {
+         'label': 'Radio',
+        }
+      %}
+      {% include '@radio'
+        with {
+         'label': 'Radio',
+        }
+      %}
+      {% include '@select'
+        with {
+          'label': 'Select',
+          'description': 'Lorem ipsum dolor set.',
+          "options": [
+            {
+              "label": "Option 1"
+            },
+            {
+              "label": "Option 2"
+            },
+            {
+              "optgroup": true,
+              "label": "Option group",
+              "optgroupoptions": [
+                {
+                  "label": "Option 3"
+                },
+                {
+                  "label": "Option 4"
+                }
+              ]
+            }
+          ]
+        }
+      %}
+      {% include '@multiselect'
+        with {
+          'label': 'Multiselect',
+          'description': 'Lorem ipsum dolor set.',
+          "options": [
+            {
+              "label": "Option 1"
+            },
+            {
+              "label": "Option 2"
+            },
+            {
+              "label": "Option 3"
+            },
+            {
+              "label": "Option 4"
+            }
+          ]
+        }
+      %}
+    </div>
+</div>

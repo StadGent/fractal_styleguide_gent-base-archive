@@ -1,0 +1,145 @@
+//
+//
+// @param $section-bg-color,
+// @param $section-text-color,
+
+// @param $section-btn-border,
+// @param $section-btn-bg-color,
+// @param $section-btn-text-color,
+
+// @param $section-btn-bg-color-hover,
+// @param $section-btn-text-color-hover,
+
+// @param $section-caption-color           [$section-text-color},
+
+// @param $section-title-color             [$section-text-color},
+
+// @param $section-link-color              [$section-text-color},
+// @param $section-link-color-hover        [$section-link-color},
+// @param $section-link-color-focus        [$section-link-color-hover},
+// @param $section-link-color-visited      [$section-link-color},
+
+// @param $section-field-text-color        [$section-text-color},
+// @param $section-field-placeholder-color [$section-field-text-color},
+// @param $section-field-bg-color          [$section-bg-color},
+// @param $section-field-border-color      [$section-field-bg-color]
+//
+//
+@mixin new-section(
+  $section-bg-color,
+  $section-text-color,
+
+  $section-btn-border,
+  $section-btn-bg-color,
+  $section-btn-text-color,
+
+  $section-btn-bg-color-hover,
+  $section-btn-text-color-hover,
+
+  $section-caption-color: $section-text-color,
+
+  $section-title-color: $section-text-color,
+
+  $section-link-color: $section-text-color,
+  $section-link-color-hover: $section-link-color,
+  $section-link-color-focus: $section-link-color-hover,
+  $section-link-color-visited: $section-link-color,
+
+  $section-field-text-color: $section-text-color,
+  $section-field-placeholder-color: $section-field-text-color,
+  $section-field-bg-color: $section-bg-color,
+  $section-field-border-color: $section-field-bg-color
+) {
+  &,
+  *[class^="section--"] & {
+    // General clearfix.
+    @include clearfix();
+
+    // Section container settings.
+    background-color: $section-bg-color;
+    color: $section-text-color;
+
+    // Headings.
+    h1,
+    .h1,
+    h2,
+    .h2,
+    h3,
+    .h3,
+    h4,
+    .h4,
+    h5,
+    .h5,
+    h6,
+    .h6,
+    th,
+    th > * {
+      color: $section-title-color;
+    }
+
+    // Captions & description.
+    .caption,
+    .description {
+      color: $section-caption-color;
+    }
+
+    // Links.
+    a {
+      color: $section-link-color;
+
+      &:visited {
+        color: $section-link-color-visited;
+      }
+
+      &:hover {
+        color: $section-link-color-hover;
+      }
+
+      &:focus {
+        color: $section-link-color-focus;
+      }
+    }
+
+    // Labels
+    label {
+      color: $section-text-color;
+
+      .label-optional {
+        color: $section-caption-color;
+      }
+    }
+
+    // Button styling.
+    .btn,
+    a.btn {
+      @include btn-scheme(
+        $section-btn-text-color,
+        $section-btn-bg-color,
+        $section-btn-border,
+        $section-btn-text-color-hover,
+        $section-btn-bg-color-hover
+    );
+    }
+
+    // Form input styling.
+    input[type='text'],
+    input[type='search'],
+    input[type='password'],
+    input[type='date'],
+    input[type='datetime'],
+    input[type='datetime-local'],
+    input[type='time'],
+    input[type='email'],
+    input[type='url'],
+    textarea,
+    select {
+      border-color: $section-field-border-color;
+      background: $section-field-bg-color;
+      color: $section-field-text-color;
+
+      &::placeholder {
+        color: $section-field-placeholder-color;
+      }
+    }
+  }
+}

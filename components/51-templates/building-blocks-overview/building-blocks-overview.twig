@@ -1,0 +1,16 @@
+<h1>Building blocks overview</h1>
+
+<div class="preview-inner-container">
+  <h2>Header</h2>
+  {% include '@pagination' %}
+</div>
+
+<div class="preview-inner-container">
+  <h2>Breadcrumbs</h2>
+  {% include '@breadcrumbs' %}
+</div>
+
+<div class="preview-inner-container">
+  <h2>Search</h2>
+  {% include '@search' with { 'placeholder': 'Search here', 'text': 'Search' }%}
+</div>
