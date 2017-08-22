@@ -36,8 +36,10 @@
   ]
 } %}
 
-<div class="preview-container">
-  {{ yield | raw }}
+<div class="container preview-container">
+  <div class="content-container">
+    {{ yield | raw }}
+  </div>
 </div>
 
 {% include '@footer' %}
