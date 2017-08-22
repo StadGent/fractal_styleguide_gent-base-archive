@@ -2,7 +2,20 @@ h2,
 .h2,
 %h2 {
   margin-bottom: 1rem;
-  color: $color-darkest-blue;
+  color: $heading-2-color;
   font-size: 1.2rem;
   line-height: 1.4em;
+
+  a {
+    color: $heading-2-color;
+    text-decoration: none;
+
+    &:visited {
+      color: $heading-2-color-visited;
+    }
+
+    &:hover {
+      color: $heading-2-color-hover;
+    }
+  }
 }

@@ -2,7 +2,20 @@ h3,
 .h3,
 %h3 {
   margin-bottom: 1rem;
-  color: $color-darkest-blue;
+  color: $heading-3-color;
   font-size: 1.1rem;
   line-height: 1.3em;
+
+  a {
+    color: $heading-3-color;
+    text-decoration: none;
+
+    &:visited {
+      color: $heading-3-color-visited;
+    }
+
+    &:hover {
+      color: $heading-3-color-hover;
+    }
+  }
 }
