@@ -23,13 +23,6 @@
       "color-orange-light": "#ffa927",
       "color-orange-lighter": "#ffbd5a"
     },
-    "items": [
-      "<a href='#'>Stad.gent</a>",
-      "<a href='#'>Overview</a>",
-      "<span>Overview</span>",
-      "<span>Overview</span>",
-      "<span>Page title</span>"
-    ],
     "h1_text": "heading 1",
     "h2_text": "heading 2",
     "h3_text": "heading 3",
