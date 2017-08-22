@@ -50,93 +50,96 @@
   $section-field-bg-color: $section-bg-color,
   $section-field-border-color: $section-field-bg-color
 ) {
-  // General clearfix.
-  @include clearfix();
+  &,
+  *[class^="section--"] & {
+    // General clearfix.
+    @include clearfix();
 
-  // Section container settings.
-  background-color: $section-bg-color;
-  color: $section-text-color;
-
-  // Headings.
-  h1,
-  .h1,
-  h2,
-  .h2,
-  h3,
-  .h3,
-  h4,
-  .h4,
-  h5,
-  .h5,
-  h6,
-  .h6,
-  th,
-  th > * {
-    color: $section-title-color;
-  }
-
-  // Captions & description.
-  .caption,
-  .description {
-    color: $section-caption-color;
-  }
-
-  // Links.
-  a {
-    color: $section-link-color;
-
-    &:visited {
-      color: $section-link-color-visited;
-    }
-
-    &:hover {
-      color: $section-link-color-hover;
-    }
-
-    &:focus {
-      color: $section-link-color-focus;
-    }
-  }
-
-  // Labels
-  label {
+    // Section container settings.
+    background-color: $section-bg-color;
     color: $section-text-color;
 
-    .label-optional {
+    // Headings.
+    h1,
+    .h1,
+    h2,
+    .h2,
+    h3,
+    .h3,
+    h4,
+    .h4,
+    h5,
+    .h5,
+    h6,
+    .h6,
+    th,
+    th > * {
+      color: $section-title-color;
+    }
+
+    // Captions & description.
+    .caption,
+    .description {
       color: $section-caption-color;
     }
-  }
 
-  // Button styling.
-  .btn,
-  a.btn {
-    @include btn-scheme(
-      $section-btn-text-color,
-      $section-btn-bg-color,
-      $section-btn-border,
-      $section-btn-text-color-hover,
-      $section-btn-bg-color-hover
-  );
-  }
+    // Links.
+    a {
+      color: $section-link-color;
 
-  // Form input styling.
-  input[type='text'],
-  input[type='search'],
-  input[type='password'],
-  input[type='date'],
-  input[type='datetime'],
-  input[type='datetime-local'],
-  input[type='time'],
-  input[type='email'],
-  input[type='url'],
-  textarea,
-  select {
-    border-color: $section-field-border-color;
-    background: $section-field-bg-color;
-    color: $section-field-text-color;
+      &:visited {
+        color: $section-link-color-visited;
+      }
 
-    &::placeholder {
-      color: $section-field-placeholder-color;
+      &:hover {
+        color: $section-link-color-hover;
+      }
+
+      &:focus {
+        color: $section-link-color-focus;
+      }
+    }
+
+    // Labels
+    label {
+      color: $section-text-color;
+
+      .label-optional {
+        color: $section-caption-color;
+      }
+    }
+
+    // Button styling.
+    .btn,
+    a.btn {
+      @include btn-scheme(
+        $section-btn-text-color,
+        $section-btn-bg-color,
+        $section-btn-border,
+        $section-btn-text-color-hover,
+        $section-btn-bg-color-hover
+    );
+    }
+
+    // Form input styling.
+    input[type='text'],
+    input[type='search'],
+    input[type='password'],
+    input[type='date'],
+    input[type='datetime'],
+    input[type='datetime-local'],
+    input[type='time'],
+    input[type='email'],
+    input[type='url'],
+    textarea,
+    select {
+      border-color: $section-field-border-color;
+      background: $section-field-bg-color;
+      color: $section-field-text-color;
+
+      &::placeholder {
+        color: $section-field-placeholder-color;
+      }
     }
   }
 }

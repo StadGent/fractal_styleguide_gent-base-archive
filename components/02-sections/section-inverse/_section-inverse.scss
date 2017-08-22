@@ -1,25 +1,22 @@
 %section--inverse,
 .section--inverse {
-  &,
-  *[class^="section--"] & {
-    @include new-section(
-      $section-bg-color: $color-lightest-blue,
-      $section-text-color: $color-dark-gray,
+  @include new-section(
+    $section-bg-color: $color-lightest-blue,
+    $section-text-color: $color-dark-gray,
 
-      $section-btn-border: none,
-      $section-btn-bg-color: $color-blue,
-      $section-btn-text-color: $color-white,
+    $section-btn-border: none,
+    $section-btn-bg-color: $color-blue,
+    $section-btn-text-color: $color-white,
 
-      $section-btn-bg-color-hover: lighten($color-blue, 5),
-      $section-btn-text-color-hover: $color-white,
+    $section-btn-bg-color-hover: lighten($color-blue, 5),
+    $section-btn-text-color-hover: $color-white,
 
-      $section-title-color: $color-darkest-blue,
-      $section-link-color: $color-blue,
-      $section-link-color-hover: $color-dark-blue,
+    $section-title-color: $color-darkest-blue,
+    $section-link-color: $color-blue,
+    $section-link-color-hover: $color-dark-blue,
 
-      $section-field-bg-color: $color-white,
-      $section-field-placeholder-color: $color-light-gray,
-      $section-field-border-color: $color-light-gray
-    );
-  }
+    $section-field-bg-color: $color-white,
+    $section-field-placeholder-color: $color-light-gray,
+    $section-field-border-color: $color-light-gray
+  );
 }
