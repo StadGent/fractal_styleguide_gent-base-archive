@@ -2,6 +2,7 @@
   "title": "Breadcrumbs",
   "status": "wip",
   "handle": "breadcrumbs",
+  "preview": "@preview-breadcrumb",
   "context": {
     "items": [
       "<a href='#'>Stad.gent</a>",
