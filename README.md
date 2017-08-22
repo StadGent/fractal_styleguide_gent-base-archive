@@ -31,18 +31,14 @@ After installing the styleguide through `npm install gent_styleguide` you''ll ge
 
 Now, to use the styleguide SASS partials you just need to import them into your main SASS file at the top so they get loaded before your own code.
 ```
-@import 'node_modules/gent_styleguide/build/sass/00-mixins/**/*';
-@import 'node_modules/gent_styleguide/build/sass/01-global-settings/**/*';
-@import 'node_modules/gent_styleguide/build/sass/01-global/**/*';
-@import 'node_modules/gent_styleguide/build/sass/10-base-settings/**/*';
+@import 'node_modules/gent_styleguide/build/sass/00-settings/reset';
+@import 'node_modules/gent_styleguide/build/sass/00-settings/vars';
+@import 'node_modules/gent_styleguide/build/sass/02-mixins/**/*';
+@import 'node_modules/gent_styleguide/build/sass/02-sections/**/*';
 @import 'node_modules/gent_styleguide/build/sass/11-base/**/*';
-@import 'node_modules/gent_styleguide/build/sass/20-atoms-settings/**/*';
 @import 'node_modules/gent_styleguide/build/sass/21-atoms/**/*';
-@import 'node_modules/gent_styleguide/build/sass/30-molecules-settings/**/*';
 @import 'node_modules/gent_styleguide/build/sass/31-molecules/**/*';
-@import 'node_modules/gent_styleguide/build/sass/40-organisms-settings/**/*';
 @import 'node_modules/gent_styleguide/build/sass/41-organisms/**/*';
-@import 'node_modules/gent_styleguide/build/sass/50-templates-settings/**/*';
 @import 'node_modules/gent_styleguide/build/sass/51-templates/**/*';
 ```
 
