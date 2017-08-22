@@ -17,6 +17,7 @@
     overflow: hidden;
     word-wrap: break-word;
 
+    &:visited,
     &:hover {
       color: $color-medium-lighter-gray;
     }
