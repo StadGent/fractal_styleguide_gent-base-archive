@@ -17,7 +17,10 @@
     overflow: hidden;
     word-wrap: break-word;
 
-    &:visited,
+    &:visited {
+      color: $color-gray;
+    }
+
     &:hover {
       color: $color-medium-lighter-gray;
     }
