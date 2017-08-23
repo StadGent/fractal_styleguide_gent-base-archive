@@ -113,3 +113,15 @@ $heading-6-color: $color-darkest-blue;
 $heading-6-color-hover: $color-dark-blue;
 $heading-6-color-visited: $color-darkest-blue;
 $heading-6-font-family: $default-font-family;
+
+// CTA links settings.
+$cta-link-color: $color-blue !default;
+$cta-link-color-hover: $color-blue !default;
+$cta-link-background-color: $color-lightest-blue !default;
+$cta-link-background-color-hover: $color-lightest-gray !default;
+$cta-link-border-color: $color-light-gray !default;
+
+$cta-link-icon-background-color: $color-blue !default;
+$cta-link-icon-color: $color-white !default;
+
+$cta-link-title-color: $color-darkest-gray !default;

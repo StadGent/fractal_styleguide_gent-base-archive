@@ -48,7 +48,16 @@
   $section-field-text-color: $section-text-color,
   $section-field-placeholder-color: $section-field-text-color,
   $section-field-bg-color: $section-bg-color,
-  $section-field-border-color: $section-field-bg-color
+  $section-field-border-color: $section-field-bg-color,
+
+  $cta-link-color: $cta-link-color,
+  $cta-link-color-hover: $cta-link-color-hover,
+  $cta-link-background-color: $cta-link-background-color,
+  $cta-link-background-color-hover: $cta-link-background-color-hover,
+  $cta-link-border-color: $cta-link-border-color,
+  $cta-link-icon-background-color: $cta-link-icon-background-color,
+  $cta-link-icon-color: $cta-link-icon-color,
+  $cta-link-title-color: $cta-link-title-color
 ) {
   &,
   *[class^="section--"] & {
@@ -118,8 +127,32 @@
         $section-btn-border,
         $section-btn-text-color-hover,
         $section-btn-bg-color-hover
-    );
+      );
     }
+
+    //
+    // Molecule: cta-link.
+    //
+    a.cta-link {
+      border: 1px solid $cta-link-border-color;
+      background-color: $cta-link-background-color;
+      color: $cta-link-color;
+
+      .icon {
+        background-color: $cta-link-icon-background-color;
+        color: $cta-link-icon-color;
+      }
+
+      .title {
+        color: $cta-link-title-color;
+      }
+
+      &:hover {
+        background-color: $cta-link-background-color-hover;
+        color: $cta-link-color-hover;
+      }
+    }
+
 
     // Form input styling.
     input[type='text'],

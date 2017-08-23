@@ -1,12 +1,12 @@
 a.cta-link {
-  @extend %section--inverse;
   display: inline-block;
   position: relative;
   width: calc(87% + 1px);
   padding: 10px 20px;
-  border: 1px solid $color-light-blue;
+  border: 1px solid $cta-link-border-color;
   border-radius: $radius-2;
-  color: $color-blue;
+  background-color: $cta-link-background-color;
+  color: $cta-link-color;
   text-decoration: none;
 
   .icon {
@@ -19,18 +19,19 @@ a.cta-link {
     padding-top: 1.4rem;
     padding-bottom: 1.4rem;
     border-radius: $radius-2;
-    background-color: $color-blue;
-    color: $color-white;
+    background-color: $cta-link-icon-background-color;
+    color: $cta-link-icon-color;
     font-size: 1.3em;
     text-align: center;
   }
 
   .title {
     margin-bottom: 0;
-    color: $color-darkest-blue;
+    color: $cta-link-title-color;
   }
 
   &:hover {
-    background-color: $color-white;
+    background-color: $cta-link-background-color-hover;
+    color: $cta-link-color-hover;
   }
 }
