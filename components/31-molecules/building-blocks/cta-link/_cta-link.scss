@@ -1,0 +1,41 @@
+a.cta-link {
+  @extend %section--inverse;
+  display: inline-block;
+  position: relative;
+  width: 87%;
+  padding: 10px 20px;
+  border: 1px solid $color-light-blue;
+  border-radius: $radius-2;
+  color: $color-blue;
+  text-decoration: none;
+
+  .icon {
+    position: absolute;
+    top: 0;
+    right: calc(-17% - 1px);
+    bottom: 0;
+    width: 17%;
+    margin: auto;
+    padding-top: 1.4rem;
+    padding-bottom: 1.4rem;
+    border-radius: $radius-2;
+    background-color: $color-blue;
+    color: $color-white;
+    font-size: 1.3em;
+    text-align: center;
+  }
+
+  .title,
+  .document {
+    display: block;
+  }
+
+  .title {
+    margin-bottom: 0;
+    color: $color-darkest-blue;
+  }
+
+  &:hover {
+    background-color: $color-white;
+  }
+}
