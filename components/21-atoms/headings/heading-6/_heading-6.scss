@@ -2,6 +2,20 @@ h6,
 .h6,
 %h6 {
   margin-bottom: .5rem;
-  color: $color-darkest-blue;
+  color: $heading-6-color;
+  font-family: $heading-6-font-family;
   font-weight: 600;
+
+  a {
+    color: $heading-6-color;
+    text-decoration: none;
+
+    &:visited {
+      color: $heading-6-color-visited;
+    }
+
+    &:hover {
+      color: $heading-6-color-hover;
+    }
+  }
 }
