@@ -11,8 +11,8 @@ a.tag {
   text-decoration: none;
 
   &:hover {
-    background-color: darken($tag-background-color, 10%);
-    color: $tag-color;
+    background-color: $tag-background-color-hover;
+    color: $tag-color-hover;
     cursor: pointer;
   }
 }
