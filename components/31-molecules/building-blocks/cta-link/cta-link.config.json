@@ -5,6 +5,7 @@
   "context": {
     "title": "Graag meer info?",
     "link_text": "Bezoek onze website",
-    "url": "javascript:(void);"
+    "url": "javascript:(void);",
+    "modifier": "link"
   }
 }
