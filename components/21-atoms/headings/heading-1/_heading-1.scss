@@ -2,9 +2,22 @@ h1,
 .h1,
 %h1 {
   margin-bottom: 1.5rem;
-  color: $color-darkest-blue;
-  font-family: $secondary-font-family;
+  color: $heading-1-color;
+  font-family: $heading-1-font-family;
   font-size: 1.6rem;
   font-weight: 700;
   line-height: 1.1em;
+
+  a {
+    color: $heading-1-color;
+    text-decoration: none;
+
+    &:visited {
+      color: $heading-1-color-visited;
+    }
+
+    &:hover {
+      color: $heading-1-color-hover;
+    }
+  }
 }
