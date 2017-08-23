@@ -1,28 +1,42 @@
 //
 //
-// @param $section-bg-color,
-// @param $section-text-color,
+// @param $section-bg-color
+// @param $section-text-color
 
-// @param $section-btn-border,
-// @param $section-btn-bg-color,
-// @param $section-btn-text-color,
+// @param $section-btn-border
+// @param $section-btn-bg-color
+// @param $section-btn-text-color
 
-// @param $section-btn-bg-color-hover,
-// @param $section-btn-text-color-hover,
+// @param $section-btn-bg-color-hover
+// @param $section-btn-text-color-hover
 
-// @param $section-caption-color           [$section-text-color},
+// @param $section-caption-color           [$section-text-color]
 
-// @param $section-title-color             [$section-text-color},
+// @param $section-title-color             [$section-text-color]
 
-// @param $section-link-color              [$section-text-color},
-// @param $section-link-color-hover        [$section-link-color},
-// @param $section-link-color-focus        [$section-link-color-hover},
-// @param $section-link-color-visited      [$section-link-color},
+// @param $section-link-color              [$section-text-color]
+// @param $section-link-color-hover        [$section-link-color]
+// @param $section-link-color-focus        [$section-link-color-hover]
+// @param $section-link-color-visited      [$section-link-color]
 
-// @param $section-field-text-color        [$section-text-color},
-// @param $section-field-placeholder-color [$section-field-text-color},
-// @param $section-field-bg-color          [$section-bg-color},
+// @param $section-field-text-color        [$section-text-color]
+// @param $section-field-placeholder-color [$section-field-text-color]
+// @param $section-field-bg-color          [$section-bg-color]
 // @param $section-field-border-color      [$section-field-bg-color]
+//
+// @param $cta-link-color:                    [$cta-link-color]
+// @param $cta-link-color-hover:              [$cta-link-color-hover]
+// @param $cta-link-background-color:         [$cta-link-background-color]
+// @param $cta-link-background-color-hover:   [$cta-link-background-color-hover]
+// @param $cta-link-border-color:             [$cta-link-border-color]
+// @param $cta-link-icon-background-color:    [$cta-link-icon-background-color]
+// @param $cta-link-icon-color:               [$cta-link-icon-color]
+// @param $cta-link-title-color:              [$cta-link-title-color]
+//
+// @param $tag-color:                         [$tag-color],
+// @param $tag-background-color:              [$tag-background-color],
+// @param $tag-color-hover:                   [$tag-color-hover],
+// @param $tag-background-color-hover:        [$tag-background-color-hove]
 //
 //
 @mixin new-section(
@@ -57,18 +71,35 @@
   $cta-link-border-color: $cta-link-border-color,
   $cta-link-icon-background-color: $cta-link-icon-background-color,
   $cta-link-icon-color: $cta-link-icon-color,
-  $cta-link-title-color: $cta-link-title-color
+  $cta-link-title-color: $cta-link-title-color,
+
+  $tag-color: $tag-color,
+  $tag-background-color: $tag-background-color,
+  $tag-color-hover: $tag-color-hover,
+  $tag-background-color-hover: $tag-background-color-hover
 ) {
   &,
   *[class^="section--"] & {
-    // General clearfix.
+    //
+    // General section styling.
+    //
     @include clearfix();
 
+    //
     // Section container settings.
+    //
     background-color: $section-bg-color;
     color: $section-text-color;
 
-    // Headings.
+    //
+    // Atom:
+    // - Heading 1
+    // - Heading 2
+    // - Heading 3
+    // - Heading 4
+    // - Heading 5
+    // - Heading 6
+    //
     h1,
     .h1,
     h2,
@@ -86,13 +117,17 @@
       color: $section-title-color;
     }
 
-    // Captions & description.
+    //
+    // Atom: Description.
+    //
     .caption,
     .description {
       color: $section-caption-color;
     }
 
-    // Links.
+    //
+    // Atom: Link.
+    //
     a {
       color: $section-link-color;
 
@@ -109,7 +144,9 @@
       }
     }
 
-    // Labels
+    //
+    // Atom: Labels.
+    //
     label {
       color: $section-text-color;
 
@@ -118,7 +155,10 @@
       }
     }
 
-    // Button styling.
+    //
+    // Atom: Button styling.
+    // @TODO: Change this so it's not a global mixin anymore?
+    //
     .btn,
     a.btn {
       @include btn-scheme(
@@ -128,6 +168,52 @@
         $section-btn-text-color-hover,
         $section-btn-bg-color-hover
       );
+    }
+
+    //
+    // Atom: Tag.
+    //
+    .tag {
+      background-color: $tag-background-color;
+      color: $tag-color;
+    }
+
+    a.tag:hover {
+      background-color: $tag-background-color-hover;
+      color: $tag-color-hover;
+    }
+
+    //
+    // Atoms:
+    // - input-text.
+    // - input-search.
+    // - input-password.
+    // - input-date.
+    // - input-datetime.
+    // - input-datetime-local.
+    // - input-time.
+    // - input-email.
+    // - input-textarea.
+    // - input-select.
+    //
+    input[type='text'],
+    input[type='search'],
+    input[type='password'],
+    input[type='date'],
+    input[type='datetime'],
+    input[type='datetime-local'],
+    input[type='time'],
+    input[type='email'],
+    input[type='url'],
+    textarea,
+    select {
+      border-color: $section-field-border-color;
+      background: $section-field-bg-color;
+      color: $section-field-text-color;
+
+      &::placeholder {
+        color: $section-field-placeholder-color;
+      }
     }
 
     //
@@ -150,28 +236,6 @@
       &:hover {
         background-color: $cta-link-background-color-hover;
         color: $cta-link-color-hover;
-      }
-    }
-
-
-    // Form input styling.
-    input[type='text'],
-    input[type='search'],
-    input[type='password'],
-    input[type='date'],
-    input[type='datetime'],
-    input[type='datetime-local'],
-    input[type='time'],
-    input[type='email'],
-    input[type='url'],
-    textarea,
-    select {
-      border-color: $section-field-border-color;
-      background: $section-field-bg-color;
-      color: $section-field-text-color;
-
-      &::placeholder {
-        color: $section-field-placeholder-color;
       }
     }
   }
