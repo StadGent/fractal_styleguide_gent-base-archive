@@ -1,3 +1,8 @@
+//
+// Globally defined grid mixins.
+// These mixins can be used by multiple components.
+//
+
 // Creates a wrapper for a series of columns
 @mixin make-row($gutter: $gutter-width) {
   @include clearfix();
