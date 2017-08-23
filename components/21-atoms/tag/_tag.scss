@@ -1,0 +1,18 @@
+.tag {
+  padding: .05rem 5px;
+  border-radius: 4px;
+  background-color: $tag-background-color;
+  color: $tag-color;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+a.tag {
+  text-decoration: none;
+
+  &:hover {
+    background-color: darken($tag-background-color, 10%);
+    color: $tag-color;
+    cursor: pointer;
+  }
+}
