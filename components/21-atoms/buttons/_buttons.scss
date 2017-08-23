@@ -2,25 +2,16 @@
 // Button size mixins.
 //
 @mixin btn-l {
-  height: 2.9rem;
-  padding-top: .7rem;
-  padding-bottom: .7rem;
   font-size: 1rem;
-  line-height: 1.5rem;
+  line-height: 2.6rem;
 }
 @mixin btn-m {
-  height: 2.4rem;
-  padding-top: .45rem;
-  padding-bottom: .45rem;
   font-size: 1rem;
-  line-height: 1.5rem;
+  line-height: 2.2rem;
 }
 @mixin btn-s {
-  height: 1.8rem;
-  padding-top: .2rem;
-  padding-bottom: .2rem;
   font-size: .8rem;
-  line-height: 1.4rem;
+  line-height: 1.6rem;
 }
 
 //
