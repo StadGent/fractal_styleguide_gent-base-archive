@@ -17,5 +17,30 @@
 
 <div class="preview-inner-container">
   <h2>CTA link</h2>
-  {% include '@cta-link' with { 'title': 'Graag meer info?', 'link_text': 'Bezoek onze website' }%}
+  {% include '@cta-link' with { 'title': 'Graag meer info?', 'link_text': 'Bezoek onze website', 'modifier': 'link' }%}
+</div>
+
+<div class="preview-inner-container">
+  <h2>CTA document</h2>
+  {% include '@cta-link' with { 'title': 'Graag meer info?', 'link_text': 'Download', 'modifier': 'clip' }%}
+</div>
+
+<div class="preview-inner-container">
+  <h2>CTA form fill</h2>
+  {% include '@cta-link' with { 'title': 'Vul het formulier in', 'link_text': 'Vul in', 'modifier': 'form-fill' }%}
+</div>
+
+<div class="preview-inner-container">
+  <h2>CTA email</h2>
+  {% include '@cta-link' with { 'title': 'Contacteer ons via mail', 'link_text': 'Mail', 'modifier': 'email' }%}
+</div>
+
+<div class="preview-inner-container">
+  <h2>CTA phone</h2>
+  {% include '@cta-link' with { 'title': 'Contacteer ons via telefoon', 'link_text': 'Telefoneer', 'modifier': 'phone' }%}
+</div>
+
+<div class="preview-inner-container">
+  <h2>CTA location</h2>
+  {% include '@cta-link' with { 'title': 'Locatie', 'link_text': 'Locatie', 'modifier': 'loc' }%}
 </div>
