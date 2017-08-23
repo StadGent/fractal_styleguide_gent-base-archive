@@ -2,7 +2,7 @@ a.cta-link {
   @extend %section--inverse;
   display: inline-block;
   position: relative;
-  width: 87%;
+  width: calc(87% + 1px);
   padding: 10px 20px;
   border: 1px solid $color-light-blue;
   border-radius: $radius-2;
@@ -23,11 +23,6 @@ a.cta-link {
     color: $color-white;
     font-size: 1.3em;
     text-align: center;
-  }
-
-  .title,
-  .document {
-    display: block;
   }
 
   .title {
