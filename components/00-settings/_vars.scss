@@ -114,8 +114,8 @@ $heading-6-font-family: $default-font-family !default;
 
 // Button settings.
 $btn-bg-color: $color-blue;
-$btn-bg-color-hover: $color-dark-blue;
-$btn-bg-color-focus: $color-dark-blue;
+$btn-bg-color-hover: lighten($color-blue, 5);
+$btn-bg-color-focus: lighten($color-blue, 5);
 $btn-text-color: $color-white;
 $btn-text-color-hover: $color-white;
 $btn-text-color-focus: $color-orange;

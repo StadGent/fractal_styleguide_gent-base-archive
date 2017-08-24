@@ -85,6 +85,7 @@ a.btn-default,
     $btn-text-color,
     $btn-bg-color,
     $btn-border,
-    $background-color-hover: lighten($color-blue, 5));
+    $background-color-hover: $btn-bg-color-hover
+  );
 }
 
