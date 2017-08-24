@@ -47,11 +47,11 @@
   $section-btn-bg-color,
   $section-btn-text-color,
 
-  $section-btn-bg-color-hover: $btn-bg-color-hover,
-  $section-btn-text-color-hover: $btn-text-color-hover,
+  $section-btn-bg-color-hover: $section-btn-bg-color,
+  $section-btn-text-color-hover: $section-btn-text-color,
 
-  $section-btn-bg-color-focus: $btn-bg-color-focus,
-  $section-btn-text-color-focus: $btn-text-color-focus,
+  $section-btn-bg-color-focus: $section-btn-bg-color-hover,
+  $section-btn-text-color-focus: $section-btn-text-color-hover,
 
   $section-caption-color: $section-text-color,
 
