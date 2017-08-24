@@ -18,6 +18,7 @@
 // @param $section-link-color-hover        [$section-link-color},
 // @param $section-link-color-focus        [$section-link-color-hover},
 // @param $section-link-color-visited      [$section-link-color},
+// @param $section-link-color-in-button
 
 // @param $section-field-text-color        [$section-text-color},
 // @param $section-field-placeholder-color [$section-field-text-color},
@@ -44,6 +45,8 @@
   $section-link-color-hover: $section-link-color,
   $section-link-color-focus: $section-link-color-hover,
   $section-link-color-visited: $section-link-color,
+  $section-link-color-active: $section-btn-bg-color,
+  $section-link-color-in-button: $section-link-color,
 
   $section-field-text-color: $section-text-color,
   $section-field-placeholder-color: $section-field-text-color,
@@ -83,6 +86,8 @@
       color: $section-caption-color;
     }
 
+
+
     // Links.
     a {
       color: $section-link-color;
@@ -95,8 +100,16 @@
         color: $section-link-color-hover;
       }
 
+      &:active {
+        color: $section-link-color-active;
+      }
+
       &:focus {
         color: $section-link-color-focus;
+      }
+
+      &.btn {
+        color: $section-link-color-in-button;
       }
     }
 

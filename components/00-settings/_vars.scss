@@ -78,6 +78,14 @@ $tag-background-color-hover: $color-darkest-gray !default;
 // component that is within a section!
 //
 
+// Link settings.
+$link-color: $color-blue !default;
+$link-color-hover: $color-dark-blue !default;
+$link-color-visited: $color-dark-blue !default;
+$link-color-active: $color-dark-blue !default;
+$link-color-focus: $color-dark-blue !default;
+$link-color-in-button: $color-white !default;
+
 // Heading 1 settings.
 $heading-1-color: $color-darkest-blue;
 $heading-1-color-hover: $color-dark-blue;
