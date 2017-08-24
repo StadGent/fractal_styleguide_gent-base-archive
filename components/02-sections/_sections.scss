@@ -24,19 +24,19 @@
 // @param $section-field-bg-color          [$section-bg-color]
 // @param $section-field-border-color      [$section-field-bg-color]
 //
-// @param $cta-link-color:                    [$cta-link-color]
-// @param $cta-link-color-hover:              [$cta-link-color-hover]
-// @param $cta-link-background-color:         [$cta-link-background-color]
-// @param $cta-link-background-color-hover:   [$cta-link-background-color-hover]
-// @param $cta-link-border-color:             [$cta-link-border-color]
-// @param $cta-link-icon-background-color:    [$cta-link-icon-background-color]
-// @param $cta-link-icon-color:               [$cta-link-icon-color]
-// @param $cta-link-title-color:              [$cta-link-title-color]
+// @param $section-cta-link-color:                    [$cta-link-color]
+// @param $section-cta-link-color-hover:              [$cta-link-color-hover]
+// @param $section-cta-link-background-color:         [$cta-link-background-color]
+// @param $section-cta-link-background-color-hover:   [$cta-link-background-color-hover]
+// @param $section-cta-link-border-color:             [$cta-link-border-color]
+// @param $section-cta-link-icon-background-color:    [$cta-link-icon-background-color]
+// @param $section-cta-link-icon-color:               [$cta-link-icon-color]
+// @param $section-cta-link-title-color:              [$cta-link-title-color]
 //
-// @param $tag-color:                         [$tag-color],
-// @param $tag-background-color:              [$tag-background-color],
-// @param $tag-color-hover:                   [$tag-color-hover],
-// @param $tag-background-color-hover:        [$tag-background-color-hove]
+// @param $section-tag-color:                         [$tag-color],
+// @param $section-tag-background-color:              [$tag-background-color],
+// @param $section-tag-color-hover:                   [$tag-color-hover],
+// @param $section-tag-background-color-hover:        [$tag-background-color-hove]
 //
 //
 @mixin new-section(
@@ -64,19 +64,19 @@
   $section-field-bg-color: $section-bg-color,
   $section-field-border-color: $section-field-bg-color,
 
-  $cta-link-color: $cta-link-color,
-  $cta-link-color-hover: $cta-link-color-hover,
-  $cta-link-background-color: $cta-link-background-color,
-  $cta-link-background-color-hover: $cta-link-background-color-hover,
-  $cta-link-border-color: $cta-link-border-color,
-  $cta-link-icon-background-color: $cta-link-icon-background-color,
-  $cta-link-icon-color: $cta-link-icon-color,
-  $cta-link-title-color: $cta-link-title-color,
+  $section-cta-link-color: $cta-link-color,
+  $section-cta-link-color-hover: $cta-link-color-hover,
+  $section-cta-link-background-color: $cta-link-background-color,
+  $section-cta-link-background-color-hover: $cta-link-background-color-hover,
+  $section-cta-link-border-color: $cta-link-border-color,
+  $section-cta-link-icon-background-color: $cta-link-icon-background-color,
+  $section-cta-link-icon-color: $cta-link-icon-color,
+  $section-cta-link-title-color: $cta-link-title-color,
 
-  $tag-color: $tag-color,
-  $tag-background-color: $tag-background-color,
-  $tag-color-hover: $tag-color-hover,
-  $tag-background-color-hover: $tag-background-color-hover
+  $section-tag-color: $tag-color,
+  $section-tag-background-color: $tag-background-color,
+  $section-tag-color-hover: $tag-color-hover,
+  $section-tag-background-color-hover: $tag-background-color-hover
 ) {
   &,
   *[class^="section--"] & {
@@ -174,13 +174,13 @@
     // Atom: Tag.
     //
     .tag {
-      background-color: $tag-background-color;
-      color: $tag-color;
+      background-color: $section-tag-background-color;
+      color: $section-tag-color;
     }
 
     a.tag:hover {
-      background-color: $tag-background-color-hover;
-      color: $tag-color-hover;
+      background-color: $section-tag-background-color-hover;
+      color: $section-tag-color-hover;
     }
 
     //
@@ -220,22 +220,22 @@
     // Molecule: cta-link.
     //
     a.cta-link {
-      border: 1px solid $cta-link-border-color;
-      background-color: $cta-link-background-color;
-      color: $cta-link-color;
+      border: 1px solid $section-cta-link-border-color;
+      background-color: $section-cta-link-background-color;
+      color: $section-cta-link-color;
 
       .icon {
-        background-color: $cta-link-icon-background-color;
-        color: $cta-link-icon-color;
+        background-color: $section-cta-link-icon-background-color;
+        color: $section-cta-link-icon-color;
       }
 
       .title {
-        color: $cta-link-title-color;
+        color: $section-cta-link-title-color;
       }
 
       &:hover {
-        background-color: $cta-link-background-color-hover;
-        color: $cta-link-color-hover;
+        background-color: $section-cta-link-background-color-hover;
+        color: $section-cta-link-color-hover;
       }
     }
   }
