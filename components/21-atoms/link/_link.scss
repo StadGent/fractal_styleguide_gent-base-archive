@@ -1,13 +1,17 @@
 a {
-  color: $color-blue;
+  @include themify {
+    color: $link-color;
 
-  &:visited {
-    color: $color-dark-blue;
+    &:visited {
+      color: $link-visited-color;
+    }
+
+    &:hover {
+      color: $link-hover-color;
+    }
   }
 
-  &:hover {
-    color: $color-dark-blue;
-  }
+
 
   &:focus {
     color: $color-dark-blue;

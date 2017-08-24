@@ -113,3 +113,16 @@ $heading-6-color: $color-darkest-blue;
 $heading-6-color-hover: $color-dark-blue;
 $heading-6-color-visited: $color-darkest-blue;
 $heading-6-font-family: $default-font-family;
+
+$themes: (
+  'default': (
+    'link-color': $color-blue,
+    'link-visited-color': #f00,
+    'link-hover-color': #f00,
+  ),
+  'wrapper': (
+    'link-color': $color-light-gray,
+    'link-visited-color': $color-dark-blue,
+    'link-hover-color': #0f0,
+  )
+) !default;

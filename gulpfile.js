@@ -52,7 +52,6 @@ var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant');
 var es = require('event-stream');
 var minify = require('gulp-minify');
-var csscomb =require('gulp-csscomb');
 var npm = require('npm');
 var fs = require('fs');
 var argv = require('yargs').argv;
@@ -78,7 +77,6 @@ gulp.task('styles:dist', function() {
     }))
     .pipe(sassLint.format())
     .pipe(sourcemaps.init())
-    .pipe(csscomb())
     .pipe(sass({outputStyle: 'nested'})).on('error', sass.logError)
     .pipe(autoprefixer({
         browsers: ['last 5 versions']
