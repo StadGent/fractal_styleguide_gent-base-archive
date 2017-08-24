@@ -3,12 +3,15 @@
 // @param $section-bg-color
 // @param $section-text-color
 
-// @param $section-btn-border
-// @param $section-btn-bg-color
-// @param $section-btn-text-color
+// @param $section-btn-border,
+// @param $section-btn-bg-color,
+// @param $section-btn-text-color,
 
-// @param $section-btn-bg-color-hover
-// @param $section-btn-text-color-hover
+// @param $section-btn-bg-color-hover      [$section-btn-bg-color]
+// @param $section-btn-text-color-hover    [$section-btn-text-color]
+
+// @param $section-btn-bg-color-focus      [$section-btn-bg-color-hover]
+// @param $section-btn-text-color-focus    [$section-btn-text-color-hover]
 
 // @param $section-caption-color           [$section-text-color]
 
@@ -47,9 +50,11 @@
   $section-btn-bg-color,
   $section-btn-text-color,
 
+  $section-btn-border-hover: $btn-border,
   $section-btn-bg-color-hover: $section-btn-bg-color,
   $section-btn-text-color-hover: $section-btn-text-color,
 
+  $section-btn-border-focus: $btn-border,
   $section-btn-bg-color-focus: $section-btn-bg-color-hover,
   $section-btn-text-color-focus: $section-btn-text-color-hover,
 
@@ -171,7 +176,9 @@
         $text-color-hover: $section-btn-text-color-hover,
         $text-color-focus: $section-btn-text-color-focus,
         $background-color-hover: $section-btn-bg-color-hover,
-        $background-color-focus: $section-btn-bg-color-focus
+        $background-color-focus: $section-btn-bg-color-focus,
+        $border-hover: $section-btn-border-hover,
+        $border-focus: $section-btn-border-focus
       );
     }
 
