@@ -42,3 +42,31 @@
     clear: both;
   }
 }
+
+//
+// Themify mixin
+// @param {Map} $themes [$themes] - Map of themes to use
+//
+@mixin themify($themes: $themes) {
+  // Iterate over the themes
+  @each $theme, $colors in $themes {
+    // Create a selector (e.g. `.media.theme-unicorn, .theme-unicorn .media`)
+    .section--#{$theme},
+    .section--#{$theme} & {
+      // Set the theme variables with `!global`
+      $link-color: map-get($colors, 'link-color') !global;
+      $link-visited-color: map-get($colors, 'link--visited-color') !global;
+      $link-hover-color: map-get($colors, 'link-hover-color') !global;
+      $section-bg-color: map-get($colors, 'section-bg-color') !global;
+
+      // Output user content
+      @content;
+    }
+  }
+}
+
+* {
+  @include themify {
+    background-color: $section-bg-color;
+  }
+}

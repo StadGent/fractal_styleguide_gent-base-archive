@@ -1,6 +1,7 @@
 a {
   @include themify {
     color: $link-color;
+    text-decoration: none;
 
     &:visited {
       color: $link-visited-color;
@@ -9,15 +10,13 @@ a {
     &:hover {
       color: $link-hover-color;
     }
-  }
 
+    &:focus {
+      color: $color-dark-blue;
+    }
 
-
-  &:focus {
-    color: $color-dark-blue;
-  }
-
-  &.btn {
-    color: $color-white;
+    &.btn {
+      color: $color-white;
+    }
   }
 }

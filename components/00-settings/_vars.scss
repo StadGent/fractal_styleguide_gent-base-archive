@@ -116,11 +116,31 @@ $heading-6-font-family: $default-font-family;
 
 $themes: (
   'default': (
+    'section-bg-color': $color-white,
     'link-color': $color-blue,
     'link-visited-color': #f00,
-    'link-hover-color': #f00,
+    'link-hover-color': $color-orange,
+  ),
+  'accent': (
+    'section-bg-color': $color-blue,
+    'link-color': $color-light-gray,
+    'link-visited-color': $color-dark-blue,
+    'link-hover-color': #0f0,
   ),
   'wrapper': (
+    'section-bg-color': $color-darkest-blue,
+    'link-color': $color-light-gray,
+    'link-visited-color': $color-dark-blue,
+    'link-hover-color': #0f0,
+  ),
+  'highlighted': (
+    'section-bg-color': $color-orange,
+    'link-color': $color-light-gray,
+    'link-visited-color': $color-dark-blue,
+    'link-hover-color': #0f0,
+  ),
+  'inverse': (
+    'section-bg-color': $color-lightest-blue,
     'link-color': $color-light-gray,
     'link-visited-color': $color-dark-blue,
     'link-hover-color': #0f0,
