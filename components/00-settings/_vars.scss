@@ -65,12 +65,6 @@ $radius-4: 30px !default;
 // Breadcrumb settings.
 $bg-hover-breadcrumb: $color-lightest-blue !default;
 
-// Tag styling.
-$tag-color: $color-white !default;
-$tag-background-color: $color-dark-gray !default;
-$tag-color-hover: $color-white !default;
-$tag-background-color-hover: $color-darkest-gray !default;
-
 //
 // Section dependent variables!
 //
@@ -78,38 +72,79 @@ $tag-background-color-hover: $color-darkest-gray !default;
 // component that is within a section!
 //
 
+//
+// ATOM SETTINGS.
+//
+
+// Link settings.
+$link-color: $color-blue !default;
+$link-color-hover: $color-dark-blue !default;
+$link-color-visited: $color-dark-blue !default;
+$link-color-active: $color-dark-blue !default;
+$link-color-focus: $color-dark-blue !default;
+$link-color-in-button: $color-white !default;
+
 // Heading 1 settings.
-$heading-1-color: $color-darkest-blue;
-$heading-1-color-hover: $color-dark-blue;
-$heading-1-color-visited: $color-darkest-blue;
-$heading-1-font-family: $secondary-font-family;
+$heading-1-color: $color-darkest-blue !default;
+$heading-1-color-hover: $color-dark-blue !default;
+$heading-1-color-visited: $color-darkest-blue !default;
+$heading-1-font-family: $secondary-font-family !default;
 
 // Heading 2 settings.
-$heading-2-color: $color-darkest-blue;
-$heading-2-color-hover: $color-dark-blue;
-$heading-2-color-visited: $color-darkest-blue;
-$heading-2-font-family: $default-font-family;
+$heading-2-color: $color-darkest-blue !default;
+$heading-2-color-hover: $color-dark-blue !default;
+$heading-2-color-visited: $color-darkest-blue !default;
+$heading-2-font-family: $default-font-family !default;
 
 // Heading 3 settings.
-$heading-3-color: $color-darkest-blue;
-$heading-3-color-hover: $color-dark-blue;
-$heading-3-color-visited: $color-darkest-blue;
-$heading-3-font-family: $default-font-family;
+$heading-3-color: $color-darkest-blue !default;
+$heading-3-color-hover: $color-dark-blue !default;
+$heading-3-color-visited: $color-darkest-blue !default;
+$heading-3-font-family: $default-font-family !default;
 
 // Heading 4 settings.
-$heading-4-color: $color-darkest-blue;
-$heading-4-color-hover: $color-dark-blue;
-$heading-4-color-visited: $color-darkest-blue;
-$heading-4-font-family: $default-font-family;
+$heading-4-color: $color-darkest-blue !default;
+$heading-4-color-hover: $color-dark-blue !default;
+$heading-4-color-visited: $color-darkest-blue !default;
+$heading-4-font-family: $default-font-family !default;
 
 // Heading 5 settings.
-$heading-5-color: $color-darkest-blue;
-$heading-5-color-hover: $color-dark-blue;
-$heading-5-color-visited: $color-darkest-blue;
-$heading-5-font-family: $default-font-family;
+$heading-5-color: $color-darkest-blue !default;
+$heading-5-color-hover: $color-dark-blue !default;
+$heading-5-color-visited: $color-darkest-blue !default;
+$heading-5-font-family: $default-font-family !default;
 
 // Heading 6 settings.
-$heading-6-color: $color-darkest-blue;
-$heading-6-color-hover: $color-dark-blue;
-$heading-6-color-visited: $color-darkest-blue;
-$heading-6-font-family: $default-font-family;
+$heading-6-color: $color-darkest-blue !default;
+$heading-6-color-hover: $color-dark-blue !default;
+$heading-6-color-visited: $color-darkest-blue !default;
+$heading-6-font-family: $default-font-family !default;
+
+// Button settings.
+$btn-bg-color: $color-blue;
+$btn-bg-color-hover: lighten($color-blue, 5);
+$btn-bg-color-focus: lighten($color-blue, 5);
+$btn-text-color: $color-white;
+$btn-border: none;
+
+// Tag styling.
+$tag-color: $color-white !default;
+$tag-background-color: $color-dark-gray !default;
+$tag-color-hover: $color-white !default;
+$tag-background-color-hover: $color-darkest-gray !default;
+
+//
+// MOLECULE SETTINGS.
+//
+
+// CTA links settings.
+$cta-link-color: $color-blue !default;
+$cta-link-color-hover: $color-blue !default;
+$cta-link-background-color: $color-lightest-blue !default;
+$cta-link-background-color-hover: $color-lightest-gray !default;
+$cta-link-border-color: $color-light-gray !default;
+
+$cta-link-icon-background-color: $color-blue !default;
+$cta-link-icon-color: $color-white !default;
+
+$cta-link-title-color: $color-darkest-gray !default;
