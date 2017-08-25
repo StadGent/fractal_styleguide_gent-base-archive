@@ -10,19 +10,19 @@
 // @param $section-btn-bg-color-hover,
 // @param $section-btn-text-color-hover,
 
-// @param $section-caption-color           [$section-text-color},
+// @param $section-caption-color           [$section-text-color]
 
-// @param $section-title-color             [$section-text-color},
+// @param $section-title-color             [$section-text-color]
 
-// @param $section-link-color              [$section-text-color},
-// @param $section-link-color-hover        [$section-link-color},
-// @param $section-link-color-focus        [$section-link-color-hover},
-// @param $section-link-color-visited      [$section-link-color},
-// @param $section-link-color-in-button
+// @param $section-link-color              [$section-text-color]
+// @param $section-link-color-hover        [$section-link-color]
+// @param $section-link-color-focus        [$section-link-color-hover]
+// @param $section-link-color-visited      [$section-link-color]
+// @param $section-link-color-active       [$section-btn-bg-color]
 
-// @param $section-field-text-color        [$section-text-color},
-// @param $section-field-placeholder-color [$section-field-text-color},
-// @param $section-field-bg-color          [$section-bg-color},
+// @param $section-field-text-color        [$section-text-color]
+// @param $section-field-placeholder-color [$section-field-text-color]
+// @param $section-field-bg-color          [$section-bg-color]
 // @param $section-field-border-color      [$section-field-bg-color]
 //
 //
@@ -46,7 +46,6 @@
   $section-link-color-focus: $section-link-color-hover,
   $section-link-color-visited: $section-link-color,
   $section-link-color-active: $section-btn-bg-color,
-  $section-link-color-in-button: $section-link-color,
 
   $section-field-text-color: $section-text-color,
   $section-field-placeholder-color: $section-field-text-color,
