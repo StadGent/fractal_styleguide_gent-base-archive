@@ -3,6 +3,7 @@
   "status": "ready",
   "handle": "button-submit",
   "context": {
-    "text": "Submit"
+    "text": "Submit",
+    "modifier": "icon icon-search icon-only"
   }
 }

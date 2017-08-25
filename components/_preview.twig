@@ -25,7 +25,11 @@
     </style>
 </head>
 <body>
-{% include '@header' %}
+{% include '@header' with {
+  "search_input_placeholder": "Wat wilt u vinden?",
+  "search_submit_text": "Search",
+  "search_submit_modifier": "inline icon icon-search icon-only"
+} %}
 {% include '@breadcrumbs' with {
   "items": [
     "<a href='#'>Stad.gent</a>",

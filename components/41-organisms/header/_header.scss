@@ -1,5 +1,6 @@
 header {
   padding: .35rem 0;
+  font-size: .7rem;
   line-height: 2.4rem;
 
   .content-container > * {
@@ -11,9 +12,12 @@ header {
       float: right;
     }
 
-    &.header-component,
-    input {
-      font-size: .7rem;
+    i {
+      display: inline-block;
+      margin-left: 10px;
+      float: right;
+      font-size: 1rem;
+      line-height: 2.4rem;
     }
 
     // Change the look and feel of the link atom.
@@ -35,6 +39,7 @@ header {
 
       input[type="search"] {
         margin: 0;
+        font-size: .7rem;
       }
 
       button {
@@ -45,14 +50,8 @@ header {
         width: 50px;
         padding-right: 10px;
         padding-left: 10px;
-        background: transparent;
         font-size: 1.3rem;
         line-height: 1.8rem;
-
-        &:hover {
-          background: $color-white;
-          color: $color-darkest-blue;
-        }
       }
     }
   }

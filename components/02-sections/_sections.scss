@@ -111,14 +111,15 @@
 
     // Button styling.
     .btn,
-    a.btn {
+    a.btn,
+    button[type="submit"] {
       @include btn-scheme(
         $section-btn-text-color,
         $section-btn-bg-color,
         $section-btn-border,
         $section-btn-text-color-hover,
         $section-btn-bg-color-hover
-    );
+      );
     }
 
     // Form input styling.

@@ -3,12 +3,6 @@
     <div id="logo">
       {% include '@logo' %}
     </div>
-    <div id="main-menu" class="header-component">
-      {% include '@link' with {
-        'url': '#',
-        'text': 'Menu'
-      } %}
-    </div>
     <div id="profile" class="header-component right">
       {% include '@link' with {
         'url': '#',
@@ -16,7 +10,7 @@
       } %}
     </div>
     <div id="header-search" class="header-search header-component right">
-      {% include '@search' with { 'text': '<i class="icon-search" ></i>', 'placeholder': 'test', 'modifier': 'inline' } %}
+      {% include '@search' %}
     </div>
   </div>
 </header>
