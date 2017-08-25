@@ -1,16 +1,22 @@
 <header class="section--wrapper">
   <div class="content-container">
-    <div id="example-logo">
-      {% include '../../21-atoms/logo/logo.twig' %}
+    <div id="logo">
+      {% include '@logo' %}
     </div>
-    <div id="example-component">
-      <p><a href="#">Menu</a></p>
+    <div id="main-menu" class="header-component">
+      {% include '@link' with {
+        'url': '#',
+        'text': 'Menu'
+      } %}
     </div>
-    <div id="example-right-component" class="right">
-      <p><a href="#"><i class="icon-search"></i> Search</a></p>
+    <div id="profile" class="header-component right">
+      {% include '@link' with {
+        'url': '#',
+        'text': '<i class="icon-user"></i> Profile'
+      } %}
     </div>
-    <div id="example-right-component" class="right">
-      <p><a href="#"><i class="icon-user"></i> Profile</a></p>
+    <div id="header-search" class="header-search header-component right">
+      {% include '@search' with { 'text': '<i class="icon-search" ></i>', 'placeholder': 'test', 'modifier': 'inline' } %}
     </div>
   </div>
 </header>

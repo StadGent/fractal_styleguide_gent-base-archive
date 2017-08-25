@@ -1,5 +1,6 @@
 header {
   padding: .35rem 0;
+  line-height: 2.4rem;
 
   .content-container > * {
     margin: 0 1rem 0 0;
@@ -10,11 +11,12 @@ header {
       float: right;
     }
 
-    p {
+    &.header-component,
+    input {
       font-size: .7rem;
-      line-height: 2rem;
     }
 
+    // Change the look and feel of the link atom.
     a {
       text-decoration: none;
 
@@ -23,5 +25,36 @@ header {
         text-decoration: underline;
       }
     }
+
+    //
+    // Change the look and feel of the search molecule.
+    //
+    &.header-search {
+      position: relative;
+      margin-right: 50px;
+
+      input[type="search"] {
+        margin: 0;
+      }
+
+      button {
+        position: absolute;
+        top: 0;
+        right: -50px;
+        bottom: 0;
+        width: 50px;
+        padding-right: 10px;
+        padding-left: 10px;
+        background: transparent;
+        font-size: 1.3rem;
+        line-height: 1.8rem;
+
+        &:hover {
+          background: $color-white;
+          color: $color-darkest-blue;
+        }
+      }
+    }
   }
 }
+
