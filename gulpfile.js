@@ -79,7 +79,10 @@ gulp.task('styles:dist', function() {
     .pipe(sassLint.format())
     .pipe(sourcemaps.init())
     .pipe(csscomb())
-    .pipe(sass({outputStyle: 'nested'})).on('error', sass.logError)
+    .pipe(sass({
+      outputStyle: 'nested',
+      includePaths: ['node_modules/breakpoint-sass/stylesheets']
+    })).on('error', sass.logError)
     .pipe(autoprefixer({
         browsers: ['last 5 versions']
     }))
@@ -106,7 +109,10 @@ gulp.task('styles:build', ['fractal:build'], function() {
       'merge-default-rules': false
     }))
     .pipe(sassLint.format())
-    .pipe(sass({outputStyle: 'compressed'})).on('error', sass.logError)
+    .pipe(sass({
+      outputStyle: 'compressed',
+      includePaths: ['node_modules/breakpoint-sass/stylesheets']
+    })).on('error', sass.logError)
     .pipe(autoprefixer({
         browsers: ['last 5 versions']
     }))

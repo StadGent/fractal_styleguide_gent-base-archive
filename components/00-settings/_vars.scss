@@ -27,8 +27,10 @@ $bp-tablet-fonts: 640px !default;
 $bp-desktop-fonts: 1360px !default;
 
 // Visual breakpoints.
-$bp-tablet: 640px !default;
-$bp-desktop: 960px !default;
+$bp-tablet: 640px !default; // Deprecated: @todo remove when not used anymore.
+$bp-tablet-min: min-width 640px !default;
+$bp-desktop: 960px !default; // Deprecated: @todo remove when not used anymore.
+$bp-desktop-min: min-width 960px !default;
 
 // Font settings.
 $default-font-family: 'Source Sans Pro', arial, sans-serif !default;
