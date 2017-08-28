@@ -1,7 +1,19 @@
+$mobile-menu-width: 375px;
+
 .mobile-menu {
-  width: 375px;
+  position: fixed;
+  top: 0;
+  left: -$mobile-menu-width;
+  width: $mobile-menu-width;
+  height: 100%;
+  transition: left.5s cubic-bezier(0, 1, .5, 1);
   background-color: $color-darkest-blue;
   box-shadow: 0 1px 16.5px 0 rgba(0, 0, 0, .5);
+  z-index: 9999;
+
+  &.js-opened {
+    left: 0;
+  }
 
   ul {
     margin: 0;
@@ -29,7 +41,7 @@
     }
   }
 
-  a.mobile-menu-close {
+  a.close {
     border: 0;
     background-color: transparent;
     text-align: right;

@@ -4,7 +4,7 @@
       {% include '../../21-atoms/logo/logo.twig' %}
     </div>
     <div id="example-component">
-      <p><a href="#">Menu</a></p>
+      <p><a href="#" class="mobile-toggle">Menu</a></p>
     </div>
     <div id="example-right-component" class="right">
       <p><a href="#"><i class="icon-search"></i> Search</a></p>
@@ -13,4 +13,12 @@
       <p><a href="#"><i class="icon-user"></i> Profile</a></p>
     </div>
   </div>
+  {% include '@mobile-menu' with {
+    "items": [
+      "<a href='javascript:(void);'>Menu item 1</a>",
+      "<a href='javascript:(void);' class='active'>Menu item 2</a>",
+      "<a href='javascript:(void);'>Menu item 3</a>",
+      "<a href='javascript:(void);'>Menu item 4</a>"
+    ]
+  } %}
 </header>

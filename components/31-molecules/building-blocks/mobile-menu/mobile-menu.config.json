@@ -2,6 +2,7 @@
   "title": "Mobile menu",
   "status": "wip",
   "handle": "mobile-menu",
+  "preview": "@preview-mobile-menu",
   "context": {
     "items": [
       "<a href='javascript:(void);'>Menu item 1</a>",
