@@ -1,3 +1,4 @@
-{% include '@input-search' with { 'placeholder': search_input_placeholder, 'modifier': search_input_modifier } %}
-{% include '@button-submit' with { 'text': search_submit_text, 'modifier': search_submit_modifier } %}
-
+<form class="form form-search">
+  {% include '@input-search' with { 'placeholder': search_input_placeholder, 'modifier': search_input_modifier } %}
+  {% include '@button-submit' with { 'text': search_submit_text, 'modifier': search_submit_modifier } %}
+</form>
