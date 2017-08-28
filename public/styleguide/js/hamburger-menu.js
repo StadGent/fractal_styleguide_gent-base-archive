@@ -25,7 +25,7 @@
       overlay.addClass('js-opened');
     });
 
-    close.on('click', function (e) {
+    close.add(overlay).on('click', function (e) {
       e.preventDefault();
       hamburgerMenu.removeClass('js-opened');
       overlay.removeClass('js-opened');
