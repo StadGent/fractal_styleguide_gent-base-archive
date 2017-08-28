@@ -5,7 +5,7 @@
   "context": {
     "items": [
       "<a href='javascript:(void);'>Menu item 1</a>",
-      "<a href='javascript:(void);'>Menu item 2</a>",
+      "<a href='javascript:(void);' class='active'>Menu item 2</a>",
       "<a href='javascript:(void);'>Menu item 3</a>",
       "<a href='javascript:(void);'>Menu item 4</a>"
     ]
