@@ -2,5 +2,5 @@
 node_modules
 build
 scss
-public/css/main.css
-public/js/*
+public/css
+public/styleguide
