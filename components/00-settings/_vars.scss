@@ -113,3 +113,9 @@ $heading-6-color: $color-darkest-blue;
 $heading-6-color-hover: $color-dark-blue;
 $heading-6-color-visited: $color-darkest-blue;
 $heading-6-font-family: $default-font-family;
+
+// Mobile menu
+$hamburger-menu-width: 320px;
+$hamburger-menu-transition: left.5s cubic-bezier(0, 1, .5, 1);
+$hamburger-menu-shadow: 0 1px 16.5px 0 rgba(0, 0, 0, .5);
+$hamburger-menu-overlay-color: rgba(44, 63, 72, .6);

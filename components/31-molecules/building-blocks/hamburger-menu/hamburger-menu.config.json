@@ -1,8 +1,8 @@
 {
-  "title": "Mobile menu",
+  "title": "Hamburger menu",
   "status": "wip",
-  "handle": "mobile-menu",
-  "preview": "@preview-mobile-menu",
+  "handle": "hamburger-menu",
+  "preview": "@preview-hamburger-menu",
   "context": {
     "items": [
       "<a href='javascript:(void);'>Menu item 1</a>",

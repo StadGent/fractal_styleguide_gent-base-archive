@@ -9,25 +9,25 @@
    * @param settings
    *   Object of additional settings.
    */
-  $(window).on('load', loadMobileMenu);
+  $(window).on('load', loadHamburgerMenu);
 
   /**
-   * Replace the mobile breadcrumb of Gent base by our own.
+   * Replace the hamburger menu.
    */
-  function loadMobileMenu() {
-    var mobileMenu = $('.mobile-menu');
-    var toggle = $('.mobile-toggle');
-    var close = mobileMenu.find('.close');
-    var overlay = $('.mobile-menu-overlay');
+  function loadHamburgerMenu() {
+    var hamburgerMenu = $('.hamburger-menu');
+    var toggle = $('.hamburger-toggle');
+    var close = hamburgerMenu.find('.close');
+    var overlay = $('.hamburger-menu-overlay');
 
     toggle.on('click', function (e) {
-      mobileMenu.addClass('js-opened');
+      hamburgerMenu.addClass('js-opened');
       overlay.addClass('js-opened');
     });
 
     close.on('click', function (e) {
       e.preventDefault();
-      mobileMenu.removeClass('js-opened');
+      hamburgerMenu.removeClass('js-opened');
       overlay.removeClass('js-opened');
     });
   }
