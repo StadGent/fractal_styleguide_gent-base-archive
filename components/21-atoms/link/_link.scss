@@ -1,19 +1,23 @@
 a {
-  color: $color-blue;
+  color: $link-color;
 
   &:visited {
-    color: $color-dark-blue;
+    color: $link-color-visited;
   }
 
   &:hover {
-    color: $color-dark-blue;
+    color: $link-color-hover;
+  }
+
+  &:active {
+    color: $link-color-active;
   }
 
   &:focus {
-    color: $color-dark-blue;
+    color: $link-color-focus;
   }
 
   &.btn {
-    color: $color-white;
+    color: $link-color-in-button;
   }
 }

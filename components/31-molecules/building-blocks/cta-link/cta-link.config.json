@@ -1,0 +1,11 @@
+{
+  "title": "CTA link",
+  "status": "ready",
+  "handle": "cta-link",
+  "context": {
+    "title": "Graag meer info?",
+    "link_text": "Bezoek onze website",
+    "url": "javascript:(void);",
+    "modifier": "link"
+  }
+}

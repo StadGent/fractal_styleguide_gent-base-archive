@@ -79,6 +79,11 @@ input[type='submit'].btn--inline {
 a.btn-default,
 .btn--default,
 %btn--default {
-  @include btn-scheme($color-white, $color-blue, none, $background-color-hover: lighten($color-blue, 5));
+  @include btn-scheme(
+    $btn-text-color,
+    $btn-bg-color,
+    $btn-border,
+    $background-color-hover: $btn-bg-color-hover
+  );
 }
 
