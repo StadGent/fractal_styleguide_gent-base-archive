@@ -3,4 +3,4 @@ node_modules
 build
 scss
 public/css
-public/styleguide
+public/styleguide/js

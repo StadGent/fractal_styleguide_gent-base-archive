@@ -21,15 +21,19 @@
     var searchButton = searchForm.find('button');
     var closeButton = mobileHeader.find('.close');
 
+    // Open/submit the mobile form
     searchButton.on('click', function (e) {
+      // Prevent button submission when form is closed.
       if (!searchButton.hasClass('js-form-search-opened')) {
         e.preventDefault();
       }
+
       mobileHeader.addClass('js-form-search-opened');
       searchInput.addClass('js-form-search-opened');
       closeButton.addClass('js-form-search-opened');
     });
 
+    // Close the mobile form.
     closeButton.on('click', function (e) {
       mobileHeader.removeClass('js-form-search-opened');
       searchInput.removeClass('js-form-search-opened');
