@@ -1,14 +1,18 @@
 <header class="section--wrapper">
   <div class="content-container">
-    <div id="example-component">
-      <p><a href="#" class="hamburger-toggle">Menu</a></p>
-    </div>
+    <p>
+      {% include '@link' with {
+        'link': 'javascript:(void);',
+        'modifier': 'hamburger-toggle',
+        'text': 'Menu'
+      } %}
+      </p>
     <div id="logo">
       {% include '@logo' %}
     </div>
     <div id="profile" class="header-component right">
       {% include '@link' with {
-        'url': '#',
+        'link': 'javascript:(void);',
         'text': '<i class="icon-user"></i> Profile'
       } %}
     </div>

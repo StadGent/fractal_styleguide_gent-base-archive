@@ -1,0 +1,12 @@
+{
+  "title": "Mijn Gent block",
+  "status": "wip",
+  "handle": "mijn-gent-block",
+  "context": {
+    "items": [
+      "<a href='javascript:(void);'>Mijn profiel</a>",
+      "<a href='javascript:(void);'>Nieuwsbrieven</a>",
+      "<a href='javascript:(void);'>Historiek</a>"
+    ]
+  }
+}
