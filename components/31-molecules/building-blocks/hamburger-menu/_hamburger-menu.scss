@@ -5,7 +5,8 @@
   width: $hamburger-menu-width;
   height: 100%;
   transition: $hamburger-menu-transition;
-  background-color: $color-darkest-blue;
+  background-color: $hamburger-menu-bg-color;
+  color: $hamburger-menu-link-color;
   z-index: 9999;
 
   &.js-opened {
@@ -21,21 +22,24 @@
     display: block;
     padding-right: .8rem;
     padding-left: .8rem;
-    border-bottom: 1.5px solid darken($color-darkest-blue, 2);
-    color: $color-white;
+    border-bottom: 1.5px solid $hamburger-menu-link-border-color;
+    background-color: $hamburger-menu-link-bg-color;
+    color: $hamburger-menu-link-color;
     font-size: .7rem;
     font-weight: bold;
     line-height: 3.48;
 
     &.active,
     &:active {
-      border-color: $color-dark-blue;
-      background-color: $color-dark-blue;
+      border-color: $hamburger-menu-link-border-color-active;
+      background-color: $hamburger-menu-link-bg-color-active;
+      color: $hamburger-menu-link-color-active;
     }
 
     &:hover {
-      border-color: darken($color-darkest-blue, 2);
-      background-color: darken($color-darkest-blue, 2);
+      border-color: $hamburger-menu-link-border-color-hover;
+      background-color: $hamburger-menu-link-bg-color-hover;
+      color: $hamburger-menu-link-color-hover;
     }
   }
 

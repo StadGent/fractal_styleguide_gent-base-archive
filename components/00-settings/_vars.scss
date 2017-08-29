@@ -119,3 +119,16 @@ $hamburger-menu-width: 320px;
 $hamburger-menu-transition: left.5s cubic-bezier(0, 1, .5, 1);
 $hamburger-menu-shadow: 0 1px 16.5px 0 rgba(0, 0, 0, .5);
 $hamburger-menu-overlay-color: rgba(44, 63, 72, .6);
+$hamburger-menu-bg-color: $color-darkest-blue;
+
+$hamburger-menu-link-color: $color-white;
+$hamburger-menu-link-color-active: $color-white;
+$hamburger-menu-link-color-hover: $color-white;
+
+$hamburger-menu-link-border-color: darken($color-darkest-blue, 2);
+$hamburger-menu-link-border-color-active: $color-dark-blue;
+$hamburger-menu-link-border-color-hover: darken($color-darkest-blue, 2);
+
+$hamburger-menu-link-bg-color: transparent;
+$hamburger-menu-link-bg-color-active: $color-dark-blue;
+$hamburger-menu-link-bg-color-hover: darken($color-darkest-blue, 2);
