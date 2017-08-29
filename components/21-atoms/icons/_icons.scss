@@ -427,6 +427,11 @@
   content: '\e906';
 }
 
+%icon-check,
+.icon-check::before {
+  content: '\f00c';
+}
+
 %icon-star,
 .icon-star::before {
   content: '\e900';
