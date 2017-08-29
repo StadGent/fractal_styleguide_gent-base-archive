@@ -45,21 +45,21 @@
 
     header,
     section {
-      padding-right: 10px;
-      padding-left: 10px;
+      padding-right: .625rem;
+      padding-left: .625rem;
     }
 
     header {
-      padding-top: 15px;
+      padding-top: .9rem;
     }
 
     section {
-      padding-left: 20px;
+      padding-left: 1.25rem;
     }
 
     footer {
       @extend %section--inverse;
-      padding: 0 10px;
+      padding: 0 .625rem;
       border-bottom-left-radius: $radius-1;
       border-bottom-right-radius: $radius-1;
       text-align: right;
