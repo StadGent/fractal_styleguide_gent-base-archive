@@ -1,5 +1,8 @@
 <header class="section--wrapper">
   <div class="content-container">
+    <div id="example-component">
+      <p><a href="#" class="hamburger-toggle">Menu</a></p>
+    </div>
     <div id="logo">
       {% include '@logo' %}
     </div>
@@ -17,4 +20,12 @@
       {% include '@search' %}
     </div>
   </div>
+  {% include '@hamburger-menu' with {
+    "items": [
+      "<a href='javascript:(void);'>Menu item 1</a>",
+      "<a href='javascript:(void);' class='active'>Menu item 2</a>",
+      "<a href='javascript:(void);'>Menu item 3</a>",
+      "<a href='javascript:(void);'>Menu item 4</a>"
+    ]
+  } %}
 </header>
