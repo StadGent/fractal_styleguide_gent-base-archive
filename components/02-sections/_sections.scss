@@ -171,7 +171,8 @@
     // @TODO: Change this so it's not a global mixin anymore?
     //
     .btn,
-    a.btn {
+    a.btn,
+    button[type="submit"] {
       @include btn-scheme(
         $section-btn-text-color,
         $section-btn-bg-color,

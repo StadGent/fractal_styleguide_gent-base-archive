@@ -3,14 +3,21 @@
     <div id="example-component">
       <p><a href="#" class="hamburger-toggle">Menu</a></p>
     </div>
-    <div id="example-logo">
-      {% include '../../21-atoms/logo/logo.twig' %}
+    <div id="logo">
+      {% include '@logo' %}
     </div>
-    <div id="example-right-component" class="right">
-      <p><a href="#"><i class="icon-search"></i> Search</a></p>
+    <div id="profile" class="header-component right">
+      {% include '@link' with {
+        'url': '#',
+        'text': '<i class="icon-user"></i> Profile'
+      } %}
     </div>
-    <div id="example-right-component" class="right">
-      <p><a href="#"><i class="icon-user"></i> Profile</a></p>
+    <div id="header-search-mobile" class="header-search-mobile header-component right">
+      {% include '@search' %}
+      <a href="javascript:(void);" class="close">Sluiten</a>
+    </div>
+    <div id="header-search" class="header-search header-component right">
+      {% include '@search' %}
     </div>
   </div>
   {% include '@hamburger-menu' with {
