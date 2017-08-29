@@ -1,19 +1,25 @@
 <div class="mijn-gent-block">
-  <header>
-    {% include '@h3' with { 'h3_text': 'Mijn Gent' } %}
-  </header>
+  {% include '@link' with {
+    'link': 'javascript:(void);',
+    'text': '<i class="icon-user"></i> Profile'
+  } %}
+  <div class="content">
+    <header>
+      {% include '@h3' with { 'h3_text': 'Mijn Gent' } %}
+    </header>
 
-  <section>
-    {% include '@list' with {
-      'modifier': 'no-style'
-    } %}
-  </section>
+    <section>
+      {% include '@list' with {
+        'modifier': 'no-style'
+      } %}
+    </section>
 
-  <footer>
-    {% include '@link' with {
-      'link': 'javascript:(void);',
-      'modifier': '',
-      'text': 'Uitloggen'
-    } %}
-  </footer>
+    <footer>
+      {% include '@link' with {
+        'link': 'javascript:(void);',
+        'modifier': '',
+        'text': 'Uitloggen'
+      } %}
+    </footer>
+  </div>
 </div>
