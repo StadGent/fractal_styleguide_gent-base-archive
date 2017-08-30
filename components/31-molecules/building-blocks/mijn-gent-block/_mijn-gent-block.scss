@@ -14,7 +14,7 @@
     position: absolute;
     top: 45px;
     right: -10px;
-    min-width: 150px;
+    min-width: 200px;
     border-radius: $radius-1;
     background: $color-white;
     box-shadow: 2px 2px 2px 0 rgba(44, 63, 72, .2), -2px 2px 2px 0 rgba(44, 63, 72, .2);
@@ -64,5 +64,9 @@
       border-bottom-right-radius: $radius-1;
       text-align: right;
     }
+  }
+
+  .mijn-gent-component {
+    border-bottom: 1px solid $color-light-blue;
   }
 }

@@ -4,17 +4,42 @@
     'modifier': 'toggle',
     'text': '<i class="icon-user"></i> Profile'
   } %}
+
   <div class="content">
-    <header>
-      {% include '@h3' with { 'h3_text': 'Mijn Gent' } %}
-    </header>
+    <div class="mijn-gent-component">
+      <header>
+        {% include '@h3' with { 'h3_text': 'Mijn Bibliotheek Gent' } %}
+      </header>
 
-    <section>
-      {% include '@list' with {
-        'modifier': 'no-style'
-      } %}
-    </section>
+      <section>
+        {% include '@list' with {
+          'modifier': 'no-style',
+          'items': [
+            "<a href='javascript:(void);'>Overzicht</a>",
+            "<a href='javascript:(void);'>Leestips</a>",
+            "<a href='javascript:(void);'>Mijn profiel</a>"
+          ]
+        } %}
+      </section>
 
+    </div>
+    <div class="mijn-gent-component">
+      <header>
+        {% include '@h3' with { 'h3_text': 'Mijn Gent' } %}
+      </header>
+
+      <section>
+        {% include '@list' with {
+          'modifier': 'no-style',
+          'items': [
+            "<a href='javascript:(void);'>Mijn profiel</a>",
+            "<a href='javascript:(void);'>Nieuwsbrieven</a>",
+            "<a href='javascript:(void);'>Historiek</a>"
+          ]
+        } %}
+      </section>
+
+    </div>
     <footer>
       {% include '@link' with {
         'link': 'javascript:(void);',
@@ -23,4 +48,5 @@
       } %}
     </footer>
   </div>
+
 </div>
