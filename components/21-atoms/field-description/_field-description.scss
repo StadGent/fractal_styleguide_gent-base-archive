@@ -1,0 +1,13 @@
+.field-description {
+  padding: 10px 10px 10px 50px;
+  border-radius: $radius-1;
+  background-color: $color-lightest-gray;
+  color: $color-dark-gray;
+  font-size: .9rem;
+  line-height: 1.1rem;
+
+  &:before {
+    @extend %icon-base-css;
+    @extend %icon-info;
+  }
+}
