@@ -144,7 +144,7 @@
 
 %icon-facebook,
 .icon-facebook::before {
-  content: '\e90e';
+  content: '\e90f';
 }
 
 %icon-facebook-full,
@@ -299,7 +299,7 @@
 
 %icon-tie,
 .icon-tie::before {
-  content: '\e90f';
+  content: '\e910';
 }
 
 %icon-rdf,
@@ -377,9 +377,14 @@
   content: '\e901';
 }
 
+%icon-smartphone,
+.icon-smartphone::before {
+  content: '\e90a';
+}
+
 %icon-data,
 .icon-data::before {
-  content: '\e90a';
+  content: '\e90b';
 }
 
 %icon-poll,
@@ -389,7 +394,7 @@
 
 %icon-textballoon-right,
 .icon-textballoon-right::before {
-  content: '\e90b';
+  content: '\e90c';
 }
 
 %icon-textballoon-left,
@@ -399,12 +404,12 @@
 
 %icon-textballoon-fill-right,
 .icon-textballoon-fill-right::before {
-  content: '\e90c';
+  content: '\e90d';
 }
 
 %icon-textballoon-fill-left,
 .icon-textballoon-fill-left::before {
-  content: '\e90d';
+  content: '\e90e';
 }
 
 %icon-house,
