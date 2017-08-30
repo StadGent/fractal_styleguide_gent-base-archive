@@ -99,3 +99,22 @@ input[type='checkbox'] {
     margin: 0 0 .5rem;
   }
 }
+
+.form-item {
+  @include make-row;
+}
+
+.form-item-column {
+  @include make-mobile-column(12);
+  @include make-tablet-column(6);
+
+  &:nth-child(1) {
+    @include tablet {
+      padding-top: 38px;
+      padding-left: $gutter-width;
+      float: right;
+    }
+
+    padding-bottom: $gutter-width;
+  }
+}
