@@ -5,8 +5,27 @@
     display: inline-block;
   }
 
-  .toggle:hover {
-    text-decoration: none;
+  .toggle {
+    overflow: hidden;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .label,
+  .picture {
+    float: left;
+  }
+
+  .picture {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-left: .625rem;
+
+    img {
+      border-radius: $radius-1;
+    }
   }
 
   .content {
@@ -28,7 +47,7 @@
     }
 
     h3 {
-      margin: 0;
+      margin-bottom: 5px;
       color: $color-dark-gray;
       font-size: .8rem;
     }
