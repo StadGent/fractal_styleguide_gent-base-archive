@@ -68,6 +68,9 @@
 
     &.progress-previous {
       &:before {
+        @include desktop {
+          line-height: 1.4rem;
+        }
         @extend %icon-base-css;
         @extend %icon-check;
         border-color: $color-green;
@@ -111,19 +114,28 @@
 
   .count {
     @include tablet {
-      top: 3px;
+      top: 0;
       right: auto;
-      left: 10px;
-      text-align: left;
+      bottom: auto;
+      left: 0;
+      line-height: 1.675rem;
+    }
+
+    @include desktop {
+      line-height: 1.475rem;
     }
 
     position: absolute;
     top: 0;
     right: 0;
+    bottom: 0;
     left: 0;
+    width: 30px;
+    height: 30px;
     margin: auto;
     color: $color-white;
     font-weight: bold;
+    line-height: 1.875rem;
     text-align: center;
     z-index: 10;
   }
