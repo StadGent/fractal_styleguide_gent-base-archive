@@ -56,11 +56,11 @@
       right: 0;
       bottom: 0;
       left: 0;
-      width: 30px;
-      height: 30px;
+      width: 1.875rem;
+      height: 1.875rem;
       margin: auto;
       border: 1.5px solid $color-gray;
-      border-radius: 30px;
+      border-radius: 1.875rem;
       background: $color-gray;
       color: $color-white;
       content: '';
@@ -70,10 +70,6 @@
       &:before {
         @extend %icon-base-css;
         @extend %icon-check;
-
-        @include desktop {
-          line-height: 1.5em;
-        }
 
         border-color: $color-green;
         background: $color-green;
@@ -110,21 +106,15 @@
     }
     display: block;
     position: relative;
+    line-height: 1.8rem;
     text-indent: -999px;
     z-index: 10;
   }
 
   .count {
     @include tablet {
-      top: 0;
       right: auto;
       bottom: auto;
-      left: 0;
-      line-height: 1.675rem;
-    }
-
-    @include desktop {
-      line-height: 1.475rem;
     }
 
     position: absolute;
@@ -132,12 +122,12 @@
     right: 0;
     bottom: 0;
     left: 0;
-    width: 30px;
-    height: 30px;
+    width: 1.875rem;
+    height: 1.875rem;
     margin: auto;
     color: $color-white;
     font-weight: bold;
-    line-height: 1.875rem;
+    line-height: 1.6em;
     text-align: center;
     z-index: 10;
   }
