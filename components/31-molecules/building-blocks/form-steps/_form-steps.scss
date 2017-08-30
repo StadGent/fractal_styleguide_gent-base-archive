@@ -72,12 +72,12 @@
         @extend %icon-check;
 
         @include desktop {
-          line-height: 1.4rem;
+          line-height: 1.5em;
         }
 
         border-color: $color-green;
         background: $color-green;
-        font-size: .8em;
+        font-size: .8rem;
         line-height: 1.6rem;
         text-align: center;
         text-indent: 0;
