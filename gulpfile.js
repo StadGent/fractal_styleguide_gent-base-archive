@@ -52,7 +52,7 @@ var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant');
 var es = require('event-stream');
 var minify = require('gulp-minify');
-var csscomb =require('gulp-csscomb');
+//var csscomb =require('gulp-csscomb');
 var npm = require('npm');
 var fs = require('fs');
 var argv = require('yargs').argv;
@@ -78,7 +78,7 @@ gulp.task('styles:dist', function() {
     }))
     .pipe(sassLint.format())
     .pipe(sourcemaps.init())
-    .pipe(csscomb())
+    //.pipe(csscomb())
     .pipe(sass({
       outputStyle: 'nested',
       includePaths: ['node_modules/breakpoint-sass/stylesheets']

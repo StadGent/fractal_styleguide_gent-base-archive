@@ -168,3 +168,39 @@ $cta-link-icon-background-color: $color-blue !default;
 $cta-link-icon-color: $color-white !default;
 
 $cta-link-title-color: $color-darkest-gray !default;
+
+//
+// THEMIFY SETTINGS.
+//
+$themes: (
+  'default': (
+    'link-color': $color-blue,
+    'link-color-visited': $color-dark-blue,
+    'link-color-focus': $color-dark-blue,
+    'link-color-hover': $color-dark-blue,
+  ),
+  'accent': (
+    'link-color': $color-orange,
+    'link-color-visited': $color-orange,
+    'link-color-focus': $color-dark-blue,
+    'link-color-hover': #0f0,
+  ),
+  'wrapper': (
+    'link-color': $color-white,
+    'link-color-visited': $color-white,
+    'link-color-focus': $color-dark-blue,
+    'link-color-hover': $color-orange,
+  ),
+  'highlighted': (
+    'link-color': $color-white,
+    'link-color-visited': $color-dark-blue,
+    'link-color-focus': $color-dark-blue,
+    'link-color-hover': $color-orange,
+  ),
+  'inverse': (
+    'link-color': $color-blue,
+    'link-color-visited': $color-dark-blue,
+    'link-color-focus': $color-dark-blue,
+    'link-color-hover': $color-orange,
+  )
+) !default;

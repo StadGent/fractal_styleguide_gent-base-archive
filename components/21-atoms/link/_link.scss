@@ -1,23 +1,32 @@
+
 a {
-  color: $link-color;
+  @include themify {
+    color: $link-color;
+  }
+
+  text-decoration: none;
 
   &:visited {
-    color: $link-color-visited;
+    @include themify {
+      color: $link-color-visited;
+    }
   }
 
   &:hover {
-    color: $link-color-hover;
-  }
-
-  &:active {
-    color: $link-color-active;
+    @include themify {
+      color: $link-color-hover;
+    }
   }
 
   &:focus {
-    color: $link-color-focus;
+    @include themify {
+      color: $link-color-focus;
+    }
   }
 
   &.btn {
-    color: $link-color-in-button;
+    @include themify {
+      color: $link-color;
+    }
   }
 }

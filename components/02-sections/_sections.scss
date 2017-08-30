@@ -133,29 +133,6 @@
     }
 
     //
-    // Atom: Link.
-    //
-    a {
-      color: $section-link-color;
-
-      &:visited {
-        color: $section-link-color-visited;
-      }
-
-      &:hover {
-        color: $section-link-color-hover;
-      }
-
-      &:active {
-        color: $section-link-color-active;
-      }
-
-      &:focus {
-        color: $section-link-color-focus;
-      }
-    }
-
-    //
     // Atom: Labels.
     //
     label {
