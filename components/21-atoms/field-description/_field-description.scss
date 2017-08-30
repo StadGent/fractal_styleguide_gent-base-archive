@@ -1,4 +1,5 @@
 .field-description {
+  position: relative;
   padding: 10px 10px 10px 50px;
   border-radius: $radius-1;
   background-color: $color-lightest-gray;
@@ -8,6 +9,10 @@
 
   &:before {
     @extend %icon-base-css;
-    @extend %icon-info;
+    @extend %icon-info-circle;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-size: 1.25rem;
   }
 }
