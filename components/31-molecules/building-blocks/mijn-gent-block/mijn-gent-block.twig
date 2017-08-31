@@ -1,6 +1,8 @@
+{% set login_link = 'no' %}
+
 <div class="mijn-gent-block">
 
-  {% if logout == "true" %}
+  {% if login_link == 'yes' %}
 
     {% include '@link' with {
       'link': 'javascript:(void);',
@@ -8,6 +10,7 @@
     } %}
 
   {% else %}
+
     <div class="toggle">
       <div class="label">
         {% include '@link' with {
@@ -20,6 +23,7 @@
         {% include '@image' with { 'src': '/styleguide/img/jpeg/avatar.jpeg', 'alt_text': 'Username' } %}
       </div>
     </div>
+
     <div class="content">
       <div class="mijn-gent-component">
         <header>
