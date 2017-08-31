@@ -166,6 +166,8 @@ $cta-link-title-color: $color-darkest-gray !default;
 //
 $themes: (
   'default': (
+    'section-bg-color': $color-white,
+    'section-text-color': $color-gray,
     'link-color': $color-blue,
     'link-color-visited': $color-blue,
     'link-color-focus': $color-dark-blue,
@@ -173,6 +175,8 @@ $themes: (
     'link-color-in-button': $color-white,
   ),
   'accent': (
+    'section-bg-color': $color-white,
+    'section-text-color': $color-gray,
     'link-color': $color-white,
     'link-color-visited': $color-white,
     'link-color-focus': $color-white,
@@ -180,6 +184,8 @@ $themes: (
     'link-color-in-button': $color-darkest-blue,
   ),
   'wrapper': (
+    'section-bg-color': $color-white,
+    'section-text-color': $color-gray,
     'link-color': $color-white,
     'link-color-visited': $color-white,
     'link-color-focus': $color-white,
@@ -187,6 +193,8 @@ $themes: (
     'link-color-in-button': $color-white,
   ),
   'highlighted': (
+    'section-bg-color': $color-white,
+    'section-text-color': $color-gray,
     'link-color': $color-white,
     'link-color-visited': $color-white,
     'link-color-focus': $color-white,
@@ -194,6 +202,8 @@ $themes: (
     'link-color-in-button': $color-darkest-blue,
   ),
   'inverse': (
+    'section-bg-color': $color-white,
+    'section-text-color': $color-gray,
     'link-color': $color-blue,
     'link-color-visited': $color-blue,
     'link-color-focus': $color-dark-blue,

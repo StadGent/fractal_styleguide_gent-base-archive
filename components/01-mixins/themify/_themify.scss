@@ -7,6 +7,9 @@
 
     .section--#{$theme} & {
 
+      $section-bg-color: map-get($colors, 'section-bg-color') !global;
+      $section-text-color: map-get($colors, 'section-text-color') !global;
+
       $link-color: map-get($colors, 'link-color') !global;
       $link-color-visited: map-get($colors, 'link-color-visited') !global;
       $link-color-focus: map-get($colors, 'link-color-focus') !global;

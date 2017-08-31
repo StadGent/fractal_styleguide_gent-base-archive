@@ -93,12 +93,6 @@
     @include clearfix();
 
     //
-    // Section container settings.
-    //
-    background-color: $section-bg-color;
-    color: $section-text-color;
-
-    //
     // Atom:
     // - Heading 1
     // - Heading 2
@@ -233,3 +227,11 @@
     }
   }
 }
+
+* {
+  @include themify {
+    background-color: $section-bg-color;
+    color: $section-text-color;
+  }
+}
+
