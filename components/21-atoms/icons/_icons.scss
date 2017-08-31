@@ -432,6 +432,11 @@
   content: '\f00c';
 }
 
+%icon-info-circle,
+.icon-info-circle::before {
+  content: '\f05a';
+}
+
 %icon-star,
 .icon-star::before {
   content: '\e900';

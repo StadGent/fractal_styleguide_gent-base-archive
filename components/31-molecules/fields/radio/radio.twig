@@ -1,4 +1,9 @@
 <div class="form-item">
-  <input type="radio" name="radio" id="radio" />
-  {% include '@label' %}
+  <div class="form-item-column">
+    {% include '@field-description' %}
+  </div>
+  <div class="form-item-column">
+    <input type="radio" name="radio" id="radio" />
+    {% include '@label' %}
+  </div>
 </div>

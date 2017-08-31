@@ -1,5 +1,10 @@
 <div class="form-item">
-{% include '@label' %}
-{% include '@input-textarea' %}
-{% include '@description' %}
+  <div class="form-item-column">
+    {% include '@field-description' %}
+  </div>
+  <div class="form-item-column">
+    {% include '@label' %}
+    {% include '@input-textarea' %}
+    {% include '@description' %}
+  </div>
 </div>
