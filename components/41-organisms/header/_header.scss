@@ -16,7 +16,7 @@ header.header {
 
     i {
       display: inline-block;
-      margin-left: 10px;
+      margin-left: .625rem;
       float: right;
       font-size: 1rem;
       line-height: 2.4rem;
@@ -38,8 +38,8 @@ header.header {
     &.header-search,
     &.header-search-mobile {
       position: relative;
-      min-height: 2.5rem;
-      padding-right: 50px;
+      min-height: 2.4rem;
+      padding-right: 3.125rem;
 
       input[type="search"] {
         margin: 0;
@@ -51,9 +51,9 @@ header.header {
         top: 0;
         right: 0;
         bottom: 0;
-        width: 50px;
-        padding-right: 10px;
-        padding-left: 10px;
+        width: 3.125rem;
+        padding-right: .625rem;
+        padding-left: .625rem;
         font-size: 1.3rem;
         line-height: 1.8rem;
       }
@@ -78,7 +78,7 @@ header.header {
       margin-left: 0;
 
       &.js-form-search-opened {
-        padding-right: 125px;
+        padding-right: 7.8rem;
         background-color: $color-darkest-blue;
       }
 
@@ -91,7 +91,7 @@ header.header {
       }
 
       button {
-        right: 75px;
+        right: 4.6rem;
       }
 
       .close {

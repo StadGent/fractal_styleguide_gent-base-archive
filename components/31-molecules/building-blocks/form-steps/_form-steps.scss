@@ -1,0 +1,136 @@
+.form-progress {
+  ul {
+    @include tablet {
+      display: block;
+    }
+
+    display: flex;
+    position: relative;
+
+    &:before {
+      @include tablet {
+        display: none;
+      }
+
+      display: block;
+      position: absolute;
+      top: .75rem;
+      right: 8%;
+      left: 8%;
+      height: .125rem;
+      margin: auto;
+      background: $color-blue;
+      content: '';
+    }
+  }
+
+  li {
+    @include tablet {
+      display: block;
+    }
+
+    display: inline-block;
+    position: relative;
+    flex: 1;
+    margin-bottom: 1em;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+
+  .progress {
+    @include tablet {
+      padding-left: 2.18rem;
+    }
+    color: $color-gray;
+    font-weight: bold;
+
+    &:before {
+      @include tablet {
+        right: auto;
+        margin: 0;
+      }
+
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 1.875rem;
+      height: 1.875rem;
+      margin: auto;
+      border: 1.5px solid $color-gray;
+      border-radius: 1.875rem;
+      background: $color-gray;
+      color: $color-white;
+      content: '';
+    }
+
+    &.progress-previous {
+      &:before {
+        @extend %icon-base-css;
+        @extend %icon-check;
+
+        border-color: $color-green;
+        background: $color-green;
+        font-size: .8rem;
+        line-height: 1.6rem;
+        text-align: center;
+        text-indent: 0;
+      }
+
+      .count {
+        display: none;
+      }
+
+      a.indicator {
+        display: block;
+        color: $color-green;
+      }
+    }
+
+    &.progress-active:before {
+      border-color: $color-blue;
+      background: $color-blue;
+    }
+
+    span:before {
+      border-color: $color-blue;
+      background: $color-white;
+    }
+  }
+
+  .indicator {
+    @include tablet {
+      text-indent: 0;
+    }
+    display: block;
+    position: relative;
+    line-height: 1.8rem;
+    text-indent: -999px;
+    z-index: 10;
+  }
+
+  .count {
+    @include tablet {
+      top: .18rem;
+      right: auto;
+      left: .625rem;
+      text-align: left;
+    }
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 1.875rem;
+    height: 1.875rem;
+    margin: auto;
+    color: $color-white;
+    font-weight: bold;
+    line-height: 1.6em;
+    text-align: center;
+    z-index: 10;
+  }
+}

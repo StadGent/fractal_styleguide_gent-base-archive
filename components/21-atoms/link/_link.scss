@@ -18,6 +18,7 @@ a {
   }
 
   &.btn {
+    display: inline;
     color: $link-color-in-button;
   }
 }
