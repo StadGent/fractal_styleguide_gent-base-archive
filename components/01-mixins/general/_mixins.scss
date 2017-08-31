@@ -12,10 +12,10 @@
 }
 
 //
-// @include border-content;
+// @include content-box;
 //
-@mixin border-content() {
-  box-sizing: border-content;
+@mixin content-box() {
+  box-sizing: content-box;
 }
 
 //
