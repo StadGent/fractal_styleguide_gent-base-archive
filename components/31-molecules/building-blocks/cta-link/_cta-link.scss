@@ -2,7 +2,7 @@ a.cta-link {
   display: inline-block;
   position: relative;
   width: calc(87% + 1px);
-  padding: 10px 20px;
+  padding: .625rem 1.25rem;
   border: 1px solid $cta-link-border-color;
   border-radius: $radius-2;
   background-color: $cta-link-background-color;
@@ -21,7 +21,7 @@ a.cta-link {
     border-radius: $radius-2;
     background-color: $cta-link-icon-background-color;
     color: $cta-link-icon-color;
-    font-size: 1.3em;
+    font-size: 1.3rem;
     text-align: center;
   }
 
