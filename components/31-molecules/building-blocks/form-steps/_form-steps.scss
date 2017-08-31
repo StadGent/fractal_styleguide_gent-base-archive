@@ -14,10 +14,10 @@
 
       display: block;
       position: absolute;
-      top: 12px;
+      top: .75rem;
       right: 8%;
       left: 8%;
-      height: 2px;
+      height: .125rem;
       margin: auto;
       background: $color-blue;
       content: '';
@@ -56,11 +56,11 @@
       right: 0;
       bottom: 0;
       left: 0;
-      width: 30px;
-      height: 30px;
+      width: 1.875rem;
+      height: 1.875rem;
       margin: auto;
       border: 1.5px solid $color-gray;
-      border-radius: 30px;
+      border-radius: 1.875rem;
       background: $color-gray;
       color: $color-white;
       content: '';
@@ -111,9 +111,9 @@
 
   .count {
     @include tablet {
-      top: 3px;
+      top: .18rem;
       right: auto;
-      left: 10px;
+      left: .625rem;
       text-align: left;
     }
 

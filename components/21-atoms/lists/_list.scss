@@ -7,7 +7,7 @@ ol {
     list-style: none;
 
     li {
-      padding-left: 15px;
+      padding-left: .93rem;
 
       &::before {
         @extend %icon-base-css;
