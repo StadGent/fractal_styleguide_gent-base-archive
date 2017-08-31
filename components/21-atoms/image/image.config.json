@@ -4,7 +4,7 @@
   "handle": "image",
   "order": 9,
   "context": {
-    "src": "http://lorempixel.com/800/532/",
+    "src": "https://lorempixel.com/800/532/city",
     "alt_text": "Image alt text"
   }
 }
