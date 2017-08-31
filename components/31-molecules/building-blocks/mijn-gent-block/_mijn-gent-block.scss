@@ -1,4 +1,5 @@
 .mijn-gent-block {
+  display: inline-block;
   position: relative;
 
   &:hover .content {
@@ -31,8 +32,8 @@
   .content {
     display: none;
     position: absolute;
-    top: 45px;
-    right: -10px;
+    top: 57px;
+    right: 0;
     min-width: 200px;
     border-radius: $radius-1;
     background: $color-white;
