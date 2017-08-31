@@ -1,17 +1,26 @@
-<header class="section--wrapper">
+<header class="header section--wrapper">
   <div class="content-container">
-    <div id="example-component">
-      <p><a href="#" class="hamburger-toggle">Menu</a></p>
-    </div>
+    {% include '@link' with {
+      'link': 'javascript:(void);',
+      'modifier': 'hamburger-toggle',
+      'text': 'Menu'
+    } %}
+
     <div id="logo">
       {% include '@logo' %}
     </div>
+
     <div id="profile" class="header-component right">
-      {% include '@link' with {
-        'url': '#',
-        'text': '<i class="icon-user"></i> Profile'
+      {% include '@mijn-gent-block' with {
+        "items": [
+          "<a href='javascript:(void);'>Mijn profiel</a>",
+          "<a href='javascript:(void);'>Nieuwsbrieven</a>",
+          "<a href='javascript:(void);'>Historiek</a>"
+        ],
+        'auth': 'true',
       } %}
     </div>
+
     <div id="header-search-mobile" class="header-search-mobile header-component right">
       {% include '@search' %}
       <a href="javascript:(void);" class="close">Sluiten</a>
@@ -20,6 +29,7 @@
       {% include '@search' %}
     </div>
   </div>
+
   {% include '@hamburger-menu' with {
     "items": [
       "<a href='javascript:(void);'>Menu item 1</a>",
@@ -28,4 +38,5 @@
       "<a href='javascript:(void);'>Menu item 4</a>"
     ]
   } %}
+
 </header>
