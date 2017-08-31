@@ -1,5 +1,6 @@
 .gallery {
   .gallery-main {
+    @include make-row;
     margin-bottom: $gutter-width;
 
     a.swipebox,
