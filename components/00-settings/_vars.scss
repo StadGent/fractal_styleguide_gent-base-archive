@@ -78,9 +78,6 @@ $bg-hover-breadcrumb: $color-lightest-blue !default;
 //
 
 // Heading 1 settings.
-$heading-1-color: $color-darkest-blue !default;
-$heading-1-color-hover: $color-dark-blue !default;
-$heading-1-color-visited: $color-darkest-blue !default;
 $heading-1-font-family: $secondary-font-family !default;
 
 // Heading 2 settings.
@@ -167,7 +164,32 @@ $cta-link-title-color: $color-darkest-gray !default;
 $themes: (
   'default': (
     'section-bg-color': $color-white,
-    'section-text-color': $color-gray,
+    'section-text-color': $color-dark-gray,
+
+    'heading-1-color': $color-darkest-blue,
+    'heading-1-color-hover': $color-dark-blue,
+    'heading-1-color-visited': $color-darkest-blue,
+
+    'heading-2-color': $color-darkest-blue,
+    'heading-2-color-hover': $color-dark-blue,
+    'heading-2-color-visited': $color-darkest-blue,
+
+    'heading-3-color': $color-darkest-blue,
+    'heading-3-color-hover': $color-dark-blue,
+    'heading-3-color-visited': $color-darkest-blue,
+
+    'heading-4-color': $color-darkest-blue,
+    'heading-4-color-hover': $color-dark-blue,
+    'heading-4-color-visited': $color-darkest-blue,
+
+    'heading-5-color': $color-darkest-blue,
+    'heading-5-color-hover': $color-dark-blue,
+    'heading-5-color-visited': $color-darkest-blue,
+
+    'heading-6-color': $color-darkest-blue,
+    'heading-6-color-hover': $color-dark-blue,
+    'heading-6-color-visited': $color-darkest-blue,
+
     'link-color': $color-blue,
     'link-color-visited': $color-blue,
     'link-color-focus': $color-dark-blue,
@@ -175,8 +197,33 @@ $themes: (
     'link-color-in-button': $color-white,
   ),
   'accent': (
-    'section-bg-color': $color-white,
-    'section-text-color': $color-gray,
+    'section-bg-color': $color-blue,
+    'section-text-color': $color-white,
+
+    'heading-1-color': $color-white,
+    'heading-1-color-hover': $color-white,
+    'heading-1-color-visited': $color-white,
+
+    'heading-2-color': $color-white,
+    'heading-2-color-hover': $color-white,
+    'heading-2-color-visited': $color-white,
+
+    'heading-3-color': $color-white,
+    'heading-3-color-hover': $color-white,
+    'heading-3-color-visited': $color-white,
+
+    'heading-4-color': $color-white,
+    'heading-4-color-hover': $color-white,
+    'heading-4-color-visited': $color-white,
+
+    'heading-5-color': $color-white,
+    'heading-5-color-hover': $color-white,
+    'heading-5-color-visited': $color-white,
+
+    'heading-6-color': $color-white,
+    'heading-6-color-hover': $color-white,
+    'heading-6-color-visited': $color-white,
+
     'link-color': $color-white,
     'link-color-visited': $color-white,
     'link-color-focus': $color-white,
@@ -184,8 +231,33 @@ $themes: (
     'link-color-in-button': $color-darkest-blue,
   ),
   'wrapper': (
-    'section-bg-color': $color-white,
-    'section-text-color': $color-gray,
+    'section-bg-color': $color-darkest-blue,
+    'section-text-color': $color-white,
+
+    'heading-1-color': $color-white,
+    'heading-1-color-hover': $color-white,
+    'heading-1-color-visited': $color-white,
+
+    'heading-2-color': $color-white,
+    'heading-2-color-hover': $color-white,
+    'heading-2-color-visited': $color-white,
+
+    'heading-3-color': $color-white,
+    'heading-3-color-hover': $color-white,
+    'heading-3-color-visited': $color-white,
+
+    'heading-4-color': $color-white,
+    'heading-4-color-hover': $color-white,
+    'heading-4-color-visited': $color-white,
+
+    'heading-5-color': $color-white,
+    'heading-5-color-hover': $color-white,
+    'heading-5-color-visited': $color-white,
+
+    'heading-6-color': $color-white,
+    'heading-6-color-hover': $color-white,
+    'heading-6-color-visited': $color-white,
+
     'link-color': $color-white,
     'link-color-visited': $color-white,
     'link-color-focus': $color-white,
@@ -193,8 +265,33 @@ $themes: (
     'link-color-in-button': $color-white,
   ),
   'highlighted': (
-    'section-bg-color': $color-white,
-    'section-text-color': $color-gray,
+    'section-bg-color': $color-orange,
+    'section-text-color': $color-dark-gray,
+
+    'heading-1-color': $color-white,
+    'heading-1-color-hover': $color-white,
+    'heading-1-color-visited': $color-white,
+
+    'heading-2-color': $color-white,
+    'heading-2-color-hover': $color-white,
+    'heading-2-color-visited': $color-white,
+
+    'heading-3-color': $color-white,
+    'heading-3-color-hover': $color-white,
+    'heading-3-color-visited': $color-white,
+
+    'heading-4-color': $color-white,
+    'heading-4-color-hover': $color-white,
+    'heading-4-color-visited': $color-white,
+
+    'heading-5-color': $color-white,
+    'heading-5-color-hover': $color-white,
+    'heading-5-color-visited': $color-white,
+
+    'heading-6-color': $color-white,
+    'heading-6-color-hover': $color-white,
+    'heading-6-color-visited': $color-white,
+
     'link-color': $color-white,
     'link-color-visited': $color-white,
     'link-color-focus': $color-white,
@@ -202,8 +299,33 @@ $themes: (
     'link-color-in-button': $color-darkest-blue,
   ),
   'inverse': (
-    'section-bg-color': $color-white,
-    'section-text-color': $color-gray,
+    'section-bg-color': $color-lightest-blue,
+    'section-text-color': $color-dark-gray,
+
+    'heading-1-color': $color-darkest-blue,
+    'heading-1-color-hover': $color-dark-blue,
+    'heading-1-color-visited': $color-darkest-blue,
+
+    'heading-2-color': $color-darkest-blue,
+    'heading-2-color-hover': $color-dark-blue,
+    'heading-2-color-visited': $color-darkest-blue,
+
+    'heading-3-color': $color-darkest-blue,
+    'heading-3-color-hover': $color-dark-blue,
+    'heading-3-color-visited': $color-darkest-blue,
+
+    'heading-4-color': $color-darkest-blue,
+    'heading-4-color-hover': $color-dark-blue,
+    'heading-4-color-visited': $color-darkest-blue,
+
+    'heading-5-color': $color-darkest-blue,
+    'heading-5-color-hover': $color-dark-blue,
+    'heading-5-color-visited': $color-darkest-blue,
+
+    'heading-6-color': $color-darkest-blue,
+    'heading-6-color-hover': $color-dark-blue,
+    'heading-6-color-visited': $color-darkest-blue,
+
     'link-color': $color-blue,
     'link-color-visited': $color-blue,
     'link-color-focus': $color-dark-blue,

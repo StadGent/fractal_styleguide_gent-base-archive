@@ -1,20 +1,22 @@
 h4,
 .h4,
 %h4 {
-  margin-bottom: .75rem;
-  color: $heading-4-color;
-  font-family: $heading-4-font-family;
-
-  a {
+  @include themify {
+    margin-bottom: .75rem;
     color: $heading-4-color;
-    text-decoration: none;
+    font-family: $heading-4-font-family;
 
-    &:visited {
-      color: $heading-4-color-visited;
-    }
+    a {
+      color: $heading-4-color;
+      text-decoration: none;
 
-    &:hover {
-      color: $heading-4-color-hover;
+      &:visited {
+        color: $heading-4-color-visited;
+      }
+
+      &:hover {
+        color: $heading-4-color-hover;
+      }
     }
   }
 }

@@ -1,23 +1,25 @@
 h1,
 .h1,
 %h1 {
-  margin-bottom: 1.5rem;
-  color: $heading-1-color;
-  font-family: $heading-1-font-family;
-  font-size: 1.6rem;
-  font-weight: 700;
-  line-height: 1.1em;
-
-  a {
+  @include themify {
+    margin-bottom: 1.5rem;
     color: $heading-1-color;
-    text-decoration: none;
+    font-family: $heading-1-font-family;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.1em;
 
-    &:visited {
-      color: $heading-1-color-visited;
-    }
+    a {
+      color: $heading-1-color;
+      text-decoration: none;
 
-    &:hover {
-      color: $heading-1-color-hover;
+      &:visited {
+        color: $heading-1-color-visited;
+      }
+
+      &:hover {
+        color: $heading-1-color-hover;
+      }
     }
   }
 }

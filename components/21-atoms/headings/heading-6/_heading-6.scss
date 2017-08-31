@@ -1,21 +1,23 @@
 h6,
 .h6,
 %h6 {
-  margin-bottom: .5rem;
-  color: $heading-6-color;
-  font-family: $heading-6-font-family;
-  font-weight: 600;
-
-  a {
+  @include themify {
+    margin-bottom: .5rem;
     color: $heading-6-color;
-    text-decoration: none;
+    font-family: $heading-6-font-family;
+    font-weight: 600;
 
-    &:visited {
-      color: $heading-6-color-visited;
-    }
+    a {
+      color: $heading-6-color;
+      text-decoration: none;
 
-    &:hover {
-      color: $heading-6-color-hover;
+      &:visited {
+        color: $heading-6-color-visited;
+      }
+
+      &:hover {
+        color: $heading-6-color-hover;
+      }
     }
   }
 }
