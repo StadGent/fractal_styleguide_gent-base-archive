@@ -1,5 +1,25 @@
 {
   "title": "Mijn Gent block",
   "status": "wip",
-  "handle": "mijn-gent-block"
+  "handle": "mijn-gent-block",
+  "default": "logged-in",
+  "context": {
+    "auth": "false"
+  },
+  "variants": [
+    {
+      "name": "logged-in",
+      "context": {
+        "auth": "true"
+      },
+      "hidden": true
+    },
+    {
+      "name": "logged-out",
+      "context": {
+        "auth": "false"
+      },
+      "hidden": true
+    }
+  ]
 }

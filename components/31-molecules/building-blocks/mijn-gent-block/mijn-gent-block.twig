@@ -1,8 +1,6 @@
-{% set login_link = 'no' %}
-
 <div class="mijn-gent-block">
 
-  {% if login_link == 'yes' %}
+  {% if auth == 'false' %}
 
     {% include '@link' with {
       'link': 'javascript:(void);',
