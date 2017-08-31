@@ -26,7 +26,7 @@ a {
 
   &.btn {
     @include themify {
-      color: $link-color;
+      color: $link-color-in-button;
     }
   }
 }

@@ -77,14 +77,6 @@ $bg-hover-breadcrumb: $color-lightest-blue !default;
 // ATOM SETTINGS.
 //
 
-// Link settings.
-$link-color: $color-blue !default;
-$link-color-hover: $color-dark-blue !default;
-$link-color-visited: $color-dark-blue !default;
-$link-color-active: $color-dark-blue !default;
-$link-color-focus: $color-dark-blue !default;
-$link-color-in-button: $color-white !default;
-
 // Heading 1 settings.
 $heading-1-color: $color-darkest-blue !default;
 $heading-1-color-hover: $color-dark-blue !default;
@@ -175,32 +167,37 @@ $cta-link-title-color: $color-darkest-gray !default;
 $themes: (
   'default': (
     'link-color': $color-blue,
-    'link-color-visited': $color-dark-blue,
+    'link-color-visited': $color-blue,
     'link-color-focus': $color-dark-blue,
     'link-color-hover': $color-dark-blue,
+    'link-color-in-button': $color-white,
   ),
   'accent': (
-    'link-color': $color-orange,
-    'link-color-visited': $color-orange,
-    'link-color-focus': $color-dark-blue,
-    'link-color-hover': #0f0,
+    'link-color': $color-white,
+    'link-color-visited': $color-white,
+    'link-color-focus': $color-white,
+    'link-color-hover': $color-white,
+    'link-color-in-button': $color-darkest-blue,
   ),
   'wrapper': (
     'link-color': $color-white,
     'link-color-visited': $color-white,
-    'link-color-focus': $color-dark-blue,
-    'link-color-hover': $color-orange,
+    'link-color-focus': $color-white,
+    'link-color-hover': $color-white,
+    'link-color-in-button': $color-white,
   ),
   'highlighted': (
     'link-color': $color-white,
-    'link-color-visited': $color-dark-blue,
-    'link-color-focus': $color-dark-blue,
-    'link-color-hover': $color-orange,
+    'link-color-visited': $color-white,
+    'link-color-focus': $color-white,
+    'link-color-hover': $color-white,
+    'link-color-in-button': $color-darkest-blue,
   ),
   'inverse': (
     'link-color': $color-blue,
-    'link-color-visited': $color-dark-blue,
+    'link-color-visited': $color-blue,
     'link-color-focus': $color-dark-blue,
-    'link-color-hover': $color-orange,
+    'link-color-hover': $color-dark-blue,
+    'link-color-in-button': $color-white,
   )
 ) !default;

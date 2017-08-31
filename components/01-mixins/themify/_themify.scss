@@ -1,8 +1,3 @@
-$link-color: null;
-$link-color-visited: null;
-$link-color-focus: null;
-$link-color-hover: null;
-
 //
 // Themify mixin
 // @param {Map} $themes [$themes] - Map of themes to use
@@ -16,13 +11,9 @@ $link-color-hover: null;
       $link-color-visited: map-get($colors, 'link-color-visited') !global;
       $link-color-focus: map-get($colors, 'link-color-focus') !global;
       $link-color-hover: map-get($colors, 'link-color-hover') !global;
+      $link-color-in-button: map-get($colors, 'link-color-in-button') !global;
 
       @content;
-
-      $link-color: null !global;
-      $link-color-visited: null !global;
-      $link-color-focus: null !global;
-      $link-color-hover: null !global;
     }
   }
 }
