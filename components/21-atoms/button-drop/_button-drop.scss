@@ -1,0 +1,119 @@
+.dropbutton-wrapper,
+.dropbutton-widget {
+  display: block;
+  position: relative;
+}
+
+.dropbutton-widget {
+  position: absolute;
+  background-color: $color-blue;
+  color: $color-white;
+
+  .dropbutton {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style-image: none;
+    list-style-type: none;
+  }
+}
+
+.dropbutton-wrapper {
+  min-height: 2em;
+}
+
+.dropbutton-multiple {
+  max-width: 100%;
+  margin-right: 2em;
+  padding-right: 10em;
+
+  .dropbutton-widget {
+    padding-right: 2em;
+  }
+
+  &.open {
+    z-index: 100;
+
+    .dropbutton-widget {
+      max-width: none;
+    }
+
+    .dropbutton .secondary-action {
+      display: block;
+    }
+  }
+}
+
+.dropbutton li,
+.dropbutton a {
+  display: block;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    outline: initial;
+  }
+}
+
+.dropbutton-multiple .dropbutton .secondary-action {
+  display: none;
+}
+
+.dropbutton-toggle {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 2em;
+  background-color: lighten($color-blue, 5);
+  text-indent: 110%;
+  white-space: nowrap;
+
+  button {
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: lighten($color-blue, 5);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      outline: initial;
+      background-color: lighten($color-blue, 5);
+    }
+  }
+}
+
+.dropbutton-arrow {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 40%;
+  width: 0;
+  height: 0;
+  margin-top: -.1666em;
+  border-width: .3333em .3333em 0;
+  border-style: solid;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  line-height: 0;
+  overflow: hidden;
+
+  .dropbutton-multiple.open & {
+    top: .6667em;
+    border-bottom: .3333em solid;
+    border-top-color: transparent;
+  }
+}
+
+
+.dropbutton-action > .button,
+.dropbutton-action > .btn {
+  text-align: left;
+}
