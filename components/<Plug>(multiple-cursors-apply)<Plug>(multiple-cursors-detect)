@@ -1,0 +1,36 @@
+<div class="gallery">
+  <div class="gallery-main">
+    {% include '@link' with {
+      'rel': 'gallery-1',
+      'modifier': 'swipebox',
+        'link': '<img src="https://stad.gent/sites/default/files/styles/sidebar_500/prco/62000/images/252144-Warme%20William_beeld_Pagina_13-2dea86-original-1498657714.png?itok=zT1fvK2O" alt="warme william" />',
+      'text': '<img src="https://stad.gent/sites/default/files/styles/sidebar_500/prco/62000/images/252144-Warme%20William_beeld_Pagina_13-2dea86-original-1498657714.png?itok=zT1fvK2O" alt="warme william" />'
+    } %}
+  </div>
+  <div class="gallery-thumbs">
+    {% include '@link' with {
+      'rel': 'gallery-1',
+      'modifier': 'swipebox',
+        'link': '<img src="https://stad.gent/sites/default/files/styles/sidebar_500/prco/62000/images/252144-Warme%20William_beeld_Pagina_13-2dea86-original-1498657714.png?itok=zT1fvK2O" alt="warme william" />',
+      'text': '<img src="https://stad.gent/sites/default/files/styles/sidebar_500/prco/62000/images/252144-Warme%20William_beeld_Pagina_13-2dea86-original-1498657714.png?itok=zT1fvK2O" alt="warme william" />'
+    } %}
+    {% include '@link' with {
+      'rel': 'gallery-1',
+      'modifier': 'swipebox',
+        'link': '<img src="https://stad.gent/sites/default/files/styles/sidebar_500/prco/62000/images/252144-Warme%20William_beeld_Pagina_13-2dea86-original-1498657714.png?itok=zT1fvK2O" alt="warme william" />',
+      'text': '<img src="https://stad.gent/sites/default/files/styles/sidebar_500/prco/62000/images/252144-Warme%20William_beeld_Pagina_13-2dea86-original-1498657714.png?itok=zT1fvK2O" alt="warme william" />'
+    } %}
+    {% include '@link' with {
+      'rel': 'gallery-1',
+      'modifier': 'swipebox',
+        'link': '<img src="https://stad.gent/sites/default/files/styles/sidebar_500/prco/62000/images/252144-Warme%20William_beeld_Pagina_13-2dea86-original-1498657714.png?itok=zT1fvK2O" alt="warme william" />',
+      'text': '<img src="https://stad.gent/sites/default/files/styles/sidebar_500/prco/62000/images/252144-Warme%20William_beeld_Pagina_13-2dea86-original-1498657714.png?itok=zT1fvK2O" alt="warme william" />'
+    } %}
+    {% include '@link' with {
+      'rel': 'gallery-1',
+      'modifier': 'swipebox',
+        'link': '<img src="https://stad.gent/sites/default/files/styles/sidebar_500/prco/62000/images/252144-Warme%20William_beeld_Pagina_13-2dea86-original-1498657714.png?itok=zT1fvK2O" alt="warme william" />',
+      'text': '<img src="https://stad.gent/sites/default/files/styles/sidebar_500/prco/62000/images/252144-Warme%20William_beeld_Pagina_13-2dea86-original-1498657714.png?itok=zT1fvK2O" alt="warme william" />'
+    } %}
+  </div>
+</div>
