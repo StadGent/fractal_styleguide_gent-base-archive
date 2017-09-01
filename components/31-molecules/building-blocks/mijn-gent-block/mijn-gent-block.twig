@@ -3,8 +3,9 @@
   {% if auth == 'false' %}
 
     {% include '@link' with {
+      'modifier': 'login-link',
       'link': 'javascript:(void);',
-      'text': '<i class="icon-user"></i> Aanmelden'
+      'text': 'Aanmelden<i class="icon-user"></i>'
     } %}
 
   {% else %}
