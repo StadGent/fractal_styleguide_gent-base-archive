@@ -171,7 +171,9 @@ $cta-link-icon-color: $color-white !default;
 $cta-link-title-color: $color-darkest-gray !default;
 
 // Message settings.
-$message-info-color: $color-blue;
-$message-error-color: $color-red;
-$message-success-color: $color-green;
-$message-warning-color: $color-orange;
+$status-message: (
+  'info': $color-blue ,
+  'error': $color-red,
+  'success': $color-green,
+  'warning': $color-orange,
+);
