@@ -1,0 +1,23 @@
+.message {
+  color: $color-darkest-blue;
+
+  &--info {
+    background: lighten($message-info-color, 50);
+    color: $message-info-color;
+  }
+
+  &--error {
+    background: lighten($message-error-color, 50);
+    color: $message-error-color;
+  }
+
+  &--success {
+    background: lighten($message-success-color, 65);
+    color: $message-success-color;
+  }
+
+  &--warning {
+    background: lighten($message-warning-color, 50);
+    color: $message-warning-color;
+  }
+}

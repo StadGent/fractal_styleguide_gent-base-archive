@@ -1,0 +1,37 @@
+{
+  "title": "Message",
+  "status": "wip",
+  "handle": "message",
+  "order": "9",
+  "default": "info",
+  "variants": [
+    {
+      "name": "info",
+      "context": {
+        "modifier": "message--info"
+      },
+      "hidden": true
+    },
+    {
+      "name": "error",
+      "context": {
+        "modifier": "message--error"
+      },
+      "hidden": true
+    },
+    {
+      "name": "success",
+      "context": {
+        "modifier": "message--success"
+      },
+      "hidden": true
+    },
+    {
+      "name": "warning",
+      "context": {
+        "modifier": "message--warning"
+      },
+      "hidden": true
+    }
+  ]
+}

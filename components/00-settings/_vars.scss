@@ -16,6 +16,7 @@ $color-medium-lighter-gray: #d5dadd !default;
 $color-orange: #f39200 !default;
 $color-white: #fff !default;
 $color-green: #00a275 !default;
+$color-red: #ce0000 !default;
 
 // Extra colors (currently used on stad.gent drupal 7 => to be standardized)
 // @TODO: Refactor?
@@ -168,3 +169,9 @@ $cta-link-icon-background-color: $color-blue !default;
 $cta-link-icon-color: $color-white !default;
 
 $cta-link-title-color: $color-darkest-gray !default;
+
+// Message settings.
+$message-info-color: $color-blue;
+$message-error-color: $color-red;
+$message-success-color: $color-green;
+$message-warning-color: $color-orange;
