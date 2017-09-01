@@ -20,7 +20,12 @@
 
     dropButtonToggle.on('click', function (e) {
       e.stopPropagation();
-      dropButton.addClass('open');
+      if (dropButton.hasClass('open')) {
+        dropButton.removeClass('open');
+      }
+      else {
+        dropButton.addClass('open');
+      }
     });
 
     $(document).on('click', function (e) {

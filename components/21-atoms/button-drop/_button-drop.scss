@@ -6,8 +6,8 @@
 
 .dropbutton-widget {
   position: absolute;
-  background-color: $color-blue;
-  color: $color-white;
+  background-color: $dropbutton-bg-color;
+  color: $dropbutton-text-color;
 
   .dropbutton {
     margin: 0;
@@ -66,25 +66,25 @@
   right: 0;
   bottom: 0;
   width: 2em;
-  background-color: lighten($color-blue, 5);
+  background-color: lighten($dropbutton-bg-color, 5);
   text-indent: 110%;
   white-space: nowrap;
 
   button {
     display: block;
-    height: 100%;
     width: 100%;
-    background-color: lighten($color-blue, 5);
+    height: 100%;
     margin: 0;
     padding: 0;
     border: 0;
     background: none;
+    background-color: lighten($dropbutton-bg-color, 5);
     cursor: pointer;
 
     &:hover,
     &:focus {
       outline: initial;
-      background-color: lighten($color-blue, 5);
+      background-color: lighten($dropbutton-bg-color, 5);
     }
   }
 }
