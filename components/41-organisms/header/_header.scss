@@ -73,8 +73,8 @@ header.header {
       }
 
       position: absolute;
-      right: 0;
-      left: $gutter-width/2;
+      right: 3rem;
+      left: .625rem;
       margin-left: 0;
 
       &.js-form-search-opened {
