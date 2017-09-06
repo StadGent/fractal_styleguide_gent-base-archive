@@ -1,3 +1,4 @@
+%input-base,
 input[type='text'],
 input[type='search'],
 input[type='password'],
@@ -43,7 +44,8 @@ input[type='datetime-local'],
 input[type='time'],
 input[type='email'],
 input[type='url'],
-textarea {
+textarea,
+.chosen-search-input {
   padding: .4rem .7rem;
 }
 
@@ -56,6 +58,7 @@ textarea {
 }
 
 // Since padding doesn't work with appearance on menu list we need to make use of height and text-indent.
+%select-base,
 select {
   height: 2.4rem;
   text-indent: .3rem;
