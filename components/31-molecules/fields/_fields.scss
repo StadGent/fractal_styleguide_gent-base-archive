@@ -117,4 +117,8 @@ input[type='checkbox'] {
 
     padding-bottom: $gutter-width;
   }
+
+  &:last-child {
+    float: left;
+  }
 }
