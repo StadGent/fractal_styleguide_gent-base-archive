@@ -177,3 +177,6 @@ $status-message: (
   'success': $color-green,
   'warning': $color-orange,
 );
+
+// Map settings.
+$map-border-radius: $radius-1 !default;
