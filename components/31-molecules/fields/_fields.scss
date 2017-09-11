@@ -8,6 +8,7 @@ input[type='datetime-local'],
 input[type='time'],
 input[type='email'],
 input[type='url'],
+input[type='tel'],
 textarea,
 select {
   display: block;
@@ -44,6 +45,7 @@ input[type='datetime-local'],
 input[type='time'],
 input[type='email'],
 input[type='url'],
+input[type='tel'],
 textarea,
 .chosen-search-input {
   padding: .4rem .7rem;
