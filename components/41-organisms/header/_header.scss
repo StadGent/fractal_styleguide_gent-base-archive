@@ -32,6 +32,11 @@ header.header {
       }
     }
 
+    &.hamburger-toggle:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
     //
     // Change the look and feel of the search molecule.
     //

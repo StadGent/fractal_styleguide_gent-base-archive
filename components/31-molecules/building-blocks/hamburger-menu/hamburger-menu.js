@@ -21,7 +21,6 @@
     var overlay = $('.hamburger-menu-overlay');
 
     toggle.on('click', function (e) {
-      e.preventDefault();
       hamburgerMenu.addClass('js-opened');
       overlay.addClass('js-opened');
     });

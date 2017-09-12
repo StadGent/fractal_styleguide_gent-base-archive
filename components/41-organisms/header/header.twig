@@ -1,10 +1,6 @@
 <header class="header section--wrapper">
   <div class="content-container">
-    {% include '@link' with {
-      'link': 'javascript:(void);',
-      'modifier': 'hamburger-toggle',
-      'text': 'Menu'
-    } %}
+    <span class="hamburger-toggle">{{ 'Menu' }}</span>
 
     <div id="logo">
       {% include '@logo' %}
