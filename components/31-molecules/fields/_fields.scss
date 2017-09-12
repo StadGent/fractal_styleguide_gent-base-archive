@@ -85,6 +85,7 @@ label {
   .label-optional {
     font-size: .8rem;
     font-weight: normal;
+    margin-left: .31rem;
   }
 }
 
@@ -95,11 +96,13 @@ input + .description {
 // Radios and checkboxes shouldn't start on a new line.
 input[type='radio'],
 input[type='checkbox'] {
+  margin: .4rem .4rem 0 0;
+  float: left;
   outline: none;
 
   + label {
-    display: inline-block;
-    margin: 0 0 .5rem;
+    display: block;
+    overflow: auto;
   }
 }
 
