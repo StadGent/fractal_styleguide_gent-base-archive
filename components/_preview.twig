@@ -35,6 +35,9 @@
     </style>
 </head>
 <body>
+
+<div class="container ">
+
 {% include '@header' with {
   "search_input_placeholder": "Wat wilt u vinden?",
   "search_submit_text": "Search",
@@ -50,13 +53,18 @@
   ]
 } %}
 
-<div class="container preview-container">
-  <div class="content-container">
-    {{ yield | raw }}
+  <div class="preview-container">
+
+    <div class="content-container">
+      {{ yield | raw }}
+    </div>
+
   </div>
+
+  {% include '@footer' %}
+
 </div>
 
-{% include '@footer' %}
 
 </body>
 </html>
