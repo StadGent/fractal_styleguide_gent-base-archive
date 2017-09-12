@@ -1,3 +1,4 @@
+%input-base,
 input[type='text'],
 input[type='search'],
 input[type='password'],
@@ -7,6 +8,7 @@ input[type='datetime-local'],
 input[type='time'],
 input[type='email'],
 input[type='url'],
+input[type='tel'],
 textarea,
 select {
   display: block;
@@ -43,7 +45,9 @@ input[type='datetime-local'],
 input[type='time'],
 input[type='email'],
 input[type='url'],
-textarea {
+input[type='tel'],
+textarea,
+.chosen-search-input {
   padding: .4rem .7rem;
 }
 
@@ -56,6 +60,7 @@ textarea {
 }
 
 // Since padding doesn't work with appearance on menu list we need to make use of height and text-indent.
+%select-base,
 select {
   height: 2.4rem;
   text-indent: .3rem;
@@ -82,6 +87,7 @@ label {
   .label-optional {
     font-size: .8rem;
     font-weight: normal;
+    margin-left: .31rem;
   }
 }
 
@@ -92,11 +98,13 @@ input + .description {
 // Radios and checkboxes shouldn't start on a new line.
 input[type='radio'],
 input[type='checkbox'] {
+  margin: .4rem .4rem 0 0;
+  float: left;
   outline: none;
 
   + label {
-    display: inline-block;
-    margin: 0 0 .5rem;
+    display: block;
+    overflow: auto;
   }
 }
 
@@ -116,5 +124,9 @@ input[type='checkbox'] {
     }
 
     padding-bottom: $gutter-width;
+  }
+
+  &:last-child {
+    float: left;
   }
 }

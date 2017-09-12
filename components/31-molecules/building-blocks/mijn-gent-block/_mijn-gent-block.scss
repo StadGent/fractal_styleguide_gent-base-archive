@@ -6,7 +6,12 @@
     display: inline-block;
   }
 
+  .login-link i {
+    margin-left: .625rem;
+  }
+
   .toggle {
+    position: relative;
     overflow: hidden;
 
     &:hover {
@@ -19,12 +24,21 @@
     float: left;
   }
 
+  .label {
+    margin-right: 3rem;
+  }
+
   .picture {
-    width: 2.5rem;
-    height: 2.5rem;
-    margin-left: .625rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 2rem;
+    height: 2rem;
+    margin: auto;
 
     img {
+      width: 100%;
       border-radius: $radius-1;
     }
   }

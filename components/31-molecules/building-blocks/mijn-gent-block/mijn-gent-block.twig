@@ -3,8 +3,9 @@
   {% if auth == 'false' %}
 
     {% include '@link' with {
+      'modifier': 'login-link',
       'link': 'javascript:(void);',
-      'text': '<i class="icon-user"></i> Aanmelden'
+      'text': 'Aanmelden<i class="icon-user"></i>'
     } %}
 
   {% else %}
@@ -18,7 +19,7 @@
         } %}
       </div>
       <div class="picture">
-        {% include '@image' with { 'src': 'https://lorempixel.com/150/150/people', 'alt_text': 'Username' } %}
+        {% include '@image' with { 'src': 'https://lorempixel.com/32/32/people', 'alt_text': 'Username' } %}
       </div>
     </div>
 

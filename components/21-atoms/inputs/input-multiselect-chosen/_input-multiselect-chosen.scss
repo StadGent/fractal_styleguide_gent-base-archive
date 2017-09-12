@@ -1,0 +1,67 @@
+.chosen-container {
+  max-width: 100% !important; // sass-lint:disable-line no-important
+
+
+  &.chosen-container-multi {
+    ul.chosen-choices {
+      margin: 0;
+      box-shadow: none;
+    }
+
+    .chosen-choices {
+      &,
+      li.search-field input[type="text"] {
+        @extend %input-base;
+        @extend %select-base;
+      }
+    }
+  }
+
+  &.chosen-with-drop .chosen-drop {
+    border-color: $color-light-gray;
+    box-shadow: none;
+  }
+
+  .chosen-choices {
+    border-color: $color-light-gray !important; // sass-lint:disable-line no-important
+
+    background: $color-white;
+    background-image: none !important; // sass-lint:disable-line no-important
+    color: $color-dark-gray;
+  }
+
+  .chosen-results li.highlighted {
+    background-color: $color-blue;
+    background-image: none;
+  }
+}
+
+.chosen-container-multi .chosen-choices li.search-choice {
+  @extend %btn;
+  @include btn-s;
+
+  .search-choice-close {
+    right: 1.2rem;
+    background: none;
+    background-image: none !important;// sass-lint:disable-line no-important
+
+
+    &:after {
+      @extend %icon-base-css;
+      @extend %icon-close;
+      color: $color-white;
+      font-size: 1.25rem;
+      line-height: 1.7rem;
+    }
+  }
+}
+
+// Specific ul specificity enables us to override chosen.css without using !important statements.
+.chosen-container-multi ul.chosen-choices li.search-choice {
+  display: inline-block;
+  width: auto;
+  height: 2rem;
+  margin: .18rem $gutter-width/2 0 0;
+  padding-right: 1.875rem;
+  line-height: 1.6rem;
+}
