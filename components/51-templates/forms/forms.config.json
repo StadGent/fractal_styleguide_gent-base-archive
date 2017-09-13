@@ -4,6 +4,14 @@
   "handle": "forms",
   "preview": "@preview",
   "order": 6,
+  "variants": [
+    {
+      "name": "no-style",
+      "context": {
+        "modifier": "no-style"
+      }
+    }
+  ],
   "context": {
     "label_optional": "Optional"
   }

@@ -115,9 +115,17 @@ input[type='checkbox'] {
     @include make-mobile-column(12);
     @include make-tablet-column(6);
 
+    .no-style & {
+      @include make-tablet-column(12);
+    }
+
 
     .field-description {
       margin-bottom: $gutter-width;
+
+      .no-style & {
+        display: none;
+      }
     }
 
     &:nth-child(1) {
