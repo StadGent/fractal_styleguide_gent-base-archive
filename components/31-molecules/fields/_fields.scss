@@ -85,9 +85,9 @@ label {
   font-weight: bold;
 
   .label-optional {
+    margin-left: .31rem;
     font-size: .8rem;
     font-weight: normal;
-    margin-left: .31rem;
   }
 }
 
@@ -116,14 +116,20 @@ input[type='checkbox'] {
   @include make-mobile-column(12);
   @include make-tablet-column(6);
 
+
+  .field-description {
+    @include tablet {
+      margin-top: calc(#{$gutter-width} + 1rem);
+    }
+
+    margin-bottom: $gutter-width;
+  }
+
   &:nth-child(1) {
     @include tablet {
-      padding-top: 38px;
       padding-left: $gutter-width;
       float: right;
     }
-
-    padding-bottom: $gutter-width;
   }
 
   &:last-child {
