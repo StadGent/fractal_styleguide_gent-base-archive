@@ -108,31 +108,28 @@ input[type='checkbox'] {
   }
 }
 
-.form-item {
+.form-item .form-columns {
   @include make-row;
-}
 
-.form-item-column {
-  @include make-mobile-column(12);
-  @include make-tablet-column(6);
+  .form-item-column {
+    @include make-mobile-column(12);
+    @include make-tablet-column(6);
 
 
-  .field-description {
-    @include tablet {
-      margin-top: calc(#{$gutter-width} + 1rem);
+    .field-description {
+      margin-bottom: $gutter-width;
     }
 
-    margin-bottom: $gutter-width;
-  }
+    &:nth-child(1) {
+      @include tablet {
+        padding-left: $gutter-width;
+        float: right;
+      }
+    }
 
-  &:nth-child(1) {
-    @include tablet {
-      padding-left: $gutter-width;
-      float: right;
+    &:last-child {
+      float: left;
     }
   }
-
-  &:last-child {
-    float: left;
-  }
 }
+

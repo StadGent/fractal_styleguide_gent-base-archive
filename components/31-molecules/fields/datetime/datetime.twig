@@ -1,10 +1,12 @@
 <div class="form-item">
-  <div class="form-item-column">
-    {% include '@field-description' %}
-  </div>
-  <div class="form-item-column">
-    {% include '@label' %}
-    {% include '@input-datetime' %}
-    {% include '@description' %}
+{% include '@label' %}
+  <div class="form-columns">
+    <div class="form-item-column">
+      {% include '@field-description' %}
+    </div>
+    <div class="form-item-column">
+      {% include '@input-datetime' %}
+      {% include '@description' %}
+    </div>
   </div>
 </div>
