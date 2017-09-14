@@ -102,16 +102,16 @@
 
   .indicator {
     @include tablet {
-      text-indent: 0;
       width: auto;
+      text-indent: 0;
     }
 
     display: block;
     position: relative;
+    width: 3rem;
     line-height: 1.8rem;
     text-indent: -999px;
     z-index: 10;
-    width: 3rem;
   }
 
   .count {
