@@ -92,7 +92,7 @@ label {
 }
 
 input + .description {
-  margin: -1rem 0 1rem;
+  margin: -1rem 0 0;
 }
 
 // Radios and checkboxes shouldn't start on a new line.
@@ -109,30 +109,44 @@ input[type='checkbox'] {
 }
 
 .form-item {
-  @include make-row;
+  margin-bottom: 1rem;
+
+  .form-columns {
+    @include make-row;
+
+    .form-item-column {
+      @include make-mobile-column(12);
+      @include make-tablet-column(6);
+
+      .no-style & {
+        @include make-tablet-column(12);
+      }
+
+
+      .field-description {
+        @include tablet {
+          margin-bottom: 0;
+        }
+
+        margin-bottom: .8rem;
+
+        .no-style & {
+          display: none;
+        }
+      }
+
+      &:nth-child(1) {
+        @include tablet {
+          padding-left: $gutter-width;
+          float: right;
+        }
+      }
+
+      &:last-child {
+        float: left;
+      }
+    }
+  }
 }
 
-.form-item-column {
-  @include make-mobile-column(12);
-  @include make-tablet-column(6);
 
-
-  .field-description {
-    @include tablet {
-      margin-top: calc(#{$gutter-width} + 1rem);
-    }
-
-    margin-bottom: $gutter-width;
-  }
-
-  &:nth-child(1) {
-    @include tablet {
-      padding-left: $gutter-width;
-      float: right;
-    }
-  }
-
-  &:last-child {
-    float: left;
-  }
-}
