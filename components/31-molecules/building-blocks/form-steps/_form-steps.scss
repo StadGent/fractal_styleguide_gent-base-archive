@@ -103,26 +103,27 @@
   .indicator {
     @include tablet {
       text-indent: 0;
+      width: auto;
     }
+
     display: block;
     position: relative;
     line-height: 1.8rem;
     text-indent: -999px;
     z-index: 10;
+    width: 3rem;
   }
 
   .count {
     @include tablet {
-      top: .18rem;
+      top: 0;
       right: auto;
-      left: .625rem;
-      text-align: left;
+      left: 0;
     }
 
     position: absolute;
     top: 0;
     right: 0;
-    bottom: 0;
     left: 0;
     width: 1.875rem;
     height: 1.875rem;
