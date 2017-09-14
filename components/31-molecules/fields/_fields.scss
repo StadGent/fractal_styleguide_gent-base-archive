@@ -51,11 +51,6 @@ textarea,
   padding: .4rem .7rem;
 }
 
-legend {
-  margin-bottom: 1.25rem;
-  font-size: 1.4rem;
-}
-
 input[type='file'] {
   margin: 0 0 1rem;
 }
@@ -83,6 +78,7 @@ select {
   }
 }
 
+legend,
 label {
   display: block;
   margin: 0 0 .5rem;
@@ -94,6 +90,11 @@ label {
     font-size: .8rem;
     font-weight: normal;
   }
+}
+
+legend {
+  margin-bottom: 1.25rem;
+  font-size: 1.4rem;
 }
 
 input + .description {
@@ -124,7 +125,6 @@ input[type='checkbox'] {
     }
   }
 
-
   .form-columns {
     @include make-row;
 
@@ -134,19 +134,6 @@ input[type='checkbox'] {
 
       .no-style & {
         @include make-tablet-column(12);
-      }
-
-
-      .field-description {
-        @include tablet {
-          margin-bottom: 0;
-        }
-
-        margin-bottom: .8rem;
-
-        .no-style & {
-          display: none;
-        }
       }
 
       &:nth-child(1) {
@@ -160,4 +147,17 @@ input[type='checkbox'] {
       }
     }
   }
+
+  .field-description {
+    @include tablet {
+      margin-bottom: 0;
+    }
+
+    margin-bottom: .8rem;
+
+    .no-style & {
+      display: none;
+    }
+  }
 }
+
