@@ -78,6 +78,7 @@ select {
   }
 }
 
+legend,
 label {
   display: block;
   margin: 0 0 .5rem;
@@ -89,6 +90,11 @@ label {
     font-size: .8rem;
     font-weight: normal;
   }
+}
+
+legend {
+  margin-bottom: 1.25rem;
+  font-size: 1.4rem;
 }
 
 input + .description {
@@ -111,6 +117,14 @@ input[type='checkbox'] {
 .form-item {
   margin-bottom: 1rem;
 
+  .form-label {
+    @include make-row;
+
+    > label {
+      @include make-mobile-column(12);
+    }
+  }
+
   .form-columns {
     @include make-row;
 
@@ -122,22 +136,8 @@ input[type='checkbox'] {
         @include make-tablet-column(12);
       }
 
-
-      .field-description {
-        @include tablet {
-          margin-bottom: 0;
-        }
-
-        margin-bottom: .8rem;
-
-        .no-style & {
-          display: none;
-        }
-      }
-
       &:nth-child(1) {
         @include tablet {
-          padding-left: $gutter-width;
           float: right;
         }
       }
@@ -147,6 +147,17 @@ input[type='checkbox'] {
       }
     }
   }
-}
 
+  .field-description {
+    @include tablet {
+      margin-bottom: 0;
+    }
+
+    margin-bottom: .8rem;
+
+    .no-style & {
+      display: none;
+    }
+  }
+}
 
