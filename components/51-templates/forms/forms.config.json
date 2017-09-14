@@ -7,6 +7,7 @@
   "variants": [
     {
       "name": "no-style",
+      "hidden": true,
       "context": {
         "modifier": "no-style"
       }
