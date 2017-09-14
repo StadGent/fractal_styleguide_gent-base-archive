@@ -14,7 +14,6 @@ select {
   display: block;
   width: 100%;
   height: 2.4rem;
-  margin: 0 0 1rem;
   border-width: 1px;
   border-style: solid;
   border-radius: $radius-1;
@@ -34,6 +33,10 @@ select {
     border-color: #a31b00;
     background-color: #ff8770;
   }
+
+  + .description {
+    margin: .3rem 0 0;
+  }
 }
 
 input[type='text'],
@@ -49,10 +52,6 @@ input[type='tel'],
 textarea,
 .chosen-search-input {
   padding: .4rem .7rem;
-}
-
-input[type='file'] {
-  margin: 0 0 1rem;
 }
 
 textarea {
@@ -95,10 +94,6 @@ label {
 legend {
   margin-bottom: 1.25rem;
   font-size: 1.4rem;
-}
-
-input + .description {
-  margin: -1rem 0 0;
 }
 
 // Radios and checkboxes shouldn't start on a new line.
