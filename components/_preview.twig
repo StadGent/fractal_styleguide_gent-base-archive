@@ -3,8 +3,10 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Preview Layout</title>
-    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,400italic" rel="stylesheet" type="text/css" />
+    <title>{% block title %}Preview Layout{% endblock %}</title>
+    {% block fonts %}
+      <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,400italic" rel="stylesheet" type="text/css" />
+    {% endblock %}
 
     <link media="all" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.2/chosen.css">
 
@@ -65,7 +67,6 @@
     <div class="content-container">
       {{ yield | raw }}
     </div>
-
   </div>
 
   {% include '@footer' %}

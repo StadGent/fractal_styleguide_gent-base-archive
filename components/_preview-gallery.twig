@@ -1,48 +1,16 @@
-<!doctype html>
+{% extends '_preview.twig' %}
 
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>Preview Layout</title>
-    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,400italic" rel="stylesheet" type="text/css" />
+{% block title %}Gallery preview{% endblock %}
 
-    <link media="all" rel="stylesheet" href="{{ '/css/main.css' | path }}">
-    <link media="all" rel="stylesheet" href="{{ '/css/styleguide.css'| path }}">
-    <link media="all" rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/jquery.swipebox/1.4.4/css/swipebox.min.css">
+{% block inline_styles %}
+  {{ parent() }}
 
-    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.swipebox/1.4.4/js/jquery.swipebox.js"></script>
+  .preview-inner-container {
+    clear: both;
+    overflow: hidden;
+  }
 
-    <script type="text/javascript" src="{{ '/styleguide/js/hamburger-menu.js'|path }}"></script>
-    <script type="text/javascript" src="{{ '/styleguide/js/breadcrumbs.js'|path }}"></script>
-    <script type="text/javascript" src="{{ '/styleguide/js/header.js'|path }}"></script>
-    <script type="text/javascript" src="{{ '/styleguide/js/gallery.js'|path }}"></script>
-
-    <meta name="MobileOptimized" content="320">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <style type="text/css">
-      .preview-container {
-        background-color: #ffffff;
-        padding: 4% 0;
-        overflow: hidden;
-      }
-      .preview-inner-container {
-        margin-bottom: 70px;
-        clear: both;
-        overflow: hidden;
-      }
-
-      .gallery {
-        max-width: 388px;
-      }
-    </style>
-</head>
-<body>
-
-<div class="preview-container">
-  {{ yield | raw }}
-</div>
-
-</body>
-</html>
+  .gallery {
+    max-width: 388px;
+  }
+{% endblock %}

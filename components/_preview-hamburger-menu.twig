@@ -1,55 +1,8 @@
-<!doctype html>
+{% extends '_preview.twig' %}
 
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>Preview Layout</title>
-    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,400italic" rel="stylesheet" type="text/css" />
-    <link media="all" rel="stylesheet" href="{{ '/css/main.css' | path }}">
-    <link media="all" rel="stylesheet" href="{{ '/css/styleguide.css'| path }}">
-    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script type="text/javascript" src="{{ '/styleguide/js/hamburger-menu.js'|path }}"></script>
-    <script type="text/javascript" src="{{ '/styleguide/js/breadcrumbs.js'|path }}"></script>
-    <script type="text/javascript" src="{{ '/styleguide/js/header.js'|path }}"></script>
-    <meta name="MobileOptimized" content="320">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style type="text/css">
-      .preview-container {
-        background-color: #ffffff;
-        padding: 4% 0;
-        overflow: hidden;
-      }
-      .preview-inner-container {
-        margin-bottom: 70px;
-        display: inline-block;
-        width: 100%;
-      }
-    </style>
-</head>
-<body>
-{% include '@header' with {
-  "search_input_placeholder": "Wat wilt u vinden?",
-  "search_submit_text": "Search",
-  "search_submit_modifier": "inline icon icon-search icon-only"
-} %}
-{% include '@breadcrumbs' with {
-  "items": [
-    "<a href='#'>Stad.gent</a>",
-    "<a href='#'>Overview</a>",
-    "<span>Overview</span>",
-    "<span>Overview</span>",
-    "<span>Page title</span>"
-  ]
-} %}
+{% block title %}Hamburger menu preview{% endblock %}
 
-<div class="container preview-container">
-  <div class="content-container">
+{% block content_container %}
   Click the <strong>Menu</strong> button in the header to toggle the hamburger menu.
-    {{ yield | raw }}
-  </div>
-</div>
+{% endblock %}
 
-{% include '@footer' %}
-
-</body>
-</html>
