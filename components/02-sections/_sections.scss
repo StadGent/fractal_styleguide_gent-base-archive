@@ -172,7 +172,8 @@
     //
     .btn,
     a.btn,
-    button[type="submit"] {
+    button,
+    input[type="submit"] {
       @include btn-scheme(
         $section-btn-text-color,
         $section-btn-bg-color,
