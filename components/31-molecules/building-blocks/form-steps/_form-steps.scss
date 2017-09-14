@@ -39,7 +39,7 @@
 
   .progress {
     @include tablet {
-      padding-left: 2.18rem;
+      padding-left: 3rem;
     }
     color: $color-gray;
     font-weight: bold;
@@ -84,7 +84,7 @@
       }
 
       a.indicator {
-        display: block;
+        display: inline-block;
         color: $color-green;
       }
     }
@@ -108,7 +108,6 @@
 
     display: block;
     position: relative;
-    width: 2rem;
     line-height: 1.8rem;
     text-indent: -9999px;
     z-index: 10;
