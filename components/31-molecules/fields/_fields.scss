@@ -1,3 +1,4 @@
+%input-base,
 input[type='text'],
 input[type='search'],
 input[type='password'],
@@ -7,6 +8,7 @@ input[type='datetime-local'],
 input[type='time'],
 input[type='email'],
 input[type='url'],
+input[type='tel'],
 textarea,
 select {
   display: block;
@@ -43,7 +45,9 @@ input[type='datetime-local'],
 input[type='time'],
 input[type='email'],
 input[type='url'],
-textarea {
+input[type='tel'],
+textarea,
+.chosen-search-input {
   padding: .4rem .7rem;
 }
 
@@ -56,6 +60,7 @@ textarea {
 }
 
 // Since padding doesn't work with appearance on menu list we need to make use of height and text-indent.
+%select-base,
 select {
   height: 2.4rem;
   text-indent: .3rem;
@@ -80,41 +85,68 @@ label {
   font-weight: bold;
 
   .label-optional {
+    margin-left: .31rem;
     font-size: .8rem;
     font-weight: normal;
   }
 }
 
 input + .description {
-  margin: -1rem 0 1rem;
+  margin: -1rem 0 0;
 }
 
 // Radios and checkboxes shouldn't start on a new line.
 input[type='radio'],
 input[type='checkbox'] {
+  margin: .4rem .4rem 0 0;
+  float: left;
   outline: none;
 
   + label {
-    display: inline-block;
-    margin: 0 0 .5rem;
+    display: block;
+    overflow: auto;
   }
 }
 
 .form-item {
-  @include make-row;
-}
+  margin-bottom: 1rem;
 
-.form-item-column {
-  @include make-mobile-column(12);
-  @include make-tablet-column(6);
+  .form-columns {
+    @include make-row;
 
-  &:nth-child(1) {
-    @include tablet {
-      padding-top: 38px;
-      padding-left: $gutter-width;
-      float: right;
+    .form-item-column {
+      @include make-mobile-column(12);
+      @include make-tablet-column(6);
+
+      .no-style & {
+        @include make-tablet-column(12);
+      }
+
+
+      .field-description {
+        @include tablet {
+          margin-bottom: 0;
+        }
+
+        margin-bottom: .8rem;
+
+        .no-style & {
+          display: none;
+        }
+      }
+
+      &:nth-child(1) {
+        @include tablet {
+          padding-left: $gutter-width;
+          float: right;
+        }
+      }
+
+      &:last-child {
+        float: left;
+      }
     }
-
-    padding-bottom: $gutter-width;
   }
 }
+
+

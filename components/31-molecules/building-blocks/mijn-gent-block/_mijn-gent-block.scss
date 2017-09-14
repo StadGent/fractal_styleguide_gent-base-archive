@@ -6,6 +6,10 @@
     display: inline-block;
   }
 
+  .login-link i {
+    margin-left: .625rem;
+  }
+
   .toggle {
     position: relative;
     overflow: hidden;
@@ -34,8 +38,8 @@
     margin: auto;
 
     img {
-      border-radius: $radius-1;
       width: 100%;
+      border-radius: $radius-1;
     }
   }
 

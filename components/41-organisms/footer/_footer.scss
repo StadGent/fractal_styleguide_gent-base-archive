@@ -5,8 +5,24 @@ footer {
     color: $color-gray;
   }
 
+  .footer--column {
+    @include make-mobile-column(12);
+    @include tablet {
+      @include make-tablet-column(6);
+    }
+    @include desktop {
+      @include make-tablet-column(3);
+    }
+  }
+
   .db-block-partnership {
-    margin-top: 12.5rem;
+    @include tablet {
+      margin-top: 6rem;
+    }
+
+    @include desktop {
+      margin-top: 12.5rem;
+    }
   }
 }
 

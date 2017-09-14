@@ -3,27 +3,21 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>{% block title %}Preview Layout{% endblock %}</title>
-    {% block fonts %}
-      <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,400italic" rel="stylesheet" type="text/css" />
-    {% endblock %}
+    <title>Preview Layout</title>
+
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,400italic" rel="stylesheet" type="text/css" />
 
     <link media="all" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.2/chosen.css">
 
     <link media="all" rel="stylesheet" href="{{ '/css/main.css' | path }}">
     <link media="all" rel="stylesheet" href="{{ '/css/styleguide.css'| path }}">
 
-    <link media="all" rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/jquery.swipebox/1.4.4/css/swipebox.min.css">
-
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.swipebox/1.4.4/js/jquery.swipebox.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.2/chosen.jquery.min.js"></script>
 
     <script type="text/javascript" src="{{ '/styleguide/js/hamburger-menu.js'|path }}"></script>
     <script type="text/javascript" src="{{ '/styleguide/js/breadcrumbs.js'|path }}"></script>
     <script type="text/javascript" src="{{ '/styleguide/js/header.js'|path }}"></script>
-    <script type="text/javascript" src="{{ '/styleguide/js/button-drop.js'|path }}"></script>
-    <script type="text/javascript" src="{{ '/styleguide/js/gallery.js'|path }}"></script>
     <script type="text/javascript" src="{{ '/styleguide/js/input-multiselect-chosen.js'|path }}"></script>
 
     <meta name="MobileOptimized" content="320">
@@ -34,45 +28,20 @@
         background-color: #ffffff;
         padding: 4% 0;
         overflow: hidden;
-        min-height: 50vh;
+        min-height: 100vh;
       }
       .preview-inner-container {
         margin-bottom: 70px;
-        display: inline-block;
-        width: 100%;
+        clear: both;
+        overflow: hidden;
       }
     </style>
 </head>
 <body>
 
-<div class="container ">
-
-{% include '@header' with {
-  "search_input_placeholder": "Wat wilt u vinden?",
-  "search_submit_text": "Search",
-  "search_submit_modifier": "inline icon icon-search icon-only"
-} %}
-{% include '@breadcrumbs' with {
-  "items": [
-    "<a href='#'>Stad.gent</a>",
-    "<a href='#'>Overview</a>",
-    "<span>Overview</span>",
-    "<span>Overview</span>",
-    "<span>Page title</span>"
-  ]
-} %}
-
-  <div class="preview-container">
-
-    <div class="content-container">
-      {{ yield | raw }}
-    </div>
-  </div>
-
-  {% include '@footer' %}
-
+<div class="preview-container">
+  {{ yield | raw }}
 </div>
-
 
 </body>
 </html>

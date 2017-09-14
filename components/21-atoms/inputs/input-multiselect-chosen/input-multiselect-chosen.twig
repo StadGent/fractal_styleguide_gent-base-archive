@@ -1,0 +1,5 @@
+<select name="selectfield" id="multiselect" multiple="multiple" class="chosen-select {{ modifier }}">
+  {% for option in options %}
+    <option>{{ option.label }}</option>
+  {% endfor %}
+</select>
