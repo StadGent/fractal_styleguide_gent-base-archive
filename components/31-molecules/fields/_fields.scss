@@ -52,8 +52,8 @@ textarea,
 }
 
 legend {
-  font-size: 1.4rem;
   margin-bottom: 1.25rem;
+  font-size: 1.4rem;
 }
 
 input[type='file'] {
@@ -116,6 +116,15 @@ input[type='checkbox'] {
 .form-item {
   margin-bottom: 1rem;
 
+  .form-label {
+    @include make-row;
+
+    > label {
+      @include make-mobile-column(12);
+    }
+  }
+
+
   .form-columns {
     @include make-row;
 
@@ -142,7 +151,6 @@ input[type='checkbox'] {
 
       &:nth-child(1) {
         @include tablet {
-          padding-left: $gutter-width;
           float: right;
         }
       }
@@ -153,5 +161,3 @@ input[type='checkbox'] {
     }
   }
 }
-
-
