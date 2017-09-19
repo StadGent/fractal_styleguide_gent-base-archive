@@ -1,0 +1,20 @@
+.form-actions > {
+  a {
+    line-height: 2.4rem;
+
+    &.delete {
+      color: $color-red;
+    }
+  }
+
+  * {
+    display: inline-block;
+    margin: 0 1rem 0 0;
+    float: left;
+
+    &.right {
+      margin: 0 0 0 1rem;
+      float: right;
+    }
+  }
+}

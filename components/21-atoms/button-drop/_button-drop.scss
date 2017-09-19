@@ -1,11 +1,10 @@
 .dropbutton-wrapper,
 .dropbutton-widget {
-  display: block;
+  display: inline-block;
   position: relative;
 }
 
 .dropbutton-widget {
-  position: absolute;
   border-top-left-radius: $radius-1;
   border-bottom-left-radius: $radius-1;
   overflow: hidden;
@@ -16,11 +15,6 @@
     overflow: hidden;
     list-style-image: none;
     list-style-type: none;
-
-    input,
-    button {
-      border-radius: 0;
-    }
 
     .dropbutton-toggle {
       display: block;
@@ -78,16 +72,20 @@
 }
 
 .dropbutton-wrapper {
+  @include clearfix();
   min-height: 2.4rem;
 }
 
 .dropbutton-multiple {
   max-width: 100%;
-  margin-right: 2rem;
-  padding-right: 10rem;
 
   .dropbutton-widget {
     padding-right: 2rem;
+  }
+
+  input,
+  button {
+    border-radius: 0;
   }
 
   &.open {
