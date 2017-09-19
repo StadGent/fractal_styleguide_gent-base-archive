@@ -1,0 +1,10 @@
+{
+  "title": "Form actions",
+  "status": "wip",
+  "handle": "form-actions",
+  "variants": [
+    {
+      "name": "Editor"
+    }
+  ]
+}
