@@ -14,10 +14,10 @@
 
       display: block;
       position: absolute;
-      top: 12px;
+      top: .75rem;
       right: 8%;
       left: 8%;
-      height: 2px;
+      height: .125rem;
       margin: auto;
       background: $color-blue;
       content: '';
@@ -39,7 +39,7 @@
 
   .progress {
     @include tablet {
-      padding-left: 2.18rem;
+      padding-left: 3rem;
     }
     color: $color-gray;
     font-weight: bold;
@@ -56,11 +56,11 @@
       right: 0;
       bottom: 0;
       left: 0;
-      width: 30px;
-      height: 30px;
+      width: 1.875rem;
+      height: 1.875rem;
       margin: auto;
       border: 1.5px solid $color-gray;
-      border-radius: 30px;
+      border-radius: 1.875rem;
       background: $color-gray;
       color: $color-white;
       content: '';
@@ -70,9 +70,10 @@
       &:before {
         @extend %icon-base-css;
         @extend %icon-check;
+
         border-color: $color-green;
         background: $color-green;
-        font-size: .8em;
+        font-size: .8rem;
         line-height: 1.6rem;
         text-align: center;
         text-indent: 0;
@@ -83,7 +84,7 @@
       }
 
       a.indicator {
-        display: block;
+        display: inline-block;
         color: $color-green;
       }
     }
@@ -101,29 +102,34 @@
 
   .indicator {
     @include tablet {
+      width: auto;
       text-indent: 0;
     }
+
     display: block;
     position: relative;
-    text-indent: -999px;
+    line-height: 1.8rem;
+    text-indent: -9999px;
     z-index: 10;
   }
 
   .count {
     @include tablet {
-      top: 3px;
+      top: 0;
       right: auto;
-      left: 10px;
-      text-align: left;
+      left: 0;
     }
 
     position: absolute;
     top: 0;
     right: 0;
     left: 0;
+    width: 1.875rem;
+    height: 1.875rem;
     margin: auto;
     color: $color-white;
     font-weight: bold;
+    line-height: 1.6em;
     text-align: center;
     z-index: 10;
   }

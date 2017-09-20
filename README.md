@@ -25,6 +25,7 @@ After installing the styleguide through `npm install gent_styleguide` you''ll ge
 .
 ├── node_modules
 │   └── gent_styleguide
+│   └── breakpoint-sass
 ├── package-lock.json
 └── package.json
 ```
@@ -41,4 +42,14 @@ Now, to use the styleguide SASS partials you just need to import them into your 
 @import 'node_modules/gent_styleguide/build/sass/41-organisms/**/*';
 @import 'node_modules/gent_styleguide/build/sass/51-templates/**/*';
 ```
+
+Note: When using the styleguide you will need to add breakpoint-sass as an includePath inside your gulpfile.js
+Example:
+```
+    .pipe(sass({
+      outputStyle: 'compressed',
+      includePaths: ['node_modules/breakpoint-sass/stylesheets']
+    })).on('error', sass.logError)
+```
+This includePaths path may vary depending on your setup!
 

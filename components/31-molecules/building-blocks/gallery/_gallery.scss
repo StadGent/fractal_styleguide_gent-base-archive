@@ -1,0 +1,25 @@
+.gallery {
+  .gallery-main {
+    @include make-row;
+    margin-bottom: $gutter-width;
+
+    a.swipebox,
+    a.swipebox img {
+      width: 100%;
+    }
+  }
+
+  .gallery-thumbs {
+    @include make-row;
+
+    a.swipebox {
+      @include tablet {
+        @include make-mobile-column(4, 1%);
+        margin-bottom: 1%;
+      }
+
+      @include make-mobile-column(6);
+      margin-bottom: $gutter-width;
+    }
+  }
+}

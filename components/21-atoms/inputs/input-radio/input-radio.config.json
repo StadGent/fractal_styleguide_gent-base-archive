@@ -1,0 +1,8 @@
+{
+  "title": "Input radio",
+  "status": "ready",
+  "handle": "input-radio",
+  "context": {
+    "label": "Radio option"
+  }
+}

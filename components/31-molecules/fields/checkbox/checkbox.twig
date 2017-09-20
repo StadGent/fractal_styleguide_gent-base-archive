@@ -1,4 +1,14 @@
 <div class="form-item">
-    <input type="checkbox" name="checkbox" id="checkbox" />
+  <div class="form-label">
     {% include '@label' %}
+  </div>
+  <div class="form-columns">
+    <div class="form-item-column">
+      {% include '@field-description' %}
+    </div>
+    <div class="form-item-column">
+      {% include '@input-checkbox' with { 'label': 'Checkbox option' }%}
+      {% include '@description' %}
+    </div>
+  </div>
 </div>

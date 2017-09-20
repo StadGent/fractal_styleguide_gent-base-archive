@@ -16,6 +16,7 @@ $color-medium-lighter-gray: #d5dadd !default;
 $color-orange: #f39200 !default;
 $color-white: #fff !default;
 $color-green: #00a275 !default;
+$color-red: #ce0000 !default;
 
 // Extra colors (currently used on stad.gent drupal 7 => to be standardized)
 // @TODO: Refactor?
@@ -158,6 +159,17 @@ $cta-link-icon-color: $color-white !default;
 
 $cta-link-title-color: $color-darkest-gray !default;
 
+// Message settings.
+$status-message: (
+  'info': $color-blue ,
+  'error': $color-red,
+  'success': $color-green,
+  'warning': $color-orange,
+);
+
+// Map settings.
+$map-border-radius: $radius-1 !default;
+
 //
 // THEMIFY SETTINGS.
 //
@@ -191,6 +203,7 @@ $themes: (
     'heading-6-color-visited': $color-darkest-blue,
 
     'link-color': $color-blue,
+    'link-color-active': $color-blue,
     'link-color-visited': $color-blue,
     'link-color-focus': $color-dark-blue,
     'link-color-hover': $color-dark-blue,
@@ -225,6 +238,7 @@ $themes: (
     'heading-6-color-visited': $color-white,
 
     'link-color': $color-white,
+    'link-color-active': $color-white,
     'link-color-visited': $color-white,
     'link-color-focus': $color-white,
     'link-color-hover': $color-white,
@@ -259,6 +273,7 @@ $themes: (
     'heading-6-color-visited': $color-white,
 
     'link-color': $color-white,
+    'link-color-active': $color-white,
     'link-color-visited': $color-white,
     'link-color-focus': $color-white,
     'link-color-hover': $color-white,
@@ -293,6 +308,7 @@ $themes: (
     'heading-6-color-visited': $color-white,
 
     'link-color': $color-white,
+    'link-color-active': $color-white,
     'link-color-visited': $color-white,
     'link-color-focus': $color-white,
     'link-color-hover': $color-white,
@@ -327,6 +343,7 @@ $themes: (
     'heading-6-color-visited': $color-darkest-blue,
 
     'link-color': $color-blue,
+    'link-color-active': $color-blue,
     'link-color-visited': $color-blue,
     'link-color-focus': $color-dark-blue,
     'link-color-hover': $color-dark-blue,

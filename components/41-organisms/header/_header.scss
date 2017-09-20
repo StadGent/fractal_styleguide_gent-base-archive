@@ -1,5 +1,6 @@
-header {
+header.header {
   position: relative;
+  height: 3.125rem;
   padding: .35rem 0;
   font-size: .7rem;
   line-height: 2.4rem;
@@ -15,8 +16,6 @@ header {
 
     i {
       display: inline-block;
-      margin-left: 10px;
-      float: right;
       font-size: 1rem;
       line-height: 2.4rem;
     }
@@ -31,6 +30,11 @@ header {
       }
     }
 
+    &.hamburger-toggle:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
     //
     // Change the look and feel of the search molecule.
     //
@@ -38,21 +42,22 @@ header {
     &.header-search-mobile {
       position: relative;
       min-height: 2.4rem;
-      padding-right: 50px;
+      padding-right: 3.125rem;
 
       input[type="search"] {
         margin: 0;
         font-size: .7rem;
       }
 
+      a.btn,
       button {
         position: absolute;
         top: 0;
         right: 0;
         bottom: 0;
-        width: 50px;
-        padding-right: 10px;
-        padding-left: 10px;
+        width: 3.125rem;
+        padding-right: .625rem;
+        padding-left: .625rem;
         font-size: 1.3rem;
         line-height: 1.8rem;
       }
@@ -72,12 +77,12 @@ header {
       }
 
       position: absolute;
-      right: 0;
-      left: $gutter-width/2;
+      right: 3rem;
+      left: .625rem;
       margin-left: 0;
 
       &.js-form-search-opened {
-        padding-right: 125px;
+        padding-right: 7.8rem;
         background-color: $color-darkest-blue;
       }
 
@@ -89,8 +94,9 @@ header {
         }
       }
 
+      a.btn,
       button {
-        right: 75px;
+        right: 4.6rem;
       }
 
       .close {

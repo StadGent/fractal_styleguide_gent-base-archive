@@ -1,3 +1,4 @@
+%input-base,
 input[type='text'],
 input[type='search'],
 input[type='password'],
@@ -7,12 +8,12 @@ input[type='datetime-local'],
 input[type='time'],
 input[type='email'],
 input[type='url'],
+input[type='tel'],
 textarea,
 select {
   display: block;
   width: 100%;
   height: 2.4rem;
-  margin: 0 0 1rem;
   border-width: 1px;
   border-style: solid;
   border-radius: $radius-1;
@@ -32,6 +33,10 @@ select {
     border-color: #a31b00;
     background-color: #ff8770;
   }
+
+  + .description {
+    margin: .3rem 0 0;
+  }
 }
 
 input[type='text'],
@@ -43,12 +48,10 @@ input[type='datetime-local'],
 input[type='time'],
 input[type='email'],
 input[type='url'],
-textarea {
+input[type='tel'],
+textarea,
+.chosen-search-input {
   padding: .4rem .7rem;
-}
-
-input[type='file'] {
-  margin: 0 0 1rem;
 }
 
 textarea {
@@ -56,6 +59,7 @@ textarea {
 }
 
 // Since padding doesn't work with appearance on menu list we need to make use of height and text-indent.
+%select-base,
 select {
   height: 2.4rem;
   text-indent: .3rem;
@@ -73,6 +77,7 @@ select {
   }
 }
 
+legend,
 label {
   display: block;
   margin: 0 0 .5rem;
@@ -80,22 +85,74 @@ label {
   font-weight: bold;
 
   .label-optional {
+    margin-left: .31rem;
     font-size: .8rem;
     font-weight: normal;
   }
 }
 
-input + .description {
-  margin: -1rem 0 1rem;
+legend {
+  margin-bottom: 1.25rem;
+  font-size: 1.4rem;
 }
 
 // Radios and checkboxes shouldn't start on a new line.
 input[type='radio'],
 input[type='checkbox'] {
+  margin: .4rem .4rem 0 0;
+  float: left;
   outline: none;
 
   + label {
-    display: inline-block;
-    margin: 0 0 .5rem;
+    display: block;
+    overflow: auto;
   }
 }
+
+.form-item {
+  margin-bottom: 1rem;
+
+  .form-label {
+    @include make-row;
+
+    > label {
+      @include make-mobile-column(12);
+    }
+  }
+
+  .form-columns {
+    @include make-row;
+
+    .form-item-column {
+      @include make-mobile-column(12);
+      @include make-tablet-column(6);
+
+      .no-style & {
+        @include make-tablet-column(12);
+      }
+
+      &:nth-child(1) {
+        @include tablet {
+          float: right;
+        }
+      }
+
+      &:last-child {
+        float: left;
+      }
+    }
+  }
+
+  .field-description {
+    @include tablet {
+      margin-bottom: 0;
+    }
+
+    margin-bottom: .8rem;
+
+    .no-style & {
+      display: none;
+    }
+  }
+}
+

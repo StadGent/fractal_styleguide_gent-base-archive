@@ -4,7 +4,7 @@
   "handle": "image",
   "order": 9,
   "context": {
-    "src": "https://beeldbank.stad.gent/index.php/embed/fcff26dc04c440ba9dd94f03c4624d95fc4f48995bbb4c13a783974a462709acf64b2beobytnw5u1znubxpb38f658hue",
+    "src": "https://lorempixel.com/800/532/city",
     "alt_text": "Image alt text"
   }
 }
