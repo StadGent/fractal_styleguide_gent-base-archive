@@ -2,13 +2,11 @@ h5,
 .h5,
 %h5 {
   @include themify {
-    margin-bottom: .5rem;
     color: $heading-5-color;
     font-family: $heading-5-font-family;
 
     a {
       color: $heading-5-color;
-      text-decoration: none;
 
       &:visited {
         color: $heading-5-color-visited;
@@ -19,4 +17,5 @@ h5,
       }
     }
   }
+  margin-bottom: .5rem;
 }

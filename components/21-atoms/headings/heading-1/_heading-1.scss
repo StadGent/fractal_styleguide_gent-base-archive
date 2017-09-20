@@ -2,16 +2,11 @@ h1,
 .h1,
 %h1 {
   @include themify {
-    margin-bottom: 1.5rem;
     color: $heading-1-color;
     font-family: $heading-1-font-family;
-    font-size: 1.6rem;
-    font-weight: 700;
-    line-height: 1.1em;
 
     a {
       color: $heading-1-color;
-      text-decoration: none;
 
       &:visited {
         color: $heading-1-color-visited;
@@ -22,4 +17,8 @@ h1,
       }
     }
   }
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.1em;
 }

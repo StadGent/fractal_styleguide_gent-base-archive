@@ -2,13 +2,11 @@ h4,
 .h4,
 %h4 {
   @include themify {
-    margin-bottom: .75rem;
     color: $heading-4-color;
     font-family: $heading-4-font-family;
 
     a {
       color: $heading-4-color;
-      text-decoration: none;
 
       &:visited {
         color: $heading-4-color-visited;
@@ -19,4 +17,5 @@ h4,
       }
     }
   }
+  margin-bottom: .75rem;
 }

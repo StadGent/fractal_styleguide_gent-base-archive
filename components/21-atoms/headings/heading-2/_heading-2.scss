@@ -2,15 +2,11 @@ h2,
 .h2,
 %h2 {
   @include themify {
-    margin-bottom: 1rem;
     color: $heading-2-color;
     font-family: $heading-2-font-family;
-    font-size: 1.2rem;
-    line-height: 1.4em;
 
     a {
       color: $heading-2-color;
-      text-decoration: none;
 
       &:visited {
         color: $heading-2-color-visited;
@@ -21,4 +17,7 @@ h2,
       }
     }
   }
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  line-height: 1.4em;
 }
