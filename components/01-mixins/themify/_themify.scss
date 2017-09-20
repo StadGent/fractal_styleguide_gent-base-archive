@@ -1,24 +1,4 @@
 //
-// Themify mixin
-// @param {Map} $themes [$themes] - Map of themes to use
-//
-@mixin themify($themes: $themes) {
-  @each $theme, $colors in $themes {
-
-    @if $theme == "default" {
-      @include themify-map($colors);
-      @content;
-    }
-
-    .section--#{$theme} &,
-    *[class*="section--"] .section--#{$theme} & {
-      @include themify-map($colors);
-      @content;
-    }
-  }
-}
-
-//
 // Themify map
 // @param {Map} $colors - Contains all colors of a section.
 //
@@ -57,3 +37,30 @@
   $link-color-hover: map-get($colors, 'link-color-hover') !global;
   $link-color-in-button: map-get($colors, 'link-color-in-button') !global;
 }
+
+//
+// Themify mixin
+// @param {Map} $themes [$themes] - Map of themes to use
+//
+@mixin themify($themes: $themes) {
+  @each $theme, $colors in $themes {
+    @include themify-map($colors);
+
+    // Apply the default section as default color scheme if there is no section
+    // defined in the DOM.
+    @if $theme == "default" {
+      @content;
+    }
+
+    .section--#{$theme} &,
+    *[class*="section--"] .section--#{$theme} & {
+      @content;
+    }
+  }
+}
+
+//
+// Merge {Map} $themes map if {Map} $overwrite-themes exist.
+//
+$themes: map-merge($themes, $overwrite-themes);
+

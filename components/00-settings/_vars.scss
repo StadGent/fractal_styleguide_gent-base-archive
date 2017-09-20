@@ -350,3 +350,6 @@ $themes: (
     'link-color-in-button': $color-white,
   )
 ) !default;
+
+// Default $overwrite-themes map to overwrite above $theme map.
+$overwrite-themes: () !default;
