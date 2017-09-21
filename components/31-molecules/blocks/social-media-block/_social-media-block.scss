@@ -31,31 +31,31 @@
     }
   }
 
-  .dg-facebook {
+  .facebook {
     &::before {
       @extend %icon-facebook;
     }
   }
 
-  .dg-twitter {
+  .twitter {
     &::before {
       @extend %icon-twitter;
     }
   }
 
-  .dg-linkedin {
+  .linkedin {
     &::before {
       @extend %icon-linkedin;
     }
   }
 
-  .dg-youtube {
+  .youtube {
     &::before {
       @extend %icon-youtube;
     }
   }
 
-  .dg-instagram {
+  .instagram {
     &::before {
       @extend %icon-instagram;
     }
