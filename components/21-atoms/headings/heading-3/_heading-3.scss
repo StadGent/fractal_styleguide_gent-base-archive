@@ -3,21 +3,13 @@ h3,
 %h3 {
   @include themify {
     color: $heading-3-color;
-    font-family: $heading-3-font-family;
 
     a {
-      color: $heading-3-color;
-
-      &:visited {
-        color: $heading-3-color-visited;
-      }
-
-      &:hover {
-        color: $heading-3-color-hover;
-      }
+      @include color-element-states($heading-3-color, $heading-3-color-hover);
     }
   }
   margin-bottom: 1rem;
+  font-family: $heading-3-font-family;
   font-size: 1.1rem;
   line-height: 1.3em;
 }

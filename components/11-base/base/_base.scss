@@ -83,25 +83,6 @@ pre {
   line-height: inherit;
 }
 
-%a,
-a {
-  transition: .11s ease-in-out;
-  text-decoration: underline;
-
-  &:hover {
-    text-decoration: none;
-  }
-
-  &:focus {
-    outline: thin dotted;
-  }
-
-  &:hover,
-  &:active {
-    outline: 0;
-  }
-}
-
 li a {
   text-decoration: none;
 }

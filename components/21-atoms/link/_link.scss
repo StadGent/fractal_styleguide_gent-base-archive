@@ -1,21 +1,22 @@
 a {
   @include themify {
-    color: $link-color;
-
-    &:active,
-    &:visited {
-      @content;
-    }
-
-    &:hover,
-    &:focus {
-      color: $link-color-hover;
-    }
+    @include color-element-states($link-color, $link-color-hover);
   }
+  transition: color .11s ease-in-out;
   text-decoration: underline;
+  cursor: pointer;
 
   &:hover,
   &:focus {
     text-decoration: none;
+  }
+
+  &:focus {
+    outline: thin dotted;
+  }
+
+  &:hover,
+  &:active {
+    outline: 0;
   }
 }

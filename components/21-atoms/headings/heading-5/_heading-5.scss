@@ -3,19 +3,11 @@ h5,
 %h5 {
   @include themify {
     color: $heading-5-color;
-    font-family: $heading-5-font-family;
 
     a {
-      color: $heading-5-color;
-
-      &:visited {
-        color: $heading-5-color-visited;
-      }
-
-      &:hover {
-        color: $heading-5-color-hover;
-      }
+      @include color-element-states($heading-5-color, $heading-5-color-hover);
     }
   }
   margin-bottom: .5rem;
+  font-family: $heading-5-font-family;
 }

@@ -3,20 +3,12 @@ h6,
 %h6 {
   @include themify {
     color: $heading-6-color;
-    font-family: $heading-6-font-family;
 
     a {
-      color: $heading-6-color;
-
-      &:visited {
-        color: $heading-6-color-visited;
-      }
-
-      &:hover {
-        color: $heading-6-color-hover;
-      }
+      @include color-element-states($heading-6-color, $heading-6-color-hover);
     }
   }
   margin-bottom: .5rem;
+  font-family: $heading-6-font-family;
   font-weight: 600;
 }

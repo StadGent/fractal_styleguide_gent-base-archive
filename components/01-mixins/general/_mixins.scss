@@ -37,6 +37,23 @@
 }
 
 //
+// Color element states like active, visited, hover and focus.
+//
+@mixin color-element-states($color, $color-hover) {
+  color: $color;
+
+  &:active,
+  &:visited {
+    @content;
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-hover;
+  }
+}
+
+//
 // Sass CSS triangle mixin, create any kind of triangles with ease
 // Use:
 // @include triangle(direction,width,height,color);
