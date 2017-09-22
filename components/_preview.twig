@@ -60,10 +60,11 @@
 } %}
 
   <div class="preview-container">
-
-    <div class="content-container">
-      {{ yield | raw }}
-    </div>
+    {% block content %}
+        <div class="content-container">
+          {{ yield | raw }}
+        </div>
+    {% endblock %}
   </div>
 
   {% include '@footer' %}

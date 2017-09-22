@@ -3,6 +3,7 @@
   "status": "ready",
   "order": 1,
   "handle": "section-default",
+  "preview": "@preview-sections",
   "context": {
     "label_optional": "Optional"
   }
