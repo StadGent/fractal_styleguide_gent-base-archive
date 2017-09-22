@@ -38,33 +38,9 @@ button,
 input[type='button'],
 input[type='submit'] {
   @include themify {
-    border: $button-border;
-    background: $button-background;
-    color: $button-color;
-
-    &:hover {
-      border: $button-border-hover;
-      background: $button-background-hover;
-      color: $button-color-hover;
-    }
-
-    &:focus {
-      border: $button-border-focus;
-      background: $button-background-focus;
-      color: $button-color-focus;
-    }
-
-    &:active {
-      border: $button-border-active;
-      background: $button-background-active;
-      color: $button-color-active;
-    }
-
-    &:visited {
-      border: $button-border-visited;
-      background: $button-background-visited;
-      color: $button-color-visited;
-    }
+    @include color-element-states($button-color, $button-color-hover, $property: "color");
+    @include color-element-states($button-background, $button-background-hover, $property: "background");
+    @include color-element-states($button-border, $button-border-hover, $property: "border");
   }
   @include btn-m;
   display: block;
