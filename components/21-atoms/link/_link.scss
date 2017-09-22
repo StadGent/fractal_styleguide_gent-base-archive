@@ -2,21 +2,20 @@ a {
   @include themify {
     color: $link-color;
 
-    &:active {
-      color: $link-color-active;
-    }
-
+    &:active,
     &:visited {
-      color: $link-color-visited;
+      @content;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: $link-color-hover;
     }
-
-    &:focus {
-      color: $link-color-focus;
-    }
   }
-  text-decoration: none;
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
 }
