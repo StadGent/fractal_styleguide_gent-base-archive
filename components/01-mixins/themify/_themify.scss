@@ -53,6 +53,12 @@
   $button-border-visited: map-get($colors, 'button-border-visited') !global;
   $button-border-focus: map-get($colors, 'button-border-focus') !global;
   $button-border-hover: map-get($colors, 'button-border-hover') !global;
+
+  $tag-color: map-get($colors, 'tag-color') !global;
+  $tag-color-hover: map-get($colors, 'tag-color-hover') !global;
+
+  $tag-background: map-get($colors, 'tag-background') !global;
+  $tag-background-hover: map-get($colors, 'tag-background-hover') !global;
 }
 
 //

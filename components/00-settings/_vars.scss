@@ -115,12 +115,6 @@ $hamburger-menu-link-bg-color: transparent;
 $hamburger-menu-link-bg-color-active: $color-dark-blue;
 $hamburger-menu-link-bg-color-hover: darken($color-darkest-blue, 2);
 
-// Tag styling.
-$tag-color: $color-white !default;
-$tag-background-color: $color-dark-gray !default;
-$tag-color-hover: $color-white !default;
-$tag-background-color-hover: $color-darkest-gray !default;
-
 //
 // MOLECULE SETTINGS.
 //
@@ -203,6 +197,12 @@ $themes: (
     'button-border-visited': none,
     'button-border-focus': none,
     'button-border-hover': none,
+
+    'tag-color': $color-white,
+    'tag-color-hover': $color-white,
+
+    'tag-background': $color-dark-gray,
+    'tag-background-hover': $color-dark-gray,
   ),
   'accent': (
     'section-bg-color': $color-blue,
@@ -255,6 +255,12 @@ $themes: (
     'button-border-visited': none,
     'button-border-focus': none,
     'button-border-hover': none,
+
+    'tag-color': $color-white,
+    'tag-color-hover': $color-white,
+
+    'tag-background': $color-dark-gray,
+    'tag-background-hover': $color-dark-gray,
   ),
   'wrapper': (
     'section-bg-color': $color-darkest-blue,
@@ -307,6 +313,12 @@ $themes: (
     'button-border-visited': none,
     'button-border-focus': none,
     'button-border-hover': none,
+    
+    'tag-color': $color-white,
+    'tag-color-hover': $color-white,
+    
+    'tag-background': $color-blue,
+    'tag-background-hover': $color-light-blue,
   ),
   'highlighted': (
     'section-bg-color': $color-orange,
@@ -360,6 +372,12 @@ $themes: (
     'button-border-visited': none,
     'button-border-focus': none,
     'button-border-hover': none,
+
+    'tag-color': $color-white,
+    'tag-color-hover': $color-white,
+
+    'tag-background': $color-dark-gray,
+    'tag-background-hover': $color-dark-gray,
   ),
   'inverse': (
     'section-bg-color': $color-lightest-blue,
@@ -413,6 +431,12 @@ $themes: (
     'button-border-visited': none,
     'button-border-focus': none,
     'button-border-hover': none,
+
+    'tag-color': $color-white,
+    'tag-color-hover': $color-white,
+
+    'tag-background': $color-dark-gray,
+    'tag-background-hover': $color-dark-gray,
   )
 ) !default;
 

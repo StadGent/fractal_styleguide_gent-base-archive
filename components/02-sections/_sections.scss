@@ -60,12 +60,7 @@
   $section-cta-link-border-color: $cta-link-border-color,
   $section-cta-link-icon-background-color: $cta-link-icon-background-color,
   $section-cta-link-icon-color: $cta-link-icon-color,
-  $section-cta-link-title-color: $cta-link-title-color,
-
-  $section-tag-color: $tag-color,
-  $section-tag-background-color: $tag-background-color,
-  $section-tag-color-hover: $tag-color-hover,
-  $section-tag-background-color-hover: $tag-background-color-hover
+  $section-cta-link-title-color: $cta-link-title-color
 ) {
   &,
   *[class^="section--"] & {
@@ -91,19 +86,6 @@
       .label-optional {
         color: $section-caption-color;
       }
-    }
-
-    //
-    // Atom: Tag.
-    //
-    .tag {
-      background-color: $section-tag-background-color;
-      color: $section-tag-color;
-    }
-
-    a.tag:hover {
-      background-color: $section-tag-background-color-hover;
-      color: $section-tag-color-hover;
     }
 
     //

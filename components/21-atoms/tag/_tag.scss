@@ -1,18 +1,38 @@
 .tag {
+  @include themify {
+    background: $tag-background;
+    color: $tag-color;
+
+    @at-root a#{&} {
+      &:active,
+      &:visited {
+        @content;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: $tag-background-hover;
+        color: $tag-color-hover;
+      }
+    }
+  }
+
   padding: .05rem .31rem;
   border-radius: .25rem;
-  background-color: $tag-background-color;
-  color: $tag-color;
   font-weight: 700;
   text-transform: uppercase;
-}
 
-a.tag {
-  text-decoration: none;
+  @at-root a#{&} {
+    text-decoration: none;
 
-  &:hover {
-    background-color: $tag-background-color-hover;
-    color: $tag-color-hover;
-    cursor: pointer;
+    &:active,
+    &:visited {
+      @content;
+    }
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+    }
   }
 }
