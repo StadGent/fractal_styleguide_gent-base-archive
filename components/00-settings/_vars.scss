@@ -115,13 +115,6 @@ $hamburger-menu-link-bg-color: transparent;
 $hamburger-menu-link-bg-color-active: $color-dark-blue;
 $hamburger-menu-link-bg-color-hover: darken($color-darkest-blue, 2);
 
-// Button settings.
-$btn-bg-color: $color-blue;
-$btn-bg-color-hover: lighten($color-blue, 5);
-$btn-bg-color-focus: lighten($color-blue, 5);
-$btn-text-color: $color-white;
-$btn-border: none;
-
 // Tag styling.
 $tag-color: $color-white !default;
 $tag-background-color: $color-dark-gray !default;
@@ -192,7 +185,24 @@ $themes: (
     'link-color-visited': $color-blue,
     'link-color-focus': $color-dark-blue,
     'link-color-hover': $color-dark-blue,
-    'link-color-in-button': $color-white,
+
+    'button-color': $color-white,
+    'button-color-active': $color-white,
+    'button-color-visited': $color-white,
+    'button-color-focus': $color-white,
+    'button-color-hover': $color-white,
+
+    'button-background': $color-blue,
+    'button-background-active': $color-blue,
+    'button-background-visited': $color-blue,
+    'button-background-focus': lighten($color-blue, 5),
+    'button-background-hover': lighten($color-blue, 5),
+
+    'button-border': none,
+    'button-border-active': none,
+    'button-border-visited': none,
+    'button-border-focus': none,
+    'button-border-hover': none,
   ),
   'accent': (
     'section-bg-color': $color-blue,
@@ -227,7 +237,24 @@ $themes: (
     'link-color-visited': $color-white,
     'link-color-focus': $color-white,
     'link-color-hover': $color-white,
-    'link-color-in-button': $color-darkest-blue,
+
+    'button-color': $color-darkest-blue,
+    'button-color-active': $color-darkest-blue,
+    'button-color-visited': $color-darkest-blue,
+    'button-color-focus': $color-dark-blue,
+    'button-color-hover': $color-dark-blue,
+
+    'button-background': $color-white,
+    'button-background-active': $color-white,
+    'button-background-visited': $color-white,
+    'button-background-focus': $color-white,
+    'button-background-hover': $color-white,
+
+    'button-border': none,
+    'button-border-active': none,
+    'button-border-visited': none,
+    'button-border-focus': none,
+    'button-border-hover': none,
   ),
   'wrapper': (
     'section-bg-color': $color-darkest-blue,
@@ -262,7 +289,24 @@ $themes: (
     'link-color-visited': $color-white,
     'link-color-focus': $color-white,
     'link-color-hover': $color-white,
-    'link-color-in-button': $color-white,
+
+    'button-color': $color-white,
+    'button-color-active': $color-white,
+    'button-color-visited': $color-white,
+    'button-color-focus': $color-darkest-blue,
+    'button-color-hover': $color-darkest-blue,
+
+    'button-background': transparent,
+    'button-background-active': transparent,
+    'button-background-visited': transparent,
+    'button-background-focus': $color-white,
+    'button-background-hover': $color-white,
+
+    'button-border': none,
+    'button-border-active': none,
+    'button-border-visited': none,
+    'button-border-focus': none,
+    'button-border-hover': none,
   ),
   'highlighted': (
     'section-bg-color': $color-orange,
@@ -298,6 +342,24 @@ $themes: (
     'link-color-focus': $color-white,
     'link-color-hover': $color-white,
     'link-color-in-button': $color-darkest-blue,
+
+    'button-color': $color-darkest-blue,
+    'button-color-active': $color-darkest-blue,
+    'button-color-visited': $color-darkest-blue,
+    'button-color-focus': $color-dark-blue,
+    'button-color-hover': $color-dark-blue,
+
+    'button-background': $color-white,
+    'button-background-active': $color-white,
+    'button-background-visited': $color-white,
+    'button-background-focus': $color-white,
+    'button-background-hover': $color-white,
+
+    'button-border': none,
+    'button-border-active': none,
+    'button-border-visited': none,
+    'button-border-focus': none,
+    'button-border-hover': none,
   ),
   'inverse': (
     'section-bg-color': $color-lightest-blue,
@@ -333,6 +395,24 @@ $themes: (
     'link-color-focus': $color-dark-blue,
     'link-color-hover': $color-dark-blue,
     'link-color-in-button': $color-white,
+
+    'button-color': $color-white,
+    'button-color-active': $color-white,
+    'button-color-visited': $color-white,
+    'button-color-focus': $color-white,
+    'button-color-hover': $color-white,
+
+    'button-background': $color-blue,
+    'button-background-active': $color-blue,
+    'button-background-visited': $color-blue,
+    'button-background-focus': lighten($color-blue, 5),
+    'button-background-hover': lighten($color-blue, 5),
+
+    'button-border': none,
+    'button-border-active': none,
+    'button-border-visited': none,
+    'button-border-focus': none,
+    'button-border-hover': none,
   )
 ) !default;
 

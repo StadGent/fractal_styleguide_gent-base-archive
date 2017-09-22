@@ -17,10 +17,6 @@ a {
     &:focus {
       color: $link-color-focus;
     }
-
-    &.btn {
-      color: $link-color-in-button;
-    }
   }
   text-decoration: none;
 }

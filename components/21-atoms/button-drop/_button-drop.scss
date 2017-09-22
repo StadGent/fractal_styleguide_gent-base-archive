@@ -83,7 +83,8 @@
     padding-right: 2rem;
   }
 
-  input,
+  input[type="button"],
+  input[type="submit"],
   button {
     border-radius: 0;
   }

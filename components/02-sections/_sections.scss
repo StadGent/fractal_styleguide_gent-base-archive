@@ -44,27 +44,9 @@
   $section-bg-color,
   $section-text-color,
 
-  $section-btn-border,
-  $section-btn-bg-color,
-  $section-btn-text-color,
-
-  $section-btn-border-hover: $btn-border,
-  $section-btn-bg-color-hover: $section-btn-bg-color,
-  $section-btn-text-color-hover: $section-btn-text-color,
-
-  $section-btn-border-focus: $btn-border,
-  $section-btn-bg-color-focus: $section-btn-bg-color-hover,
-  $section-btn-text-color-focus: $section-btn-text-color-hover,
-
   $section-caption-color: $section-text-color,
 
   $section-title-color: $section-text-color,
-
-  $section-link-color: $section-text-color,
-  $section-link-color-hover: $section-link-color,
-  $section-link-color-focus: $section-link-color-hover,
-  $section-link-color-visited: $section-link-color,
-  $section-link-color-active: $section-btn-bg-color,
 
   $section-field-text-color: $section-text-color,
   $section-field-placeholder-color: $section-field-text-color,
@@ -109,27 +91,6 @@
       .label-optional {
         color: $section-caption-color;
       }
-    }
-
-    //
-    // Atom: Button styling.
-    // @TODO: Change this so it's not a global mixin anymore?
-    //
-    .btn,
-    a.btn,
-    button,
-    input[type="submit"] {
-      @include btn-scheme(
-        $section-btn-text-color,
-        $section-btn-bg-color,
-        $section-btn-border,
-        $text-color-hover: $section-btn-text-color-hover,
-        $text-color-focus: $section-btn-text-color-focus,
-        $background-color-hover: $section-btn-bg-color-hover,
-        $background-color-focus: $section-btn-bg-color-focus,
-        $border-hover: $section-btn-border-hover,
-        $border-focus: $section-btn-border-focus
-      );
     }
 
     //
