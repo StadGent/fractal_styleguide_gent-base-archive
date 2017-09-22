@@ -74,7 +74,7 @@ input[type='submit'] {
   &.icon-only {
     text-indent: -9999px;
 
-    &:before {
+    &::before {
       width: 100%;
       margin: 0;
       float: left;

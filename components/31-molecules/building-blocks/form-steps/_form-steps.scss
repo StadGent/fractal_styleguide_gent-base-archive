@@ -7,7 +7,7 @@
     display: flex;
     position: relative;
 
-    &:before {
+    &::before {
       @include tablet {
         display: none;
       }
@@ -44,7 +44,7 @@
     color: $color-gray;
     font-weight: bold;
 
-    &:before {
+    &::before {
       @include tablet {
         right: auto;
         margin: 0;
@@ -67,7 +67,7 @@
     }
 
     &.progress-previous {
-      &:before {
+      &::before {
         @extend %icon-base-css;
         @extend %icon-check;
 
@@ -89,12 +89,12 @@
       }
     }
 
-    &.progress-active:before {
+    &.progress-active::before {
       border-color: $color-blue;
       background: $color-blue;
     }
 
-    span:before {
+    span::before {
       border-color: $color-blue;
       background: $color-white;
     }
