@@ -115,22 +115,6 @@ $hamburger-menu-link-bg-color: transparent;
 $hamburger-menu-link-bg-color-active: $color-dark-blue;
 $hamburger-menu-link-bg-color-hover: darken($color-darkest-blue, 2);
 
-//
-// MOLECULE SETTINGS.
-//
-
-// CTA links settings.
-$cta-link-color: $color-blue !default;
-$cta-link-color-hover: $color-blue !default;
-$cta-link-background-color: $color-lightest-blue !default;
-$cta-link-background-color-hover: $color-lightest-gray !default;
-$cta-link-border-color: $color-light-gray !default;
-
-$cta-link-icon-background-color: $color-blue !default;
-$cta-link-icon-color: $color-white !default;
-
-$cta-link-title-color: $color-darkest-gray !default;
-
 // Message settings.
 $status-message: (
   'info': $color-blue ,

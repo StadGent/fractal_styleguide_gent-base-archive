@@ -1,6 +1,5 @@
 a.cta-link {
   @include themify {
-    @include color-element-states($cta-link-color, $cta-link-color-hover, $property: "color");
     @include color-element-states($cta-link-background, $cta-link-background-hover, $property: "background");
     @include color-element-states($cta-link-border, $cta-link-border-hover, $property: "border");
 
