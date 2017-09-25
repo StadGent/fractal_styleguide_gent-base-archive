@@ -4,16 +4,8 @@
     color: $tag-color;
 
     @at-root a#{&} {
-      &:active,
-      &:visited {
-        @content;
-      }
-
-      &:hover,
-      &:focus {
-        background-color: $tag-background-hover;
-        color: $tag-color-hover;
-      }
+      @include color-element-states($tag-background, $tag-background-hover, $property: "background");
+      @include color-element-states($tag-color, $tag-color-hover, $property: "color");
     }
   }
 
