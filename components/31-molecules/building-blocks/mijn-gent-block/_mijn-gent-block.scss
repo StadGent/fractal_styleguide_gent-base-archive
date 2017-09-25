@@ -92,10 +92,10 @@
     }
 
     footer {
-      @extend %section--inverse;
       padding: 0 .625rem;
       border-bottom-left-radius: $radius-1;
       border-bottom-right-radius: $radius-1;
+      background: $color-lightest-blue;
       text-align: right;
     }
   }

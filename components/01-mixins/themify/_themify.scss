@@ -24,6 +24,8 @@
   $heading-6-color: map-get($colors, 'heading-6-color') !global;
   $heading-6-color-hover: map-get($colors, 'heading-6-color-hover') !global;
 
+  $description-color: map-get($colors, 'description-color') !global;
+
   $link-color: map-get($colors, 'link-color') !global;
   $link-color-hover: map-get($colors, 'link-color-hover') !global;
 
@@ -35,6 +37,14 @@
 
   $cta-link-title-color: map-get($colors, 'cta-link-title-color') !global;
   $cta-link-document-color: map-get($colors, 'cta-link-document-color') !global;
+
+  $field-color: map-get($colors, 'field-color') !global;
+  $field-background: map-get($colors, 'field-background') !global;
+  $field-border: map-get($colors, 'field-border') !global;
+  $field-placeholder: map-get($colors, 'field-placeholder') !global;
+
+  $label-color: map-get($colors, 'label-color') !global;
+  $label-optional-color: map-get($colors, 'label-optional-color') !global;
 
   $button-color: map-get($colors, 'button-color') !global;
   $button-color-hover: map-get($colors, 'button-color-hover') !global;

@@ -147,7 +147,7 @@ $map-border-radius: $radius-1 !default;
 //
 $themes: (
   'default': (
-    'section-bg-color': $color-white,
+    'section-background': $color-white,
     'section-text-color': $color-dark-gray,
 
     'heading-1-color': $color-darkest-blue,
@@ -168,6 +168,8 @@ $themes: (
     'heading-6-color': $color-darkest-blue,
     'heading-6-color-hover': $color-dark-blue,
 
+    'description-color': $color-gray,
+
     'link-color': $color-blue,
     'link-color-hover': $color-dark-blue,
 
@@ -179,6 +181,14 @@ $themes: (
 
     'cta-link-title-color': $color-darkest-blue,
     'cta-link-document-color': $color-blue,
+
+    'field-color': $color-dark-gray,
+    'field-background': $color-white,
+    'field-border': 1px solid $color-light-gray,
+    'field-placeholder': $color-light-gray,
+
+    'label-color': $color-dark-gray,
+    'label-optional-color': $color-gray,
 
     'button-color': $color-white,
     'button-color-hover': $color-white,
@@ -196,7 +206,7 @@ $themes: (
     'tag-background-hover': $color-dark-gray,
   ),
   'accent': (
-    'section-bg-color': $color-blue,
+    'section-background': $color-blue,
     'section-text-color': $color-white,
 
     'heading-1-color': $color-white,
@@ -217,6 +227,8 @@ $themes: (
     'heading-6-color': $color-white,
     'heading-6-color-hover': $color-white,
 
+    'description-color': $color-white-blue,
+
     'link-color': $color-white,
     'link-color-hover': $color-light-blue,
 
@@ -228,6 +240,14 @@ $themes: (
 
     'cta-link-title-color': $color-white,
     'cta-link-document-color': $color-light-blue,
+
+    'field-color': $color-dark-gray,
+    'field-background': $color-white,
+    'field-border': 1px solid $color-light-gray,
+    'field-placeholder': $color-light-gray,
+
+    'label-color': $color-white,
+    'label-optional-color': $color-white-blue,
 
     'button-color': $color-darkest-blue,
     'button-color-hover': $color-dark-blue,
@@ -245,7 +265,7 @@ $themes: (
     'tag-background-hover': $color-dark-gray,
   ),
   'wrapper': (
-    'section-bg-color': $color-darkest-blue,
+    'section-background': $color-darkest-blue,
     'section-text-color': $color-white,
 
     'heading-1-color': $color-white,
@@ -266,6 +286,8 @@ $themes: (
     'heading-6-color': $color-white,
     'heading-6-color-hover': $color-white,
 
+    'description-color': $color-gray,
+
     'link-color': $color-white,
     'link-color-hover': $color-white,
 
@@ -277,6 +299,14 @@ $themes: (
 
     'cta-link-title-color': $color-white,
     'cta-link-document-color': $color-lightest-gray,
+
+    'field-color': $color-white,
+    'field-background': rgba(255, 255, 255, .2),
+    'field-border': transparent,
+    'field-placeholder': $color-light-gray,
+
+    'label-color': $color-white,
+    'label-optional-color': $color-gray,
 
     'button-color': $color-white,
     'button-color-hover': $color-darkest-blue,
@@ -294,7 +324,7 @@ $themes: (
     'tag-background-hover': $color-light-blue,
   ),
   'highlighted': (
-    'section-bg-color': $color-orange,
+    'section-background': $color-orange,
     'section-text-color': $color-dark-gray,
 
     'heading-1-color': $color-white,
@@ -315,6 +345,8 @@ $themes: (
     'heading-6-color': $color-white,
     'heading-6-color-hover': $color-white,
 
+    'description-color': $color-light-gray,
+
     'link-color': $color-white,
     'link-color-hover': $color-white,
 
@@ -326,6 +358,14 @@ $themes: (
 
     'cta-link-title-color': $color-white,
     'cta-link-document-color': $color-dark-gray,
+
+    'field-color': $color-dark-gray,
+    'field-background': $color-white,
+    'field-border': 1px solid $color-light-gray,
+    'field-placeholder': $color-light-gray,
+
+    'label-color': $color-dark-gray,
+    'label-optional-color': $color-light-gray,
 
     'button-color': $color-darkest-blue,
     'button-color-hover': $color-dark-blue,
@@ -343,7 +383,7 @@ $themes: (
     'tag-background-hover': $color-dark-gray,
   ),
   'inverse': (
-    'section-bg-color': $color-lightest-blue,
+    'section-background': $color-lightest-blue,
     'section-text-color': $color-dark-gray,
 
     'heading-1-color': $color-darkest-blue,
@@ -364,6 +404,8 @@ $themes: (
     'heading-6-color': $color-darkest-blue,
     'heading-6-color-hover': $color-dark-blue,
 
+    'description-color': $color-gray,
+
     'link-color': $color-blue,
     'link-color-hover': $color-dark-blue,
 
@@ -375,6 +417,14 @@ $themes: (
 
     'cta-link-title-color': $color-darkest-blue,
     'cta-link-document-color': $color-blue,
+
+    'field-color': $color-dark-gray,
+    'field-background': $color-white,
+    'field-border': 1px solid $color-light-gray,
+    'field-placeholder': $color-light-gray,
+
+    'label-color': $color-dark-gray,
+    'label-optional-color': $color-gray,
 
     'button-color': $color-white,
     'button-color-hover': $color-white,

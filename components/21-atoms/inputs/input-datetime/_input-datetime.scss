@@ -1,10 +1,4 @@
 input[type='datetime'],
 input[type='datetime-local'] {
-  border-color: $color-light-gray;
-  background: $color-white;
-  color: $color-dark-gray;
-
-  &::placeholder {
-    color: $color-light-gray;
-  }
+  @extend %field-colors;
 }
