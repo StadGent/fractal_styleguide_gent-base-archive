@@ -120,29 +120,6 @@
         color: $section-field-placeholder-color;
       }
     }
-
-    //
-    // Molecule: cta-link.
-    //
-    a.cta-link {
-      border: 1px solid $section-cta-link-border-color;
-      background-color: $section-cta-link-background-color;
-      color: $section-cta-link-color;
-
-      .icon {
-        background-color: $section-cta-link-icon-background-color;
-        color: $section-cta-link-icon-color;
-      }
-
-      .title {
-        color: $section-cta-link-title-color;
-      }
-
-      &:hover {
-        background-color: $section-cta-link-background-color-hover;
-        color: $section-cta-link-color-hover;
-      }
-    }
   }
 }
 

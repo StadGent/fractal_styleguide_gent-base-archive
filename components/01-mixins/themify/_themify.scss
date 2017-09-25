@@ -26,23 +26,23 @@
 
   $link-color: map-get($colors, 'link-color') !global;
   $link-color-hover: map-get($colors, 'link-color-hover') !global;
-  
+
+  $cta-link-background: map-get($colors, 'cta-link-background') !global;
+  $cta-link-background-hover: map-get($colors, 'cta-link-background-hover') !global;
+
+  $cta-link-border: map-get($colors, 'cta-link-border') !global;
+  $cta-link-border-hover: map-get($colors, 'cta-link-border-hover') !global;
+
+  $cta-link-title-color: map-get($colors, 'cta-link-title-color') !global;
+  $cta-link-document-color: map-get($colors, 'cta-link-document-color') !global;
+
   $button-color: map-get($colors, 'button-color') !global;
-  $button-color-active: map-get($colors, 'button-color-active') !global;
-  $button-color-visited: map-get($colors, 'button-color-visited') !global;
-  $button-color-focus: map-get($colors, 'button-color-focus') !global;
   $button-color-hover: map-get($colors, 'button-color-hover') !global;
 
   $button-background: map-get($colors, 'button-background') !global;
-  $button-background-active: map-get($colors, 'button-background-active') !global;
-  $button-background-visited: map-get($colors, 'button-background-visited') !global;
-  $button-background-focus: map-get($colors, 'button-background-focus') !global;
   $button-background-hover: map-get($colors, 'button-background-hover') !global;
 
   $button-border: map-get($colors, 'button-border') !global;
-  $button-border-active: map-get($colors, 'button-border-active') !global;
-  $button-border-visited: map-get($colors, 'button-border-visited') !global;
-  $button-border-focus: map-get($colors, 'button-border-focus') !global;
   $button-border-hover: map-get($colors, 'button-border-hover') !global;
 
   $tag-color: map-get($colors, 'tag-color') !global;
