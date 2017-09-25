@@ -4,14 +4,6 @@
 //
 
 //
-// Border-box polyfill helper.
-// @include border-box;
-//
-@mixin border-box() {
-  box-sizing: border-box;
-}
-
-//
 // Clearfix
 //
 // For modern browsers
