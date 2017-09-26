@@ -18,6 +18,12 @@
   }
 }
 
+@mixin tablet-only {
+  @include breakpoint($bp-tablet $bp-desktop) {
+    @content;
+  }
+}
+
 //
 // Desktop breakpoint (see $bp-tablet defined in _vars.scss).
 // This asumes a min-width as defined by the variable.
