@@ -1,9 +1,9 @@
 {
   "name": "gent_styleguide",
-  "version": "2.2.10",
+  "version": "2.2.11",
   "description": "Styleguide Stad.Gent",
   "devDependencies": {
-    "@frctl/fractal": "^1.1.x",
+    "@frctl/fractal": "^1.1.7",
     "@frctl/twig": "git+https://github.com/tnottu/fractal-twig-adapter.git",
     "event-stream": "^3.3.4",
     "gulp": "^3.9.1",
