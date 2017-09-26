@@ -17,4 +17,9 @@ h6,
 .h6,
 %h6 {
   margin: 0;
+  text-decoration: none;
+
+  a {
+    text-decoration: none;
+  }
 }

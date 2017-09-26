@@ -1,24 +1,22 @@
 a {
-  color: $link-color;
-
-  &:visited {
-    color: $link-color-visited;
+  @include themify {
+    @include color-element-states($link-color, $link-color-hover);
   }
+  transition: color .11s ease-in-out;
+  text-decoration: underline;
+  cursor: pointer;
 
-  &:hover {
-    color: $link-color-hover;
-  }
-
-  &:active {
-    color: $link-color-active;
+  &:hover,
+  &:focus {
+    text-decoration: none;
   }
 
   &:focus {
-    color: $link-color-focus;
+    outline: thin dotted;
   }
 
-  &.btn {
-    display: inline;
-    color: $link-color-in-button;
+  &:hover,
+  &:active {
+    outline: 0;
   }
 }

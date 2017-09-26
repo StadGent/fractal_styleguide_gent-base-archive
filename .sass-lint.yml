@@ -97,6 +97,7 @@ rules:
   hex-notation: 2
   indentation: 2
   leading-zero: 2
+  pseudo-element: 2
   nesting-depth:
     - 2
     - max-depth: 4

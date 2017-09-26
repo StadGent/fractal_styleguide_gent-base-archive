@@ -2,6 +2,7 @@
   "title": "Section highlighted",
   "status": "ready",
   "handle": "section-highlighted",
+  "preview": "@preview-sections",
   "context": {
     "label_optional": "Optional"
   }

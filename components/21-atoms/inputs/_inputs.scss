@@ -1,0 +1,11 @@
+%field-colors {
+  @include themify {
+    border: $field-border;
+    background: $field-background;
+    color: $field-color;
+
+    &::placeholder {
+      color: $field-placeholder;
+    }
+  }
+}

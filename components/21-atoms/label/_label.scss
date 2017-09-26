@@ -1,7 +1,9 @@
 label {
-  color: $color-dark-gray;
+  @include themify {
+    color: $label-color;
 
-  .label-optional {
-    color: #9da8af;
+    .label-optional {
+      color: $label-optional-color;
+    }
   }
 }

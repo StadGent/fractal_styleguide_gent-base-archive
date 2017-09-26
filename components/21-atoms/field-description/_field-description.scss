@@ -7,7 +7,7 @@
   font-size: .9rem;
   line-height: 1.1rem;
 
-  &:before {
+  &::before {
     @extend %icon-base-css;
     @extend %icon-info-circle;
     position: absolute;

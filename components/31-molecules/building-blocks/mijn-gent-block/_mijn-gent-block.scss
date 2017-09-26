@@ -54,7 +54,7 @@
     box-shadow: 2px 2px 2px 0 rgba(44, 63, 72, .2), -2px 2px 2px 0 rgba(44, 63, 72, .2);
     z-index: 9999;
 
-    &:before {
+    &::before {
       @include triangle(top, 10px, 10px, $color-white);
       position: absolute;
       top: -10px;
@@ -92,10 +92,10 @@
     }
 
     footer {
-      @extend %section--inverse;
       padding: 0 .625rem;
       border-bottom-left-radius: $radius-1;
       border-bottom-right-radius: $radius-1;
+      background: $color-lightest-blue;
       text-align: right;
     }
   }

@@ -34,13 +34,21 @@
 %btn,
 .btn,
 a.btn,
-button {
-  @extend %btn--default;
+button,
+input[type='button'],
+input[type='submit'] {
+  @include themify {
+    @include color-element-states($button-color, $button-color-hover, $property: "color");
+    @include color-element-states($button-background, $button-background-hover, $property: "background");
+    @include color-element-states($button-border, $button-border-hover, $property: "border");
+  }
+  @include btn-m;
   display: block;
   position: relative;
   width: 100%;
   margin: 0;
-  padding: 0 1rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
   transition: .11s ease-in-out;
   transition-property: background, color, border;
   border: 0;
@@ -58,9 +66,7 @@ button {
     text-decoration: none;
   }
 
-  @include btn-m;
-
-  &.icon:before {
+  &.icon::before {
     @extend %icon-base-css;
     margin-right: .43rem;
   }
@@ -68,7 +74,7 @@ button {
   &.icon-only {
     text-indent: -9999px;
 
-    &:before {
+    &::before {
       width: 100%;
       margin: 0;
       float: left;
@@ -81,26 +87,12 @@ button {
 //
 // Inline button styling.
 //
+%btn--inline,
 .inline.btn,
 .btn--inline,
-%btn--inline,
 a.btn--inline,
+button.btn--inline,
+input[type='button'].btn--inline,
 input[type='submit'].btn--inline {
   @include btn-inlineblock
 }
-
-
-//
-// Default button color scheme
-//
-a.btn-default,
-.btn--default,
-%btn--default {
-  @include btn-scheme(
-    $btn-text-color,
-    $btn-bg-color,
-    $btn-border,
-    $background-color-hover: $btn-bg-color-hover
-  );
-}
-

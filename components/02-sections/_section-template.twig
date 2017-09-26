@@ -12,7 +12,7 @@
     {% include '@paragraph' with { 'text': 'Normal text below an heading 5.'} %}
     {% include '@h6' with { 'h6_text': 'Heading 6' } %}
     {% include '@paragraph' with { 'text': 'Normal text below an heading 6.'} %}
-    {% include '@paragraph' with { 'text': 'Paragraphs <a href="#">link</a>'} %}
+    <p>{% include '@link' with { 'text': 'Link'} %} {% include '@tag' with { 'text': 'Tag'} %}</p>
     <p>{% include '@button-sm' with { 'text': 'Button'} %}</p>
     <p>{% include '@button-md' with { 'text': 'Button'} %}</p>
     <p>{% include '@button-lg' with { 'text': 'Button'} %}</p>
