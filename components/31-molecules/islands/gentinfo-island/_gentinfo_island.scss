@@ -12,7 +12,7 @@
     color: $color-white;
   }
 
-  .telephone {
+  .phone {
     &::before {
       @extend %icon-base-css;
       @extend %icon-phone;
@@ -20,7 +20,7 @@
     }
   }
 
-  .e-mail {
+  .email {
     &::before {
       @extend %icon-base-css;
       @extend %icon-email;
