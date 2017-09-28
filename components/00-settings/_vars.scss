@@ -41,7 +41,7 @@ $primary-font-family: $default-font-family !default;
 $primary-font-weight: $default-font-weight !default;
 $primary-font-size: $default-font-size !default; //px
 $primary-line-height: $default-line-height !default; //em
-$secondary-font-family: 'expresswayextrabold', sans-serif !default;
+$secondary-font-family: 'expressway', sans-serif !default;
 
 $bg-outside-container: $color-lightest-gray !default;
 $border-outside-container: 1px solid $color-light-gray !default;
@@ -82,19 +82,19 @@ $bg-hover-breadcrumb: $color-lightest-blue !default;
 $heading-1-font-family: $secondary-font-family !default;
 
 // Heading 2 settings.
-$heading-2-font-family: $default-font-family !default;
+$heading-2-font-family: $secondary-font-family !default;
 
 // Heading 3 settings.
-$heading-3-font-family: $default-font-family !default;
+$heading-3-font-family: $secondary-font-family !default;
 
 // Heading 4 settings.
-$heading-4-font-family: $default-font-family !default;
+$heading-4-font-family: $secondary-font-family !default;
 
 // Heading 5 settings.
-$heading-5-font-family: $default-font-family !default;
+$heading-5-font-family: $secondary-font-family !default;
 
 // Heading 6 settings.
-$heading-6-font-family: $default-font-family !default;
+$heading-6-font-family: $secondary-font-family !default;
 
 // Mobile menu
 $hamburger-menu-width: 320px;

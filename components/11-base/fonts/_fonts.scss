@@ -1,12 +1,1 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,400italic'); // sass-lint:disable-line no-url-protocols
-
-@font-face {
-  font-family: 'expresswayextrabold';
-  font-style: normal;
-  font-weight: 700;
-  src: url('#{$styleguide-dir}/fonts/expressway_xb-webfont.eot?#iefix') format('embedded-opentype'),
-  url('#{$styleguide-dir}/fonts/expressway_xb-webfont.woff') format('woff'),
-  url('#{$styleguide-dir}/fonts/expressway_xb-webfont.woff2') format('woff2'),
-  url('#{$styleguide-dir}/fonts/expressway_xb-webfont.ttf') format('truetype'),
-  url('#{$styleguide-dir}/fonts/expressway_xb-webfont.svg#expresswayextrabold') format('svg');
-}
