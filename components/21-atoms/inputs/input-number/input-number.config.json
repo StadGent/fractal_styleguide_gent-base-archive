@@ -1,0 +1,8 @@
+{
+  "title": "Input number",
+  "status": "ready",
+  "handle": "input-number",
+  "context": {
+    "placeholder": "Placeholder input number"
+  }
+}
