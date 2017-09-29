@@ -1,5 +1,8 @@
 //
 // Themify map
+//
+// @access private
+//
 // @param {Map} $colors - Contains all colors of a section.
 //
 @mixin themify-map($colors) {
@@ -64,6 +67,9 @@
 
 //
 // Themify mixin
+//
+// @access public
+//
 // @param {Map} $themes [$themes] - Map of themes to use
 //
 @mixin themify($themes: $themes) {

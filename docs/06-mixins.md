@@ -14,7 +14,6 @@ We encourage you to use these where necessary.
   
 - **[General mixins](#general)**:
   - clearfix();
-  - color-element-states($color, $color-hover, $property);
   - triangle($direction, $size-h, $size-v, $color);
   
   
@@ -186,6 +185,40 @@ Forked from https://github.com/juanbrujo/triangle-mixin.less
 ***
 
 ## <a name="themify"></a>Themify mixins 
+### themify($themes: $themes);
+**Description:**
+This mixins is used throughout components in the style guide to "themify" them. 
+This means that when we use the themify mixin on a color, this color can be 
+different based on the section the component is in.
+
+It uses a SASS map `$themes` to loop over the different sections defined in `_vars.scss`.
+
+**Implementation:**
+```
+@mixin themify($themes: $themes) {
+  @each $theme, $colors in $themes {
+    @include themify-map($colors);
+
+    // Apply the default section as default color scheme if there is no section
+    // defined in the DOM.
+    @if $theme == "default" {
+      @content;
+    }
+
+    .section--#{$theme} &,
+    *[class*="section--"] .section--#{$theme} & {
+      @content;
+    }
+  }
+}
+```
+**Usage:**
+```
+@include themify(
+  color: $color-blue;
+);
+```
+***
 
 ## <a name="grid"></a>Grid mixins 
 
