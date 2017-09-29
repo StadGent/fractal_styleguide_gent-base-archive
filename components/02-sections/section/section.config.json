@@ -1,6 +1,5 @@
 {
-  "title": "Section",
-  "name": "Section default",
+  "title": "Section default",
   "order": 2,
   "status": "ready",
   "default": "section-default",
@@ -9,36 +8,31 @@
       "name": "section-default",
       "context": {
         "modifier": "section--default"
-      },
-      "hidden": true
+      }
     },
     {
       "name": "section-accent",
       "context": {
         "modifier": "section--accent"
-      },
-      "hidden": true
+      }
     },
     {
       "name": "section-highlighted",
       "context": {
         "modifier": "section--highlighted"
-      },
-      "hidden": true
+      }
     },
     {
       "name": "section-inverse",
       "context": {
         "modifier": "section--inverse"
-      },
-      "hidden": true
+      }
     },
     {
       "name": "section-wrapper",
       "context": {
         "modifier": "section--wrapper"
-      },
-      "hidden": true
+      }
     }
   ]
 }
