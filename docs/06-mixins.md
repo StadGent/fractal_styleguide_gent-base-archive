@@ -1,0 +1,192 @@
+---
+title: Mixins 
+---
+
+This styleguide uses a lot of mixins throughout its code.
+We encourage you to use these where necessary.
+
+## Overview of mixins
+- **[Breakpoint mixins](#breakpoints)**:
+  - tablet();
+  - tablet-only();
+  - desktop();
+  
+  
+- **[General mixins](#general)**:
+  - clearfix();
+  - color-element-states($color, $color-hover, $property);
+  - triangle($direction, $size-h, $size-v, $color);
+  
+  
+- **[Themify mixins](#themify)**:
+  - themify($themes);
+   
+   
+- **[Grid mixins](#grid)**:
+  - make-row($gutter);
+  - make-mobile-column($columns, $gutter);
+  - make-mobile-column-push($columns);
+  - make-mobile-column-pull($columns);
+  - make-tablet-column($columns, $gutter: $gutter-width);
+  - make-tablet-column-offset($columns);
+  - make-tablet-column-push($columns);
+  - make-tablet-column-pull($columns);
+  - make-desktop-column($columns, $gutter: $gutter-width);
+  - make-desktop-column-offset($columns);
+  - make-desktop-column-push($columns);
+  - make-desktop-column-pull($columns);
+
+
+## <a name="breakpoints"></a>Breakpoint mixins 
+
+### tablet();
+**Description:**
+Tablet breakpoint (see $bp-tablet defined in _vars.scss).
+This asumes a min-width as defined by the variable.
+
+**Implementation:**
+```
+@mixin tablet {
+  @include breakpoint($bp-tablet) {
+    @content;
+  }
+}
+```
+**Usage:**
+```
+@include tablet { ... }
+```
+
+***
+
+### tablet-only();
+**Description:**
+Tablet-only breakpoint (see $bp-tablet defined in _vars.scss).
+This asumes a min-width as defined by the $bp-tablet variable and a max-width as defined by the $bp-desktop variable.
+
+**Implementation:**
+```
+@mixin tablet-only {
+  @include breakpoint($bp-tablet $bp-desktop) {
+    @content;
+  }
+}
+```
+**Usage:**
+```
+@include tablet-only { ... }
+```
+
+***
+
+### tablet-only();
+**Description:**
+Desktop breakpoint (see $bp-tablet defined in _vars.scss).
+This asumes a min-width as defined by the variable.
+
+**Implementation:**
+```
+@mixin desktop {
+  @include breakpoint($bp-desktop) {
+    @content;
+  }
+}
+```
+**Usage:**
+```
+@include desktop { ... }
+```
+
+## <a name="general"></a>General mixins 
+### clearfix();
+**Description:**
+For modern browsers
+1. The space content is one way to avoid an Opera bug when the
+   contenteditable attribute is included anywhere else in the document.
+   Otherwise it causes space to appear at the top and bottom of elements
+   that are clearfixed.
+2. The use of `table` rather than `block` is only necessary if using
+   `:before` to contain the top-margins of child elements.
+
+Source: http://nicolasgallagher.com/micro-clearfix-hack/
+
+**Implementation:**
+```
+@mixin clearfix() {
+  &::before,
+  &::after {
+    display: table; // 2
+    content: ' '; // 1
+  }
+
+  &::after {
+    clear: both;
+  }
+}
+```
+**Usage:**
+```
+@include clearfix();
+```
+***
+
+### triangle($direction, $size-h, $size-v, $color);
+**Description:**
+Sass CSS triangle mixin, create any kind of triangles with ease
+Forked from https://github.com/juanbrujo/triangle-mixin.less
+
+**Implementation:**
+```
+@mixin triangle($direction, $size-h, $size-v, $color) {
+  display: block;
+  width: 0;
+  height: 0;
+  transform: scale(.9999);
+  border-style: solid;
+  content: '';
+
+  @if $direction == top {
+    border-width: 0 $size-v $size-h;
+    border-color: transparent transparent $color;
+  }
+  @if $direction == bottom {
+    border-width: $size-v $size-h 0 $size-v;
+    border-color: $color transparent transparent;
+  }
+  @if $direction == left {
+    border-width: $size-v $size-h $size-v 0;
+    border-color: transparent $color transparent transparent;
+  }
+  @if $direction == right {
+    border-width: $size-v 0 $size-v $size-h;
+    border-color: transparent transparent transparent $color;
+  }
+  @if $direction == topright {
+    border-width: 0 $size-h $size-v 0;
+    border-color: transparent $color transparent transparent;
+  }
+  @if $direction == bottomright {
+    border-width: 0 0 $size-h $size-v;
+    border-color: transparent transparent $color;
+  }
+  @if $direction == bottomleft {
+    border-width: $size-h 0 0 $size-v;
+    border-color: transparent transparent transparent $color;
+  }
+  @if $direction == topleft {
+    border-width: $size-h $size-v 0 0;
+    border-color: $color transparent transparent;
+  }
+}
+```
+**Usage:**
+```
+@include triangle(bottomright,$square,$square,$color);
+```
+***
+
+## <a name="themify"></a>Themify mixins 
+
+## <a name="grid"></a>Grid mixins 
+
+

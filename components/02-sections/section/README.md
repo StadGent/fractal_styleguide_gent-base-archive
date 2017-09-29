@@ -1,4 +1,3 @@
-
 # Color sections
 
 In the style guide of Ghent there are 5 color sections (or schemes) available. These are named after the content sections.
