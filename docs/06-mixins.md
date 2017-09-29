@@ -19,7 +19,7 @@ We encourage you to use these where necessary.
   
   
 - **[Themify mixins](#themify)**:
-   - themify($themes);
+  - themify($themes);
    
    
 - **[Grid mixins](#grid)**:
