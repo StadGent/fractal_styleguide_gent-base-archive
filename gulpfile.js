@@ -56,7 +56,6 @@ var npm = require('npm');
 var fs = require('fs');
 var argv = require('yargs').argv;
 var bump = require('gulp-bump');
-var wcagAccess = require('gulp-wcag-accessibility');
 
 /*
  *
@@ -73,9 +72,9 @@ gulp.task('styles:dist', function() {
     .pipe(sassGlob())
     .pipe(sassLint({
       configFile: './.sass-lint.yml',
-      formatter: 'stylish',
     }))
     .pipe(sassLint.format())
+    .pipe(sassLint.failOnError())
     .pipe(sourcemaps.init())
     .pipe(sass({
       outputStyle: 'nested',
@@ -102,11 +101,10 @@ gulp.task('styles:build', ['fractal:build'], function() {
   gulp.src('components/**/*.s+(a|c)ss')
     .pipe(sassGlob())
     .pipe(sassLint({
-      configFile: './.sass-lint.yml',
-      formatter: 'stylish',
-      'merge-default-rules': false
+      configFile: './.sass-lint.yml'
     }))
     .pipe(sassLint.format())
+    .pipe(sassLint.failOnError())
     .pipe(sass({
       outputStyle: 'compressed',
       includePaths: ['node_modules/breakpoint-sass/stylesheets']
@@ -130,6 +128,7 @@ gulp.task('styles:validate', function() {
     configFile: './.sass-lint.yml'
   }))
   .pipe(sassLint.format())
+  .pipe(sassLint.failOnError())
 });
 
 /*
@@ -358,25 +357,6 @@ gulp.task('bump', function(callback){
     .pipe(gulp.dest('./'));
 
   return callback();
-});
-
-
-gulp.task('test', function() {
-  return gulp.src('')
-    .pipe(wcagAccess({
-        accessibilityLevel: 'WCAG2AA',
-        force: true,
-        verbose: true,
-        reportLevels: {
-            notice: false,
-            warning: false,
-            error: true
-        },
-        forceUrls: true,
-        urls: [
-            'http://localhost:3000/components/preview/buttons'
-        ]
-    }))
 });
 
 /*

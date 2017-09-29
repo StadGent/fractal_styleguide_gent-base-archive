@@ -14,8 +14,8 @@ rules:
   mixins-before-declarations:
     - 2
     - exclude:
-      - mobile
       - desktop
+      - tablet
       - tablet-only
 
   # Line Spacing
