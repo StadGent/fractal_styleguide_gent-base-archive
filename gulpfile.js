@@ -56,7 +56,6 @@ var npm = require('npm');
 var fs = require('fs');
 var argv = require('yargs').argv;
 var bump = require('gulp-bump');
-var wcagAccess = require('gulp-wcag-accessibility');
 
 /*
  *
@@ -358,25 +357,6 @@ gulp.task('bump', function(callback){
     .pipe(gulp.dest('./'));
 
   return callback();
-});
-
-
-gulp.task('test', function() {
-  return gulp.src('')
-    .pipe(wcagAccess({
-        accessibilityLevel: 'WCAG2AA',
-        force: true,
-        verbose: true,
-        reportLevels: {
-            notice: false,
-            warning: false,
-            error: true
-        },
-        forceUrls: true,
-        urls: [
-            'http://localhost:3000/components/preview/buttons'
-        ]
-    }))
 });
 
 /*
