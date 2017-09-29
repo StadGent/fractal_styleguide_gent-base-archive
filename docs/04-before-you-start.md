@@ -11,26 +11,6 @@ As you can see, one of the first SASS files that get loaded are the sections `@i
 You can see an example of this on the Sections Overview template under the menu tab `Templates`.
 
 #### Component variables and sections
-In the `components/00-settings/_vars.scss` file you will find a section called **Section dependent variables**
-This section provides you with variables that can be set to define the styling of atoms, molecules and organisms.
-
-**But it should be noted that these might get overridden when those atoms, molecules or organisms are used within the context of a section!**
-
-So for example:
-```
-$heading-1-color: #ff0000;
-```
-
-```
-h1,
-.h1,
-%h1 {
-  ...
-  color: $heading-1-color;
-  ...
-}
-
-```
-Headings (h1) get a color based on the variable `$heading-1-color`.
-But headings used within a `.section--wrapper` get a color of #ffffff; because the `_section_wrapper.scss` partial defines a link to be white instead of the color defined inside the `_vars.scss` file.
+In the `components/00-settings/_vars.scss` file you will find a SASS map `$themes` that defines all section types.
+Atoms then base their styling on the section they are in.
 
