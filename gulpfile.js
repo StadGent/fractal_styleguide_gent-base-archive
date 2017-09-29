@@ -73,9 +73,9 @@ gulp.task('styles:dist', function() {
     .pipe(sassGlob())
     .pipe(sassLint({
       configFile: './.sass-lint.yml',
-      formatter: 'stylish',
     }))
     .pipe(sassLint.format())
+    .pipe(sassLint.failOnError())
     .pipe(sourcemaps.init())
     .pipe(sass({
       outputStyle: 'nested',
@@ -102,11 +102,10 @@ gulp.task('styles:build', ['fractal:build'], function() {
   gulp.src('components/**/*.s+(a|c)ss')
     .pipe(sassGlob())
     .pipe(sassLint({
-      configFile: './.sass-lint.yml',
-      formatter: 'stylish',
-      'merge-default-rules': false
+      configFile: './.sass-lint.yml'
     }))
     .pipe(sassLint.format())
+    .pipe(sassLint.failOnError())
     .pipe(sass({
       outputStyle: 'compressed',
       includePaths: ['node_modules/breakpoint-sass/stylesheets']
@@ -130,6 +129,7 @@ gulp.task('styles:validate', function() {
     configFile: './.sass-lint.yml'
   }))
   .pipe(sassLint.format())
+  .pipe(sassLint.failOnError())
 });
 
 /*
