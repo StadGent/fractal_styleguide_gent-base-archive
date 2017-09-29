@@ -7,7 +7,7 @@
     display: flex;
     position: relative;
 
-    &:before {
+    &::before {
       @include tablet {
         display: none;
       }
@@ -38,13 +38,10 @@
   }
 
   .progress {
-    @include tablet {
-      padding-left: 2.18rem;
-    }
     color: $color-gray;
     font-weight: bold;
 
-    &:before {
+    &::before {
       @include tablet {
         right: auto;
         margin: 0;
@@ -67,7 +64,7 @@
     }
 
     &.progress-previous {
-      &:before {
+      &::before {
         @extend %icon-base-css;
         @extend %icon-check;
 
@@ -84,17 +81,17 @@
       }
 
       a.indicator {
-        display: block;
+        display: inline-block;
         color: $color-green;
       }
     }
 
-    &.progress-active:before {
+    &.progress-active::before {
       border-color: $color-blue;
       background: $color-blue;
     }
 
-    span:before {
+    span::before {
       border-color: $color-blue;
       background: $color-white;
     }
@@ -108,7 +105,7 @@
 
     display: block;
     position: relative;
-    width: 2rem;
+    padding-left: 3rem;
     line-height: 1.8rem;
     text-indent: -9999px;
     z-index: 10;

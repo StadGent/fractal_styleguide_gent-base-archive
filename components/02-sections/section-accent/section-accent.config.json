@@ -1,0 +1,10 @@
+{
+  "title": "Section accent",
+  "status": "ready",
+  "order": 2,
+  "handle": "section-accent",
+  "preview": "@preview-sections",
+  "context": {
+    "label_optional": "Optional"
+  }
+}

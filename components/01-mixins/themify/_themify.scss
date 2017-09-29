@@ -1,0 +1,90 @@
+//
+// Themify map
+// @param {Map} $colors - Contains all colors of a section.
+//
+@mixin themify-map($colors) {
+  $section-bg-color: map-get($colors, 'section-bg-color') !global;
+  $section-text-color: map-get($colors, 'section-text-color') !global;
+
+  $heading-1-color: map-get($colors, 'heading-1-color') !global;
+  $heading-1-color-hover: map-get($colors, 'heading-1-color-hover') !global;
+
+  $heading-2-color: map-get($colors, 'heading-2-color') !global;
+  $heading-2-color-hover: map-get($colors, 'heading-2-color-hover') !global;
+
+  $heading-3-color: map-get($colors, 'heading-3-color') !global;
+  $heading-3-color-hover: map-get($colors, 'heading-3-color-hover') !global;
+
+  $heading-4-color: map-get($colors, 'heading-4-color') !global;
+  $heading-4-color-hover: map-get($colors, 'heading-4-color-hover') !global;
+
+  $heading-5-color: map-get($colors, 'heading-5-color') !global;
+  $heading-5-color-hover: map-get($colors, 'heading-5-color-hover') !global;
+
+  $heading-6-color: map-get($colors, 'heading-6-color') !global;
+  $heading-6-color-hover: map-get($colors, 'heading-6-color-hover') !global;
+
+  $description-color: map-get($colors, 'description-color') !global;
+
+  $link-color: map-get($colors, 'link-color') !global;
+  $link-color-hover: map-get($colors, 'link-color-hover') !global;
+
+  $cta-link-background: map-get($colors, 'cta-link-background') !global;
+  $cta-link-background-hover: map-get($colors, 'cta-link-background-hover') !global;
+
+  $cta-link-border: map-get($colors, 'cta-link-border') !global;
+  $cta-link-border-hover: map-get($colors, 'cta-link-border-hover') !global;
+
+  $cta-link-title-color: map-get($colors, 'cta-link-title-color') !global;
+  $cta-link-document-color: map-get($colors, 'cta-link-document-color') !global;
+
+  $field-color: map-get($colors, 'field-color') !global;
+  $field-background: map-get($colors, 'field-background') !global;
+  $field-border: map-get($colors, 'field-border') !global;
+  $field-placeholder: map-get($colors, 'field-placeholder') !global;
+
+  $label-color: map-get($colors, 'label-color') !global;
+  $label-optional-color: map-get($colors, 'label-optional-color') !global;
+
+  $button-color: map-get($colors, 'button-color') !global;
+  $button-color-hover: map-get($colors, 'button-color-hover') !global;
+
+  $button-background: map-get($colors, 'button-background') !global;
+  $button-background-hover: map-get($colors, 'button-background-hover') !global;
+
+  $button-border: map-get($colors, 'button-border') !global;
+  $button-border-hover: map-get($colors, 'button-border-hover') !global;
+
+  $tag-color: map-get($colors, 'tag-color') !global;
+  $tag-color-hover: map-get($colors, 'tag-color-hover') !global;
+
+  $tag-background: map-get($colors, 'tag-background') !global;
+  $tag-background-hover: map-get($colors, 'tag-background-hover') !global;
+}
+
+//
+// Themify mixin
+// @param {Map} $themes [$themes] - Map of themes to use
+//
+@mixin themify($themes: $themes) {
+  @each $theme, $colors in $themes {
+    @include themify-map($colors);
+
+    // Apply the default section as default color scheme if there is no section
+    // defined in the DOM.
+    @if $theme == "default" {
+      @content;
+    }
+
+    .section--#{$theme} &,
+    *[class*="section--"] .section--#{$theme} & {
+      @content;
+    }
+  }
+}
+
+//
+// Merge {Map} $themes map if {Map} $overwrite-themes exist.
+//
+$themes: map-merge($themes, $overwrite-themes);
+

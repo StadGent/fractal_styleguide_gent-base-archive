@@ -1,20 +1,13 @@
 h5,
 .h5,
 %h5 {
-  margin-bottom: .5rem;
-  color: $heading-5-color;
-  font-family: $heading-5-font-family;
-
-  a {
+  @include themify {
     color: $heading-5-color;
-    text-decoration: none;
 
-    &:visited {
-      color: $heading-5-color-visited;
-    }
-
-    &:hover {
-      color: $heading-5-color-hover;
+    a {
+      @include color-element-states($heading-5-color, $heading-5-color-hover);
     }
   }
+  margin-bottom: .5rem;
+  font-family: $heading-5-font-family;
 }

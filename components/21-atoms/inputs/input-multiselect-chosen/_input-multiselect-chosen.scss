@@ -4,6 +4,7 @@
 
   &.chosen-container-multi {
     ul.chosen-choices {
+      height: auto;
       margin: 0;
       box-shadow: none;
     }
@@ -46,7 +47,7 @@
     background-image: none !important;// sass-lint:disable-line no-important
 
 
-    &:after {
+    &::after {
       @extend %icon-base-css;
       @extend %icon-close;
       color: $color-white;

@@ -4,14 +4,6 @@
 //
 
 //
-// Border-box polyfill helper.
-// @include border-box;
-//
-@mixin border-box() {
-  box-sizing: border-box;
-}
-
-//
 // Clearfix
 //
 // For modern browsers
@@ -33,6 +25,23 @@
 
   &::after {
     clear: both;
+  }
+}
+
+//
+// Color element states like active, visited, hover and focus.
+//
+@mixin color-element-states($color, $color-hover, $property: "color") {
+  #{$property}: $color;
+
+  &:active,
+  &:visited {
+    @content;
+  }
+
+  &:hover,
+  &:focus {
+    #{$property}: $color-hover;
   }
 }
 

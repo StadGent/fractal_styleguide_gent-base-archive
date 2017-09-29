@@ -1,5 +1,4 @@
 .dg-default-block {
-  background: $color-blue;
 
   h2 {
     font-size: 1.94872rem;
@@ -13,7 +12,7 @@
     color: $color-white;
   }
 
-  .telephone {
+  .phone {
     &::before {
       @extend %icon-base-css;
       @extend %icon-phone;
@@ -21,7 +20,7 @@
     }
   }
 
-  .e-mail {
+  .email {
     &::before {
       @extend %icon-base-css;
       @extend %icon-email;

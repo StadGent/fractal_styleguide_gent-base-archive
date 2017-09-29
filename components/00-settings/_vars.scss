@@ -41,7 +41,7 @@ $primary-font-family: $default-font-family !default;
 $primary-font-weight: $default-font-weight !default;
 $primary-font-size: $default-font-size !default; //px
 $primary-line-height: $default-line-height !default; //em
-$secondary-font-family: 'expresswayextrabold', sans-serif !default;
+$secondary-font-family: expressway, sans-serif !default;
 
 $bg-outside-container: $color-lightest-gray !default;
 $border-outside-container: 1px solid $color-light-gray !default;
@@ -78,49 +78,23 @@ $bg-hover-breadcrumb: $color-lightest-blue !default;
 // ATOM SETTINGS.
 //
 
-// Link settings.
-$link-color: $color-blue !default;
-$link-color-hover: $color-dark-blue !default;
-$link-color-visited: $color-dark-blue !default;
-$link-color-active: $color-dark-blue !default;
-$link-color-focus: $color-dark-blue !default;
-$link-color-in-button: $color-white !default;
-
 // Heading 1 settings.
-$heading-1-color: $color-darkest-blue !default;
-$heading-1-color-hover: $color-dark-blue !default;
-$heading-1-color-visited: $color-darkest-blue !default;
 $heading-1-font-family: $secondary-font-family !default;
 
 // Heading 2 settings.
-$heading-2-color: $color-darkest-blue !default;
-$heading-2-color-hover: $color-dark-blue !default;
-$heading-2-color-visited: $color-darkest-blue !default;
-$heading-2-font-family: $default-font-family !default;
+$heading-2-font-family: $secondary-font-family !default;
 
 // Heading 3 settings.
-$heading-3-color: $color-darkest-blue !default;
-$heading-3-color-hover: $color-dark-blue !default;
-$heading-3-color-visited: $color-darkest-blue !default;
-$heading-3-font-family: $default-font-family !default;
+$heading-3-font-family: $secondary-font-family !default;
 
 // Heading 4 settings.
-$heading-4-color: $color-darkest-blue !default;
-$heading-4-color-hover: $color-dark-blue !default;
-$heading-4-color-visited: $color-darkest-blue !default;
-$heading-4-font-family: $default-font-family !default;
+$heading-4-font-family: $secondary-font-family !default;
 
 // Heading 5 settings.
-$heading-5-color: $color-darkest-blue !default;
-$heading-5-color-hover: $color-dark-blue !default;
-$heading-5-color-visited: $color-darkest-blue !default;
-$heading-5-font-family: $default-font-family !default;
+$heading-5-font-family: $secondary-font-family !default;
 
 // Heading 6 settings.
-$heading-6-color: $color-darkest-blue;
-$heading-6-color-hover: $color-dark-blue;
-$heading-6-color-visited: $color-darkest-blue;
-$heading-6-font-family: $default-font-family;
+$heading-6-font-family: $secondary-font-family !default;
 
 // Mobile menu
 $hamburger-menu-width: 320px;
@@ -141,35 +115,6 @@ $hamburger-menu-link-bg-color: transparent;
 $hamburger-menu-link-bg-color-active: $color-dark-blue;
 $hamburger-menu-link-bg-color-hover: darken($color-darkest-blue, 2);
 
-// Button settings.
-$btn-bg-color: $color-blue;
-$btn-bg-color-hover: lighten($color-blue, 5);
-$btn-bg-color-focus: lighten($color-blue, 5);
-$btn-text-color: $color-white;
-$btn-border: none;
-
-// Tag styling.
-$tag-color: $color-white !default;
-$tag-background-color: $color-dark-gray !default;
-$tag-color-hover: $color-white !default;
-$tag-background-color-hover: $color-darkest-gray !default;
-
-//
-// MOLECULE SETTINGS.
-//
-
-// CTA links settings.
-$cta-link-color: $color-blue !default;
-$cta-link-color-hover: $color-blue !default;
-$cta-link-background-color: $color-lightest-blue !default;
-$cta-link-background-color-hover: $color-lightest-gray !default;
-$cta-link-border-color: $color-light-gray !default;
-
-$cta-link-icon-background-color: $color-blue !default;
-$cta-link-icon-color: $color-white !default;
-
-$cta-link-title-color: $color-darkest-gray !default;
-
 // Message settings.
 $status-message: (
   'info': $color-blue ,
@@ -180,3 +125,307 @@ $status-message: (
 
 // Map settings.
 $map-border-radius: $radius-1 !default;
+
+//
+// THEMIFY SETTINGS.
+//
+$themes: (
+  'default': (
+    'section-background': $color-white,
+    'section-text-color': $color-dark-gray,
+
+    'heading-1-color': $color-darkest-blue,
+    'heading-1-color-hover': $color-dark-blue,
+
+    'heading-2-color': $color-darkest-blue,
+    'heading-2-color-hover': $color-dark-blue,
+
+    'heading-3-color': $color-darkest-blue,
+    'heading-3-color-hover': $color-dark-blue,
+
+    'heading-4-color': $color-darkest-blue,
+    'heading-4-color-hover': $color-dark-blue,
+
+    'heading-5-color': $color-darkest-blue,
+    'heading-5-color-hover': $color-dark-blue,
+
+    'heading-6-color': $color-darkest-blue,
+    'heading-6-color-hover': $color-dark-blue,
+
+    'description-color': $color-gray,
+
+    'link-color': $color-blue,
+    'link-color-hover': $color-dark-blue,
+
+    'cta-link-background': $color-lightest-blue,
+    'cta-link-background-hover': $color-white,
+
+    'cta-link-border': 1px solid $color-light-gray,
+    'cta-link-border-hover': 1px solid $color-light-gray,
+
+    'cta-link-title-color': $color-darkest-blue,
+    'cta-link-document-color': $color-blue,
+
+    'field-color': $color-dark-gray,
+    'field-background': $color-white,
+    'field-border': 1px solid $color-light-gray,
+    'field-placeholder': $color-light-gray,
+
+    'label-color': $color-dark-gray,
+    'label-optional-color': $color-gray,
+
+    'button-color': $color-white,
+    'button-color-hover': $color-white,
+
+    'button-background': $color-blue,
+    'button-background-hover': lighten($color-blue, 5),
+
+    'button-border': none,
+    'button-border-hover': none,
+
+    'tag-color': $color-white,
+    'tag-color-hover': $color-white,
+
+    'tag-background': $color-dark-gray,
+    'tag-background-hover': $color-dark-gray,
+  ),
+  'accent': (
+    'section-background': $color-blue,
+    'section-text-color': $color-white,
+
+    'heading-1-color': $color-white,
+    'heading-1-color-hover': $color-white,
+
+    'heading-2-color': $color-white,
+    'heading-2-color-hover': $color-white,
+
+    'heading-3-color': $color-white,
+    'heading-3-color-hover': $color-white,
+
+    'heading-4-color': $color-white,
+    'heading-4-color-hover': $color-white,
+
+    'heading-5-color': $color-white,
+    'heading-5-color-hover': $color-white,
+
+    'heading-6-color': $color-white,
+    'heading-6-color-hover': $color-white,
+
+    'description-color': $color-white-blue,
+
+    'link-color': $color-white,
+    'link-color-hover': $color-light-blue,
+
+    'cta-link-background': $color-dark-blue,
+    'cta-link-background-hover': $color-darkest-blue,
+
+    'cta-link-border': 1px solid $color-light-gray,
+    'cta-link-border-hover': 1px solid $color-light-gray,
+
+    'cta-link-title-color': $color-white,
+    'cta-link-document-color': $color-light-blue,
+
+    'field-color': $color-dark-gray,
+    'field-background': $color-white,
+    'field-border': 1px solid $color-light-gray,
+    'field-placeholder': $color-light-gray,
+
+    'label-color': $color-white,
+    'label-optional-color': $color-white-blue,
+
+    'button-color': $color-darkest-blue,
+    'button-color-hover': $color-dark-blue,
+
+    'button-background': $color-white,
+    'button-background-hover': $color-white,
+
+    'button-border': none,
+    'button-border-hover': none,
+
+    'tag-color': $color-white,
+    'tag-color-hover': $color-white,
+
+    'tag-background': $color-dark-gray,
+    'tag-background-hover': $color-dark-gray,
+  ),
+  'wrapper': (
+    'section-background': $color-darkest-blue,
+    'section-text-color': $color-white,
+
+    'heading-1-color': $color-white,
+    'heading-1-color-hover': $color-white,
+
+    'heading-2-color': $color-white,
+    'heading-2-color-hover': $color-white,
+
+    'heading-3-color': $color-white,
+    'heading-3-color-hover': $color-white,
+
+    'heading-4-color': $color-white,
+    'heading-4-color-hover': $color-white,
+
+    'heading-5-color': $color-white,
+    'heading-5-color-hover': $color-white,
+
+    'heading-6-color': $color-white,
+    'heading-6-color-hover': $color-white,
+
+    'description-color': $color-gray,
+
+    'link-color': $color-white,
+    'link-color-hover': $color-white,
+
+    'cta-link-background': rgba(255, 255, 255, .2),
+    'cta-link-background-hover': rgba(255, 255, 255, .3),
+
+    'cta-link-border': none,
+    'cta-link-border-hover': none,
+
+    'cta-link-title-color': $color-white,
+    'cta-link-document-color': $color-lightest-gray,
+
+    'field-color': $color-white,
+    'field-background': rgba(255, 255, 255, .2),
+    'field-border': transparent,
+    'field-placeholder': $color-light-gray,
+
+    'label-color': $color-white,
+    'label-optional-color': $color-gray,
+
+    'button-color': $color-white,
+    'button-color-hover': $color-darkest-blue,
+
+    'button-background': transparent,
+    'button-background-hover': $color-white,
+
+    'button-border': none,
+    'button-border-hover': none,
+    
+    'tag-color': $color-white,
+    'tag-color-hover': $color-white,
+    
+    'tag-background': $color-blue,
+    'tag-background-hover': $color-light-blue,
+  ),
+  'highlighted': (
+    'section-background': $color-orange,
+    'section-text-color': $color-dark-gray,
+
+    'heading-1-color': $color-white,
+    'heading-1-color-hover': $color-white,
+
+    'heading-2-color': $color-white,
+    'heading-2-color-hover': $color-white,
+
+    'heading-3-color': $color-white,
+    'heading-3-color-hover': $color-white,
+
+    'heading-4-color': $color-white,
+    'heading-4-color-hover': $color-white,
+
+    'heading-5-color': $color-white,
+    'heading-5-color-hover': $color-white,
+
+    'heading-6-color': $color-white,
+    'heading-6-color-hover': $color-white,
+
+    'description-color': $color-light-gray,
+
+    'link-color': $color-white,
+    'link-color-hover': $color-white,
+
+    'cta-link-background': $color-orange-light,
+    'cta-link-background-hover': $color-orange-lighter,
+
+    'cta-link-border': 1px solid $color-light-gray,
+    'cta-link-border-hover': 1px solid $color-light-gray,
+
+    'cta-link-title-color': $color-white,
+    'cta-link-document-color': $color-dark-gray,
+
+    'field-color': $color-dark-gray,
+    'field-background': $color-white,
+    'field-border': 1px solid $color-light-gray,
+    'field-placeholder': $color-light-gray,
+
+    'label-color': $color-dark-gray,
+    'label-optional-color': $color-light-gray,
+
+    'button-color': $color-darkest-blue,
+    'button-color-hover': $color-dark-blue,
+
+    'button-background': $color-white,
+    'button-background-hover': $color-white,
+
+    'button-border': none,
+    'button-border-hover': none,
+
+    'tag-color': $color-white,
+    'tag-color-hover': $color-white,
+
+    'tag-background': $color-dark-gray,
+    'tag-background-hover': $color-dark-gray,
+  ),
+  'inverse': (
+    'section-background': $color-lightest-blue,
+    'section-text-color': $color-dark-gray,
+
+    'heading-1-color': $color-darkest-blue,
+    'heading-1-color-hover': $color-dark-blue,
+
+    'heading-2-color': $color-darkest-blue,
+    'heading-2-color-hover': $color-dark-blue,
+
+    'heading-3-color': $color-darkest-blue,
+    'heading-3-color-hover': $color-dark-blue,
+
+    'heading-4-color': $color-darkest-blue,
+    'heading-4-color-hover': $color-dark-blue,
+
+    'heading-5-color': $color-darkest-blue,
+    'heading-5-color-hover': $color-dark-blue,
+
+    'heading-6-color': $color-darkest-blue,
+    'heading-6-color-hover': $color-dark-blue,
+
+    'description-color': $color-gray,
+
+    'link-color': $color-blue,
+    'link-color-hover': $color-dark-blue,
+
+    'cta-link-background': $color-white,
+    'cta-link-background-hover': $color-lightest-gray,
+
+    'cta-link-border': 1px solid $color-light-gray,
+    'cta-link-border-hover': 1px solid $color-light-gray,
+
+    'cta-link-title-color': $color-darkest-blue,
+    'cta-link-document-color': $color-blue,
+
+    'field-color': $color-dark-gray,
+    'field-background': $color-white,
+    'field-border': 1px solid $color-light-gray,
+    'field-placeholder': $color-light-gray,
+
+    'label-color': $color-dark-gray,
+    'label-optional-color': $color-gray,
+
+    'button-color': $color-white,
+    'button-color-hover': $color-white,
+
+    'button-background': $color-blue,
+    'button-background-hover': lighten($color-blue, 5),
+
+    'button-border': none,
+    'button-border-hover': none,
+
+    'tag-color': $color-white,
+    'tag-color-hover': $color-white,
+
+    'tag-background': $color-dark-gray,
+    'tag-background-hover': $color-dark-gray,
+  )
+) !default;
+
+// Default $overwrite-themes map to overwrite above $theme map.
+$overwrite-themes: () !default;

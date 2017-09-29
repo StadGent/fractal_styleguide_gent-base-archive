@@ -1,22 +1,15 @@
 h2,
 .h2,
 %h2 {
+  @include themify {
+    color: $heading-2-color;
+
+    a {
+      @include color-element-states($heading-2-color, $heading-2-color-hover);
+    }
+  }
   margin-bottom: 1rem;
-  color: $heading-2-color;
   font-family: $heading-2-font-family;
   font-size: 1.2rem;
   line-height: 1.4em;
-
-  a {
-    color: $heading-2-color;
-    text-decoration: none;
-
-    &:visited {
-      color: $heading-2-color-visited;
-    }
-
-    &:hover {
-      color: $heading-2-color-hover;
-    }
-  }
 }

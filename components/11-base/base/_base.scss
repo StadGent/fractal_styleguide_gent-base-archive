@@ -11,10 +11,10 @@
 }
 
 html {
-  @include border-box;
   background: $bg-outside-container;
   font: $default-font-weight $default-font-size $default-font-family;
   line-height: $default-line-height;
+  box-sizing: border-box;
 
   @media (min-width: $bp-tablet-fonts) {
     font-size: $default-font-size + 2;
@@ -81,25 +81,6 @@ pre {
   margin-bottom: .5em;
   font-size: inherit;
   line-height: inherit;
-}
-
-%a,
-a {
-  transition: .11s ease-in-out;
-  text-decoration: underline;
-
-  &:hover {
-    text-decoration: none;
-  }
-
-  &:focus {
-    outline: thin dotted;
-  }
-
-  &:hover,
-  &:active {
-    outline: 0;
-  }
 }
 
 li a {
