@@ -1,37 +1,37 @@
 {
-  "name": "Stad.Gent Sections",
+  "name": "Sections",
   "order": 2,
   "status": "ready",
-  "default": "section-default",
-  "handle": "sections",
+  "default": "default",
+  "handle": "section",
   "preview": "@preview-sections",
   "variants": [
     {
-      "name": "section-default",
+      "name": "default",
       "context": {
         "modifier": "section--default"
       }
     },
     {
-      "name": "section-accent",
+      "name": "accent",
       "context": {
         "modifier": "section--accent"
       }
     },
     {
-      "name": "section-highlighted",
+      "name": "highlighted",
       "context": {
         "modifier": "section--highlighted"
       }
     },
     {
-      "name": "section-inverse",
+      "name": "inverse",
       "context": {
         "modifier": "section--inverse"
       }
     },
     {
-      "name": "section-wrapper",
+      "name": "wrapper",
       "context": {
         "modifier": "section--wrapper"
       }
