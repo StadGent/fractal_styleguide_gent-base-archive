@@ -105,10 +105,19 @@
 
     display: block;
     position: relative;
-    padding-left: 3rem;
     line-height: 1.8rem;
     text-indent: -9999px;
     z-index: 10;
+
+    > span,
+    > a {
+      display: block;
+
+      @include tablet {
+        display: inline-block;
+        padding-left: 3rem;
+      }
+    }
   }
 
   .count {

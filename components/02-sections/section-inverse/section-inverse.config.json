@@ -1,9 +1,0 @@
-{
-  "title": "Section inverse",
-  "status": "ready",
-  "handle": "section-inverse",
-  "preview": "@preview-sections",
-  "context": {
-    "label_optional": "Optional"
-  }
-}
