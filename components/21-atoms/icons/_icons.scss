@@ -2,10 +2,10 @@
   font-family: 'gent-icons';
   font-style: normal;
   font-weight: normal;
-  src: url('#{$styleguide-dir}/fonts/gent-icons.eot?#iefixn03rbzy') format('embedded-opentype'),
-  url('#{$styleguide-dir}/fonts/gent-icons.woff?n03rbzy') format('woff'),
-  url('#{$styleguide-dir}/fonts/gent-icons.ttf?n03rbzy') format('truetype'),
-  url('#{$styleguide-dir}/fonts/gent-icons.svg?n03rbzy#gent-icons') format('svg');
+  src: url('#{$styleguide-dir}/fonts/gent-icons.eot?##{$uuid}') format('embedded-opentype'),
+  url('#{$styleguide-dir}/fonts/gent-icons.woff?#{$uuid}') format('woff'),
+  url('#{$styleguide-dir}/fonts/gent-icons.ttf?#{$uuid}') format('truetype'),
+  url('#{$styleguide-dir}/fonts/gent-icons.svg?#{$uuid}#gent-icons') format('svg');
 }
 
 // IMPORTANT: KEEP 'icon-base-css' class. Can be used to extend, to set base gent-icons css.
@@ -75,6 +75,11 @@
 %icon-arrow-down,
 .icon-arrow-down::before {
   content: '\e601';
+}
+
+%icon-repeat,
+.icon-repeat::before {
+  content: '\f01e';
 }
 
 %icon-form-fill,
@@ -385,6 +390,11 @@
 %icon-data,
 .icon-data::before {
   content: '\e90b';
+}
+
+%icon-data-new,
+.icon-data-new::before {
+  content: '\e911';
 }
 
 %icon-poll,
