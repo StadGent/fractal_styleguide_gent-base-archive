@@ -11,6 +11,8 @@ var gentStyleGuideBreadcrumb = {};
 
   /**
    * Replace the mobile breadcrumb of Gent base by our own.
+   *
+   * Adds this function to a global gentStyleBreadcrumb namespace.
    */
   gentStyleGuideBreadcrumb.updateMobileBreadcrumb = function () {
     var breadcrumb = $('ol.breadcrumb, ul.nav--breadcrumb, ul.breadcrumb');

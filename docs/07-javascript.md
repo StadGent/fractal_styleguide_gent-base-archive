@@ -36,13 +36,26 @@ the correct Javascript functionality per component.
 ## Javascript enabled components
 Inside this stylguide we have the following Javascript enabled components:
 
-* Breadcrumbs
-* Hamburger-menu
+* Molecules
+** Breadcrumbs
+** Hamburger-menu
+* Organisms
+** Header
 
 ### Breadcrumbs
 #### Breadcrumbs-functions.js
+Implements the default Breadcrumb behavior of the Styleguide. A new global
+namespace: gentStyleGuideBreadcrum has been created to give access to the
+public functionality of this script. As such the following public functions are
+available
+
+* gentStyleGuideBreadcrumb.updateMobileBreadcrumb(): Replace the default Breadcrumb
+with a mobile optimized one.
 
 #### Breadcrumbs.bindings.js
+Integration of the breadcrumb functionality with this Styleguide. Calls the
+gentStyleGuideBreadcrumb.updateMobileBreadcrumb() method on the window.load
+event.
 
 #### Styleguide implementation
 [Breadcrumbs molecule](../../components/detail/breadcrumbs)
@@ -60,3 +73,11 @@ Binds the functionality to a DOM element and the window.onload event
 
 #### Styleguide implementation
 [Hamburger-menu molecule](../../components/detail/hamburger-menu)
+
+### Header
+#### Header-functions.js
+
+#### Header.bindings.js
+
+#### Styleguide implementation
+[Header organism](../../components/detail/hamburger-menu)
