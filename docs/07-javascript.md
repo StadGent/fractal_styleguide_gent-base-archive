@@ -39,5 +39,14 @@ Inside this stylguide we have the following Javascript enabled components:
 * Hamburger-menu
 
 ### Hamburger-menu
+#### Hamburger-menu-functions.js
+Implements a hamburger-menu button combined with a slide-in panel for easy navigation.
 
+* loadHamburgerMenu(): jQuery extension to bind the slide functionality to a
+DOM element.
+
+#### Hamburger-menu.bindings.js
+Binds the functionality to a DOM element inside the styleguide.
+
+#### Styleguide implementation
 [Hamburger-menu molecule](../../components/detail/hamburger-menu)

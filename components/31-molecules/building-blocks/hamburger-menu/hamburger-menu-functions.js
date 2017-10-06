@@ -10,12 +10,13 @@
 (function ($) {
   'use strict';
 
-  /**
-   * Creates a jQuery extension function.
-   *
-   * @fires event:click
-   */
   $.fn.extend({
+
+    /**
+      * Creates a jQuery extension function.
+      *
+      * @fires event:click
+      */
     loadHamburgerMenu: function () {
       var hamburgerMenu = $(this);
       var close = hamburgerMenu.find('.close');
