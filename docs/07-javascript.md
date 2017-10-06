@@ -36,7 +36,16 @@ the correct Javascript functionality per component.
 ## Javascript enabled components
 Inside this stylguide we have the following Javascript enabled components:
 
+* Breadcrumbs
 * Hamburger-menu
+
+### Breadcrumbs
+#### Breadcrumbs-functions.js
+
+#### Breadcrumbs.bindings.js
+
+#### Styleguide implementation
+[Breadcrumbs molecule](../../components/detail/breadcrumbs)
 
 ### Hamburger-menu
 #### Hamburger-menu-functions.js
@@ -46,7 +55,8 @@ Implements a hamburger-menu button combined with a slide-in panel for easy navig
 DOM element.
 
 #### Hamburger-menu.bindings.js
-Binds the functionality to a DOM element inside the styleguide.
+Binds the functionality to a DOM element and the window.onload event
+ inside the styleguide.
 
 #### Styleguide implementation
 [Hamburger-menu molecule](../../components/detail/hamburger-menu)

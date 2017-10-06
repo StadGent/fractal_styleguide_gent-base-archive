@@ -1,22 +1,19 @@
+/**
+ * @file
+ * Breadcrumb handling and rendering.
+ */
+
+// Breadcrumb namespace definition.
+var gentStyleGuideBreadcrumb = {};
+
 (function ($) {
   'use strict';
 
   /**
-   * Invoked after after loading the initial page and after each AJAX request.
-   *
-   * @param context
-   *   The DOM context.
-   * @param settings
-   *   Object of additional settings.
-   */
-  $(window).on('load', updateMobileBreadcrumb);
-
-  /**
    * Replace the mobile breadcrumb of Gent base by our own.
    */
-  function updateMobileBreadcrumb() {
+  gentStyleGuideBreadcrumb.updateMobileBreadcrumb = function () {
     var breadcrumb = $('ol.breadcrumb, ul.nav--breadcrumb, ul.breadcrumb');
-
     if (breadcrumb.length && !breadcrumb.hasClass('gentbe-processed')) {
       // Prevent duplicate processing by us or Gent base.
       breadcrumb.addClass('gentbe-processed');
@@ -31,14 +28,14 @@
       breadcrumb.after(mobile);
 
       // Truncate the labels.
-      truncateBreadcrumbLabels(breadcrumb, 150);
-      truncateBreadcrumbLabels(mobile, 100);
+      truncateBreadcrumbLabels_(breadcrumb, 150);
+      truncateBreadcrumbLabels_(mobile, 100);
 
       // Collapse the trail.
-      collapseBreadcrumbTrail(breadcrumb, 6);
-      collapseBreadcrumbTrail(mobile, 5, 1, 2);
+      collapseBreadcrumbTrail_(breadcrumb, 6);
+      collapseBreadcrumbTrail_(mobile, 5, 1, 2);
     }
-  }
+  };
 
   /**
    * Truncate the breadcrumb labels to a maximum length.
@@ -50,7 +47,7 @@
    * @param {boolean} [ellipsis]
    *   Wether an elipsis should be added, defaults to true.
    */
-  function truncateBreadcrumbLabels(breadcrumb, length, ellipsis) {
+  function truncateBreadcrumbLabels_(breadcrumb, length, ellipsis) {
     $('a, span', breadcrumb).each(function () {
       var element = $(this);
       var text = element.text().trim();
@@ -82,7 +79,7 @@
    * @param {string} [text]
    *   Text to use as link to show the collapsed items, defaults to "...".
    */
-  function collapseBreadcrumbTrail(breadcrumb, min_length, head, tail, text) {
+  function collapseBreadcrumbTrail_(breadcrumb, min_length, head, tail, text) {
     // Set the default head and tail.
     if (head == null) {
       head = 2;
@@ -127,5 +124,4 @@
       }
     }
   }
-
 })(jQuery);
