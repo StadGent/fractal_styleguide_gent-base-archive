@@ -34,12 +34,29 @@
     flex: 1;
     margin-bottom: 1em;
     font-size: 1.125rem;
-    line-height: 1.375rem;
+    line-height: 2rem;
   }
 
   .progress {
+    @include tablet {
+      width: 100%;
+      height: auto;
+      padding-left: 3rem;
+    }
+
+    width: 1.8rem;
+    height: 1.8rem;
+    padding-left: 0;
     color: $color-gray;
     font-weight: bold;
+
+    .label {
+      @include tablet {
+        display: block;   
+      }
+      
+      display: none;
+    }
 
     &::before {
       @include tablet {
@@ -64,24 +81,20 @@
     }
 
     &.progress-previous {
-      &::before {
-        @extend %icon-base-css;
-        @extend %icon-check;
-
-        border-color: $color-green;
-        background: $color-green;
+      .count i {
         font-size: .8rem;
         line-height: 1.6rem;
+      }
+
+      .count {
+        border-radius: 100%;
+        background-color: $color-green;
         text-align: center;
         text-indent: 0;
       }
 
-      .count {
-        display: none;
-      }
-
       a.indicator {
-        display: inline-block;
+        display: block;
         color: $color-green;
       }
     }
@@ -109,15 +122,15 @@
     text-indent: -9999px;
     z-index: 10;
 
-    > span,
-    > a {
-      display: block;
-
+    .count {
       @include tablet {
-        display: inline-block;
-        padding-left: 3rem;
+        left: -3rem;
       }
+
+      left: 0;
+      text-indent: 0;
     }
+
   }
 
   .count {
@@ -127,6 +140,7 @@
       left: 0;
     }
 
+    display: inline-block;
     position: absolute;
     top: 0;
     right: 0;
@@ -136,7 +150,7 @@
     margin: auto;
     color: $color-white;
     font-weight: bold;
-    line-height: 1.6em;
+    line-height: 1.8rem;
     text-align: center;
     z-index: 10;
   }
