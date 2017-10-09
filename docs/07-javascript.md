@@ -42,6 +42,7 @@ Inside this stylguide we have the following Javascript enabled components:
 ** Molecules **
 * Breadcrumbs
 * Hamburger-menu
+* Gallery
 
 ** Organisms **
 * Header
@@ -91,6 +92,15 @@ Binds the functionality to a DOM element and the window.onload event
 
 #### Styleguide implementation
 [Hamburger-menu molecule](../../components/detail/hamburger-menu)
+
+###Gallery
+We omitted to create a functions.js file, since all functions are provided
+by the swipebox jQuery plugin.
+
+**Dependencies**
+[Swipebox jQuery plugin](http://brutaldesign.github.io/swipebox/)
+
+#### Gallery.binding.js
 
 ### Header
 #### Header-functions.js
