@@ -1,6 +1,6 @@
 /**
  * @file
- * Javascript binding of hamburger-menu-functions.js.
+ * Javascript binding of hamburger-menu.functions.js.
  */
 (function ($) {
   'use strict';

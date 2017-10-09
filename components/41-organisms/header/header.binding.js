@@ -1,6 +1,6 @@
 /**
  * @file
- * Javascript binding of header-functions.js.
+ * Javascript binding of header.functions.js.
  */
 (function ($) {
   'use strict';

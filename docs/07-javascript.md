@@ -29,7 +29,7 @@ Use this file if you want to write your own bindings or integrate it into
 another Javascript framework, eg. integration in a Drupal theme.
 
 ### Component.binding.js
-This file integrates the Component-functions.js with the Styleguide components
+This file integrates the Component.functions.js with the Styleguide components
 inside Fractal. These bindings can be used inside your own project to implement
 the correct Javascript functionality per component.
 

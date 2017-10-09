@@ -1,6 +1,6 @@
 /**
  * @file
- * binding of button-drop-functions.js
+ * binding of button-drop.functions.js
  */
 (function ($) {
   'use strict';

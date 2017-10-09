@@ -1,6 +1,6 @@
 /**
  * @file
- * Javascript binding of breadcrumb-functions.js
+ * Javascript binding of breadcrumb.functions.js
  */
 (function ($) {
   'use strict';
