@@ -135,6 +135,14 @@
       text-indent: 0;
     }
 
+    .label {
+      @include tablet {
+        display: block;
+      }
+
+      display: none;
+    }
+
   }
 
   .count {
