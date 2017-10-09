@@ -38,6 +38,7 @@ Inside this stylguide we have the following Javascript enabled components:
 
 ** Atoms **
 * Button-drop
+* Input-multiselect-chosen
 
 ** Molecules **
 * Breadcrumbs
@@ -60,6 +61,19 @@ inside this styleguide.
 
 #### Styleguide implementation
 [Button-drop atom](../../components/detail/button-drop)
+
+### Input multi-select chosen
+We omitted to create a functions.js file, since all functions are provided
+by the Chosen jQuery plugin.
+
+**Dependencies**
+[Chosen jQuery plugin](https://github.com/harvesthq/chosen)
+
+#### Input-multiselect-chosen.binding.js
+Implements chosen jQuery plugin in this Styleguide.
+
+#### Styleguide implementation
+[Button-drop atom](../../components/detail/input-multiselect-chosen)
 
 ### Breadcrumbs
 #### Breadcrumbs-functions.js
@@ -101,6 +115,7 @@ by the swipebox jQuery plugin.
 [Swipebox jQuery plugin](http://brutaldesign.github.io/swipebox/)
 
 #### Gallery.binding.js
+Implements swipebox jQuery plugin in this Styleguide.
 
 ### Header
 #### Header-functions.js
