@@ -11,4 +11,4 @@ behaviour on it self but only in relation to a bigger organism.
 
 ## Javascript
 This is a Javascript enabled molecule. Please check the [javascript documentation]
-(../../docs/javascript) on how to implement this correctly in your proper project.
+(../../docs/javascript) on how to implement this correctly in your project.

@@ -7,10 +7,10 @@ be used in various situations or to implement part of
 the behaviour of this Styleguide.
 
 ## Javascript conventions
-Javascript files are organized per component. Each component has at least
-to distinct Javascript files namely:
+Javascript files are organized per component. Each component consists of
+the following files namely:
 
-* COMPONENT-functions.js
+* COMPONENT.functions.js (optional if an external library is implemented)
 * COMPONENT.binding.js
 
 Depending on the implementation of the styleguide either the functions.js
@@ -21,7 +21,7 @@ dependent on:
 
 * jQuery
 
-### Component-functions.js
+### Component.functions.js
 This is the main functionalty of a component. This file defines several jQuery
 function extensions that can be implemented in your project.
 
@@ -49,7 +49,7 @@ Inside this stylguide we have the following Javascript enabled components:
 * Header
 
 ### Button-drop
-#### Button-drop-functions.js
+#### Button-drop.functions.js
 Implements a drop-down button based on a list element.
 
 * dropButtonLoad(): jQuery extension to bind the drop-down functionality to a
@@ -76,7 +76,7 @@ Implements chosen jQuery plugin in this Styleguide.
 [Button-drop atom](../../components/detail/input-multiselect-chosen)
 
 ### Breadcrumbs
-#### Breadcrumbs-functions.js
+#### Breadcrumbs.functions.js
 Implements the default Breadcrumb behavior of the Styleguide. A new global
 namespace: gentStyleGuideBreadcrum has been created to give access to the
 public functionality of this script. As such the following public functions are
@@ -94,7 +94,7 @@ event.
 [Breadcrumbs molecule](../../components/detail/breadcrumbs)
 
 ### Hamburger-menu
-#### Hamburger-menu-functions.js
+#### Hamburger-menu.functions.js
 Implements a hamburger-menu button combined with a slide-in panel for easy navigation.
 
 * loadHamburgerMenu(): jQuery extension to bind the slide functionality to a
@@ -118,7 +118,7 @@ by the swipebox jQuery plugin.
 Implements swipebox jQuery plugin in this Styleguide.
 
 ### Header
-#### Header-functions.js
+#### Header.functions.js
 Implements a minimized search botton combined with a slide-in form for easy searching on obile devices.
 
 * loadMobileHeader(): jQuery extension to bind the search functionality to a
