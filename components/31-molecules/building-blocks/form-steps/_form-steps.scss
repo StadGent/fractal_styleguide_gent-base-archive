@@ -97,6 +97,10 @@
         display: block;
         color: $color-green;
       }
+
+      &.progress-active a.indicator {
+        color: $color-blue;
+      }
     }
 
     &.progress-active::before {
