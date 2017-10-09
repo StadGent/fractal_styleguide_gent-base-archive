@@ -12,6 +12,10 @@
         display: none;
       }
 
+      @include themify {
+        background: $form-steps-timeline-color;
+      }
+
       display: block;
       position: absolute;
       top: .75rem;
@@ -19,7 +23,6 @@
       left: 8%;
       height: .125rem;
       margin: auto;
-      background: $color-blue;
       content: '';
     }
   }
@@ -44,10 +47,13 @@
       padding-left: 3rem;
     }
 
+    @include themify {
+      color: $form-steps-inactive-step-label;
+    }
+
     width: 1.8rem;
     height: 1.8rem;
     padding-left: 0;
-    color: $color-gray;
     font-weight: bold;
 
     .label {
@@ -64,6 +70,12 @@
         margin: 0;
       }
 
+      @include themify {
+        border: 1.5px solid $form-steps-inactive-prefix-background;
+        background: $form-steps-inactive-prefix-background;
+        color: $form-steps-inactive-prefix-color;
+      }
+
       display: block;
       position: absolute;
       top: 0;
@@ -73,10 +85,7 @@
       width: 1.875rem;
       height: 1.875rem;
       margin: auto;
-      border: 1.5px solid $color-gray;
       border-radius: 1.875rem;
-      background: $color-gray;
-      color: $color-white;
       content: '';
     }
 
@@ -87,30 +96,34 @@
       }
 
       .count {
+        @include themify {
+          background-color: $form-steps-previous-step-background;
+        }
+
         border-radius: 100%;
-        background-color: $color-green;
         text-align: center;
         text-indent: 0;
       }
 
       a.indicator {
+        @include themify {
+          color: $form-steps-previous-step-label;
+        }
         display: block;
-        color: $color-green;
       }
 
       &.progress-active a.indicator {
-        color: $color-blue;
+        @include themify {
+          color: $form-steps-active-step-label;
+        }
       }
     }
 
     &.progress-active::before {
-      border-color: $color-blue;
-      background: $color-blue;
-    }
-
-    span::before {
-      border-color: $color-blue;
-      background: $color-white;
+      @include themify {
+        border-color: $form-steps-active-prefix-background;
+        background: $form-steps-active-prefix-background;
+      }
     }
   }
 
@@ -154,6 +167,10 @@
       left: 0;
     }
 
+    @include themify {
+      color: $form-steps-prefix-color;
+    }
+
     display: inline-block;
     position: absolute;
     top: 0;
@@ -162,7 +179,6 @@
     width: 1.875rem;
     height: 1.875rem;
     margin: auto;
-    color: $color-white;
     font-weight: bold;
     line-height: 1.8rem;
     text-align: center;
