@@ -1,12 +1,12 @@
 /**
  * @file
- * Javascript binding of hamburger-menu-functions.js.
+ * Javascript binding of header-functions.js.
  */
 (function ($) {
   'use strict';
 
   $(window).on('load', function (e) {
-    $('.hamburger-menu').loadHamburgerMenu();
+    $('.header-search-mobile').loadMobileHeader();
   });
 
 })(jQuery);
