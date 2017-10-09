@@ -48,8 +48,14 @@ Inside this stylguide we have the following Javascript enabled components:
 
 ### Button-drop
 #### Button-drop-functions.js
+Implements a drop-down button based on a list element.
+
+* dropButtonLoad(): jQuery extension to bind the drop-down functionality to a
+DOM element.
 
 #### Button-drop.binding.js
+Binds the functionality to a DOM element and the window.onload event
+inside this styleguide.
 
 #### Styleguide implementation
 [Button-drop atom](../../components/detail/button-drop)
@@ -64,7 +70,7 @@ available
 * gentStyleGuideBreadcrumb.updateMobileBreadcrumb(): Replace the default Breadcrumb
 with a mobile optimized one.
 
-#### Breadcrumbs.bindings.js
+#### Breadcrumbs.binding.js
 Integration of the breadcrumb functionality with this Styleguide. Calls the
 gentStyleGuideBreadcrumb.updateMobileBreadcrumb() method on the window.load
 event.
@@ -79,7 +85,7 @@ Implements a hamburger-menu button combined with a slide-in panel for easy navig
 * loadHamburgerMenu(): jQuery extension to bind the slide functionality to a
 DOM element.
 
-#### Hamburger-menu.bindings.js
+#### Hamburger-menu.binding.js
 Binds the functionality to a DOM element and the window.onload event
  inside the styleguide.
 
