@@ -138,9 +138,11 @@
     .label {
       @include tablet {
         display: block;
+        text-indent: 0;
       }
 
-      display: none;
+      display: inline-block;
+      text-indent: -9999px;
     }
 
   }
