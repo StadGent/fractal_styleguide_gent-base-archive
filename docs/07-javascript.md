@@ -17,7 +17,7 @@ Depending on the implementation of the styleguide either the functions.js
 file or both are necessary.
 
 Take into consideration that all Javascript included in this styleguide is
-dependant on:
+dependent on:
 
 * jQuery
 
@@ -36,11 +36,23 @@ the correct Javascript functionality per component.
 ## Javascript enabled components
 Inside this stylguide we have the following Javascript enabled components:
 
-* Molecules
-** Breadcrumbs
-** Hamburger-menu
-* Organisms
-** Header
+** Atoms **
+* Button-drop
+
+** Molecules **
+* Breadcrumbs
+* Hamburger-menu
+
+** Organisms **
+* Header
+
+### Button-drop
+#### Button-drop-functions.js
+
+#### Button-drop.binding.js
+
+#### Styleguide implementation
+[Button-drop atom](../../components/detail/button-drop)
 
 ### Breadcrumbs
 #### Breadcrumbs-functions.js
@@ -76,8 +88,14 @@ Binds the functionality to a DOM element and the window.onload event
 
 ### Header
 #### Header-functions.js
+Implements a minimized search botton combined with a slide-in form for easy searching on obile devices.
+
+* loadMobileHeader(): jQuery extension to bind the search functionality to a
+DOM element.
 
 #### Header.bindings.js
+Binds the functionality to a DOM element and the window.onload event
+ inside this styleguide.
 
 #### Styleguide implementation
 [Header organism](../../components/detail/hamburger-menu)
