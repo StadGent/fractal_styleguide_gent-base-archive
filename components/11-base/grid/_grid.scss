@@ -1,7 +1,7 @@
 %container,
 .container {
   @include clearfix();
-  @media (min-width: $bp-container) {
+  @include breakpoint($bp-container) {
     width: $bp-container;
     max-width: 100%;
     margin: 0 auto;
@@ -16,7 +16,7 @@
   margin: 0 auto;
   padding: 0 ($gutter-width / 2);
 
-  @media (min-width: $bp-tablet) {
+  @include tablet {
     padding: 0 $gutter-width + ($gutter-width / 2); // gutter + padding cols
   }
 }
@@ -33,10 +33,10 @@
 @include make-grid-columns;
 @include make-grid('mobile');
 
-@media (min-width: $bp-tablet) {
+@include tablet {
   @include make-grid('tablet');
 }
 
-@media (min-width: $bp-desktop) {
+@include desktop {
   @include make-grid('desktop');
 }
