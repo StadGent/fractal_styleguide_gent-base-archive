@@ -64,22 +64,22 @@ header.header {
     }
 
     &.header-search {
+      display: none;
+
       @include tablet {
         display: block;
       }
-
-      display: none;
     }
 
     &.header-search-mobile {
-      @include tablet {
-        display: none;
-      }
-
       position: absolute;
       right: 3rem;
       left: .625rem;
       margin-left: 0;
+
+      @include tablet {
+        display: none;
+      }
 
       &.js-form-search-opened {
         padding-right: 7.8rem;

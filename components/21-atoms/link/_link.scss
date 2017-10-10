@@ -2,6 +2,7 @@ a {
   @include themify {
     @include color-element-states($link-color, $link-color-hover);
   }
+
   transition: color .11s ease-in-out;
   text-decoration: underline;
   cursor: pointer;
