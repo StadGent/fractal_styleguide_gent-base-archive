@@ -14,6 +14,7 @@ We encourage you to use these where necessary.
   
 - **[General mixins](#general)**:
   - clearfix();
+  - color-element-states($color, $color-hover, $property);
   - triangle($direction, $size-h, $size-v, $color);
   
   
@@ -118,6 +119,32 @@ Source: http://nicolasgallagher.com/micro-clearfix-hack/
 **Usage:**
 ```
 @include clearfix();
+```
+***
+
+### color-element-states($color, $color-hover, $property);
+**Description:**
+Adds active, visited, hover and focus states to a link.
+
+**Implementation:**
+```
+@mixin color-element-states($color, $color-hover, $property: "color") {
+  #{$property}: $color;
+
+  &:active,
+  &:visited {
+    @content;
+  }
+
+  &:hover,
+  &:focus {
+    #{$property}: $color-hover;
+  }
+}
+```
+**Usage:**
+```
+  @include color-element-states($link-color, $link-color-hover);
 ```
 ***
 
