@@ -1,4 +1,45 @@
 .form-progress {
+  @include themify {
+    ul {
+      &::before {
+        background: $form-steps-timeline-color;
+      }
+    }
+
+    .progress {
+      color: $form-steps-inactive-step-label;
+
+      &::before {
+        border: 1.5px solid $form-steps-inactive-prefix-background;
+        background: $form-steps-inactive-prefix-background;
+        color: $form-steps-inactive-prefix-color;
+      }
+
+      &.progress-previous {
+        .count {
+          background-color: $form-steps-previous-step-background;
+        }
+
+        a.indicator {
+          color: $form-steps-previous-step-label;
+        }
+
+        &.progress-active a.indicator {
+          color: $form-steps-active-step-label;
+        }
+      }
+
+      &.progress-active::before {
+        border-color: $form-steps-active-prefix-background;
+        background: $form-steps-active-prefix-background;
+      }
+    }
+
+    .count {
+      color: $form-steps-prefix-color;
+    }
+  }
+
   ul {
     @include tablet {
       display: block;
