@@ -189,6 +189,19 @@ $themes: (
 
     'tag-background': $color-dark-gray,
     'tag-background-hover': $color-dark-gray,
+
+    'form-steps-timeline-color': $color-blue,
+    'form-steps-prefix-color': $color-white,
+
+    'form-steps-inactive-step-label': $color-gray,
+    'form-steps-inactive-prefix-background': $color-gray,
+    'form-steps-inactive-prefix-color': $color-white,
+
+    'form-steps-previous-step-label': $color-green,
+    'form-steps-previous-step-background': $color-green,
+
+    'form-steps-active-step-label': $color-blue,
+    'form-steps-active-prefix-background': $color-blue,
   ),
   'accent': (
     'section-background': $color-blue,
