@@ -1,7 +1,13 @@
-.lg-actions {
-  .lg-next,
-  .lg-prev {
-    width: auto;
+.lg {
+  .lg-toolbar {
+    background-color: transparent;
+  }
+
+  .lg-actions {
+    .lg-next,
+    .lg-prev {
+      width: auto;
+    }
   }
 }
 
