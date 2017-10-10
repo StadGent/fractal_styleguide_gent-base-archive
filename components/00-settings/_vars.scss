@@ -1,5 +1,6 @@
 // Styleguide general settings.
 $styleguide-dir: '../styleguide' !default;
+$uuid: unique-id();
 
 // Styleguide colors.
 $color-darkest-blue: #2c3f48 !default;
@@ -49,7 +50,7 @@ $default-text-color: $color-dark-gray !default;
 
 // Grid settings
 $grid-columns: 12 !default;
-$gutter-width: 20px !default;
+$gutter-width: 1rem !default;
 
 // Max content width.
 $bp-max-content: 1440px !default;
@@ -188,6 +189,19 @@ $themes: (
 
     'tag-background': $color-dark-gray,
     'tag-background-hover': $color-dark-gray,
+
+    'form-steps-timeline-color': $color-blue,
+    'form-steps-prefix-color': $color-white,
+
+    'form-steps-inactive-step-label': $color-gray,
+    'form-steps-inactive-prefix-background': $color-gray,
+    'form-steps-inactive-prefix-color': $color-white,
+
+    'form-steps-previous-step-label': $color-green,
+    'form-steps-previous-step-background': $color-green,
+
+    'form-steps-active-step-label': $color-blue,
+    'form-steps-active-prefix-background': $color-blue,
   ),
   'accent': (
     'section-background': $color-blue,

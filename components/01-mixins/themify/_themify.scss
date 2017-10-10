@@ -63,6 +63,19 @@
 
   $tag-background: map-get($colors, 'tag-background') !global;
   $tag-background-hover: map-get($colors, 'tag-background-hover') !global;
+
+  $form-steps-timeline-color: map-get($colors, 'form-steps-timeline-color') !global;
+  $form-steps-prefix-color: map-get($colors, 'form-steps-prefix-color') !global;
+
+  $form-steps-inactive-step-label: map-get($colors, 'form-steps-inactive-step-label') !global;
+  $form-steps-inactive-prefix-background: map-get($colors, 'form-steps-inactive-prefix-background') !global;
+  $form-steps-inactive-prefix-color: map-get($colors, 'form-steps-inactive-prefix-color') !global;
+
+  $form-steps-previous-step-label: map-get($colors, 'form-steps-previous-step-label') !global;
+  $form-steps-previous-step-background: map-get($colors, 'form-steps-previous-step-background') !global;
+
+  $form-steps-active-step-label: map-get($colors, 'form-steps-active-step-label') !global;
+  $form-steps-active-prefix-background: map-get($colors, 'form-steps-active-prefix-background') !global;
 }
 
 //
