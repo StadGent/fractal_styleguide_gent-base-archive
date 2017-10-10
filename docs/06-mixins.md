@@ -24,16 +24,8 @@ We encourage you to use these where necessary.
 - **[Grid mixins](#grid)**:
   - make-row($gutter);
   - make-mobile-column($columns, $gutter);
-  - make-mobile-column-push($columns);
-  - make-mobile-column-pull($columns);
   - make-tablet-column($columns, $gutter: $gutter-width);
-  - make-tablet-column-offset($columns);
-  - make-tablet-column-push($columns);
-  - make-tablet-column-pull($columns);
   - make-desktop-column($columns, $gutter: $gutter-width);
-  - make-desktop-column-offset($columns);
-  - make-desktop-column-push($columns);
-  - make-desktop-column-pull($columns);
 
 
 ## <a name="breakpoints"></a>Breakpoint mixins 
@@ -221,5 +213,88 @@ It uses a SASS map `$themes` to loop over the different sections defined in `_va
 ***
 
 ## <a name="grid"></a>Grid mixins 
+### make-row($gutter);  
+**Description:**
+This mixins is used to create a Bootstrap style row which adds 
+negative margins to the div.
 
+**Implementation:**
+```
+@mixin make-row($gutter: $gutter-width) {
+  @include clearfix();
+  margin-right: -($gutter / 2);
+  margin-left: -($gutter / 2);
+}
+```
+**Usage:**
+```
+@include make-row;
+```
 
+***
+
+### make-mobile-column($columns, $gutter); 
+**Description:**
+Create a column applied to mobile layouts.
+
+**Implementation:**
+```
+@mixin make-mobile-column($columns, $gutter: $gutter-width) {
+  position: relative;
+  width: percentage(($columns / $grid-columns));
+  min-height: 1px;
+  padding-right: ($gutter / 2);
+  padding-left:  ($gutter / 2);
+  float: left;
+}
+```
+**Usage:**
+```
+@include make-mobile-column(6);
+```
+
+### make-tablet-column($columns, $gutter); 
+**Description:**
+Create a column applied to tablet layouts.
+
+**Implementation:**
+```
+@mixin make-tablet-column($columns, $gutter: $gutter-width) {
+  position: relative;
+  min-height: 1px;
+  padding-right: ($gutter / 2);
+  padding-left:  ($gutter / 2);
+
+  @media (min-width: $bp-tablet) {
+    width: percentage(($columns / $grid-columns));
+    float: left;
+  }
+}
+```
+**Usage:**
+```
+@include make-tablet-column(6);
+```
+
+### make-desktop-column($columns, $gutter); 
+**Description:**
+Create a column applied to desktop layouts.
+
+**Implementation:**
+```
+@mixin make-desktop-column($columns, $gutter: $gutter-width) {
+  position: relative;
+  min-height: 1px;
+  padding-right: ($gutter / 2);
+  padding-left:  ($gutter / 2);
+
+  @media (min-width: $bp-desktop) {
+    width: percentage(($columns / $grid-columns));
+    float: left;
+  }
+}
+```
+**Usage:**
+```
+@include make-desktop-column(6);
+```
