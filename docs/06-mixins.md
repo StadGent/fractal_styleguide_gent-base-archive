@@ -124,7 +124,7 @@ Source: http://nicolasgallagher.com/micro-clearfix-hack/
 
 ### color-element-states($color, $color-hover, $property);
 **Description:**
-Adds active, visited, hover and focus states to a link.
+Adds active, visited, hover and focus states to elements like links or buttons etc... 
 
 **Implementation:**
 ```
