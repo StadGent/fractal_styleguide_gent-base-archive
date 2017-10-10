@@ -1,6 +1,11 @@
 # Changelog
 All Notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
+## 2.5.1
+* STIJ-116: Minor change to the styling of the Form Steps molecule.
+
+***
+
 ## 2.5.0 
 *  STIJ-116: 
     * Changed markup for the Form Steps molecule.
