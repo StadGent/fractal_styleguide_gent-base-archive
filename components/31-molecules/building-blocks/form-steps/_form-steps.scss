@@ -41,18 +41,14 @@
   }
 
   ul {
+    display: flex;
+    position: relative;
+
     @include tablet {
       display: block;
     }
 
-    display: flex;
-    position: relative;
-
     &::before {
-      @include tablet {
-        display: none;
-      }
-
       display: block;
       position: absolute;
       top: .75rem;
@@ -61,48 +57,47 @@
       height: .125rem;
       margin: auto;
       content: '';
+
+      @include tablet {
+        display: none;
+      }
     }
   }
 
   li {
-    @include tablet {
-      display: block;
-    }
-
     display: inline-block;
     position: relative;
     flex: 1;
     margin-bottom: 1em;
     font-size: 1.125rem;
     line-height: 2rem;
+
+    @include tablet {
+      display: block;
+    }
   }
 
   .progress {
+    width: 1.8rem;
+    height: 1.8rem;
+    padding-left: 0;
+    font-weight: bold;
+
     @include tablet {
       width: 100%;
       height: auto;
       padding-left: 3rem;
     }
 
-    width: 1.8rem;
-    height: 1.8rem;
-    padding-left: 0;
-    font-weight: bold;
-
     .label {
-      @include tablet {
-        display: block;   
-      }
-      
       display: none;
+
+      @include tablet {
+        display: block;
+      }
     }
 
     &::before {
-      @include tablet {
-        right: auto;
-        margin: 0;
-      }
-
       display: block;
       position: absolute;
       top: 0;
@@ -114,6 +109,11 @@
       margin: auto;
       border-radius: 1.875rem;
       content: '';
+
+      @include tablet {
+        right: auto;
+        margin: 0;
+      }
     }
 
     &.progress-previous {
@@ -135,45 +135,39 @@
   }
 
   .indicator {
-    @include tablet {
-      width: auto;
-      text-indent: 0;
-    }
-
     display: block;
     position: relative;
     line-height: 1.8rem;
     text-indent: -9999px;
     z-index: 10;
 
-    .count {
-      @include tablet {
-        left: -3rem;
-      }
-
-      left: 0;
+    @include tablet {
+      width: auto;
       text-indent: 0;
     }
 
+    .count {
+      left: 0;
+      text-indent: 0;
+
+      @include tablet {
+        left: -3rem;
+      }
+    }
+
     .label {
+      display: inline-block;
+      text-indent: -9999px;
+
       @include tablet {
         display: block;
         text-indent: 0;
       }
-
-      display: inline-block;
-      text-indent: -9999px;
     }
 
   }
 
   .count {
-    @include tablet {
-      top: 0;
-      right: auto;
-      left: 0;
-    }
-
     display: inline-block;
     position: absolute;
     top: 0;
@@ -186,5 +180,11 @@
     line-height: 1.8rem;
     text-align: center;
     z-index: 10;
+
+    @include tablet {
+      top: 0;
+      right: auto;
+      left: 0;
+    }
   }
 }
