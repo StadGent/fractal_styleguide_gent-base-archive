@@ -24,14 +24,13 @@
           color: $form-steps-previous-step-label;
         }
 
+        &.progress-active .count {
+          border-color: $form-steps-active-prefix-background;
+          background: $form-steps-active-prefix-background;
+        }
         &.progress-active a.indicator {
           color: $form-steps-active-step-label;
         }
-      }
-
-      &.progress-active::before {
-        border-color: $form-steps-active-prefix-background;
-        background: $form-steps-active-prefix-background;
       }
     }
 
@@ -39,6 +38,7 @@
       color: $form-steps-prefix-color;
     }
   }
+
 
   ul {
     display: flex;
