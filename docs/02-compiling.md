@@ -4,7 +4,7 @@ title: Compiling
 
 There are a few different operations available for this style guide.
 
-### Gulp commands
+## Gulp commands
 ```
 $ gulp
 $ gulp watch
