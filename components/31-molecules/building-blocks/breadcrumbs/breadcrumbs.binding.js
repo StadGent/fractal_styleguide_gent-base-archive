@@ -6,7 +6,7 @@
   'use strict';
 
   $(window).on('load', function (e) {
-    gentStyleGuideBreadcrumb.updateMobileBreadcrumb();
+    this.gentStyleGuideBreadcrumb.updateMobileBreadcrumb();
   });
 
 })(jQuery);
