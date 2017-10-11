@@ -9,6 +9,7 @@
     <div class="form-item-column">
       <input type="file" name="File" id="file" placeholder="{{ placeholder|default('Placeholder text') }}" />
       {% include '@description' %}
+      {% include '@field-error' %}
     </div>
   </div>
 </div>
