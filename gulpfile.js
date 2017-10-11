@@ -71,10 +71,9 @@ gulp.task('styles:dist', function() {
   gulp.src('components/**/*.s+(a|c)ss')
     .pipe(sassGlob())
     .pipe(sassLint({
-      configFile: './.sass-lint.yml',
+      configFile: './.sass-lint.yml'
     }))
     .pipe(sassLint.format())
-    .pipe(sassLint.failOnError())
     .pipe(sourcemaps.init())
     .pipe(sass({
       outputStyle: 'nested',
@@ -128,7 +127,7 @@ gulp.task('styles:validate', function() {
     configFile: './.sass-lint.yml'
   }))
   .pipe(sassLint.format())
-  .pipe(sassLint.failOnError())
+  .pipe(sassLint.failOnError());
 });
 
 /*
@@ -137,7 +136,7 @@ gulp.task('styles:validate', function() {
  *
  */
 gulp.task('styles:watch', function() {
-  gulp.watch('./components/**/*.scss', ['styles:dist', 'styles:validate']);
+  gulp.watch('./components/**/*.scss', ['styles:dist']);
 });
 
 /*
@@ -195,7 +194,7 @@ gulp.task('js:validate', function() {
  *
  */
 gulp.task('js:watch', function() {
-  gulp.watch('./components/**/*.js', ['js:validate']);
+  gulp.watch('./components/**/*.js', ['js:validate', 'js:dist']);
 });
 
 /*
@@ -395,7 +394,7 @@ gulp.task('validate', ['styles:validate', 'js:validate']);
  *  Used to compile production ready SCSS and JS code.
  *
  */
-gulp.task('compile', ['fractal:build', 'styles:build', 'styles:dist', 'styles:extract', 'js:build', 'js:dist', 'images:minify']);
+gulp.task('compile', ['fractal:build', 'styles:build', 'styles:extract', 'js:build', 'images:minify']);
 gulp.task('compile:dev', ['fractal:build', 'styles:dist', 'js:dist', 'images:minify']);
 
 /*
