@@ -46,6 +46,10 @@
   $field-border: map-get($colors, 'field-border') !global;
   $field-placeholder: map-get($colors, 'field-placeholder') !global;
 
+  $field-error-background: map-get($colors, 'field-error-background') !global;
+  $field-error-color: map-get($colors, 'field-error-color') !global;
+  $field-error-border: map-get($colors, 'field-error-border') !global;
+
   $label-color: map-get($colors, 'label-color') !global;
   $label-optional-color: map-get($colors, 'label-optional-color') !global;
 
