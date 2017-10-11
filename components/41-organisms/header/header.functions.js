@@ -42,10 +42,32 @@
 
       // Close the mobile form.
       closeButton.on('click', function (e) {
+        e.preventDefault();
         mobileHeader.removeClass('js-form-search-opened');
         searchInput.removeClass('js-form-search-opened');
         closeButton.removeClass('js-form-search-opened');
       });
+    },
+
+    /**
+     * Implements a jQuery extension function.
+     */
+    displaySiteName: function () {
+      var componentsWidth = 70;
+      var logo = null;
+
+      // Calculate component width except for logo.
+      this.children('.header-component:visible').each(function () {
+        if ($(this).has('.site-logo').length === 0) {
+          componentsWidth += $(this).width();
+        }
+        else {
+          logo = this;
+        }
+      });
+
+      // Set available width on the logo component to show the site title.
+      $(logo).width(this.width() - componentsWidth);
     }
   });
 })(jQuery);

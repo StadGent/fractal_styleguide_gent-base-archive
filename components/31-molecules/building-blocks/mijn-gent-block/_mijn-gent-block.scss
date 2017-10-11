@@ -6,35 +6,54 @@
     display: inline-block;
   }
 
-  .login-link i {
-    margin-left: .625rem;
+  .login-link {
+    display: inline-block;
+    position: relative;
+    height: 2rem;
+
+    @include tablet() {
+      padding-right: 2rem;
+    }
+
+    i {
+      display: none;
+
+      @include tablet() {
+        display: inline;
+        position: absolute;
+        margin-top: -.2rem;
+        margin-left: .625rem;
+      }
+    }
   }
 
   .toggle {
+    display: inline-block;
     position: relative;
+    height: 2rem;
     overflow: hidden;
-
-    &:hover {
-      text-decoration: none;
-    }
   }
 
   .label,
   .picture {
+    height: 2rem;
     float: left;
   }
 
   .label {
-    margin-right: 3rem;
+    display: none;
+
+    @include tablet() {
+      display: inline;
+      margin-right: .5rem;
+    }
   }
 
   .picture {
-    position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     width: 2rem;
-    height: 2rem;
     margin: auto;
 
     img {
@@ -46,9 +65,10 @@
   .content {
     display: none;
     position: absolute;
-    top: 57px;
+    top: calc(2.4rem - 10px);
     right: 0;
     min-width: 200px;
+    margin-top: 10px;
     border-radius: $radius-1;
     background: $color-white;
     box-shadow: 2px 2px 2px 0 rgba(44, 63, 72, .2), -2px 2px 2px 0 rgba(44, 63, 72, .2);

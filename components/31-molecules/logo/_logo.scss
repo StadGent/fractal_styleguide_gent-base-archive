@@ -1,7 +1,16 @@
 .site-logo {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
+  @include themify {
+    .site-name div p::after {
+      background: $section-background;
+    }
+  }
+
+  height: 2rem;
+  overflow: hidden;
+
+  > a {
+    float: left;
+  }
 
   img {
     width: 5rem;
@@ -9,9 +18,32 @@
     border-radius: 0;
   }
 
-  .site-name p {
-    margin: 0 0 0 .5rem;
-    font-size: .8rem;
-    font-weight: bold;
+  .site-name {
+    display: table;
+    height: 100%;
+
+    div {
+      display: table-cell;
+      vertical-align: middle;
+
+      p {
+        position: relative;
+        margin: 0 0 0 .5rem;
+        font-size: .8rem;
+        font-weight: bold;
+        line-height: 1rem;
+
+        &::after {
+          position: absolute;
+          top: 1rem;
+          right: 0;
+          width: 33%;
+          height: calc(100% - 2rem);
+          padding-left: 5px;
+          content: '...';
+          overflow: hidden;
+        }
+      }
+    }
   }
 }

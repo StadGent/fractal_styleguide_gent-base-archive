@@ -1,112 +1,139 @@
 header.header {
   position: relative;
-  height: 3.125rem;
+  height: 2.7rem;
   padding: .35rem 0;
   font-size: .7rem;
-  line-height: 2.4rem;
 
-  .content-container > * {
-    margin: 0 1rem 0 0;
-    float: left;
+  input,
+  button {
+    height: 2rem;
+  }
 
-    &.right {
-      margin: 0 0 0 1rem;
-      float: right;
-    }
+  .content-container {
+    height: 100%;
 
-    i {
-      display: inline-block;
-      font-size: 1rem;
-      line-height: 2.4rem;
-    }
+    > * {
+      min-height: 100%;
+      margin: 0 1rem 0 0;
+      float: left;
+      line-height: 2rem;
 
-    // Change the look and feel of the link atom.
-    a {
-      text-decoration: none;
-
-      &:hover,
-      &:active {
-        text-decoration: underline;
-      }
-    }
-
-    &.hamburger-toggle:hover {
-      text-decoration: underline;
-      cursor: pointer;
-    }
-
-    //
-    // Change the look and feel of the search molecule.
-    //
-    &.header-search,
-    &.header-search-mobile {
-      position: relative;
-      min-height: 2.4rem;
-      padding-right: 3.125rem;
-
-      input[type="search"] {
-        margin: 0;
-        font-size: .7rem;
+      &.right {
+        margin: 0 0 0 1rem;
+        float: right;
       }
 
-      a.btn,
-      button {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        width: 3.125rem;
-        padding-right: .625rem;
-        padding-left: .625rem;
-        font-size: 1.3rem;
-        line-height: 1.8rem;
-      }
-    }
-
-    &.header-search {
-      @include tablet {
-        display: block;
+      .site-logo {
+        min-width: 4.5rem;
       }
 
-      display: none;
-    }
-
-    &.header-search-mobile {
-      @include tablet {
-        display: none;
+      i {
+        display: inline-block;
+        font-size: 1rem;
+        line-height: 2.4rem;
       }
 
-      position: absolute;
-      right: 3rem;
-      left: .625rem;
-      margin-left: 0;
-
-      &.js-form-search-opened {
-        padding-right: 7.8rem;
-        background-color: $color-darkest-blue;
-      }
-
-      input[type="search"] {
+      .login-link i {
         display: none;
 
-        &.js-form-search-opened {
-          display: block;
+        @include tablet() {
+          display: inline;
         }
       }
 
-      a.btn,
-      button {
-        right: 4.6rem;
+      // Change the look and feel of the link atom.
+      a {
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+        }
       }
 
-      .close {
+      &.hamburger-toggle:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+
+      //
+      // Change the look and feel of the search molecule.
+      //
+      &.header-search,
+      &.header-search-mobile {
+        input[type="search"] {
+          width: 10rem;
+          margin: 0;
+          font-size: .7rem;
+        }
+
+        a.btn,
+        button {
+          width: 2rem;
+          padding-right: .5rem;
+          padding-left: .5rem;
+          font-size: 1rem;
+          line-height: 1.8rem;
+        }
+      }
+
+      &.header-search {
         display: none;
-        position: absolute;
-        top: 0;
-        right: $gutter-width/2;
+
+        @include tablet {
+          display: block;
+
+          input[type="search"] {
+            float: left;
+          }
+
+          button {
+            float: left;
+          }
+        }
+      }
+
+      &.header-search-mobile {
+        width: 2rem;
+
+        @include tablet {
+          display: none;
+        }
 
         &.js-form-search-opened {
-          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          margin: 0;
+          padding: .35rem $gutter-width/2;
+          background-color: $color-darkest-blue;
+
+          button {
+            position: absolute;
+            top: .35rem;
+            left: calc(75% - 2.35rem);
+          }
+        }
+
+        input[type="search"] {
+          display: none;
+
+          &.js-form-search-opened {
+            display: block;
+            width: calc(75% - 2rem);
+          }
+        }
+
+        .close {
+          display: none;
+          position: absolute;
+          top: .35rem;
+          right: $gutter-width/2;
+
+          &.js-form-search-opened {
+            display: block;
+          }
         }
       }
     }

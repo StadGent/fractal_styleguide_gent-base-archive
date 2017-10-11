@@ -3,7 +3,7 @@
 // @param {Map} $colors - Contains all colors of a section.
 //
 @mixin themify-map($colors) {
-  $section-bg-color: map-get($colors, 'section-bg-color') !global;
+  $section-background: map-get($colors, 'section-background') !global;
   $section-text-color: map-get($colors, 'section-text-color') !global;
 
   $heading-1-color: map-get($colors, 'heading-1-color') !global;
