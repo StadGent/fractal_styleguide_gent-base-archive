@@ -31,8 +31,9 @@ select {
   }
 
   &.error {
-    border-color: #a31b00;
-    background-color: #ff8770;
+    @include themify {
+      border: 1px solid $field-error-border;
+    }
   }
 
   + .description {

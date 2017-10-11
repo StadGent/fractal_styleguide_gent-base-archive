@@ -17,7 +17,7 @@ $color-medium-lighter-gray: #d5dadd !default;
 $color-orange: #f39200 !default;
 $color-white: #fff !default;
 $color-green: #00a275 !default;
-$color-red: #ce0000 !default;
+$color-red: #a31b00 !default;
 
 // Extra colors (currently used on stad.gent drupal 7 => to be standardized)
 // @TODO: Refactor?
@@ -171,6 +171,10 @@ $themes: (
     'field-background': $color-white,
     'field-border': 1px solid $color-light-gray,
     'field-placeholder': $color-light-gray,
+
+    'field-error-background': lighten($color-red, 40%),
+    'field-error-color': $color-darkest-gray,
+    'field-error-border': $color-red,
 
     'label-color': $color-dark-gray,
     'label-optional-color': $color-gray,

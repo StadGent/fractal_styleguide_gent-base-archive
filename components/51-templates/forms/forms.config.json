@@ -11,6 +11,13 @@
       "context": {
         "modifier": "no-style"
       }
+    },
+    {
+      "name": "errors",
+      "hidden": true,
+      "context": {
+        "errors": true
+      }
     }
   ],
   "context": {
