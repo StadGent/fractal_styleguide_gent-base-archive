@@ -10,22 +10,17 @@ In the style guide of Ghent there are 5 color sections (or schemes) available. T
 
 ## Custom color sections
 
-It's possible to create custom color sections for your subtheme with following mixin: `new-section($bg-color, $text-color)`. A breakdown for all available parameters below:
+All components are dependent on a section context.
+This means that you always need a wrapper section, and that components will change their 
+theming based on this wrapper section. If no wrapper is explicitly defined, a default section is assumed.
 
-### Text styles
-- `$section-bg-color`: The background color.
-- `$section-text-color`: The text color.
-- `$section-title-color`: **(optional)** The title color. _Default: `$section-text-color`_
-- `$section-caption-color`: **(optional)** The caption or description color _Default: `$section-text-color`_
+When inspecting individual components like a heading 1 atom, you will see that the SASS code
+uses one particular mixin to define theming of components based on their wrapper. 
+```
+themify() 
+```
+More technical information on this mixin can be found in the chapter about mixins, where it is fully documented.
 
-### Link styles
-- `$section-link-color`: **(optional)** The link color _Default: `$section-text-color`_
-- `$section-link-color-hover`: **(optional)** The link color when in an hover state _Default: `$section-link-color`_
-- `$section-link-color-focus`: **(optional)** The link color when in an focus state _Default: `$section-link-color-hover`_
-- `$section-link-color-visited`: **(optional)** The link color when in an visited state _Default: `$section-link-color`_
-
-### Field styles
-- `$section-field-text-color`: **(optional)** The input field text color _Default: `$section-text-color`_
-- `$section-field-placeholder-color`: **(optional)** The input field placeholder color _Default: `$section-field-text-color`_
-- `$section-field-bg-color`: **(optional)** The input field background color _Default: `$section-bg-color`_
-- `$section-field-border-color`: **(optional)** The input field border color _Default: `$section-field-bg-color`_
+To create more sections in your subtheme we provide a SASS map `$overwrite-themes`.
+This variable needs to be structured like the `$themes` variable. SASS will then merge these two maps into
+1 themes map to define all the basic sections with your own custom sections.
