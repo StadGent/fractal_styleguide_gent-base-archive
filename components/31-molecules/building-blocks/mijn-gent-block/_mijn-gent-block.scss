@@ -11,14 +11,14 @@
     position: relative;
     height: 2rem;
 
-    @include tablet() {
+    @include tablet {
       padding-right: 2rem;
     }
 
     i {
       display: none;
 
-      @include tablet() {
+      @include tablet {
         display: inline;
         position: absolute;
         margin-top: -.2rem;
@@ -43,7 +43,7 @@
   .label {
     display: none;
 
-    @include tablet() {
+    @include tablet {
       display: inline;
       margin-right: .5rem;
     }

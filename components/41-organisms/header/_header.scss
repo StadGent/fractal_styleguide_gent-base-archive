@@ -36,7 +36,7 @@ header.header {
       .login-link i {
         display: none;
 
-        @include tablet() {
+        @include tablet {
           display: inline;
         }
       }
