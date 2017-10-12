@@ -1,7 +1,7 @@
 .dg-default-block {
 
-  h2 {
-    font-size: 1.94872rem;
+  h3 {
+    @extend %h2;
   }
 
   li {
