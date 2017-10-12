@@ -4,6 +4,8 @@ All Notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 ## 2.6.1
 * STIJ-34: Changed Gent info block title to h3.
 
+***
+
 ## 2.6.0
 * STIJ-32: Refactored heading.
 * STIJ-95: Added more documentation.
