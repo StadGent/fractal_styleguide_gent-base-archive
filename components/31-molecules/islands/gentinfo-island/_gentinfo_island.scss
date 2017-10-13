@@ -1,7 +1,6 @@
 .dg-default-block {
-
-  h2 {
-    font-size: 1.94872rem;
+  h3 {
+    @extend %h2;
   }
 
   li {
@@ -16,6 +15,7 @@
     &::before {
       @extend %icon-base-css;
       @extend %icon-phone;
+
       padding-right: .5rem;
     }
   }
@@ -24,6 +24,7 @@
     &::before {
       @extend %icon-base-css;
       @extend %icon-email;
+
       padding-right: .5rem;
     }
   }
@@ -32,6 +33,7 @@
     &::before {
       @extend %icon-base-css;
       @extend %icon-link;
+
       padding-right: .5rem;
     }
   }
@@ -46,8 +48,8 @@
     &::before {
       @extend %icon-base-css;
       @extend %icon-textballoon-fill-right;
+
       padding-right: .5rem;
     }
   }
 }
-
