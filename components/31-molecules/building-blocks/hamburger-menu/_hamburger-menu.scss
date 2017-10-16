@@ -15,6 +15,7 @@
   }
 
   ul {
+    @extend %list-no-style;
     margin: 0;
   }
 
@@ -25,9 +26,8 @@
     border-bottom: 1.5px solid $hamburger-menu-link-border-color;
     background-color: $hamburger-menu-link-bg-color;
     color: $hamburger-menu-link-color;
-    font-size: .7rem;
     font-weight: bold;
-    line-height: 3.48;
+    line-height: 3.48em;
 
     &.active,
     &:active {
