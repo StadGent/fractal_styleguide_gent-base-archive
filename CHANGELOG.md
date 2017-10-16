@@ -2,6 +2,9 @@
 All Notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
 ## 2.6.1
+* STIJ-2: 
+    * Added default no-style styling to lists in the hamburger menu.
+    * Fixed preview hamburger menu.
 * STIJ-34: Changed Gent info block title to h3.
 
 ***
@@ -24,7 +27,7 @@ All Notable changes to `digipolisgent/fractal_styleguide_gent-base`.
     * Added bindings and functions layer to all Javascript files.
     * Added documentation for Javascript use and component Javascript. 
     * Refactored some Javascript code.
-*  STIJ-116: 
+* STIJ-116: 
     * Changed markup for the Form Steps molecule.
     * Changed styling for the Form Steps molecule.
     * Added themify for the Form Steps molecule.    
