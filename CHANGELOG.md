@@ -1,6 +1,9 @@
 # Changelog
 All Notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
+## 2.6.2
+* STIJ-35: Added bindings and functions for the Gallery component.
+
 ## 2.6.1
 * STIJ-2: 
     * Added default no-style styling to lists in the hamburger menu.
