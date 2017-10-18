@@ -1,6 +1,9 @@
 # Changelog
 All Notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
+## 2.6.3
+* STIJ-40: Fixed ugly styling on buttons and input fields for iOS.
+
 ## 2.6.2
 * STIJ-35: Added bindings and functions for the Gallery component.
 
