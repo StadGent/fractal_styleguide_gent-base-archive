@@ -43,17 +43,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style type="text/css">
-      .preview-container {
-        background-color: #ffffff;
-        padding: 4% 0;
-        overflow: hidden;
-        min-height: 50vh;
-      }
-      .preview-inner-container {
-        margin-bottom: 70px;
-        display: inline-block;
-        width: 100%;
-      }
+      {% block inline_styles %}
+        .preview-container {
+          background-color: #ffffff;
+          padding: 4% 0;
+          overflow: hidden;
+          min-height: 50vh;
+        }
+        .preview-inner-container {
+          margin-bottom: 70px;
+          display: inline-block;
+          width: 100%;
+        }
+      {% endblock %}
     </style>
 </head>
 <body>
@@ -77,9 +79,9 @@
 
   <div class="preview-container">
     {% block content %}
-        <div class="content-container">
-          {{ yield | raw }}
-        </div>
+      <div class="content-container">
+        {{ yield | raw }}
+      </div>
     {% endblock %}
   </div>
 

@@ -2,6 +2,7 @@
   "title": "Mijn Gent block",
   "status": "wip",
   "handle": "mijn-gent-block",
+  "preview": "@preview-mijn-gent",
   "default": "logged-in",
   "context": {
     "auth": "false"
