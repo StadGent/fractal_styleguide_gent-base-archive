@@ -15,7 +15,7 @@
      * Creates a jQuery extension function.
      *
      */
-    loadLightGallery: function() {
+    loadLightGallery: function () {
       $(this).lightGallery({
         download: false,
         getCaptionFromTitleOrAlt: false,
