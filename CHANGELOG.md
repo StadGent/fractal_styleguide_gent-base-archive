@@ -1,6 +1,9 @@
 # Changelog
 All Notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
+## 2.6.5
+* STIJ-126: Removed CDN imports of external libraries and added them through yarn.
+
 ## 2.6.4
 * STIJ-125: Fixed close button for items inside multiselect.
 * STIJ-137: Changed preview template for Mijn Gent block.
