@@ -1,6 +1,9 @@
 # Changelog
 All Notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
+## 2.6.7
+* Fixed select box appearance in IE.
+
 ## 2.6.6
 * Fixed a bug in the postinstall.sh script.
 
