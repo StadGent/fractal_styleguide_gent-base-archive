@@ -1,6 +1,9 @@
 # Changelog
 All Notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
+## 2.6.6
+* Fixed a bug in the postinstall.sh script.
+
 ## 2.6.5
 * STIJ-126: Removed CDN imports of external libraries and added them through yarn.
 
