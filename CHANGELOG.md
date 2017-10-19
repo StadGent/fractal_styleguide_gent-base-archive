@@ -3,6 +3,7 @@ All Notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
 ## 2.6.4
 * STIJ-125: Fixed close button for items inside multiselect.
+* STIJ-137: Changed preview template for Mijn Gent block.
 
 ## 2.6.3
 * STIJ-40: Fixed ugly styling on buttons and input fields for iOS.
