@@ -5,12 +5,11 @@
     <meta charset="utf-8">
     <title>{% block title %}Preview Layout{% endblock %}</title>
 
-    <link media="all" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.2/chosen.css">
+    <link media="all" rel="stylesheet" href="{{ '/styleguide/vendor/chosen-js/chosen.min.css'| path }}">
+    <link media="all" rel="stylesheet" href="{{ '/styleguide/vendor/lightgallery/dist/css/lightgallery.min.css'| path }}">
 
     <link media="all" rel="stylesheet" href="{{ '/css/main.css' | path }}">
     <link media="all" rel="stylesheet" href="{{ '/css/styleguide.css'| path }}">
-
-    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.2/dist/css/lightgallery.min.css" />
 
     <script>
       (function(d) {
@@ -23,9 +22,9 @@
       })(document);
     </script>
 
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.2/dist/js/lightgallery.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.2/chosen.jquery.min.js"></script>
+    <script type="text/javascript" src="{{ '/styleguide/vendor/jquery/dist/jquery.min.js'|path }}"></script>
+    <script type="text/javascript" src="{{ '/styleguide/vendor/lightgallery/dist/js/lightgallery.min.js'|path }}"></script>
+    <script type="text/javascript" src="{{ '/styleguide/vendor/chosen-js/chosen.jquery.min.js'|path }}"></script>
 
     <script type="text/javascript" src="{{ '/styleguide/js/hamburger-menu.functions.js'|path }}"></script>
     <script type="text/javascript" src="{{ '/styleguide/js/hamburger-menu.binding.js'|path }}"></script>

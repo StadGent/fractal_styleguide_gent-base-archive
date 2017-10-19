@@ -4,3 +4,4 @@ build
 scss
 public/css
 public/styleguide/js
+public/styleguide/vendor
