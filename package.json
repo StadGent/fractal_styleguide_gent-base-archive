@@ -1,6 +1,6 @@
 {
   "name": "gent_styleguide",
-  "version": "2.6.7",
+  "version": "2.6.8",
   "description": "Styleguide Stad.Gent",
   "devDependencies": {
     "@frctl/fractal": "^1.1.7",
