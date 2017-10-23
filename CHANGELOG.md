@@ -3,6 +3,9 @@ All Notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
 ## 2.6.7
 * Fixed select box appearance in IE.
+* STIJ-139: Added no-optional class to hide optional from field labels.
+* STIJ-139: Changed the styling of checkbox and radio field labels.
+* STIJ-139: Added fieldset styling.
 
 ## 2.6.6
 * Fixed a bug in the postinstall.sh script.
