@@ -13,10 +13,10 @@
       }
     },
     {
-      "name": "errors",
+      "name": "no-optional",
       "hidden": true,
       "context": {
-        "errors": true
+        "modifier": "no-optional"
       }
     }
   ],
