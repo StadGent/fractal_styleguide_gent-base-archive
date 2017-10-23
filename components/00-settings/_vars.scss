@@ -116,13 +116,6 @@ $hamburger-menu-link-bg-color: transparent;
 $hamburger-menu-link-bg-color-active: $color-dark-blue;
 $hamburger-menu-link-bg-color-hover: darken($color-darkest-blue, 2);
 
-// Message settings.
-$status-message: (
-  'error': $color-red,
-  'status': $color-green,
-  'warning': $color-orange,
-);
-
 // Map settings.
 $map-border-radius: $radius-1 !default;
 
@@ -205,6 +198,20 @@ $themes: (
 
     'form-steps-active-step-label': $color-blue,
     'form-steps-active-prefix-background': $color-blue,
+
+    'messages-status-background': lighten($color-green, 50),
+    'messages-status-color': $color-green,
+    'messages-status-border': 1px solid $color-green,
+
+    'messages-error-background': lighten($color-red, 50),
+    'messages-error-color': $color-red,
+    'messages-error-border': 1px solid $color-red,
+
+    'messages-warning-background': lighten($color-orange, 50),
+    'messages-warning-color': $color-orange,
+    'messages-warning-border': 1px solid $color-orange,
+
+    'messages-title-color': $color-darkest-gray,
   ),
   'accent': (
     'section-background': $color-blue,

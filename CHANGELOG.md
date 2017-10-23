@@ -1,6 +1,9 @@
 # Changelog
 All Notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
+## 2.6.8
+* STIJ-25: Added themify to the status messages component.
+
 ## 2.6.7
 * Fixed select box appearance in IE.
 * STIJ-139: Added no-optional class to hide optional from field labels.
