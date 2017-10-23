@@ -2,6 +2,11 @@
 
 <div class="preview-inner-container">
   <form class="{{ modifier }}">
+    <fieldset>
+    <legend>
+      This is a fieldset title.
+    </legend>
+
     {% include '@textfield'
     with {
       'label': 'Textfield',
@@ -179,6 +184,8 @@
       ]
     }
     %}
+
+    </fieldset>
 
     {% include '@form-actions--editor' %}
 
