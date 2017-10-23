@@ -1,19 +1,34 @@
 .messages {
-  margin-bottom: 1rem;
+  @include themify {
+    &--status {
+      border: $messages-status-border;
+      background: $messages-status-background;
+      color: $messages-status-color;
+    }
 
-  @each $key, $color in $status-message {
-    &--#{$key} {
-      background: lighten($color, 50);
-      color: $color;
+    &--error {
+      border: $messages-error-border;
+      background: $messages-error-background;
+      color: $messages-error-color;
+    }
 
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        color: $color;
-      }
+    &--warning {
+      border: $messages-warning-border;
+      background: $messages-warning-background;
+      color: $messages-warning-color;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: $messages-title-color;
     }
   }
+
+  margin-bottom: 1rem;
+  padding: .5rem 1rem;
+  border-radius: $radius-2;
 }
