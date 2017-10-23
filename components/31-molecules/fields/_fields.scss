@@ -156,10 +156,6 @@ input[type='checkbox'] {
   }
 
   .field-description {
-    @include tablet {
-      margin-bottom: 0;
-    }
-
     margin-bottom: .8rem;
 
     .no-style & {
