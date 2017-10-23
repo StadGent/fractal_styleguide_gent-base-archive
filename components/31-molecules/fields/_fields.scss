@@ -120,6 +120,10 @@ input[type='checkbox'] {
 
     > label {
       @include make-mobile-column(12);
+
+      @at-root .no-optional .label-optional {
+        display: none;
+      }
     }
   }
 
