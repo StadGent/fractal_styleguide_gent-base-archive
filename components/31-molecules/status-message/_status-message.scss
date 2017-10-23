@@ -1,4 +1,6 @@
-.message {
+.messages {
+  margin-bottom: 1rem;
+
   @each $key, $color in $status-message {
     &--#{$key} {
       background: lighten($color, 50);

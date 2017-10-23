@@ -118,9 +118,8 @@ $hamburger-menu-link-bg-color-hover: darken($color-darkest-blue, 2);
 
 // Message settings.
 $status-message: (
-  'info': $color-blue ,
   'error': $color-red,
-  'success': $color-green,
+  'status': $color-green,
   'warning': $color-orange,
 );
 
