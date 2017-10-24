@@ -1,0 +1,33 @@
+{
+  "title": "Button",
+  "name": "Button",
+  "status": "ready",
+  "default": "button-sm",
+  "order": 1,
+  "context": {
+    "text": "Button"
+  },
+  "variants": [
+    {
+      "name": "button-sm",
+      "handle": "button",
+      "context": {
+        "modifier": "btn--small"
+      }
+    },
+    {
+      "name": "button-md",
+      "handle": "md",
+      "context": {
+        "modifier": "btn--medium"
+      }
+    },
+    {
+      "name": "button-lg",
+      "handle": "button-lg",
+      "context": {
+        "modifier": "btn--large"
+      }
+    }
+  ]
+}

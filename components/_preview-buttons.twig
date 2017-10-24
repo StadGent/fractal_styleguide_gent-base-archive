@@ -1,0 +1,12 @@
+{% extends '_preview.twig' %}
+
+{% block title %}Buttons preview{% endblock %}
+
+{% block inline_styles %}
+  {{ parent() }}
+
+ .preview-inner-container .example-full-width .btn {
+    width: 100%;
+  }
+
+{% endblock %}
