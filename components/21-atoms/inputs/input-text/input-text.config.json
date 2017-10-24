@@ -1,8 +1,5 @@
 {
   "title": "Input text",
   "status": "ready",
-  "handle": "input-text",
-  "context": {
-    "placeholder": "Placeholder input text"
-  }
+  "handle": "input-text"
 }
