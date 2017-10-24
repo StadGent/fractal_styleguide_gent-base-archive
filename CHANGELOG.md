@@ -9,10 +9,12 @@ All Notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 * STIJ-129: Changed implementation of button. All buttons are now `inline` by default!
 * STIJ-129: Updated button documentation.
 
-
+***
 
 ## 2.6.8
 * STIJ-25: Added themify to the status messages component.
+
+***
 
 ## 2.6.7
 * Fixed select box appearance in IE.
@@ -21,21 +23,33 @@ All Notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 * STIJ-139: Added fieldset styling.
 * STIJ-139: Changed class of messages.
 
+***
+
 ## 2.6.6
 * Fixed a bug in the postinstall.sh script.
 
+***
+
 ## 2.6.5
 * STIJ-126: Removed CDN imports of external libraries and added them through yarn.
+
+***
 
 ## 2.6.4
 * STIJ-125: Fixed close button for items inside multiselect.
 * STIJ-137: Changed preview template for Mijn Gent block.
 
+***
+
 ## 2.6.3
 * STIJ-40: Fixed ugly styling on buttons and input fields for iOS.
 
+***
+
 ## 2.6.2
 * STIJ-35: Added bindings and functions for the Gallery component.
+
+***
 
 ## 2.6.1
 * STIJ-2: 
