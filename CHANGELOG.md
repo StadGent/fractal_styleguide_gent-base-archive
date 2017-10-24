@@ -1,7 +1,9 @@
 # Changelog
 All Notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
-## 2.6.9
+## 2.7.0 IMPORTANT
+**This change may break the way your buttons work!**
+
 * STIJ-129: **IMPORTANT!**: Changed button classes to be consistent with their SASS placeholders!
 * STIJ-129: Changed implementation of button. All buttons are now `inline` by default!
 * STIJ-129: Updated button documentation.
