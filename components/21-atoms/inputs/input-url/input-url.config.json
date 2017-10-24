@@ -1,8 +1,5 @@
 {
   "title": "Input url",
   "status": "ready",
-  "handle": "input-url",
-  "context": {
-    "placeholder": "Placeholder input url"
-  }
+  "handle": "input-url"
 }

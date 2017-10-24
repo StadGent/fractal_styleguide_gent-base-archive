@@ -1,8 +1,5 @@
 {
   "title": "Input date",
   "status": "ready",
-  "handle": "input-date",
-  "context": {
-    "placeholder": "Placeholder input date"
-  }
+  "handle": "input-date"
 }

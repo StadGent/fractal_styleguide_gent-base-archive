@@ -1,8 +1,5 @@
 {
   "title": "Input tel",
   "status": "ready",
-  "handle": "input-tel",
-  "context": {
-    "placeholder": "Placeholder input tel"
-  }
+  "handle": "input-tel"
 }
