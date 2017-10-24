@@ -7,6 +7,7 @@ All Notable changes to `digipolisgent/fractal_styleguide_gent-base`.
            it is discouraged to use underlined text.
 * STIJ-131: Remove placeholders from all input type fields except search fields.
 * STIJ-25: Fixed status messages preview pages.
+* STIJ-140: Fixed themify issue on select input fields.
 
 
 ## 2.6.8
