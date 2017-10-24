@@ -1,18 +1,47 @@
 <h1>Button styles</h1>
 
 <div class="preview-inner-container">
-  <h3>Small buttons</h3>
-  {% include '@button-sm' %}
-  <h3>Inline: Small buttons</h3>
-  {% include '@button-sm' with { 'modifier': 'inline' } %}
-
-  <h3>Medium buttons</h3>
-  {% include '@button-md' %}
-  <h3>Inline: Medium buttons</h3>
-  {% include '@button-md' with { 'modifier': 'inline' } %}
-
-  <h3>Large buttons</h3>
-  {% include '@button-lg' %}
-  <h3>Inline: Large buttons</h3>
-  {% include '@button-lg' with { 'modifier': 'inline' } %}
+  <h3>Small buttons (default inline button)</h3>
+  <p>
+    {% include '@button--button-sm' with {
+      'modifier': 'btn--small'
+    }
+    %}
+  </p>
+  <h3>Full width : Small buttons</h3>
+  <p class="example-full-width">
+    {% include '@button--button-sm' with {
+      'modifier': 'btn--small'
+    }
+    %}
+  </p>
 </div>
+
+<div class="preview-inner-container">
+  <h3>Medium buttons (default inline button)</h3>
+  <p>
+    {% include '@button' %}
+  </p>
+  <h3>Full width: Medium buttons</h3>
+  <p class="example-full-width">
+    {% include '@button' %}
+  </p>
+</div>
+
+<div class="preview-inner-container">
+  <h3>Large buttons (default inline button)</h3>
+  <p>
+    {% include '@button--button-lg' with {
+        'modifier': 'btn--large'
+      }
+    %}
+  </p>
+  <h3>Full width: Large buttons</h3>
+  <p class="example-full-width">
+    {% include '@button--button-lg' with {
+        'modifier': 'btn--large'
+      }
+    %}
+  </p>
+</div>
+

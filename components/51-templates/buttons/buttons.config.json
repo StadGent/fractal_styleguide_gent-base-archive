@@ -1,8 +1,8 @@
 {
   "title": "Buttons",
   "status": "ready",
-  "handle": "buttons",
-  "preview": "@preview",
+  "handle": "buttons-overview",
+  "preview": "@preview-buttons",
   "order": 3,
   "context": {
     "text": "Button"
