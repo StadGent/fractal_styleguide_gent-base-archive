@@ -1,6 +1,13 @@
 # Changelog
 All Notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
+## 2.6.9
+* STIJ-63: Made Fractal variants of paragraphs.
+* STIJ-63: Remove underlined text from paragraph examples, 
+           it is discouraged to use underlined text.
+* STIJ-131: Remove placeholders from all input type fields except search fields.
+
+
 ## 2.6.8
 * STIJ-25: Added themify to the status messages component.
 
