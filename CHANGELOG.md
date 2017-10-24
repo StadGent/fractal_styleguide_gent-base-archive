@@ -2,12 +2,13 @@
 All Notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
 ## 2.6.9
+* STIJ-129: **IMPORTANT!**: Changed button classes to be consistent with their SASS placeholders!
+* STIJ-129: Changed implementation of button. All buttons are now `inline` by default!
+* STIJ-129: Updated button documentation.
+* STIJ-131: Remove placeholders from all input type fields except search fields.
 * STIJ-63: Made Fractal variants of paragraphs.
 * STIJ-63: Remove underlined text from paragraph examples, 
            it is discouraged to use underlined text.
-* STIJ-131: Remove placeholders from all input type fields except search fields.
-* STIJ-129: Changed implementation of button. All buttons are now `inline` by default!
-* STIJ-129: Updated button documentation.
 
 ***
 
