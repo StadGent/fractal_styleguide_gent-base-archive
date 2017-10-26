@@ -1,6 +1,9 @@
 # Changelog
 All Notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
+## 2.6.10
+* STIJ-145: Added pinned icon.
+
 ## 2.6.9
 * STIJ-63: Made Fractal variants of paragraphs.
 * STIJ-63: Remove underlined text from paragraph examples, 

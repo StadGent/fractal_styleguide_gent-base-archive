@@ -89,7 +89,7 @@
 
 %icon-paper,
 .icon-paper::before {
-  content: '\e908';
+  content: '\e909';
 }
 
 %icon-tag,
@@ -149,7 +149,7 @@
 
 %icon-facebook,
 .icon-facebook::before {
-  content: '\e90f';
+  content: '\e910';
 }
 
 %icon-facebook-full,
@@ -304,7 +304,7 @@
 
 %icon-tie,
 .icon-tie::before {
-  content: '\e910';
+  content: '\e911';
 }
 
 %icon-rdf,
@@ -369,7 +369,7 @@
 
 %icon-idea,
 .icon-idea::before {
-  content: '\e909';
+  content: '\e90a';
 }
 
 %icon-megaphone,
@@ -377,64 +377,74 @@
   content: '\e801';
 }
 
+%icon-pinned,
+.icon-pinned::before {
+  content: '\e900';
+}
+
+%icon-star,
+.icon-star::before {
+  content: '\e901';
+}
+
 %icon-medal,
 .icon-medal::before {
-  content: '\e901';
+  content: '\e902';
 }
 
 %icon-smartphone,
 .icon-smartphone::before {
-  content: '\e90a';
+  content: '\e90b';
 }
 
 %icon-data,
 .icon-data::before {
-  content: '\e90b';
+  content: '\e90c';
 }
 
 %icon-data-new,
 .icon-data-new::before {
-  content: '\e911';
+  content: '\e912';
 }
 
 %icon-poll,
 .icon-poll::before {
-  content: '\e902';
+  content: '\e903';
 }
 
 %icon-textballoon-right,
 .icon-textballoon-right::before {
-  content: '\e90c';
+  content: '\e90d';
 }
 
 %icon-textballoon-left,
 .icon-textballoon-left::before {
-  content: '\e903';
+  content: '\e904';
 }
 
 %icon-textballoon-fill-right,
 .icon-textballoon-fill-right::before {
-  content: '\e90d';
+  content: '\e90e';
 }
 
 %icon-textballoon-fill-left,
 .icon-textballoon-fill-left::before {
-  content: '\e90e';
+  content: '\e90f';
 }
 
 %icon-house,
 .icon-house::before {
-  content: '\e904';
+  content: '\e905';
 }
 
 %icon-cross,
 .icon-cross::before {
-  content: '\e905';
+  content: '\e906';
 }
 
 %icon-tick,
 .icon-tick::before {
-  content: '\e906';
+  content: '\e907';
 }
 
 %icon-check,
@@ -447,14 +457,9 @@
   content: '\f05a';
 }
 
-%icon-star,
-.icon-star::before {
-  content: '\e900';
-}
-
 %icon-heart,
 .icon-heart::before {
-  content: '\e907';
+  content: '\e908';
 }
 
 %icon-outdoor,
