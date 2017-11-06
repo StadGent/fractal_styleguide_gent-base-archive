@@ -407,6 +407,16 @@
   content: '\e912';
 }
 
+%icon-code,
+.icon-code::before {
+  content: '\e913';
+}
+
+%icon-at,
+.icon-at::before {
+  content: '\e914';
+}
+
 %icon-poll,
 .icon-poll::before {
   content: '\e903';
