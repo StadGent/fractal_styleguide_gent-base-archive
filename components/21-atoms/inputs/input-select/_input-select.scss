@@ -12,3 +12,7 @@ select {
     display: none;
   }
 }
+
+select[multiple] {
+  background-image: none;
+}
