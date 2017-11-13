@@ -15,7 +15,11 @@
    * Replace the mobile breadcrumb of Gent base by our own.
    */
   function initMultiselectChosen() {
-    $('.chosen-select').chosen({disable_search: true});
+    var isIpad = navigator.userAgent.match(/iPad/i) != null;
+
+    if (isIpad === false) {
+      $('.chosen-select').loadChosenSelect();
+    }
   }
 
 })(jQuery);

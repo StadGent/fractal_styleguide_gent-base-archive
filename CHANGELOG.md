@@ -1,6 +1,9 @@
 # Changelog
 All Notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
+## 2.6.12
+* STIJ-147: Added changes to Chosen for multiselect fields. Chosen will now be disabled on iPad.
+
 ## 2.6.11
 * STIJ-146: Added at and code icons.
 * Optimised following icons: caret, pinned, paper, idea, smartphone, data, data-new.
