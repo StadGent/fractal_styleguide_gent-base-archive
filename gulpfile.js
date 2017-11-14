@@ -29,15 +29,20 @@ fractal.components.set('ext', '.twig');
 * Set custom statuses.
 */
 fractal.components.set('statuses', {
+  deprecated: {
+    label: "deprecated",
+    description: "Deprecated.",
+    color: "#dd5e01"
+  },
   beta: {
     label: "beta",
     description: "Work in progress. Implement with caution.",
-    color: "#FF9233"
+    color: "#ff9233"
   },
   ready: {
     label: "Ready",
     description: "Ready to implement.",
-    color: "#29CC29"
+    color: "#29cc29"
   }
 });
 
