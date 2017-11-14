@@ -26,6 +26,22 @@ fractal.components.engine(twigAdapter);
 fractal.components.set('ext', '.twig');
 
 /*
+* Set custom statuses.
+*/
+fractal.components.set('statuses', {
+  beta: {
+    label: "beta",
+    description: "Work in progress. Implement with caution.",
+    color: "#FF9233"
+  },
+  ready: {
+    label: "Ready",
+    description: "Ready to implement.",
+    color: "#29CC29"
+  }
+});
+
+/*
 * Tell Fractal where to look for documentation pages.
 */
 fractal.docs.set('path', path.join(__dirname, 'docs'));
