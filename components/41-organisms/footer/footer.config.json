@@ -2,6 +2,27 @@
   "title": "Footer",
   "status": "wip",
   "context": {
-    "section": "section--wrapper"
-  }
+    "section": "section--wrapper",
+    "columns": "4"
+  },
+  "variants": [
+    {
+      "name": "columns-4",
+      "context": {
+        "columns": "4"
+      }
+    },
+    {
+      "name": "columns-3",
+      "context": {
+        "columns": "3"
+      }
+    },
+    {
+      "name": "columns-2",
+      "context": {
+        "columns": "2"
+      }
+    }
+  ]
 }
