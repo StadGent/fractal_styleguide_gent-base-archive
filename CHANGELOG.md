@@ -1,6 +1,10 @@
 # Changelog
 All Notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
+## 2.6.13
+* STIJ-149: The footer organism now has a different grid implementation. Through the use of a data-columns attribute 
+we made the grid styling flexible between 2, 3 or 4 columns.
+
 ## 2.6.12
 * STIJ-147: Added changes to Chosen for multiselect fields. Chosen will now be disabled on iPad.
 
