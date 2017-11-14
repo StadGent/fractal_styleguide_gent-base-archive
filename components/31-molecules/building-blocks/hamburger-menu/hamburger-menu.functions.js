@@ -45,6 +45,7 @@
       var focusables = getFocusables(this[0]);
 
       /**
+       * Closes the hamburger menu
        *
        * @param {event} e onclick or keydown:escape
        */
@@ -61,6 +62,7 @@
       };
 
       /**
+       * Opens the hamburger menu
        *
        * @param {event} e onclick
        */
