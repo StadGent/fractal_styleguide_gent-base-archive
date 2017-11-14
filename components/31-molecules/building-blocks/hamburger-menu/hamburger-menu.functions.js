@@ -21,27 +21,63 @@
       var hamburgerMenu = $(this[0]);
       var closeBtn = hamburgerMenu.find('.close');
       var overlay = $('.hamburger-menu-overlay');
-      var focusPosition = -1;
       var trigger;
+      var tabTrap = new TabTrap(this[0]);
 
       /**
-       * Returns all focusable elements within a given container.
+       * Generates a tabTrap object
        *
-       * @param {object} container hamburger DOM-element
-       * @return {array} focusable elements
+       * @param {object} container DOM-element
+       * @constructor
        */
-      var getFocusables = function (container) {
-        var focusables = container
-          .querySelectorAll('a[href], ' +
-            'area[href], ' +
-            'input:not([disabled]):not([hidden]), ' +
-            'select:not([disabled]), ' +
-            'textarea:not([disabled]), ' +
-            'button:not([disabled]), ' +
-            '[tabindex="0"]');
-        return Array.prototype.slice.call(focusables);
-      };
-      var focusables = getFocusables(hamburgerMenu);
+      function TabTrap(container) {
+        var focusPosition = -1;
+        var focusables = getFocusables(container);
+
+        /**
+         * Returns all focusable elements within a given container.
+         *
+         * @param {object} container hamburger DOM-element
+         * @return {array} focusable elements
+         */
+        function getFocusables(container) {
+          var focusables = container
+            .querySelectorAll('a[href], ' +
+              'area[href], ' +
+              'input:not([disabled]):not([hidden]), ' +
+              'select:not([disabled]), ' +
+              'textarea:not([disabled]), ' +
+              'button:not([disabled]), ' +
+              '[tabindex="0"]');
+          return Array.prototype.slice.call(focusables);
+        }
+
+        this.next = function () {
+          if (++focusPosition > focusables.length - 1) {
+            focusPosition = 0;
+          }
+          focusables[focusPosition].focus();
+        };
+
+        this.back = function () {
+          if (--focusPosition < 0) {
+            focusPosition = focusables.length - 1;
+          }
+          focusables[focusPosition].focus();
+        };
+
+        this.home = function () {
+          focusPosition = 0;
+          focusables[focusPosition].focus();
+        };
+
+        this.end = function () {
+          focusPosition = focusables.length - 1;
+          focusables[focusPosition].focus();
+        };
+
+        this.hasFocusables = focusables && focusables.length > 0;
+      }
 
       /**
        * Closes the hamburger menu
@@ -60,6 +96,10 @@
         if (trigger) {
           trigger.focus();
         }
+
+        // remove the menu from the tabindex
+        // jquery .css() doesn't now 'important'
+        hamburgerMenu.attr('style', 'display: none !important');
       };
 
       /**
@@ -71,6 +111,11 @@
         if (e) {
           e.preventDefault();
         }
+
+        // add the menu to the tabindex
+        // jquery .css() doesn't now 'important'
+        hamburgerMenu.attr('style', 'display: block !important');
+
         hamburgerMenu.addClass('js-opened');
         overlay.addClass('js-opened');
 
@@ -85,47 +130,49 @@
       };
 
       /**
+       * Handle keyboard input
        *
        * @param {object} e event
        */
       var handleKeyboardInput = function (e) {
 
-        var next = function () {
-          if (++focusPosition > focusables.length - 1) {
-            focusPosition = 0;
-          }
-          focusables[focusPosition].focus();
-        };
+        if (!tabTrap || !tabTrap.hasFocusables || !e) {
+          return;
+        }
 
-        var back = function () {
-          if (--focusPosition < 0) {
-            focusPosition = focusables.length - 1;
-          }
-          focusables[focusPosition].focus();
-        };
+        var keyCode = e.keyCode || e.which;
 
-        if (focusables && e) {
-          var keyCode = e.keyCode || e.which;
-
-          switch (keyCode) {
-            case 9: // tab
-              e.preventDefault();
-              e.shiftKey ? back() : next();
-              break;
-            case 40: // arrow down
-            case 39: // arrow right
-              e.preventDefault();
-              next();
-              break;
-            case 38: // arrow up
-            case 37: // arrow left
-              e.preventDefault();
-              back();
-              break;
-            case 27: // esc
-              close(e);
-              break;
-          }
+        switch (keyCode) {
+          case 9: // tab
+            e.preventDefault();
+            if (e.shiftKey) {
+              tabTrap.back();
+            }
+            else {
+              tabTrap.next();
+            }
+            break;
+          case 40: // arrow down
+          case 39: // arrow right
+            e.preventDefault();
+            tabTrap.next();
+            break;
+          case 38: // arrow up
+          case 37: // arrow left
+            e.preventDefault();
+            tabTrap.back();
+            break;
+          case 36: // home
+            e.preventDefault();
+            tabTrap.home();
+            break;
+          case 35: // end
+            e.preventDefault();
+            tabTrap.end();
+            break;
+          case 27: // esc
+            close(e);
+            break;
         }
       };
 
@@ -147,6 +194,9 @@
        * @event click
        */
       closeBtn.add(overlay).on('click', close);
+
+      // init the menu as closed on startup
+      close();
     }
   });
 })(jQuery);
