@@ -2,7 +2,7 @@
   "title": "Hamburger menu",
   "status": "wip",
   "handle": "hamburger-menu",
-  "preview": "@preview",
+  "preview": "@preview-hamburger-menu",
   "context": {
     "items": [
       "<a href='javascript:void(0);'>Menu item 1</a>",

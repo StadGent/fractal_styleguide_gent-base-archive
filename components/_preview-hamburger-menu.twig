@@ -1,0 +1,24 @@
+{% extends '_preview.twig' %}
+
+{% block title %}Gallery preview{% endblock %}
+
+{% block inline_styles %}
+    {{ parent() }}
+
+    .preview-inner-container {
+    clear: both;
+    overflow: hidden;
+    }
+
+    .gallery {
+    max-width: 388px;
+    }
+{% endblock %}
+
+{% block content %}
+
+    <div class="content-container">
+        <p>Click the <strong>Menu</strong> button in the header (on a mobile device) to toggle the hamburger menu.</p>
+    </div>
+
+{% endblock %}

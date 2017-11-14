@@ -18,7 +18,7 @@
      * @fires event:click
      */
     loadHamburgerMenu: function () {
-      var hamburgerMenu = $(this);
+      var hamburgerMenu = $(this[0]);
       var closeBtn = hamburgerMenu.find('.close');
       var overlay = $('.hamburger-menu-overlay');
       var focusPosition = -1;
@@ -41,8 +41,7 @@
             '[tabindex="0"]');
         return Array.prototype.slice.call(focusables);
       };
-      // todo what if there are two hamburger menu's?
-      var focusables = getFocusables(this[0]);
+      var focusables = getFocusables(hamburgerMenu);
 
       /**
        * Closes the hamburger menu
