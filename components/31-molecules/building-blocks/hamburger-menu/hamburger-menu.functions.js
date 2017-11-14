@@ -78,9 +78,8 @@
         // remember the trigger
         trigger = e.target;
 
-        // set focus to the first element
-        focusables[0].focus();
-        console.log(focusables[0]);
+        // set focus to the menu
+        hamburgerMenu.focus();
 
         // handle keyboard input
         document.addEventListener('keydown', handleKeyboardInput);
