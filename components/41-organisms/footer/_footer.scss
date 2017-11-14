@@ -14,7 +14,7 @@ footer {
 }
 
 // Footer 2 column layout.
-footer[data-columns*="2"] {
+footer[data-columns="2"] {
   .footer--column {
     @include make-mobile-column(12);
     @include make-tablet-column(6);
@@ -23,7 +23,7 @@ footer[data-columns*="2"] {
 }
 
 // Footer 3 column layout.
-footer[data-columns*="3"] {
+footer[data-columns="3"] {
   .footer--column {
     @include make-mobile-column(12);
     @include make-tablet-column(6);
@@ -32,7 +32,7 @@ footer[data-columns*="3"] {
 }
 
 // Footer 4 column layout.
-footer[data-columns*="4"] {
+footer[data-columns="4"] {
   .footer--column {
     @include make-mobile-column(12);
     @include make-tablet-column(6);
