@@ -139,8 +139,9 @@ header.header {
       font-weight: normal;
 
       &:hover,
-      &:focus {
-        background: inherit;
+      &:focus,
+      &:active {
+        background: transparent;
         color: inherit;
         text-decoration: underline;
       }
