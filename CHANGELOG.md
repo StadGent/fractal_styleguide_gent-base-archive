@@ -1,6 +1,9 @@
 # Changelog
 All Notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
+## 2.6.13
+* STIJ-150: Changed social media links block. This now displays the social media links of Stad Ghent correctly. 
+
 ## 2.6.12
 * STIJ-147: Added changes to Chosen for multiselect fields. Chosen will now be disabled on iPad.
 
