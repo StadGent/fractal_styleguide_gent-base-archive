@@ -14,6 +14,9 @@ For example:
 ```
 Will result in a footer with 4 columns on desktop, 2 columns on tablet and 1 column on mobile.
 
+**It is explicitly forbidden to use less then 2 or more then 4 columns in this footer organisme!**
 
-## Components
+
+## Components and examples
 Components in the footer should be as defined by the styleguide.
+Examples of 2, 3 or 4 column layouts can be viewed in the style guide.
