@@ -8,6 +8,7 @@
   background-color: $hamburger-menu-bg-color;
   color: $hamburger-menu-link-color;
   z-index: 9999;
+  overflow: auto;
 
   &.js-opened {
     left: 0;
