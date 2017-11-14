@@ -37,7 +37,8 @@
       color: $hamburger-menu-link-color-active;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       border-color: $hamburger-menu-link-border-color-hover;
       background-color: $hamburger-menu-link-bg-color-hover;
       color: $hamburger-menu-link-color-hover;
@@ -52,6 +53,13 @@
 
     i {
       padding-left: .7rem;
+    }
+
+    &:hover,
+    &:focus {
+      border-color: $hamburger-menu-link-border-color-hover;
+      background-color: $hamburger-menu-link-bg-color-hover;
+      color: $hamburger-menu-link-color-hover;
     }
   }
 
