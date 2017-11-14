@@ -2,6 +2,7 @@
 All Notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
 ## 2.6.13
+* STIJ-112: Added footer documentation.
 * STIJ-150: Changed social media links block. This now displays the social media links of Stad Ghent correctly. 
 
 ## 2.6.12
