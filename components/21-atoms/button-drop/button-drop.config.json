@@ -1,6 +1,6 @@
 {
   "title": "Button drop",
-  "status": "ready",
+  "status": "deprecated",
   "handle": "button-drop",
   "context": {
     "text": "Submit",
