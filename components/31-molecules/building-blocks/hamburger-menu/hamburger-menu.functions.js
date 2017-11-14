@@ -44,12 +44,15 @@
       // todo what if there are two hamburger menu's?
       var focusables = getFocusables(this[0]);
 
+      /**
+       *
+       * @param {event} e onclick or keydown:escape
+       */
       var close = function (e) {
         e.preventDefault();
         hamburgerMenu.removeClass('js-opened');
         overlay.removeClass('js-opened');
         document.removeEventListener('keydown', handleKeyboardInput);
-
 
         // return focus to the trigger
         if (trigger) {
@@ -57,6 +60,10 @@
         }
       };
 
+      /**
+       *
+       * @param {event} e onclick
+       */
       var open = function (e) {
         e.preventDefault();
         hamburgerMenu.addClass('js-opened');
@@ -78,34 +85,50 @@
        */
       var handleKeyboardInput = function (e) {
 
+        var next = function () {
+          if (++focusPosition > focusables.length - 1) {
+            focusPosition = 0;
+          }
+          focusables[focusPosition].focus();
+        };
+
+        var back = function () {
+          if (--focusPosition < 0) {
+            focusPosition = focusables.length - 1;
+          }
+          focusables[focusPosition].focus();
+        };
+
         if (focusables && e) {
           var keyCode = e.keyCode || e.which;
-          console.log(keyCode);
 
           // tab trap
           if (keyCode === 9) {
             e.preventDefault();
 
-            var next;
             if (e.shiftKey) {
-              if (--focusPosition < 0) {
-                focusPosition = focusables.length - 1;
-              }
-              next = focusables[focusPosition];
+              back();
             }
             else {
-              if (++focusPosition > focusables.length - 1) {
-                focusPosition = 0;
-              }
-              next = focusables[focusPosition];
+              next();
             }
-
-            next.focus();
+          }
+          // arrow down, arrow left
+          else if (keyCode === 40 || keyCode === 39) {
+            e.preventDefault();
+            next();
+          }
+          // arrow up, arrow right
+          else if (keyCode === 38 || keyCode === 37) {
+            e.preventDefault();
+            back();
           }
           // escape
           else if (keyCode === 27) {
+            e.preventDefault();
             close(e);
           }
+
 
         }
       };
