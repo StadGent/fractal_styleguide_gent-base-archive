@@ -7,8 +7,8 @@
   transition: $hamburger-menu-transition;
   background-color: $hamburger-menu-bg-color;
   color: $hamburger-menu-link-color;
-  z-index: 9999;
   overflow: auto;
+  z-index: 9999;
 
   &.js-opened {
     left: 0;
