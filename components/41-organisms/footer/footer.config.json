@@ -1,7 +1,5 @@
 {
   "title": "Footer",
-  "status": "wip",
-  "context": {
-    "section": "section--wrapper"
-  }
+  "status": "ready",
+  "name": "Footer"
 }
