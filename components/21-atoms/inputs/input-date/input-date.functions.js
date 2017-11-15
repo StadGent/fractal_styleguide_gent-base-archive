@@ -1,6 +1,6 @@
 /**
  * @file
- * Implements the jQuery light gallery plugin.
+ * Implements the jQuery UI datepicker plugin.
  *
  * @author
  * Gert-Jan Meire
@@ -15,13 +15,10 @@
      * Creates a jQuery extension function.
      *
      */
-    loadLightGallery: function () {
-      $(this).lightGallery({
-        download: false,
-        getCaptionFromTitleOrAlt: false,
-        counter: false
+    loadDatepicker: function () {
+      $(this).datepicker({
+        'showWeek': true
       });
-
     }
 
   });

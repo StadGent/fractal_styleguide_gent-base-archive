@@ -2,8 +2,7 @@
   'use strict';
 
   $(document).ready(function () {
-    $('.gallery').loadLightGallery();
-
+    $('.datepicker').loadDatepicker();
   });
 
 })(jQuery);
