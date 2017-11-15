@@ -23,7 +23,7 @@
       var overlay = $('.hamburger-menu-overlay');
       var trigger;
 
-      if(typeof gent === 'undefined') {
+      if(typeof gent_styleguide === 'undefined') {
         console.error('You need to include base.js.');
         return;
       }

@@ -1,4 +1,4 @@
-var gent = (function () {
+var gent_styleguide = (function () {
 
   /**
    * Generates a tabTrap object
