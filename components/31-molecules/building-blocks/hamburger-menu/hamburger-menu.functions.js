@@ -3,8 +3,9 @@
  * Implements a hamburger-menu button combined with
  * a slide-in panel for easy mobile navigation.
  *
- * @author
+ * @authors
  * Wim Vantomme
+ * Bart Delrue
  *
  */
 (function ($) {
@@ -23,12 +24,12 @@
       var overlay = $('.hamburger-menu-overlay');
       var trigger;
 
-      if(typeof gent_styleguide === 'undefined') {
-        console.error('You need to include base.js.');
+      if (typeof gent_styleguide === 'undefined') {
+        console.error('You need to include base.js.'); // eslint-disable-line no-console
         return;
       }
 
-      var tabTrap = new gent.TabTrap(this[0]);
+      var tabTrap = new gent_styleguide.TabTrap(this[0]); // eslint-disable-line no-undef
 
       /**
        * Closes the hamburger menu

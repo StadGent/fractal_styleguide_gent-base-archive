@@ -1,4 +1,5 @@
-var gent_styleguide = (function () {
+var gent_styleguide = (function () { // eslint-disable-line no-unused-vars
+  'use strict';
 
   /**
    * Generates a tabTrap object
@@ -18,13 +19,13 @@ var gent_styleguide = (function () {
      */
     function getFocusables(container) {
       var focusables = container
-          .querySelectorAll('a[href], ' +
-              'area[href], ' +
-              'input:not([disabled]):not([hidden]), ' +
-              'select:not([disabled]), ' +
-              'textarea:not([disabled]), ' +
-              'button:not([disabled]), ' +
-              '[tabindex="0"]');
+        .querySelectorAll('a[href], ' +
+          'area[href], ' +
+          'input:not([disabled]):not([hidden]), ' +
+          'select:not([disabled]), ' +
+          'textarea:not([disabled]), ' +
+          'button:not([disabled]), ' +
+          '[tabindex="0"]');
       return Array.prototype.slice.call(focusables);
     }
 
@@ -57,6 +58,6 @@ var gent_styleguide = (function () {
 
   return {
     TabTrap: TabTrap
-  }
+  };
 
 })();
