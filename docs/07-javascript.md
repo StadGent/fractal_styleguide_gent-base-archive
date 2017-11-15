@@ -19,6 +19,7 @@ file or both are necessary.
 Take into consideration that all Javascript included in this styleguide is
 dependent on:
 
+* [base.js](/docs/base.js)
 * jQuery
 
 ### Component.functions.js
@@ -107,7 +108,7 @@ Binds the functionality to a DOM element and the window.onload event
 #### Styleguide implementation
 [Hamburger-menu molecule](../../components/detail/hamburger-menu)
 
-###Gallery
+### Gallery
 We omitted to create a functions.js file, since all functions are provided
 by the swipebox jQuery plugin.
 
