@@ -1,6 +1,10 @@
 # Changelog
 All Notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
+## 2.6.14
+* STIJ-148: Made hamburger-menu WCAG compliant.
+* STIJ-148: Created a global TabTrap object.
+
 ## 2.6.13
 * STIJ-112: Added footer documentation.
 * STIJ-149: The footer organism now has a different grid implementation. Through the use of a data-columns attribute 
