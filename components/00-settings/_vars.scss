@@ -198,16 +198,16 @@ $themes: (
 
     'messages-title-color': $color-darkest-gray,
 
-    'hamburger-menu-bg-color': $color-darkest-blue,
+    'hamburger-menu-background': $color-darkest-blue,
     'hamburger-menu-overlay-color': rgba(44, 63, 72, .6),
 
     'hamburger-menu-link-border': 1.5px solid darken($color-darkest-blue, 2),
     'hamburger-menu-link-border-active': 1.5px solid $color-dark-blue,
     'hamburger-menu-link-border-hover': 1.5px solid darken($color-darkest-blue, 2),
 
-    'hamburger-menu-link-bg-color': transparent,
-    'hamburger-menu-link-bg-color-active': $color-dark-blue,
-    'hamburger-menu-link-bg-color-hover': darken($color-darkest-blue, 2),
+    'hamburger-menu-link-background': transparent,
+    'hamburger-menu-link-background-active': $color-dark-blue,
+    'hamburger-menu-link-background-hover': darken($color-darkest-blue, 2),
 
     'hamburger-menu-link-color': $color-white,
     'hamburger-menu-link-color-active': $color-white,
