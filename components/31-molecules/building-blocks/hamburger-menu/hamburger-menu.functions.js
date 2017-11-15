@@ -100,7 +100,9 @@
 
         // remove the menu from the tabindex
         // jquery .css() doesn't now 'important'
-        hamburgerMenu.attr('style', 'display: none !important');
+        setTimeout(function () {
+          hamburgerMenu.attr('style', 'display: none');
+        }, 500);
       };
 
       /**
@@ -115,10 +117,13 @@
 
         // add the menu to the tabindex
         // jquery .css() doesn't now 'important'
-        hamburgerMenu.attr('style', 'display: block !important');
+        hamburgerMenu.attr('style', 'display: block');
 
-        hamburgerMenu.addClass('js-opened');
-        overlay.addClass('js-opened');
+        setTimeout(function () {
+          hamburgerMenu.addClass('js-opened');
+          overlay.addClass('js-opened');
+        });
+
 
         // remember the trigger
         trigger = e.target;
