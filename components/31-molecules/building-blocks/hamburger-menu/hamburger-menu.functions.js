@@ -95,6 +95,7 @@
         // return focus to the trigger
         if (trigger) {
           trigger.focus();
+          trigger.setAttribute('aria-expanded', false);
         }
 
         // remove the menu from the tabindex
@@ -121,6 +122,7 @@
 
         // remember the trigger
         trigger = e.target;
+        trigger.setAttribute('aria-expanded', true);
 
         // set focus to the menu
         hamburgerMenu.focus();
