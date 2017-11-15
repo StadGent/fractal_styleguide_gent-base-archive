@@ -1,6 +1,6 @@
 {
   "title": "Breadcrumbs",
-  "status": "wip",
+  "status": "beta",
   "handle": "breadcrumbs",
   "preview": "@preview-breadcrumb",
   "context": {

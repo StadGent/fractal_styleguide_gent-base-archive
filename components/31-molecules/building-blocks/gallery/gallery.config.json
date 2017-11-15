@@ -1,7 +1,7 @@
 {
   "title": "Gallery",
   "name": "Gallery",
-  "status": "wip",
+  "status": "beta",
   "preview": "@preview-gallery",
   "handle": "gallery"
 }

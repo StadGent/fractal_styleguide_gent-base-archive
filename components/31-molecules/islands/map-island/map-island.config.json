@@ -1,7 +1,7 @@
 {
   "title": "Map island",
   "name": "Map island",
-  "status": "wip",
+  "status": "beta",
   "preview": "@preview-map-island",
   "handle": "map-island"
 }

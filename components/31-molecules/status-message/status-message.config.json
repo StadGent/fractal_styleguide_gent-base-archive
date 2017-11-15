@@ -1,6 +1,6 @@
 {
   "title": "Status message",
-  "status": "wip",
+  "status": "beta",
   "handle": "status-message",
   "order": "9",
   "default": "status",
