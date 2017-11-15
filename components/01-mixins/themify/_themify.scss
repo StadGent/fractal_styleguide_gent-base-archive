@@ -94,6 +94,21 @@
   $messages-warning-border: map-get($colors, 'messages-warning-border') !global;
 
   $messages-title-color: map-get($colors, 'messages-title-color') !global;
+
+  $hamburger-menu-bg-color: map-get($colors, 'hamburger-menu-bg-color') !global;
+  $hamburger-menu-overlay-color: map-get($colors, 'hamburger-menu-overlay-color') !global;
+
+  $hamburger-menu-link-border: map-get($colors, 'hamburger-menu-link-border') !global;
+  $hamburger-menu-link-border-active: map-get($colors, 'hamburger-menu-link-border-active') !global;
+  $hamburger-menu-link-border-hover: map-get($colors, 'hamburger-menu-link-border-hover') !global;
+
+  $hamburger-menu-link-bg-color: map-get($colors, 'hamburger-menu-link-bg-color') !global;
+  $hamburger-menu-link-bg-color-active: map-get($colors, 'hamburger-menu-link-bg-color-active') !global;
+  $hamburger-menu-link-bg-color-hover: map-get($colors, 'hamburger-menu-link-bg-color-hover') !global;
+
+  $hamburger-menu-link-color: map-get($colors, 'hamburger-menu-link-color') !global;
+  $hamburger-menu-link-color-active: map-get($colors, 'hamburger-menu-link-color-active') !global;
+  $hamburger-menu-link-color-hover: map-get($colors, 'hamburger-menu-link-color-hover') !global;
 }
 
 //
