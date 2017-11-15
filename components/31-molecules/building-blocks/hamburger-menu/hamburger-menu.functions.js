@@ -19,9 +19,9 @@
      * @fires event:click
      */
     loadHamburgerMenu: function () {
-      var hamburgerMenu = $(this[0]);
-      var closeBtn = hamburgerMenu.find('.close');
-      var overlay = $('.hamburger-menu-overlay');
+      var $hamburgerMenu = $(this[0]);
+      var $closeBtn = $hamburgerMenu.find('.close');
+      var $overlay = $('.hamburger-menu-overlay');
       var trigger;
 
       if (typeof gent_styleguide === 'undefined') {
@@ -40,8 +40,8 @@
         if (e) {
           e.preventDefault();
         }
-        hamburgerMenu.removeClass('js-opened');
-        overlay.removeClass('js-opened');
+        $hamburgerMenu.removeClass('js-opened');
+        $overlay.removeClass('js-opened');
         document.removeEventListener('keydown', handleKeyboardInput);
 
         // return focus to the trigger
@@ -53,7 +53,7 @@
         // remove the menu from the tabindex
         // jquery .css() doesn't now 'important'
         setTimeout(function () {
-          hamburgerMenu.attr('style', 'display: none');
+          $hamburgerMenu.attr('style', 'display: none');
         }, 500);
       };
 
@@ -69,11 +69,11 @@
 
         // add the menu to the tabindex
         // jquery .css() doesn't now 'important'
-        hamburgerMenu.attr('style', 'display: block');
+        $hamburgerMenu.attr('style', 'display: block');
 
         setTimeout(function () {
-          hamburgerMenu.addClass('js-opened');
-          overlay.addClass('js-opened');
+          $hamburgerMenu.addClass('js-opened');
+          $overlay.addClass('js-opened');
         });
 
 
@@ -82,7 +82,7 @@
         trigger.setAttribute('aria-expanded', true);
 
         // set focus to the menu
-        hamburgerMenu.focus();
+        $hamburgerMenu.focus();
 
         // handle keyboard input
         document.addEventListener('keydown', handleKeyboardInput);
@@ -152,7 +152,7 @@
        *
        * @event click
        */
-      closeBtn.add(overlay).on('click', close);
+      $closeBtn.add($overlay).on('click', close);
 
       // init the menu as closed on startup
       close();
