@@ -1,6 +1,16 @@
 <header class="header section--wrapper">
   <div class="content-container">
-    <span class="header-component hamburger-toggle visible-mobile">{{ 'Menu' }}</span>
+    <nav class="visible-mobile header-component">
+      <button class="hamburger-toggle">{{ 'Menu' }}</button>
+        {% include '@hamburger-menu' with {
+        "items": [
+        "<a href='javascript:void(0);'>Menu item 1</a>",
+        "<a href='javascript:void(0);' class='active'>Menu item 2</a>",
+        "<a href='javascript:void(0);'>Menu item 3</a>",
+        "<a href='javascript:void(0);'>Menu item 4</a>"
+        ]
+        } %}
+    </nav>
 
     <div id="logo" class="header-component">
       {% include '@logo' %}
@@ -25,14 +35,4 @@
       {% include '@search' %}
     </div>
   </div>
-
-  {% include '@hamburger-menu' with {
-    "items": [
-      "<a href='javascript:(void);'>Menu item 1</a>",
-      "<a href='javascript:(void);' class='active'>Menu item 2</a>",
-      "<a href='javascript:(void);'>Menu item 3</a>",
-      "<a href='javascript:(void);'>Menu item 4</a>"
-    ]
-  } %}
-
 </header>

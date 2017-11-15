@@ -1,12 +1,38 @@
 .hamburger-menu {
+  @include themify() {
+    background-color: $hamburger-menu-background;
+    color: $hamburger-menu-link-color;
+
+    a {
+      @include color-element-states($hamburger-menu-link-color, $hamburger-menu-link-color-hover, $property: "color");
+      @include color-element-states($hamburger-menu-link-background, $hamburger-menu-link-background-hover, $property: "background-color");
+
+      border-bottom: $hamburger-menu-link-border;
+
+      &.active {
+        border-bottom: $hamburger-menu-link-border-active;
+        background-color: $hamburger-menu-link-background-active;
+        color: $hamburger-menu-link-color-active;
+      }
+
+      &.close {
+        @include color-element-states($hamburger-menu-link-color, $hamburger-menu-link-color-hover, $property: "color");
+      }
+    }
+
+    &-overlay.js-opened {
+      background: $hamburger-menu-overlay-color;
+    }
+  }
+
   position: fixed;
   top: 0;
   left: -$hamburger-menu-width;
   width: $hamburger-menu-width;
+  max-width: 100%;
   height: 100%;
-  transition: $hamburger-menu-transition;
-  background-color: $hamburger-menu-bg-color;
-  color: $hamburger-menu-link-color;
+  transition: left.5s cubic-bezier(0, 1, .5, 1);
+  overflow: auto;
   z-index: 9999;
 
   &.js-opened {
@@ -23,34 +49,21 @@
     display: block;
     padding-right: .8rem;
     padding-left: .8rem;
-    border-bottom: 1.5px solid $hamburger-menu-link-border-color;
-    background-color: $hamburger-menu-link-bg-color;
-    color: $hamburger-menu-link-color;
     font-weight: bold;
     line-height: 3.48em;
 
-    &.active,
-    &:active {
-      border-color: $hamburger-menu-link-border-color-active;
-      background-color: $hamburger-menu-link-bg-color-active;
-      color: $hamburger-menu-link-color-active;
+    &:hover,
+    &:focus {
+      text-decoration: none !important; // sass-lint:disable-line no-important
     }
 
-    &:hover {
-      border-color: $hamburger-menu-link-border-color-hover;
-      background-color: $hamburger-menu-link-bg-color-hover;
-      color: $hamburger-menu-link-color-hover;
-    }
-  }
+    &.close {
+      border: 0;
+      text-align: right;
 
-  a.close {
-    border: 0;
-    background-color: transparent;
-    text-align: right;
-    text-decoration: none;
-
-    i {
-      padding-left: .7rem;
+      i {
+        padding-left: .7rem;
+      }
     }
   }
 
@@ -60,7 +73,6 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: $hamburger-menu-overlay-color;
     z-index: 9998;
   }
 }

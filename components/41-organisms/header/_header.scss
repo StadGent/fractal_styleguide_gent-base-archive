@@ -51,11 +51,6 @@ header.header {
         }
       }
 
-      &.hamburger-toggle:hover {
-        text-decoration: underline;
-        cursor: pointer;
-      }
-
       //
       // Change the look and feel of the search molecule.
       //
@@ -134,6 +129,21 @@ header.header {
             display: block;
           }
         }
+      }
+    }
+
+    button.hamburger-toggle {
+      width: auto;
+      padding: 0;
+      font-size: 1em;
+      font-weight: normal;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background: transparent;
+        color: inherit;
+        text-decoration: underline;
       }
     }
   }
