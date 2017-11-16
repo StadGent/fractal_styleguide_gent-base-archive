@@ -53,6 +53,10 @@ var gent_styleguide = (function () { // eslint-disable-line no-unused-vars
       focusables[focusPosition].focus();
     };
 
+    this.reset = function () {
+      focusPosition = -1;
+    };
+
     this.hasFocusables = focusables && focusables.length > 0;
   }
 
