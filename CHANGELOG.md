@@ -2,6 +2,7 @@
 All Notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
 ## 2.6.15
+* STIJ-45: Added custom styling to the jQuery UI datepicker component.
 * STIJ-148: Refactored hamburger-menu into a single component.
 
 ## 2.6.14
