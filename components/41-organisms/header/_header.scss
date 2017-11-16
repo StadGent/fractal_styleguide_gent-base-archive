@@ -131,21 +131,6 @@ header.header {
         }
       }
     }
-
-    button.hamburger-toggle {
-      width: auto;
-      padding: 0;
-      font-size: 1em;
-      font-weight: normal;
-
-      &:hover,
-      &:focus,
-      &:active {
-        background: transparent;
-        color: inherit;
-        text-decoration: underline;
-      }
-    }
   }
 }
 

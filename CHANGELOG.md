@@ -1,6 +1,9 @@
 # Changelog
 All Notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
+## 2.6.15
+* STIJ-148: Refactored hamburger-menu into a single component.
+
 ## 2.6.14
 * STIJ-148: Made hamburger-menu WCAG compliant.
 * STIJ-148: Created a global TabTrap object.

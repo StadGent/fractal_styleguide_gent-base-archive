@@ -22,6 +22,7 @@ TabTrap enables looping over the focusable elements within the given DOM-element
 * back(): place focus on the previous focusable element.
 * home(): place focus on the first focusable element.
 * end(): place focus on the last focusable element.
+* reset(): resets the TabTrap to it's original values.
 
 #### Attention:
 

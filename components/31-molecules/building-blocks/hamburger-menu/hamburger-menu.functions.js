@@ -19,9 +19,9 @@
      * @fires event:click
      */
     loadHamburgerMenu: function () {
-      var $hamburgerMenu = $(this[0]);
-      var $closeBtn = $hamburgerMenu.find('.close');
-      var $overlay = $('.hamburger-menu-overlay');
+      var $drawer = $(this[0]).find('.hamburger-menu__drawer');
+      var $closeBtn = $drawer.find('.close');
+      var $overlay = $('.hamburger-menu__overlay');
       var trigger;
 
       if (typeof gent_styleguide === 'undefined') {
@@ -29,7 +29,8 @@
         return;
       }
 
-      var tabTrap = new gent_styleguide.TabTrap(this[0]); // eslint-disable-line no-undef
+      // TabTrap doens't use jquery opbjects.
+      var tabTrap = new gent_styleguide.TabTrap($drawer[0]); // eslint-disable-line no-undef
 
       /**
        * Closes the hamburger menu
@@ -40,9 +41,10 @@
         if (e) {
           e.preventDefault();
         }
-        $hamburgerMenu.removeClass('js-opened');
+        $drawer.removeClass('js-opened');
         $overlay.removeClass('js-opened');
         document.removeEventListener('keydown', handleKeyboardInput);
+        tabTrap.reset();
 
         // return focus to the trigger
         if (trigger) {
@@ -53,7 +55,7 @@
         // remove the menu from the tabindex
         // jquery .css() doesn't now 'important'
         setTimeout(function () {
-          $hamburgerMenu.attr('style', 'display: none');
+          $drawer.attr('style', 'display: none');
         }, 500);
       };
 
@@ -69,10 +71,10 @@
 
         // add the menu to the tabindex
         // jquery .css() doesn't now 'important'
-        $hamburgerMenu.attr('style', 'display: block');
+        $drawer.attr('style', 'display: block');
 
         setTimeout(function () {
-          $hamburgerMenu.addClass('js-opened');
+          $drawer.addClass('js-opened');
           $overlay.addClass('js-opened');
         });
 
@@ -82,7 +84,7 @@
         trigger.setAttribute('aria-expanded', true);
 
         // set focus to the menu
-        $hamburgerMenu.focus();
+        $drawer.focus();
 
         // handle keyboard input
         document.addEventListener('keydown', handleKeyboardInput);
@@ -142,7 +144,7 @@
        *
        * @event click
        */
-      $('.hamburger-toggle').on('click', open);
+      $('.hamburger-menu__toggle').on('click', open);
 
       /**
        * Indicates that a user has clicked on the closeBtn hamburger menu
