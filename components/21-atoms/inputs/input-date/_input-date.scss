@@ -46,7 +46,7 @@ input.datepicker {
           padding: 0;
           float: left;
           // sass-lint:disable-block no-duplicate-properties
-          font-size: .6 * 18px;
+          font-size: .6 * 1.125rem;
           font-size: .6rem;
           font-weight: normal;
           line-height: 1.8rem;
@@ -58,9 +58,9 @@ input.datepicker {
       .ui-state-hover .ui-icon.ui-icon-circle-triangle-w {
         width: 0;
         height: 0;
-        border-top: 10px solid transparent;
-        border-right: 10px solid $color-blue;
-        border-bottom: 10px solid transparent;
+        border-top: .625rem solid transparent;
+        border-right: .625rem solid $color-blue;
+        border-bottom: .625rem solid transparent;
         background-image: none;
       }
 
@@ -69,9 +69,9 @@ input.datepicker {
       .ui-state-hover .ui-icon.ui-icon-circle-triangle-e {
         width: 0;
         height: 0;
-        border-top: 10px solid transparent;
-        border-bottom: 10px solid transparent;
-        border-left: 10px solid $color-blue;
+        border-top: .625rem solid transparent;
+        border-bottom: .625rem solid transparent;
+        border-left: .625rem solid $color-blue;
         background-image: none;
       }
     }
@@ -82,7 +82,7 @@ input.datepicker {
 
     th {
       padding: .7em .3em;
-      background-color: #ecf5f7;
+      background-color: $color-lightest-blue;
       font-size: .72645rem;
       font-weight: normal;
       line-height: 1.694rem;
@@ -93,7 +93,7 @@ input.datepicker {
       display: table-cell;
       width: 2rem;
       height: 2rem;
-      border: 1px solid #dde2e5;
+      border: 1px solid $color-lightest-gray;
       background-color: #f2ffd6;
       color: #595f60;
       font-size: .82645rem;
@@ -142,7 +142,6 @@ input.datepicker {
         background-color: $color-orange;
         color: $color-blue;
       }
-
     }
 
     tr td:last-child {
