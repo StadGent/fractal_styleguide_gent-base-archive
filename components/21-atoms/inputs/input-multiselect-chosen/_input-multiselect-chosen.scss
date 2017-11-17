@@ -40,6 +40,7 @@
 .chosen-container-multi .chosen-choices li.search-choice {
   @extend %btn;
   @include btn-s;
+  text-align: left;
 
   .search-choice-close {
     right: 1.2rem;
@@ -61,7 +62,7 @@
 .chosen-container-multi ul.chosen-choices li.search-choice {
   display: inline-block;
   width: auto;
-  height: 2rem;
+  min-height: 2rem;
   margin: .18rem $gutter-width/2 0 0;
   padding-right: 1.875rem;
   line-height: 1.6rem;
