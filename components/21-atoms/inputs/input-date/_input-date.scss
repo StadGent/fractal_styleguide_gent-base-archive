@@ -1,6 +1,7 @@
 //
 // Datepicker styling.
 //
+input[type="date"],
 input.datepicker {
   @extend %field-colors;
 

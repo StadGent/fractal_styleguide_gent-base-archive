@@ -4,6 +4,10 @@
     background: $field-background;
     color: $field-color;
 
+    &::-webkit-input-placeholder, // sass-lint:disable-line no-vendor-prefixes
+    &:-moz-placeholder, // sass-lint:disable-line no-vendor-prefixes
+    &::-moz-placeholder, // sass-lint:disable-line no-vendor-prefixes
+    &:-ms-input-placeholder, // sass-lint:disable-line no-vendor-prefixes
     &::placeholder {
       color: $field-placeholder;
     }
