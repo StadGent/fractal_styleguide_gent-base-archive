@@ -1,5 +1,8 @@
 <!--- Provide a general summary of your changes in the Title above -->
 
+## Changelog 
+<!--- Don' forget to chagne the CHANGELOG.md file -->
+
 ## Description
 <!--- Describe your changes in detail -->
 
