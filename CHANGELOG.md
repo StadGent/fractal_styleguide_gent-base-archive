@@ -1,6 +1,9 @@
 # Changelog
 All Notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
+## 2.6.17
+**IMPORTANT: Updating this style guide through composer is DEPRECATED! The next release will remove composer.json!**
+
 ## 2.6.16
 * STIJ-155: Added small fixes to various form elements.
 
