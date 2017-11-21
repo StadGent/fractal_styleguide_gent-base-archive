@@ -1,6 +1,11 @@
 # Changelog
 All Notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
+## 2.6.17
+* STIJ-156: Added LICENSING, SECURITY, CONTRIBUTING and README changes.
+* STIJ-156: Added license information for the gallery component that uses Light Gallery (jQuery plugin).
+   **Important: Check the bit about the commercial license!**
+
 ## 2.6.16
 * STIJ-155: Added small fixes to various form elements.
 
