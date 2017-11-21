@@ -2,15 +2,6 @@
 
 {% block title %}Hamburger menu preview{% endblock %}
 
-{% block inline_styles %}
-  {{ parent() }}
-
-  .preview-container {
-    padding: 0;
-    min-height: 100vh;
-  }
-{% endblock %}
-
 {% block content %}
 
   {% include '@header' with {
