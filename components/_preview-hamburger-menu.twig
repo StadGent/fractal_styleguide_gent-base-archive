@@ -2,7 +2,31 @@
 
 {% block title %}Hamburger menu preview{% endblock %}
 
+{% block inline_styles %}
+  {{ parent() }}
+
+  .preview-container {
+    padding: 0;
+    min-height: 100vh;
+  }
+{% endblock %}
+
 {% block content %}
+
+  {% include '@header' with {
+    "search_input_placeholder": "Wat wilt u vinden?",
+    "search_submit_text": "Search",
+    "search_submit_modifier": "inline icon icon-search icon-only"
+  } %}
+  {% include '@breadcrumbs' with {
+    "items": [
+      "<a href='#'>Stad.gent</a>",
+      "<a href='#'>Overview</a>",
+      "<span>Overview</span>",
+      "<span>Overview</span>",
+      "<span>Page title</span>"
+    ]
+  } %}
 
     <div class="content-container">
         <p>Click the <strong>Menu</strong> button in the header (on a mobile device) to toggle the hamburger menu.</p>
