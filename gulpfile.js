@@ -415,7 +415,7 @@ gulp.task('validate', ['styles:validate', 'js:validate']);
  *  Used to compile production ready SCSS and JS code.
  *
  */
-gulp.task('compile', ['fractal:build', 'styles:build', 'styles:extract', 'js:build', 'images:minify']);
+gulp.task('compile', ['fractal:build', 'styles:build', 'styles:dist', 'styles:extract', 'js:build', 'js:dist', 'images:minify']);
 gulp.task('compile:dev', ['fractal:build', 'styles:dist', 'js:dist', 'images:minify']);
 
 /*
