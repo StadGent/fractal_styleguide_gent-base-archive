@@ -1,6 +1,12 @@
 # Styleguide Gent Base
 This styleguide contains the SASS library and needed assets that are required for use in a subthemes of the Gent starterkit.
 
+### Licences 
+#### Light Gallery plugin for jQuery
+**It is important to note that anyone willing to use this style guide or fork this repository for commercial purposes they should [pay for a license](http://sachinchoolur.github.io/lightGallery/docs/license.html)!**
+
+If however you are building something for the city of Ghent (Stad Gent) or Digipolis, you can request this license at <info@digipolis.be>
+
 ### Folder structure
 When installing this package, you will get a directory structure like this.
 ```
