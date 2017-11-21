@@ -34,8 +34,6 @@ consider the following:
  * Have you tested your PR? If not, why?
  * Does your PR have any limitations we should know of?
  * Is your PR up-to-date with the branch you're trying to push into?
- * Is your code in check with the 
- [Symfony coding standards](https://symfony.com/doc/current/contributing/code/standards.html)?
 
 # Contributing guidelines.
 Something of note when contributing to the repository.
