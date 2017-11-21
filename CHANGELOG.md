@@ -4,6 +4,7 @@ All Notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 ## 2.6.17
 **IMPORTANT: Updating this style guide through composer is DEPRECATED! The next release will remove composer.json!**
 
+* STIJ-154: Changed preview layout of style guide to be more user friendly.
 * STIJ-156: Added LICENSING, SECURITY, CONTRIBUTING and README changes.
 * STIJ-156: Added license information for the gallery component that uses Light Gallery (jQuery plugin).
    **Important: Check the bit about the commercial license!**
