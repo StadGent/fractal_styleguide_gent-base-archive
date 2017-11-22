@@ -1,5 +1,9 @@
 {
   "title": "Input text",
   "status": "ready",
-  "handle": "input-text"
+  "handle": "input-text",
+  "context": {
+    "textfield_id": "textfield_id",
+    "textfield_name": "textfield_name"
+  }
 }

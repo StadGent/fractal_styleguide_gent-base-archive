@@ -2,8 +2,11 @@
   'use strict';
 
   $(document).ready(function () {
-    $('.gallery').loadLightGallery();
+    var $gallery = $('.gallery');
 
+    if ($gallery.length > 0) {
+      $gallery.loadLightGallery();
+    }
   });
 
 })(jQuery);

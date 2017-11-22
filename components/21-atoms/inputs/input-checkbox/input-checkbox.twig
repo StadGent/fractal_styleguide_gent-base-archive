@@ -1,1 +1,5 @@
-<input type="checkbox" id="{{ id }}" name="checkbox" class="checkbox {{ modifier }}" /><label for="{{ id }}">{{ label }}</label>
+<input type="checkbox"
+       id="{{ checkbox_id}}"
+       name="{{ checkbox_name }}"
+       class="checkbox {% if modifier %}{{ modifier }}{% endif %}"
+/>

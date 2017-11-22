@@ -1,1 +1,7 @@
-<input type="datetime" name="datetime" id="datetime" class="{{ modifier }}" />
+<input type="datetime"
+       name="{{ datetime_name }}"
+       id="{{ datetime_id}}"
+       {% if modifier %}
+         class="{{ modifier }}"
+       {% endif %}
+/>

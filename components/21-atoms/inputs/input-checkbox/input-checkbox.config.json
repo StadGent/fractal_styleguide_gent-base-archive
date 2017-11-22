@@ -1,9 +1,5 @@
 {
   "title": "Input checkbox",
   "status": "ready",
-  "handle": "input-checkbox",
-  "context": {
-    "id": "checkbox-1",
-    "label": "Checkbox option"
-  }
+  "handle": "input-checkbox"
 }
