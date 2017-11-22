@@ -1,14 +1,18 @@
 # Styleguide Gent Base
-This style guide contains the SASS library and needed assets that are required for use in a subthemes of the Gent starterkit.
+This style guide contains the SASS library and needed assets to be able to style a web application in the corporate identity for the city of Ghent..
 
-### Licenses 
+## Licenses 
 
-#### Light Gallery plugin for jQuery
-**It is important to note that anyone that wants to use this style guide or fork this repository for commercial purposes, should [pay for a license](http://sachinchoolur.github.io/lightGallery/docs/license.html)!**
+If you are building something for the City of Ghent (Stad Gent) or Digipolis, you can contact the web team at Digipolis or open an issue here to get the necessary licenses thar are required for your project.
+For more info on what licenses you need see below.
 
-If however you are building something for the city of Ghent (Stad Gent) or Digipolis, you can contact the web team at Digipolis or open an issue here.
+### License: Expressway font
+The Expressway font is a paying font used by the style guide of the City of Ghent. It needs to be included through Typekit 
 
-### Folder structure
+### License: Light Gallery plugin for jQuery
+It is important to note that anyone that wants to use this style guide or fork this repository for commercial purposes, should [pay for a license](http://sachinchoolur.github.io/lightGallery/docs/license.html)!
+
+## Folder structure
 When installing this package, you will get a directory structure like this.
 ```
 .
@@ -20,9 +24,9 @@ When installing this package, you will get a directory structure like this.
 │       └── sass
 └── package.json
 ```
-The build directory contains all sass source files and all asset files needed for the style guide.
+The build directory contains all SASS source files and all asset files needed to be able to style a web application in the corporate identity for the city of Ghent..
 
-### Implementing this style guide in your own project
+## Implementing this style guide in your own project
 This style guide aims to be technology independent. This means you should be able to use it inside your project with wathever technology you want.
 It utilizes SASS to style its components, so you will have to use that in your project.
 

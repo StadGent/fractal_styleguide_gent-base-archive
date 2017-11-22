@@ -39,7 +39,8 @@ consider the following:
 Something of note when contributing to the repository:
 When applying changes to the style guide keep in mind that many projects may rely on a specific version of the code.
 
-We default to [semver.org](http://semver.org) ( (semantic versions), **but** we deviate from this here.
+We default to [semver.org](http://semver.org) (semantic versions) for most of our projects, **but** we deviate from this here.
+If you want to be safe, make sure you stay on the same minor version and only introduce new minor versions when you have the time to review your changes. We do release minor versions quite regularly, and most of the time they don't introduce backward incompatible changes. But this project is still partly research for us and we're finding the best approach along the way, so we can't guarantee flawless updates on minor versions. For more explanation, see below.
 
 To make sure you are backwards compatible you will need to follow some guidelines:
 
