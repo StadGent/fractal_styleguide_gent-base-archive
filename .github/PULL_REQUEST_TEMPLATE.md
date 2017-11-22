@@ -1,8 +1,5 @@
 <!--- Provide a general summary of your changes in the Title above -->
 
-## Changelog 
-<!--- Don' forget to chagne the CHANGELOG.md file -->
-
 ## Description
 <!--- Describe your changes in detail -->
 
@@ -29,4 +26,5 @@
 - [ ] My code follows the code style of this project.
 - [ ] My change requires a change to the documentation.
 - [ ] I have updated the documentation accordingly.
+- [ ] I have updated the CHANGELOG accordingly.
 - [ ] I have read the **CONTRIBUTING** document.

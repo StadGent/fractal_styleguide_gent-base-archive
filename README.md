@@ -1,11 +1,12 @@
 # Styleguide Gent Base
-This styleguide contains the SASS library and needed assets that are required for use in a subthemes of the Gent starterkit.
+This style guide contains the SASS library and needed assets that are required for use in a subthemes of the Gent starterkit.
 
-### Licences 
+### Licenses 
+
 #### Light Gallery plugin for jQuery
-**It is important to note that anyone willing to use this style guide or fork this repository for commercial purposes they should [pay for a license](http://sachinchoolur.github.io/lightGallery/docs/license.html)!**
+**It is important to note that anyone that wants to use this style guide or fork this repository for commercial purposes, should [pay for a license](http://sachinchoolur.github.io/lightGallery/docs/license.html)!**
 
-If however you are building something for the city of Ghent (Stad Gent) or Digipolis, you can request this license at <info@digipolis.be>
+If however you are building something for the city of Ghent (Stad Gent) or Digipolis, you can contact the web team at Digipolis or open an issue here.
 
 ### Folder structure
 When installing this package, you will get a directory structure like this.
@@ -19,13 +20,13 @@ When installing this package, you will get a directory structure like this.
 │       └── sass
 └── package.json
 ```
-The build directory contains all sass source files and all asset files needed for the styleguide.
+The build directory contains all sass source files and all asset files needed for the style guide.
 
-### Implementing this styleguide in your own project
-This styleguide aims to be technology independent. This means you should be able to use it inside your project with wathever technology you want.
+### Implementing this style guide in your own project
+This style guide aims to be technology independent. This means you should be able to use it inside your project with wathever technology you want.
 It utilizes SASS to style its components, so you will have to use that in your project.
 
-After installing the styleguide through `npm install gent_styleguide` you''ll get a folder structure like this:
+After installing the style guide through `npm install gent_styleguide` you''ll get a folder structure like this:
 
 ```
 .
@@ -36,7 +37,7 @@ After installing the styleguide through `npm install gent_styleguide` you''ll ge
 └── package.json
 ```
 
-Now, to use the styleguide SASS partials you just need to import them into your main SASS file at the top so they get loaded before your own code.
+Now, to use the style guide SASS partials you just need to import them into your main SASS file at the top so they get loaded before your own code.
 ```
 @import 'node_modules/gent_styleguide/build/sass/00-settings/reset';
 @import 'node_modules/gent_styleguide/build/sass/00-settings/vars';
@@ -49,7 +50,7 @@ Now, to use the styleguide SASS partials you just need to import them into your 
 @import 'node_modules/gent_styleguide/build/sass/51-templates/**/*';
 ```
 
-Note: When using the styleguide you will need to add breakpoint-sass as an includePath inside your gulpfile.js
+Note: When using the style guide you will need to add breakpoint-sass as an includePath inside your gulpfile.js
 Example:
 ```
     .pipe(sass({
