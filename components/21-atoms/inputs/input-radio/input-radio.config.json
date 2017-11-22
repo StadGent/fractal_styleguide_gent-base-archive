@@ -1,5 +1,9 @@
 {
   "title": "Input radio",
   "status": "ready",
-  "handle": "input-radio"
+  "handle": "input-radio",
+  "context": {
+    "radio_id": "radio_id",
+    "radio_name": "radio_name"
+  }
 }
