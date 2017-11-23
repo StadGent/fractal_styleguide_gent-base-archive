@@ -1,10 +1,9 @@
 # Changelog
 All Notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
-## 2.6.19
-* STIJ-50: Fixed label for attributes and changed a lot of the form examples in the style guide.
-
 ## 2.6.18
+* STIJ-50: Fixed label for attributes and changed a lot of the form examples in the style guide.
+* STIJ-86: Added documentation to some components.
 * STIJ-156: Updated the CONTRIBUTING and README files.
 * STIJ-156: Updated the README file of the gallery component with important licensing information.
 * STIJ-157: Changed the loaded JS files in the _preview.twig file to the minified versions. This fixes issues when automatically deploying.
