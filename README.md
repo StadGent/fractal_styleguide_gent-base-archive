@@ -2,7 +2,6 @@
 This style guide contains the SASS library and needed assets to be able to style a web application in the corporate identity for the city of Ghent..
 
 ## Licenses 
-
 If you are building something for the City of Ghent (Stad Gent) or Digipolis, you can contact the web team at Digipolis or open an issue here to get the necessary licenses thar are required for your project.
 For more info on what licenses you need see below.
 
@@ -30,6 +29,7 @@ The build directory contains all SASS source files and all asset files needed to
 This style guide aims to be technology independent. This means you should be able to use it inside your project with wathever technology you want.
 It utilizes SASS to style its components, so you will have to use that in your project.
 
+### Setup
 After installing the style guide through `npm install gent_styleguide` you''ll get a folder structure like this:
 
 ```
@@ -64,3 +64,21 @@ Example:
 ```
 This includePaths path may vary depending on your setup!
 
+### Fonts
+You need to make sure the Expressway font is included on an additional include file.
+This would be done by including the Typescript script in your project and requesting a license / Typekit kit from the web team at Digipolis.
+
+Example:
+```
+<script>
+  (function(d) {
+    var config = {
+          kitId: 'kgt4wbp',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+```
+So in this example you would need to change the `kitId` to the ID you got from the web team of Digipolis.
