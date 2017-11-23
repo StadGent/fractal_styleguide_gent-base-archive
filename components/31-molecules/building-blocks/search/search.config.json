@@ -3,7 +3,7 @@
   "status": "ready",
   "handle": "search",
   "context": {
-    "placeholder": "Wat wilt u vinden?",
+    "placeholder": "What are you looking for?",
     "modifier_search": "inline",
     "text": "Submit",
     "search_id": "header-search",

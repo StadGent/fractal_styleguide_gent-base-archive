@@ -39,17 +39,17 @@
   background-color: rgba(0, 125, 179, .15);
 }
 
+h2.styleguide {
+  padding-left: .5rem;
+  border-bottom: 1px dotted #d0cccc;
+  background: #efeded;
+}
+
 .preview-container {
   min-height: 100vh;
   padding: 4% 0;
   background-color: #fff;
   overflow: hidden;
-
-  .content-container > h2 {
-    padding-left: .5rem;
-    border-bottom: 1px dotted #d0cccc;
-    background: #efeded;
-  }
 
   .preview-inner-container {
     display: inline-block;
