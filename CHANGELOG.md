@@ -53,7 +53,7 @@ we made the grid styling flexible between 2, 3 or 4 columns.
 ## 2.6.9
 * STIJ-63: Made Fractal variants of paragraphs.
 * STIJ-63: Remove underlined text from paragraph examples, 
-           it is discouraged to use underlined text.
+it is discouraged to use underlined text.
 * STIJ-131: Remove placeholders from all input type fields except search fields.
 * STIJ-25: Fixed status messages preview pages.
 * STIJ-140: Fixed themify issue on select input fields.
@@ -91,20 +91,14 @@ we made the grid styling flexible between 2, 3 or 4 columns.
     * Fixed preview hamburger menu.
 * STIJ-34: Changed Gent info block title to h3.
 
-***
-
 ## 2.6.0
 * STIJ-32: Refactored heading.
 * STIJ-95: Added more documentation.
 * STIJ-122: Minor validation fixes.
 * STIJ-123: Added form errors.
 
-***
-
 ## 2.5.1
 * STIJ-116: Minor change to the styling of the Form Steps molecule.
-
-***
 
 ## 2.5.0 
 * STIJ-76: 
@@ -116,4 +110,3 @@ we made the grid styling flexible between 2, 3 or 4 columns.
     * Changed styling for the Form Steps molecule.
     * Added themify for the Form Steps molecule.    
 
-***
