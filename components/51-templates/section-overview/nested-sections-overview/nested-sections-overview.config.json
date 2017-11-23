@@ -1,10 +1,9 @@
 {
-  "title": "Sections overview",
+  "title": "Nested sections overview",
   "status": "ready",
   "order": 2,
   "preview": "@preview",
   "context": {
-    "label_optional": "Optional",
     "items": [
       "<a href='#'>Stad.gent</a>",
       "<a href='#'>Overview</a>",
