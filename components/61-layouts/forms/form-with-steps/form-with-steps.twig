@@ -7,48 +7,45 @@
 <div class="row">
   <div class="col-desktop-3">
     {% include '@form-steps' with {
-      'step1_title': 'Beschrijf uw activiteit',
-      'step2_title': 'Plan uw activiteit',
-      'step3_title': 'Vul uw contactgegevens aan',
-      'step4_title': 'Vul uw facturatiegegevens in',
-      'step5_title': 'Vragen of opmerkingen'
+      'step1_title': 'Describe your activity',
+      'step2_title': 'Plan your activity',
+      'step3_title': 'Fill in your personal information',
+      'step4_title': 'Enter your billing information',
+      'step5_title': 'Questions or remarks'
     } %}
   </div>
   <div class="col-desktop-9">
     <fieldset class="form-item">
       <legend>
-        1. Beschrijf uw activiteit
+        1. Describe your activity
       </legend>
 
       {% include '@textfield'
         with {
-          'label': 'Naam van de activiteit',
-          'placeholder': '',
-          'description': 'Geef de naam van uw activiteit op.',
-          "field_error": 'Gelieve een correcte naam voor uw activiteit in te vullen.',
-          "field_description": 'A.d.h.v. de naam van uw activiteit kunnen we u beter identificeren.'
+          'label': 'Activity name',
+          'description': 'Enter a name for your activity.',
+          "field_error": 'Please enter a valid name for your activity.',
+          "field_description": 'We can identify you better through the name of your activity.'
         }
       %}
 
       {% include '@textarea'
         with {
-          'label': 'Omschrijf kort uw activiteit en het doel ervan',
-          'placeholder': '',
-          'description': 'Omschrijf kort uw activiteit en het doel ervan.',
-          "field_error": 'Gelieve uw activiteit kort te beschrijven.',
-          "field_description": 'Een korte eenvoudige beschrijving van uw activiteit.'
+          'label': 'Describe your activity and it\'s purpose',
+          'description': 'Describe your activity and it\'s purpose.',
+          "field_error": 'Please shortly describe your activity.',
+          "field_description": 'A short and simplified description of your activity.'
         }
       %}
 
       <fieldset class="form-item">
         <legend>
-          2. Is dit een activiteit met winstoogmerk?
+          2. Is this a profit-oriented activity?
         </legend>
 
         {% include '@field-description'
           with {
-            "field_description": 'Met winstoogmerk = de aanvrager van de zaal streeft ernaar om winst te maken, dit wil zeggen: de opbrengst van de activiteit overstijgt de kosten die eraan verbonden zijn. Het positieve saldo gaat niet louter naar een goed doel
-    '
+            "field_description": 'For profit purposes = the applicant of the room strives to make a profit, i.e. the proceeds of the activity exceed the costs associated with it.'
           }
         %}
 

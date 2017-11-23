@@ -1,9 +1,0 @@
-{
-  "title": "Button submit",
-  "status": "ready",
-  "handle": "button-submit",
-  "context": {
-    "text": "Submit",
-    "modifier": "icon icon-search icon-only"
-  }
-}
