@@ -3,6 +3,6 @@
   "status": "ready",
   "handle": "input-submit",
   "context": {
-    "text": "Submit"
+    "value": "Submit"
   }
 }
