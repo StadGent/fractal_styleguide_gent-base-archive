@@ -54,8 +54,8 @@ Now, to use the style guide SASS partials you just need to import them into your
 @import 'node_modules/gent_styleguide/build/sass/51-templates/**/*';
 ```
 
-Note: that we use this structure, to allow you to override where necessary in your own custom project.
-They way to do this is to add to your main SASS file this above imports and inbetween add imports to your own files.
+Note: we use this structure to allow you to override anything you wish in your own custom project.
+The way to do this, is to add the imports above to your main SASS file and add imports of your own overriding files in between.
 
 Example:
 ```
