@@ -54,6 +54,28 @@ Now, to use the style guide SASS partials you just need to import them into your
 @import 'node_modules/gent_styleguide/build/sass/51-templates/**/*';
 ```
 
+Note: that we use this structure, to allow you to override where necessary in your own custom project.
+They way to do this is to add to your main SASS file this above imports and inbetween add imports to your own files.
+Example:
+```
+@import 'node_modules/gent_styleguide/build/sass/00-settings/reset';
+@import 'node_modules/gent_styleguide/build/sass/00-settings/vars';
+@import '/sass/02-vars-overrides/**/*';
+@import 'node_modules/gent_styleguide/build/sass/02-mixins/**/*';
+@import '/sass/02-mixins-overrides/**/*';
+@import 'node_modules/gent_styleguide/build/sass/02-sections/**/*';
+@import '/sass/02-sections-overrides/**/*';
+@import 'node_modules/gent_styleguide/build/sass/11-base/**/*';
+@import '/sass/02-base-overrides/**/*';
+@import 'node_modules/gent_styleguide/build/sass/21-atoms/**/*';
+@import '/sass/02-atom-overrides/**/*';
+@import 'node_modules/gent_styleguide/build/sass/31-molecules/**/*';
+@import '/sass/02-molecule-overrides/**/*';
+@import 'node_modules/gent_styleguide/build/sass/41-organisms/**/*';
+@import '/sass/02-organism-overrides/**/*';
+@import 'node_modules/gent_styleguide/build/sass/51-templates/**/*';
+```
+
 Note: When using the style guide you will need to add breakpoint-sass as an includePath inside your gulpfile.js
 Example:
 ```
