@@ -2,10 +2,14 @@
 All Notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
 ## 2.6.19
+* STIJ-158: Changed datepicker date format to an English format.
 * STIJ-159: Removed button submit atom.
 * STIJ-159: Moved the submit button documentation to the input submit atom.
 * STIJ-160: Changed the form actions - editor molecule variant to include a normal button instead of a dropbutton.
+* STIJ-161: Fixed broken links in documentation files.
 * STIJ-162: Changed all Dutch text to English.
+* STIJ-168: Changed style guide title to a versioned version.
+* STIJ-169: Integrate link in style guide to the GitHub CHANGELOG.
 
 ## 2.6.18
 * STIJ-50: Fixed label for attributes and changed a lot of the form examples in the style guide.
