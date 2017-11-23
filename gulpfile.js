@@ -178,6 +178,9 @@ gulp.task('styles:extract', ['fractal:build', 'styles:build', 'styles:dist'], fu
 gulp.task('js:dist', ['styles:dist'], function() {
   gulp.src('components/**/*.js')
     .pipe(rename({dirname: ''}))
+    .pipe(minify({
+      noSource: true
+    }))
     .pipe(gulp.dest('./public/styleguide/js/'));
 });
 

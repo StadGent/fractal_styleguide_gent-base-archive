@@ -4,6 +4,8 @@ All Notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 ## 2.6.18
 * STIJ-156: Updated the CONTRIBUTING and README files.
 * STIJ-156: Updated the README file of the gallery component with important licensing information.
+* STIJ-157: Changed the loaded JS files in the _preview.twig file to the minified versions. This fixes issues when automatically deploying.
+* STIJ-157: Changed the gulp file to also locally minify the JS files. This fixes local JS issues.
 
 ## 2.6.17
 **IMPORTANT: Updating this style guide through composer is DEPRECATED! The next release will remove composer.json!**
