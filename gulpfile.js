@@ -1,5 +1,8 @@
 'use strict';
 
+var packageInfo = require('./package.json');
+var packageVersion = packageInfo.version;
+
 /*
 * Require the path module
 */
@@ -14,7 +17,7 @@ const logger = fractal.cli.console; // keep a reference to the fractal CLI conso
 /*
 * Give your project a title.
 */
-fractal.set('project.title', 'City of Ghent Style Guide - Version 2.x.x ');
+fractal.set('project.title', 'City of Ghent Style Guide - Version ' + packageVersion);
 
 /*
 * Tell Fractal where to look for components.

@@ -1,5 +1,5 @@
 ---
-title: City of Ghent Style Guide - Version 2.x.x 
+title: City of Ghent Style Guide
 ---
 
 ## Install
