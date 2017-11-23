@@ -1,6 +1,10 @@
 # Changelog
 All Notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
+## 2.6.19
+* STIJ-159: Removed button submit atom.
+* STIJ-159: Moved the submit button documentation to the input submit atom.
+
 ## 2.6.18
 * STIJ-50: Fixed label for attributes and changed a lot of the form examples in the style guide.
 * STIJ-86: Added documentation to some components.
