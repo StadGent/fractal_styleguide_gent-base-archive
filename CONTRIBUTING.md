@@ -7,7 +7,7 @@
 ## Contributing
 Thank you for your interest in contributing to this project. There are several ways to help out, even if you've never 
 worked on an open source project before. If you've found a bug or want to request a feature, you can report it by 
-[posting an issue](issues/new) - be sure to read the [guidelines](#issues) 
+[posting an issue](https://github.com/StadGent/fractal_styleguide_gent-base/issues/new) - be sure to read the [guidelines](#issues) 
 first! If you want to contribute your own work (be it code or documentation), please read the 
 [guidelines](#pull-requests) for submitting a pull request.
 
@@ -35,25 +35,35 @@ consider the following:
  * Does your PR have any limitations we should know of?
  * Is your PR up-to-date with the branch you're trying to push into?
 
-# Contributing guidelines.
-Something of note when contributing to the repository.
-When applying changes to the styleguide keep in mind that many proejcts may rely on a specific version of the code.
+## A note about versions.
+Something of note when contributing to the repository:
+When applying changes to the style guide keep in mind that many projects may rely on a specific version of the code.
+
+We default to [semver.org](http://semver.org) (semantic versions) for most of our projects, **but** we deviate from this here.
+If you want to be safe, make sure you stay on the same minor version and only introduce new minor versions when you have the time to review your changes. We do release minor versions quite regularly, and most of the time they don't introduce backward incompatible changes. But this project is still partly research for us and we're finding the best approach along the way, so we can't guarantee flawless updates on minor versions. For more explanation, see below.
+
 To make sure you are backwards compatible you will need to follow some guidelines:
 
 ### Patch changes
-When your changes don't affect the structure of the styleguide you can publish a patch:
+**This introduces small changes and bug fixes and should be fully backwards compatible.**
+
+When your changes don't affect the structure of the style guide you can publish a patch:
 ```
 1.0.1 --> 1.0.2
 ```
 
 ### Minor changes
-When your changes might affect the structure, like adding / refactoring / removing an atom or molecule in the styleguide:
+**Backwards incompatible changes can be introduced in minor versions**
+
+When your changes might affect the structure, like adding / refactoring / removing an atom or molecule in the style guide:
 ```
 1.0.0 --> 1.1.0
 ```
 
 ### Major changes
-When your changes are sure to change the structure and critical parts of the styleguide and when these changes are not backwards compatible:
+**Major versions are used when major changes are introduced in the actual styling of components.**
+
+When your changes are sure to change the structure and critical parts of the style guide and when these changes are not backwards compatible:
 ```
 1.0.1 --> 2.0.0
 ```
