@@ -56,6 +56,7 @@ Now, to use the style guide SASS partials you just need to import them into your
 
 Note: that we use this structure, to allow you to override where necessary in your own custom project.
 They way to do this is to add to your main SASS file this above imports and inbetween add imports to your own files.
+
 Example:
 ```
 @import 'node_modules/gent_styleguide/build/sass/00-settings/reset';
@@ -77,6 +78,7 @@ Example:
 ```
 
 Note: When using the style guide you will need to add breakpoint-sass as an includePath inside your gulpfile.js
+
 Example:
 ```
     .pipe(sass({
@@ -87,7 +89,7 @@ Example:
 This includePaths path may vary depending on your setup!
 
 ### Fonts
-You need to make sure the Expressway font is included on an additional include file.
+You need to make sure the Expressway font is included in your project somehow.
 This would be done by including the Typescript script in your project and requesting a license / Typekit kit from the web team at Digipolis.
 
 Example:
