@@ -3,8 +3,8 @@
   "status": "ready",
   "handle": "cta-link",
   "context": {
-    "title": "Graag meer info?",
-    "link_text": "Bezoek onze website",
+    "title": "More info?",
+    "link_text": "Visit our website",
     "url": "javascript:(void);",
     "modifier": "link"
   }
