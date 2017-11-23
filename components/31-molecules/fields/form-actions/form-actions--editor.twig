@@ -1,4 +1,10 @@
 <div class="form-actions">
-  {% include '@button-drop' %}
-  {% include '@link' with { 'text': 'Delete', 'modifier': 'right delete' } %}
+  {% include '@input-submit' with {
+  'value': 'Submit',
+  'modifier': 'btn--inline'
+  } %}
+  {% include '@link' with {
+  'text': 'Delete',
+  'modifier': 'right delete'
+  } %}
 </div>
