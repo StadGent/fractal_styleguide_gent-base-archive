@@ -5,6 +5,7 @@ All Notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 * STIJ-159: Removed button submit atom.
 * STIJ-159: Moved the submit button documentation to the input submit atom.
 * STIJ-160: Changed the form actions - editor molecule variant to include a normal button instead of a dropbutton.
+* STIJ-162: Changed all Dutch text to English.
 
 ## 2.6.18
 * STIJ-50: Fixed label for attributes and changed a lot of the form examples in the style guide.
