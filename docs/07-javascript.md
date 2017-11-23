@@ -2,9 +2,9 @@
 title: Javascript libraries
 ---
 
-This styleguide offers some Javascript functionality to
+This style guide offers some Javascript functionality to
 be used in various situations or to implement part of
-the behaviour of this Styleguide.
+the behaviour of this style guide.
 
 ## Javascript conventions
 Javascript files are organized per component. Each component consists of
@@ -13,13 +13,13 @@ the following files namely:
 * COMPONENT.functions.js (optional if an external library is implemented)
 * COMPONENT.binding.js
 
-Depending on the implementation of the styleguide either the functions.js
+Depending on the implementation of the style guide either the functions.js
 file or both are necessary.
 
-Take into consideration that all Javascript included in this styleguide is
+Take into consideration that all Javascript included in this style guide is
 dependent on:
 
-* [base.js](/docs/base.js)
+* base.js
 * jQuery
 
 ### Base JS
@@ -67,7 +67,7 @@ Use this file if you want to write your own bindings or integrate it into
 another Javascript framework, eg. integration in a Drupal theme.
 
 ### Component.binding.js
-This file integrates the Component.functions.js with the Styleguide components
+This file integrates the Component.functions.js with the Style guide components
 inside Fractal. These bindings can be used inside your own project to implement
 the correct Javascript functionality per component.
 
@@ -95,10 +95,10 @@ DOM element.
 
 #### Button-drop.binding.js
 Binds the functionality to a DOM element and the window.onload event
-inside this styleguide.
+inside this style guide.
 
-#### Styleguide implementation
-[Button-drop atom](../../components/detail/button-drop)
+#### Styl eguide implementation
+<a href="{{path '/components/detail/button-drop'}}">Drop button atom</a>
 
 ### Input multi-select chosen
 We omitted to create a functions.js file, since all functions are provided
@@ -108,14 +108,14 @@ by the Chosen jQuery plugin.
 [Chosen jQuery plugin](https://github.com/harvesthq/chosen)
 
 #### Input-multiselect-chosen.binding.js
-Implements chosen jQuery plugin in this Styleguide.
+Implements chosen jQuery plugin in this Style guide.
 
-#### Styleguide implementation
-[Button-drop atom](../../components/detail/input-multiselect-chosen)
+#### Style guide implementation
+<a href="{{path '/components/detail/input-multiselect-chosen'}}">Multiselect with Chosen</a>
 
 ### Breadcrumbs
 #### Breadcrumbs.functions.js
-Implements the default Breadcrumb behavior of the Styleguide. A new global
+Implements the default Breadcrumb behavior of the Style guide. A new global
 namespace: gentStyleGuideBreadcrum has been created to give access to the
 public functionality of this script. As such the following public functions are
 available
@@ -124,12 +124,12 @@ available
 with a mobile optimized one.
 
 #### Breadcrumbs.binding.js
-Integration of the breadcrumb functionality with this Styleguide. Calls the
+Integration of the breadcrumb functionality with this Style guide. Calls the
 gentStyleGuideBreadcrumb.updateMobileBreadcrumb() method on the window.load
 event.
 
-#### Styleguide implementation
-[Breadcrumbs molecule](../../components/detail/breadcrumbs)
+#### Style guide implementation
+<a href="{{path '/components/detail/breadcrumbs'}}">Breadcrumbs molecule</a>
 
 ### Hamburger-menu
 #### Hamburger-menu.functions.js
@@ -140,20 +140,20 @@ DOM element.
 
 #### Hamburger-menu.binding.js
 Binds the functionality to a DOM element and the window.onload event
- inside the styleguide.
+ inside the style guide.
 
-#### Styleguide implementation
-[Hamburger-menu molecule](../../components/detail/hamburger-menu)
+#### Style guide implementation
+<a href="{{path '/components/detail/hamburger-menu'}}">Hamburger menu</a>
 
 ### Gallery
 We omitted to create a functions.js file, since all functions are provided
 by the swipebox jQuery plugin.
 
 **Dependencies**
-[Swipebox jQuery plugin](http://brutaldesign.github.io/swipebox/)
+[Light Gallery](http://sachinchoolur.github.io/lightGallery/)
 
 #### Gallery.binding.js
-Implements swipebox jQuery plugin in this Styleguide.
+Implements swipebox jQuery plugin in this Style guide.
 
 ### Header
 #### Header.functions.js
@@ -164,7 +164,7 @@ DOM element.
 
 #### Header.bindings.js
 Binds the functionality to a DOM element and the window.onload event
- inside this styleguide.
+ inside this style guide.
 
-#### Styleguide implementation
-[Header organism](../../components/detail/hamburger-menu)
+#### Style guide implementation
+<a href="{{path '/components/detail/header'}}">Header organism</a>
