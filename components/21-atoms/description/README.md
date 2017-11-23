@@ -6,4 +6,4 @@ This atom is used in the context of a webform. This component is used to display
 The description is always visible and is displayed under the field it describes.
 
 ## Themify
-This is a themefy enabled component. Please use the themify mixin as defined in [mixins](../../docs/mixins) to change the colorscheme of this description.
+This is a themify enabled component. Please use the themify mixin as defined in [mixins](../../docs/mixins) to change the colorscheme of this description.
