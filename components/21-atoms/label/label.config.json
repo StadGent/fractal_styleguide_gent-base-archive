@@ -5,6 +5,7 @@
   "order": 11,
   "context": {
     "label": "Label",
+    "for": "form-item",
     "label_optional": "Optional"
   }
 }

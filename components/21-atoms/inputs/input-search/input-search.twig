@@ -1,1 +1,8 @@
-<input type="search" name="s" placeholder="{{ placeholder|default(placeholder) }}" class="{{ modifier }}">
+<input type="search"
+       name="{{ search_name }}"
+       id="{{ search_id }}"
+       placeholder="{{ placeholder }}"
+       {% if modifier %}
+         class="{{ modifier }}"
+       {% endif %}
+>

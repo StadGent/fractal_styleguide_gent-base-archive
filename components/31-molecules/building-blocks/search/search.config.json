@@ -3,9 +3,11 @@
   "status": "ready",
   "handle": "search",
   "context": {
-    "search_input_placeholder": "Placeholder search",
-    "search_input_modifier": "inline",
-    "search_submit_text": "Submit",
-    "search_submit_modifier": "btn--inline"
+    "placeholder": "Wat wilt u vinden?",
+    "modifier_search": "inline",
+    "text": "Submit",
+    "search_id": "header-search",
+    "search_name": "header-search",
+    "modifier_submit": "btn--inline"
   }
 }

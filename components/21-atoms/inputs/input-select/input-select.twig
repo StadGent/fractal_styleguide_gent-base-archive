@@ -1,4 +1,9 @@
-<select name="selectfield" id="selectfield" class="{{ modifier }}">
+<select name="{{ select_name }}"
+        id="{{ select_id }}"
+        {% if modifier %}
+          class="{{ modifier }}"
+        {% endif  %}
+>
   {% for option in options %}
 
     {% if option.optgroup %}
