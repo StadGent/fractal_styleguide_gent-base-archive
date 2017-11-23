@@ -16,8 +16,7 @@
 
     "radio1_label": "Label radio 1",
     "radio1_label_for": "radio-1",
-    "radio1_label_optional": "Optional",
-
+    "radio1_label_optional": "",
 
     "label_radio2": "Radio option 2",
     "radio2_name": "radiogroup",
@@ -25,6 +24,6 @@
 
     "radio2_label": "Label radio 2",
     "radio2_label_for": "radio-2",
-    "radio2_label_optional": "Optional"
+    "radio2_label_optional": ""
   }
 }

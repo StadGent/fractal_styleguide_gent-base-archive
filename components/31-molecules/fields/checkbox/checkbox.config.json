@@ -16,7 +16,7 @@
 
     "checkbox1_label": "Label checkbox 1",
     "checkbox1_label_for": "checkbox-1",
-    "checkbox1_label_optional": "Optional",
+    "checkbox1_label_optional": "",
 
 
     "label_checkbox2": "Checkbox option 2",
@@ -25,6 +25,6 @@
 
     "checkbox2_label": "Label checkbox 2",
     "checkbox2_label_for": "checkbox-2",
-    "checkbox2_label_optional": "Optional"
+    "checkbox2_label_optional": ""
   }
 }
