@@ -4,7 +4,7 @@
   "handle": "cta-link",
   "default": "website",
   "context": {
-    "title": "Want more info?",
+    "title": "Do you want more info?",
     "link_text": "Visit our website",
     "url": "javascript:(void);",
     "modifier": "link"
