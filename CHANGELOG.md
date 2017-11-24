@@ -1,6 +1,9 @@
 # Changelog
 All Notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
+## 2.6.20
+* STIJ-96: Added paragraph atom documentation.
+
 ## 2.6.19
 * STIJ-158: Changed datepicker date format to an English format.
 * STIJ-159: Removed button submit atom.
