@@ -1,9 +1,9 @@
 # Paragraphs
 A paragraph has a certain behavior.
-* It should always have a width based on it' container of 7/12.
-**This means the container needs to make sure paragraphs can never be bigger then 7/12 of itself.**
-* It always has a max-width in REMs of 40rem on desktop.
+* It should always have a width of 7/12 (except for mobile) based on the container.
+**This means the container needs to make sure that paragraphs can never be bigger then 7/12 of itself.**
 * For a mobile layout a paragraph is always full width.
+* It always has a max-width of 40 rems on desktop.
 * A paragraph can **never** be centered!
 * A paragraph can **never** be justified!
 
