@@ -56,6 +56,10 @@ header.header {
       //
       &.header-search,
       &.header-search-mobile {
+        .form-label {
+          display: none;
+        }
+
         input[type="search"] {
           width: 10rem;
           margin: 0;
