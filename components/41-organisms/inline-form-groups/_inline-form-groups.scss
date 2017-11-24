@@ -1,0 +1,20 @@
+.inline-form-elements {
+  @include make-desktop-column(9);
+  clear: both;
+
+  > .fieldset-wrapper {
+    width: 100%;
+
+    > .form-item {
+      @include make-desktop-column(6);
+    }
+  }
+
+  .field-description {
+    width: 100%;
+  }
+
+  .form-item .form-item-column {
+    width: 100%;
+  }
+}

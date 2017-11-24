@@ -1,0 +1,28 @@
+.address-component {
+  .form-item {
+    &.address-street {
+      @include make-desktop-column(5);
+    }
+
+    &.address-number {
+      @include make-desktop-column(3);
+    }
+
+    &.address-box-number {
+      @include make-desktop-column(4);
+    }
+
+    &.address-postal-code {
+      @include make-desktop-column(3);
+      clear: left;
+    }
+
+    &.address-city {
+      @include make-desktop-column(9);
+    }
+
+    &.address-country {
+      clear: left;
+    }
+  }
+}
