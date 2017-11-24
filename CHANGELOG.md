@@ -1,6 +1,9 @@
 # Changelog
 All Notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
+## 2.6.20
+* STIJ-170: Fixed search molecule bug where it was using the old button submit atom instead of the input type submit atom.
+
 ## 2.6.19
 * STIJ-158: Changed datepicker date format to an English format.
 * STIJ-159: Removed button submit atom.
