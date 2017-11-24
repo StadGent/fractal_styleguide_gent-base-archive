@@ -7,4 +7,9 @@ A CTA link has a certain behavior.
 
 Examples of paragraphs are defined in paragraph variants:
 
-* <a href="{{path './cta-link'}}">CTA link default</a>
+* <a href="{{path './cta-link--website'}}">CTA link website</a>
+* <a href="{{path './cta-link--document'}}">CTA link document</a>
+* <a href="{{path './cta-link--form-fill'}}">CTA link form fill</a>
+* <a href="{{path './cta-link--email'}}">CTA link email</a>
+* <a href="{{path './cta-link--phone'}}">CTA link phone</a>
+* <a href="{{path './cta-link--location'}}">CTA link location</a>
