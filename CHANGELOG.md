@@ -2,6 +2,7 @@
 All Notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
 ## 2.6.20
+* STIJ-89: Changed the documentation of an icon to English and update it a bit.
 * STIJ-106: Added search molecule documentation.
 
 ## 2.6.19
