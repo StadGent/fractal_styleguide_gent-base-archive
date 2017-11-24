@@ -3,6 +3,7 @@ All Notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
 ## 2.6.20
 * STIJ-96: Added paragraph atom documentation.
+* STIJ-96: Removed the paragraph variant that contains centered text, **it is not allowed by the City of Ghent**!
 
 ## 2.6.19
 * STIJ-158: Changed datepicker date format to an English format.
