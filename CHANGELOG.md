@@ -2,6 +2,8 @@
 All Notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
 ## 2.6.20
+* STIJ-87: Added description field documentation.
+* STIJ-87: Refactored description field atom to use Themify mixin.
 * STIJ-89: Changed the documentation of an icon to English and update it a bit.
 
 ## 2.6.19
@@ -43,9 +45,9 @@ All Notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
 ## 2.6.13
 * STIJ-112: Added footer documentation.
-* STIJ-149: The footer organism now has a different grid implementation. Through the use of a data-columns attribute 
+* STIJ-149: The footer organism now has a different grid implementation. Through the use of a data-columns attribute
 we made the grid styling flexible between 2, 3 or 4 columns.
-* STIJ-150: Changed social media links block. This now displays the social media links of Stad Ghent correctly. 
+* STIJ-150: Changed social media links block. This now displays the social media links of Stad Ghent correctly.
 
 ## 2.6.12
 * STIJ-147: Added changes to Chosen for multiselect fields. Chosen will now be disabled on iPad.
@@ -59,7 +61,7 @@ we made the grid styling flexible between 2, 3 or 4 columns.
 
 ## 2.6.9
 * STIJ-63: Made Fractal variants of paragraphs.
-* STIJ-63: Remove underlined text from paragraph examples, 
+* STIJ-63: Remove underlined text from paragraph examples,
 it is discouraged to use underlined text.
 * STIJ-131: Remove placeholders from all input type fields except search fields.
 * STIJ-25: Fixed status messages preview pages.
@@ -93,7 +95,7 @@ it is discouraged to use underlined text.
 * STIJ-35: Added bindings and functions for the Gallery component.
 
 ## 2.6.1
-* STIJ-2: 
+* STIJ-2:
     * Added default no-style styling to lists in the hamburger menu.
     * Fixed preview hamburger menu.
 * STIJ-34: Changed Gent info block title to h3.
@@ -107,13 +109,13 @@ it is discouraged to use underlined text.
 ## 2.5.1
 * STIJ-116: Minor change to the styling of the Form Steps molecule.
 
-## 2.5.0 
-* STIJ-76: 
+## 2.5.0
+* STIJ-76:
     * Added bindings and functions layer to all Javascript files.
-    * Added documentation for Javascript use and component Javascript. 
+    * Added documentation for Javascript use and component Javascript.
     * Refactored some Javascript code.
-* STIJ-116: 
+* STIJ-116:
     * Changed markup for the Form Steps molecule.
     * Changed styling for the Form Steps molecule.
-    * Added themify for the Form Steps molecule.    
+    * Added themify for the Form Steps molecule.
 
