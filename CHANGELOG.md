@@ -1,5 +1,10 @@
 # Changelog
-All Notable changes to `digipolisgent/fractal_styleguide_gent-base`.
+
+## Roadmap
+Refer to upcoming changes in our README.md under "Roadmap"
+
+## Changes
+All notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
 ## 2.6.20
 * STIJ-89: Changed the documentation of an icon to English and update it a bit.
