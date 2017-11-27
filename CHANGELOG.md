@@ -4,6 +4,10 @@ All Notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 ## 2.6.20
 * STIJ-89: Changed the documentation of an icon to English and update it a bit.
 * STIJ-106: Added search molecule documentation.
+* STIJ-170: Fixed search molecule bug where it was using the old button submit atom instead of the input type submit atom.
+* STIJ-170: Added a label to the search molecule.
+* STIJ-170: Hide the label of the search molecule in the header organism.
+* STIJ-170: Add placeholder to search molecule inside the header organism.
 
 ## 2.6.19
 * STIJ-158: Changed datepicker date format to an English format.
