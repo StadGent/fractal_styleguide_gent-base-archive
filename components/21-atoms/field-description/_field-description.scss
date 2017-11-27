@@ -1,12 +1,12 @@
 .field-description {
 
   @include themify {
-    background-color: $color-lightest-gray;
-    color: $color-dark-gray;
+    background-color: $field-description-background;
+    color: $field-description-color;
   }
 
   position: relative;
-  padding: 10px 10px 10px 50px;
+  padding: .625rem .625rem .625rem 3.125rem;
   border-radius: $radius-1;
   font-size: .9rem;
   line-height: 1.1rem;
@@ -14,9 +14,10 @@
   &::before {
     @extend %icon-base-css;
     @extend %icon-info-circle;
+
     position: absolute;
-    top: 10px;
-    left: 15px;
+    top: .625rem;
+    left: .9325rem;
     font-size: 1.25rem;
   }
 }
