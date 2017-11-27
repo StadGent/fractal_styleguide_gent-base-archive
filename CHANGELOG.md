@@ -2,6 +2,7 @@
 All Notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
 ## 2.6.20
+* STIJ-1: Fixed whitespace issue for the gallery component.
 * STIJ-89: Changed the documentation of an icon to English and update it a bit.
 * STIJ-106: Added search molecule documentation.
 * STIJ-170: Fixed search molecule bug where it was using the old button submit atom instead of the input type submit atom.
