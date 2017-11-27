@@ -1,0 +1,44 @@
+.page-wide-image-wrapper {
+  .description {
+    @include tablet {
+      display: block;
+      margin-top: .25rem;
+      margin-right: .5rem;
+      float: right;
+    }
+
+    display: none;
+  }
+}
+
+.page-wide-image {
+  position: relative;
+
+  img {
+    @include tablet {
+      display: block;
+      width: 100%;
+      max-height: 26.25rem;
+      overflow: hidden;
+    }
+
+    display: none;
+  }
+
+  h2 {
+    @include themify {
+      color: $heading-2-color;
+    }
+
+    @include tablet {
+      position: absolute;
+      bottom: 1rem;
+      left: 1rem;
+      margin-bottom: 0;
+      color: $color-white;
+      font-size: 1.61051rem;
+      line-height: 1.13008em;
+    }
+
+  }
+}
