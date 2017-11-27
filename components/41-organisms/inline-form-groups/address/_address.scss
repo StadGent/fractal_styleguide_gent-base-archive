@@ -21,7 +21,8 @@
       @include make-desktop-column(9);
     }
 
-    &.address-country {
+    &.address-country,
+    &.address-nim {
       clear: left;
     }
   }

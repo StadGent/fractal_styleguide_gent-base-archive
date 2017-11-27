@@ -1,5 +1,4 @@
 .inline-form-elements {
-  @include make-desktop-column(9);
   clear: both;
 
   > .fieldset-wrapper {
