@@ -12,8 +12,25 @@ a.cta-link {
     }
 
     .icon {
+      border: $cta-link-icon-border;
       background: $button-background;
       color: $button-color;
+    }
+
+    &:hover {
+      .title {
+        color: $cta-link-title-color-hover;
+      }
+
+      .document {
+        color: $cta-link-document-color-hover;
+      }
+
+      .icon {
+        border: $button-border-hover;
+        background: $button-background-hover;
+        color: $button-color-hover;
+      }
     }
   }
 
@@ -32,6 +49,7 @@ a.cta-link {
     right: calc(-15% - 1px);
     bottom: 0;
     width: 15%;
+    min-height: 4rem;
     margin: auto;
     padding-top: 1.4rem;
     padding-bottom: 1.4rem;
