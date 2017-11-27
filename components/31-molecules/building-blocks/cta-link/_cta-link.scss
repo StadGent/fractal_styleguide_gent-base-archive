@@ -17,6 +17,7 @@ a.cta-link {
       color: $button-color;
     }
 
+    &:focus,
     &:hover {
       .title {
         color: $cta-link-title-color-hover;

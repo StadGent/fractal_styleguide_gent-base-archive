@@ -323,11 +323,14 @@ $themes: (
     'cta-link-background': $color-darkest-gray,
     'cta-link-background-hover': $color-white,
 
-    'cta-link-border': 2px solid $color-white,
-    'cta-link-border-hover': 2px solid $color-darkest-gray,
+    'cta-link-border': 1px solid $color-white,
+    'cta-link-border-hover': 1px solid $color-darkest-gray,
 
     'cta-link-title-color': $color-white,
-    'cta-link-document-color': $color-darkest-gray,
+    'cta-link-title-color-hover': $color-darkest-gray,
+
+    'cta-link-document-color': $color-white,
+    'cta-link-document-color-hover': $color-darkest-gray,
 
     'cta-link-icon-border': 1px solid $color-white,
 
@@ -347,7 +350,7 @@ $themes: (
     'label-optional-color': $color-gray,
 
     'button-color': $color-white,
-    'button-color-hover': $color-darkest-blue,
+    'button-color-hover': $color-darkest-gray,
 
     'button-background': transparent,
     'button-background-hover': $color-white,
@@ -395,7 +398,10 @@ $themes: (
     'cta-link-border-hover': 1px solid $color-darkest-gray,
 
     'cta-link-title-color': $color-darkest-gray,
-    'cta-link-document-color': $color-dark-gray,
+    'cta-link-title-color-hover': $color-darkest-gray,
+
+    'cta-link-document-color': $color-darkest-gray,
+    'cta-link-document-color-hover': $color-darkest-gray,
 
     'cta-link-icon-border': 1px solid $color-darkest-gray,
 
@@ -463,7 +469,10 @@ $themes: (
     'cta-link-border-hover': 1px solid $color-light-gray,
 
     'cta-link-title-color': $color-darkest-blue,
+    'cta-link-title-color-hover': $color-darkest-blue,
+
     'cta-link-document-color': $color-blue,
+    'cta-link-document-color-hover': $color-blue,
 
     'field-color': $color-dark-gray,
     'field-background': $color-white,
