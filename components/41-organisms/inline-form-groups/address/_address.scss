@@ -1,5 +1,7 @@
 .address-component {
   .form-item {
+    @include make-mobile-column(12);
+
     &.address-street {
       @include make-desktop-column(5);
     }
