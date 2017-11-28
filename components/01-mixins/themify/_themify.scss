@@ -39,12 +39,20 @@
   $cta-link-border-hover: map-get($colors, 'cta-link-border-hover') !global;
 
   $cta-link-title-color: map-get($colors, 'cta-link-title-color') !global;
+  $cta-link-title-color-hover: map-get($colors, 'cta-link-title-color-hover') !global;
+
   $cta-link-document-color: map-get($colors, 'cta-link-document-color') !global;
+  $cta-link-document-color-hover: map-get($colors, 'cta-link-document-color-hover') !global;
+
+  $cta-link-icon-border: map-get($colors, 'cta-link-icon-border') !global;
 
   $field-color: map-get($colors, 'field-color') !global;
   $field-background: map-get($colors, 'field-background') !global;
   $field-border: map-get($colors, 'field-border') !global;
   $field-placeholder: map-get($colors, 'field-placeholder') !global;
+
+  $fieldset-border: map-get($colors, 'fieldset-border') !global;
+  $fieldset-color: map-get($colors, 'fieldset-color') !global;
 
   $field-error-background: map-get($colors, 'field-error-background') !global;
   $field-error-color: map-get($colors, 'field-error-color') !global;

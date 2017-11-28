@@ -81,17 +81,14 @@
   }
 
   button.hamburger-menu__toggle {
-    width: auto;
-    padding: 0;
-    font-size: 1em;
-    font-weight: normal;
+    @include btn-s;
 
-    &:hover,
-    &:focus,
-    &:active {
-      background: transparent;
-      color: inherit;
-      text-decoration: underline;
+    &::before {
+      @extend %icon-base-css;
+      @extend %icon-menu;
+      position: relative;
+      top: .1rem;
+      margin-right: .5rem;
     }
   }
 }

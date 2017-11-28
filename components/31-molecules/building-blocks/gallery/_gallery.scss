@@ -17,6 +17,10 @@
 
 .gallery {
   > .main {
+    @include tablet {
+      @include make-mobile-column(12, 1%);
+    }
+
     @include make-mobile-column(12);
 
     display: block;
