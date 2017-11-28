@@ -15,6 +15,7 @@ All notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 * STIJ-170: Added a label to the search molecule.
 * STIJ-170: Hide the label of the search molecule in the header organism.
 * STIJ-170: Add placeholder to search molecule inside the header organism.
+* STIJ-182: Fixed whitespace when previewing footer component in the style guide.
 
 ### 2.6.19
 * STIJ-158: Changed datepicker date format to an English format.
