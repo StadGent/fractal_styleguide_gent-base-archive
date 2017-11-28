@@ -51,13 +51,13 @@
   </head>
   <body>
     <div class="container ">
-      <div class="preview-container">
-        {% block content %}
+      {% block content %}
+        <div class="preview-container">
           <div class="content-container">
             {{ yield | raw }}
           </div>
-        {% endblock %}
-      </div>
+        </div>
+      {% endblock %}
     </div>
   </body>
 </html>
