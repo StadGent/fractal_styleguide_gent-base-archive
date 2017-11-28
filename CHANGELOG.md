@@ -1,6 +1,40 @@
 # Changelog
 All Notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
+## 2.6.20
+* STIJ-89: Changed the documentation of an icon to English and update it a bit.
+* STIJ-106: Added search molecule documentation.
+* STIJ-170: Fixed search molecule bug where it was using the old button submit atom instead of the input type submit atom.
+* STIJ-170: Added a label to the search molecule.
+* STIJ-170: Hide the label of the search molecule in the header organism.
+* STIJ-170: Add placeholder to search molecule inside the header organism.
+
+## 2.6.19
+* STIJ-158: Changed datepicker date format to an English format.
+* STIJ-159: Removed button submit atom.
+* STIJ-159: Moved the submit button documentation to the input submit atom.
+* STIJ-160: Changed the form actions - editor molecule variant to include a normal button instead of a dropbutton.
+* STIJ-161: Fixed broken links in documentation files.
+* STIJ-162: Changed all Dutch text to English.
+* STIJ-168: Changed style guide title to a versioned version.
+* STIJ-169: Integrate link in style guide to the GitHub CHANGELOG.
+
+## 2.6.18
+* STIJ-50: Fixed label for attributes and changed a lot of the form examples in the style guide.
+* STIJ-86: Added documentation to some components.
+* STIJ-156: Updated the CONTRIBUTING and README files.
+* STIJ-156: Updated the README file of the gallery component with important licensing information.
+* STIJ-157: Changed the loaded JS files in the _preview.twig file to the minified versions. This fixes issues when automatically deploying.
+* STIJ-157: Changed the gulp file to also locally minify the JS files. This fixes local JS issues.
+
+## 2.6.17
+**IMPORTANT: Updating this style guide through composer is DEPRECATED! The next release will remove composer.json!**
+
+* STIJ-154: Changed preview layout of style guide to be more user friendly.
+* STIJ-156: Added LICENSING, SECURITY, CONTRIBUTING and README changes.
+* STIJ-156: Added license information for the gallery component that uses Light Gallery (jQuery plugin).
+   **Important: Check the bit about the commercial license!**
+
 ## 2.6.16
 * STIJ-155: Added small fixes to various form elements.
 
@@ -31,7 +65,7 @@ we made the grid styling flexible between 2, 3 or 4 columns.
 ## 2.6.9
 * STIJ-63: Made Fractal variants of paragraphs.
 * STIJ-63: Remove underlined text from paragraph examples, 
-           it is discouraged to use underlined text.
+it is discouraged to use underlined text.
 * STIJ-131: Remove placeholders from all input type fields except search fields.
 * STIJ-25: Fixed status messages preview pages.
 * STIJ-140: Fixed themify issue on select input fields.
@@ -69,20 +103,14 @@ we made the grid styling flexible between 2, 3 or 4 columns.
     * Fixed preview hamburger menu.
 * STIJ-34: Changed Gent info block title to h3.
 
-***
-
 ## 2.6.0
 * STIJ-32: Refactored heading.
 * STIJ-95: Added more documentation.
 * STIJ-122: Minor validation fixes.
 * STIJ-123: Added form errors.
 
-***
-
 ## 2.5.1
 * STIJ-116: Minor change to the styling of the Form Steps molecule.
-
-***
 
 ## 2.5.0 
 * STIJ-76: 
@@ -94,4 +122,3 @@ we made the grid styling flexible between 2, 3 or 4 columns.
     * Changed styling for the Form Steps molecule.
     * Added themify for the Form Steps molecule.    
 
-***

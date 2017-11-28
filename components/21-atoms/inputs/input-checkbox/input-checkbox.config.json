@@ -3,7 +3,7 @@
   "status": "ready",
   "handle": "input-checkbox",
   "context": {
-    "id": "checkbox-1",
-    "label": "Checkbox option"
+    "checkbox_id": "checkbox_id",
+    "checkbox_name": "checkbox_name"
   }
 }

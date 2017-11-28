@@ -3,6 +3,8 @@
   "status": "ready",
   "handle": "input-select",
   "context": {
+    "select_name": "select_name",
+    "select_id": "select_id",
     "label": "Input Select",
     "options": [
       {

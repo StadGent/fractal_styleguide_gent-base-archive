@@ -1,5 +1,5 @@
 ---
-title: Mixins 
+title: Mixins
 ---
 
 This styleguide uses a lot of mixins throughout its code.
@@ -10,18 +10,18 @@ We encourage you to use these where necessary.
   - tablet();
   - tablet-only();
   - desktop();
-  
-  
+
+
 - **[General mixins](#general)**:
   - clearfix();
   - color-element-states($color, $color-hover, $property);
   - triangle($direction, $size-h, $size-v, $color);
-  
-  
+
+
 - **[Themify mixins](#themify)**:
   - themify($themes);
-   
-   
+
+
 - **[Grid mixins](#grid)**:
   - make-row($gutter);
   - make-mobile-column($columns, $gutter);
@@ -29,7 +29,7 @@ We encourage you to use these where necessary.
   - make-desktop-column($columns, $gutter: $gutter-width);
 
 
-## <a name="breakpoints"></a>Breakpoint mixins 
+## <a name="breakpoints"></a>Breakpoint mixins
 
 ### tablet();
 **Description:**
@@ -89,7 +89,7 @@ This asumes a min-width as defined by the variable.
 @include desktop { ... }
 ```
 
-## <a name="general"></a>General mixins 
+## <a name="general"></a>General mixins
 ### clearfix();
 **Description:**
 For modern browsers
@@ -124,7 +124,7 @@ Source: http://nicolasgallagher.com/micro-clearfix-hack/
 
 ### color-element-states($color, $color-hover, $property);
 **Description:**
-Adds active, visited, hover and focus states to elements like links or buttons etc... 
+Adds active, visited, hover and focus states to elements like links or buttons etc...
 
 **Implementation:**
 ```
@@ -203,11 +203,11 @@ Forked from https://github.com/juanbrujo/triangle-mixin.less
 ```
 ***
 
-## <a name="themify"></a>Themify mixins 
+## <a name="themify"></a>Themify mixins
 ### themify($themes: $themes);
 **Description:**
-This mixins is used throughout components in the style guide to "themify" them. 
-This means that when we use the themify mixin on a color, this color can be 
+This mixin is used throughout components in the style guide to "themify" them.
+This means that when we use the themify mixin on a color, this color can be
 different based on the section the component is in.
 
 It uses a SASS map `$themes` to loop over the different sections defined in `_vars.scss`.
@@ -239,10 +239,10 @@ It uses a SASS map `$themes` to loop over the different sections defined in `_va
 ```
 ***
 
-## <a name="grid"></a>Grid mixins 
-### make-row($gutter);  
+## <a name="grid"></a>Grid mixins
+### make-row($gutter);
 **Description:**
-This mixins is used to create a Bootstrap style row which adds 
+This mixins is used to create a Bootstrap style row which adds
 negative margins to the div.
 
 **Implementation:**
@@ -260,7 +260,7 @@ negative margins to the div.
 
 ***
 
-### make-mobile-column($columns, $gutter); 
+### make-mobile-column($columns, $gutter);
 **Description:**
 Create a column applied to mobile layouts.
 
@@ -280,7 +280,7 @@ Create a column applied to mobile layouts.
 @include make-mobile-column(6);
 ```
 
-### make-tablet-column($columns, $gutter); 
+### make-tablet-column($columns, $gutter);
 **Description:**
 Create a column applied to tablet layouts.
 
@@ -303,7 +303,7 @@ Create a column applied to tablet layouts.
 @include make-tablet-column(6);
 ```
 
-### make-desktop-column($columns, $gutter); 
+### make-desktop-column($columns, $gutter);
 **Description:**
 Create a column applied to desktop layouts.
 

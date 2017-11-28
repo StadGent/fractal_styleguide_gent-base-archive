@@ -17,7 +17,8 @@
      */
     loadDatepicker: function () {
       $(this).datepicker({
-        showWeek: true
+        showWeek: true,
+        dateFormat: 'yy-mm-dd'
       });
     }
   });

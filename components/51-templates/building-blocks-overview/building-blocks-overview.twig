@@ -1,51 +1,102 @@
-<h1>Building blocks overview</h1>
-
+<h2 class="styleguide">Building blocks overview</h2>
 <div class="preview-inner-container">
   <h2>Header</h2>
-  {% include '@pagination' %}
+  {% include '@header' %}
 </div>
 
 <div class="preview-inner-container">
+  <h2>Footer</h2>
+  {% include '@footer' %}
+</div>
+
+<div class="preview-inner-inner-container">
   <h2>Breadcrumbs</h2>
-  {% include '@breadcrumbs' %}
+  {% include '@breadcrumbs' with {
+    "items": [
+      "<a href='#'>Stad.gent</a>",
+      "<a href='#'>Overview</a>",
+      "<span>Overview</span>",
+      "<span>Overview</span>",
+      "<span>Page title</span>"
+    ]
+  }%}
 </div>
 
-<div class="preview-inner-container">
+<div class="preview-inner-inner-container">
   <h2>Search</h2>
-  {% include '@search' with { 'placeholder': 'Search here', 'text': 'Search' }%}
+  {% include '@search' with {
+  "search_id": "header-search",
+  "search_name": "header-search",
+  "placeholder": "What are you looking for?",
+  "modifier_search": "inline",
+  "text": "Search",
+  "modifier_submit": "btn--inline"
+  } %}
 </div>
 
-<div class="preview-inner-container">
+<div class="preview-inner-inner-container">
   <h2>CTA link</h2>
-  {% include '@cta-link' with { 'title': 'Graag meer info?', 'link_text': 'Bezoek onze website', 'modifier': 'link' }%}
+  {% include '@cta-link' with {
+    'title': 'Want more info?',
+    'link_text': 'Visit our website',
+    'modifier': 'link'
+  }%}
 </div>
 
-<div class="preview-inner-container">
+<div class="preview-inner-inner-container">
   <h2>CTA document</h2>
-  {% include '@cta-link' with { 'title': 'Graag meer info?', 'link_text': 'Download', 'modifier': 'clip' }%}
+  {% include '@cta-link' with {
+    'title': 'Want more info?',
+    'link_text': 'Download',
+    'modifier': 'clip'
+  }%}
 </div>
 
-<div class="preview-inner-container">
+<div class="preview-inner-inner-container">
   <h2>CTA form fill</h2>
-  {% include '@cta-link' with { 'title': 'Vul het formulier in', 'link_text': 'Vul in', 'modifier': 'form-fill' }%}
+  {% include '@cta-link' with {
+    'title': 'Fill in the form',
+    'link_text': 'Fill in',
+    'modifier': 'form-fill'
+  }%}
 </div>
 
-<div class="preview-inner-container">
+<div class="preview-inner-inner-container">
   <h2>CTA email</h2>
-  {% include '@cta-link' with { 'title': 'Contacteer ons via mail', 'link_text': 'Mail', 'modifier': 'email' }%}
+  {% include '@cta-link' with {
+    'title': 'Contact us by email',
+    'link_text': 'Mail',
+    'modifier': 'email'
+  }%}
 </div>
 
-<div class="preview-inner-container">
+<div class="preview-inner-inner-container">
   <h2>CTA phone</h2>
-  {% include '@cta-link' with { 'title': 'Contacteer ons via telefoon', 'link_text': 'Telefoneer', 'modifier': 'phone' }%}
+  {% include '@cta-link' with {
+    'title': 'Contact us by phone',
+    'link_text': 'Call us',
+    'modifier': 'phone'
+  }%}
 </div>
 
-<div class="preview-inner-container">
+<div class="preview-inner-inner-container">
   <h2>CTA location</h2>
-  {% include '@cta-link' with { 'title': 'Locatie', 'link_text': 'Locatie', 'modifier': 'loc' }%}
+  {% include '@cta-link' with {
+    'title': 'Location',
+    'link_text': 'Location',
+    'modifier': 'loc'
+  }%}
 </div>
 
-<div class="preview-inner-container">
+<div class="preview-inner-inner-container">
   <h2>Form steps</h2>
-  {% include '@form-steps' %}
+  {% include '@form-steps' with {
+    "step1_title": "Step 1 title",
+    "step2_title": "Step 2 title",
+    "step3_title": "Step 3 title",
+    "step4_title": "Step 4 title",
+    "step5_title": "Step 5 title",
+    "step6_title": "Step 6 title",
+    "step7_title": "Step 7 title"
+  } %}
 </div>

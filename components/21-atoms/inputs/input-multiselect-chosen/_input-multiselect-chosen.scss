@@ -7,6 +7,7 @@
     ul.chosen-choices {
       height: auto;
       margin: 0;
+      padding-right: 1rem;
       box-shadow: none;
     }
 
@@ -42,6 +43,10 @@
   @extend %btn;
   @include btn-s;
   text-align: left;
+
+  span {
+    margin-left: -5px;
+  }
 
   .search-choice-close {
     right: 1.2rem;

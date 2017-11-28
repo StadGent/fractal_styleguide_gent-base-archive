@@ -1,5 +1,8 @@
 'use strict';
 
+var packageInfo = require('./package.json');
+var packageVersion = packageInfo.version;
+
 /*
 * Require the path module
 */
@@ -14,7 +17,7 @@ const logger = fractal.cli.console; // keep a reference to the fractal CLI conso
 /*
 * Give your project a title.
 */
-fractal.set('project.title', 'StyleGuide');
+fractal.set('project.title', 'City of Ghent Style Guide - Version ' + packageVersion);
 
 /*
 * Tell Fractal where to look for components.
@@ -183,6 +186,9 @@ gulp.task('styles:extract', ['fractal:build', 'styles:build', 'styles:dist'], fu
 gulp.task('js:dist', ['styles:dist'], function() {
   gulp.src('components/**/*.js')
     .pipe(rename({dirname: ''}))
+    .pipe(minify({
+      noSource: true
+    }))
     .pipe(gulp.dest('./public/styleguide/js/'));
 });
 
@@ -420,7 +426,7 @@ gulp.task('validate', ['styles:validate', 'js:validate']);
  *  Used to compile production ready SCSS and JS code.
  *
  */
-gulp.task('compile', ['fractal:build', 'styles:build', 'styles:extract', 'js:build', 'images:minify']);
+gulp.task('compile', ['fractal:build', 'styles:build', 'styles:dist', 'styles:extract', 'js:build', 'js:dist', 'images:minify']);
 gulp.task('compile:dev', ['fractal:build', 'styles:dist', 'js:dist', 'images:minify']);
 
 /*

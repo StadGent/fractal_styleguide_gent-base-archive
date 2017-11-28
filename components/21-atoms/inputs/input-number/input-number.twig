@@ -1,1 +1,7 @@
-<input type="number" name="number" class="{{ modifier }}" />
+<input type="number"
+       name="{{ number_name }}"
+       id="{{ number_id }}"
+       {% if modifier %}
+         class="{{ modifier }}"
+       {% endif %}
+/>

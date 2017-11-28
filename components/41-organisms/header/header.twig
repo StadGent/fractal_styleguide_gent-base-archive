@@ -28,11 +28,25 @@
     </div>
 
     <div id="header-search-mobile" class="header-search-mobile header-component right">
-      {% include '@search' %}
+      {% include '@search' with {
+        "search_id": "header-search-mobile",
+        "search_name": "header-search-mobile",
+        "placeholder": "What are you looking for?",
+        "modifier_search": "inline",
+        "text": "Search",
+        "modifier_submit": "btn--inline"
+      } %}
       <a href="javascript:(void);" class="close">Sluiten</a>
     </div>
     <div id="header-search" class="header-search header-component right">
-      {% include '@search' %}
+      {% include '@search' with {
+        "search_id": "header-search",
+        "search_name": "header-search",
+        "placeholder": "What are you looking for?",
+        "modifier_search": "inline",
+        "text": "Search",
+        "modifier_submit": "btn--inline"
+      } %}
     </div>
   </div>
 </header>

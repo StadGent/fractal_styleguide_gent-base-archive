@@ -1,1 +1,8 @@
-<input type="email" name="email" id="email" class="{{ modifier }}" />
+<input type="email"
+       name="{{ email_name }}"
+       id="{{ email_id }}"
+       {% if modifier %}
+         class="{{ modifier }}"
+       {% endif %}
+/>
+

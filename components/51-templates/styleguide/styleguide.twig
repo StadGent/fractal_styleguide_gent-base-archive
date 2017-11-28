@@ -1,29 +1,24 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Preview Layout</title>
-    <link media="all" rel="stylesheet" href="{{ '/css/main.css' | path }}">
-    <link media="all" rel="stylesheet" href="{{ '/css/styleguide.css'| path }}">
-    <meta name="MobileOptimized" content="320">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
   <h1>Styleguide</h1>
 
+  <h2 class="styleguide">Colors</h2>
   <div class="preview-inner-container">
-    <h2>Colors</h2>
     {% include '@colors' %}
   </div>
 
+  <h2 class="styleguide">Fonts & text styles</h2>
   <div class="preview-inner-container">
-    <h2>Fonts & text styles</h2>
     {% include '@fonts' %}
   </div>
 
-  {% include '@text-styles' with {
+  {% include '@headings' %}
+
+  {% include '@paragraph-types' with {
     'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin mauris vel nisi condimentum accumsan. Phasellus eget est condimentum erat fringilla congue. Duis malesuada justo ut tincidunt tincidunt. <u>Vestibulum</u> in felis quam. In <strong>varius</strong> ligula vel ultricies consequat. Cras fringilla blandit purus nec <a href="javascript:(void);">fermentum</a>. Vivamus tristique ac mi a <i>pulvinar</i>. Quisque non ipsum tortor. Nunc nec odio non tellus malesuada molestie id sed ipsum. Curabitur risus ex, aliquet sed orci a, sagittis finibus sem. Ut bibendum purus id sodales scelerisque.'
   } %}
+
+  {% include '@lists' %}
+
+  {% include '@tags' %}
 
   {% include '@buttons' with { 'text': 'Button' }%}
 
@@ -40,7 +35,3 @@
   {% include '@building-blocks-overview' %}
 
   {% include '@blocks-overview' %}
-
-  {% include '@section-overview' %}
-</body>
-</html>

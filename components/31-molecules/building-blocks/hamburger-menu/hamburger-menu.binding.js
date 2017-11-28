@@ -6,7 +6,11 @@
   'use strict';
 
   $(window).on('load', function (e) {
-    $('.hamburger-menu').loadHamburgerMenu();
+    var $hamburgerMenu = $('.hamburger-menu');
+
+    if ($hamburgerMenu.length > 0) {
+      $hamburgerMenu.loadHamburgerMenu();
+    }
   });
 
 })(jQuery);

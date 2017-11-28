@@ -1,7 +1,17 @@
 # Styleguide Gent Base
-This styleguide contains the SASS library and needed assets that are required for use in a subthemes of the Gent starterkit.
+This style guide contains the SASS library and needed assets to be able to style a web application in the corporate identity for the city of Ghent..
 
-### Folder structure
+## Licenses 
+If you are building something for the City of Ghent (Stad Gent) or Digipolis, you can contact the web team at Digipolis or open an issue here to get the necessary licenses thar are required for your project.
+For more info on what licenses you need see below.
+
+### License: Expressway font
+The Expressway font is a paying font used by the style guide of the City of Ghent. It needs to be included through Typekit 
+
+### License: Light Gallery plugin for jQuery
+It is important to note that anyone that wants to use this style guide or fork this repository for commercial purposes, should [pay for a license](http://sachinchoolur.github.io/lightGallery/docs/license.html)!
+
+## Folder structure
 When installing this package, you will get a directory structure like this.
 ```
 .
@@ -13,13 +23,14 @@ When installing this package, you will get a directory structure like this.
 │       └── sass
 └── package.json
 ```
-The build directory contains all sass source files and all asset files needed for the styleguide.
+The build directory contains all SASS source files and all asset files needed to be able to style a web application in the corporate identity for the city of Ghent..
 
-### Implementing this styleguide in your own project
-This styleguide aims to be technology independent. This means you should be able to use it inside your project with wathever technology you want.
+## Implementing this style guide in your own project
+This style guide aims to be technology independent. This means you should be able to use it inside your project with wathever technology you want.
 It utilizes SASS to style its components, so you will have to use that in your project.
 
-After installing the styleguide through `npm install gent_styleguide` you''ll get a folder structure like this:
+### Setup
+After installing the style guide through `npm install gent_styleguide` you''ll get a folder structure like this:
 
 ```
 .
@@ -30,7 +41,7 @@ After installing the styleguide through `npm install gent_styleguide` you''ll ge
 └── package.json
 ```
 
-Now, to use the styleguide SASS partials you just need to import them into your main SASS file at the top so they get loaded before your own code.
+Now, to use the style guide SASS partials you just need to import them into your main SASS file at the top so they get loaded before your own code.
 ```
 @import 'node_modules/gent_styleguide/build/sass/00-settings/reset';
 @import 'node_modules/gent_styleguide/build/sass/00-settings/vars';
@@ -43,7 +54,31 @@ Now, to use the styleguide SASS partials you just need to import them into your 
 @import 'node_modules/gent_styleguide/build/sass/51-templates/**/*';
 ```
 
-Note: When using the styleguide you will need to add breakpoint-sass as an includePath inside your gulpfile.js
+Note: we use this structure to allow you to override anything you wish in your own custom project.
+The way to do this, is to add the imports above to your main SASS file and add imports of your own overriding files in between.
+
+Example:
+```
+@import 'node_modules/gent_styleguide/build/sass/00-settings/reset';
+@import 'node_modules/gent_styleguide/build/sass/00-settings/vars';
+@import '/sass/02-vars-overrides/**/*';
+@import 'node_modules/gent_styleguide/build/sass/02-mixins/**/*';
+@import '/sass/02-mixins-overrides/**/*';
+@import 'node_modules/gent_styleguide/build/sass/02-sections/**/*';
+@import '/sass/02-sections-overrides/**/*';
+@import 'node_modules/gent_styleguide/build/sass/11-base/**/*';
+@import '/sass/02-base-overrides/**/*';
+@import 'node_modules/gent_styleguide/build/sass/21-atoms/**/*';
+@import '/sass/02-atom-overrides/**/*';
+@import 'node_modules/gent_styleguide/build/sass/31-molecules/**/*';
+@import '/sass/02-molecule-overrides/**/*';
+@import 'node_modules/gent_styleguide/build/sass/41-organisms/**/*';
+@import '/sass/02-organism-overrides/**/*';
+@import 'node_modules/gent_styleguide/build/sass/51-templates/**/*';
+```
+
+Note: When using the style guide you will need to add breakpoint-sass as an includePath inside your gulpfile.js
+
 Example:
 ```
     .pipe(sass({
@@ -53,3 +88,21 @@ Example:
 ```
 This includePaths path may vary depending on your setup!
 
+### Fonts
+You need to make sure the Expressway font is included in your project somehow.
+This would be done by including the Typescript script in your project and requesting a license / Typekit kit from the web team at Digipolis.
+
+Example:
+```
+<script>
+  (function(d) {
+    var config = {
+          kitId: 'kgt4wbp',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+```
+So in this example you would need to change the `kitId` to the ID you got from the web team of Digipolis.

@@ -146,6 +146,7 @@
        */
       $('.hamburger-menu__toggle').on('click', open);
 
+
       /**
        * Indicates that a user has clicked on the closeBtn hamburger menu
        * toggle.
