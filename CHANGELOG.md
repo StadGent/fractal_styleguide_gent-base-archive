@@ -6,6 +6,9 @@ Refer to upcoming changes in our README.md under "Roadmap"
 ## Changes
 All notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
+### 2.7.0
+* STIJ-175: Added page wide image component.
+
 ### 2.6.20
 * STIJ-1: Fixed whitespace issue for the gallery component.
 * STIJ-39: Fixed component colors inside of sections, based on guidelines fron the City of Ghent.
