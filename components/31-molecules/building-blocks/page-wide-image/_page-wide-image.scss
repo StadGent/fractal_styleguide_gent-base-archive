@@ -1,25 +1,12 @@
 .page-wide-image-wrapper {
+  position: relative;
+
   .description {
     @include tablet {
       display: block;
       margin-top: .25rem;
       margin-right: .5rem;
       float: right;
-    }
-
-    display: none;
-  }
-}
-
-.page-wide-image {
-  position: relative;
-
-  img {
-    @include tablet {
-      display: block;
-      width: 100%;
-      max-height: 26.25rem;
-      overflow: hidden;
     }
 
     display: none;
@@ -42,6 +29,19 @@
 
   h2 {
     @extend %h1;
+  }
+}
+
+.page-wide-image {
+  img {
+    @include tablet {
+      display: block;
+      width: 100%;
+      max-height: 26.25rem;
+      overflow: hidden;
+    }
+
+    display: none;
   }
 }
 

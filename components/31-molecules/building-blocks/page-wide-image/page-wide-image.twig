@@ -1,17 +1,19 @@
 <div class="page-wide-image-wrapper">
-  <div class="page-wide-image">
+  <figure class="page-wide-image">
     {% include '@image' with {
       "src": "https://via.placeholder.com/1600x420",
       "alt_text": "Page wide image",
       "modifier": "no-style"
     } %}
 
-    {% include 'h2' with {
-      "h2_text": "Page wide title",
-    } %}
-  </div>
+    <figcaption>
+      {% include 'description' with {
+        "description": "Caption text comes here.",
+      } %}
+    </figcaption>
+  </figure>
 
-  {% include 'description' with {
-  "description": "Caption text comes here.",
+  {% include 'h2' with {
+    "h2_text": "Page wide title",
   } %}
 </div>
