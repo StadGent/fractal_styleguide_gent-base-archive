@@ -8,6 +8,8 @@ All notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
 ### 2.7.0
 * STIJ-175: Added page wide image component.
+* STIJ-186: Added header variant with breadcrumb and with a banner image.
+* STIJ-186: Added small fix to the buttons in the header.
 
 ### 2.6.20
 * STIJ-1: Fixed whitespace issue for the gallery component.
