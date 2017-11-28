@@ -4,7 +4,3 @@
     color: map-get($colors, 'section-text-color');
   }
 }
-
-*[class*="section--"] {
-  @include clearfix();
-}
