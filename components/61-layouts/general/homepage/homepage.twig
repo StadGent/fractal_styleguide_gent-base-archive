@@ -1,0 +1,57 @@
+{% include '@header--with-menu' %}
+
+<div class="page-container">
+  <section class="section--inverse">
+
+    <div class="row">
+      <div class="col-tablet-4">
+        <section class="island section--default">
+          <h2>Veelgevraagde info</h2>
+          {% include '@list' with {
+            "modifier": "links",
+            "items": [
+              "<a href='#'>item 1</a>",
+              "<a href='#'>item 2</a>",
+              "<a href='#'>item 3</a>",
+              "<a href='#'>item 4</a>",
+            ]
+          } %}
+        </section>
+      </div>
+
+      <div class="col-tablet-4">
+        <section class="island section--default">
+          <h2>Openingsuren en adressen</h2>
+          {% include '@list' with {
+            "modifier": "links",
+            "items": [
+              "<a href='#'>item 1</a>",
+              "<a href='#'>item 2</a>",
+              "<a href='#'>item 3</a>",
+              "<a href='#'>item 4</a>",
+            ]
+          } %}
+        </section>
+      </div>
+
+      <div class="col-tablet-4">
+        <section class="island section--highlighted">
+          <h2>Gentinfo</h2>
+          {% include '@list' with {
+            "modifier": "links",
+            "items": [
+              "<a href='#'>item 1</a>",
+              "<a href='#'>item 2</a>",
+              "<a href='#'>item 3</a>",
+              "<a href='#'>item 4</a>",
+            ]
+          } %}
+        </section>
+      </div>
+
+    </div>
+
+  </section>
+</div>
+
+{% include '@footer' %}
