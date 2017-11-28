@@ -1,6 +1,7 @@
 {
   "title": "Header",
   "status": "ready",
+  "preview": "@preview-header",
   "context": {
     "section": "section--wrapper"
   }
