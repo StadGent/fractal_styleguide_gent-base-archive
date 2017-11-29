@@ -18,8 +18,8 @@
     loadDatepicker: function () {
       $(this).datepicker({
         showWeek: true,
-        dateFormat: 'dd-mm-yy',
-        altFormat: 'dd-mm-yy'
+        dateFormat: 'dd/mm/yy',
+        altFormat: 'dd/mm/yy'
       });
     }
   });
