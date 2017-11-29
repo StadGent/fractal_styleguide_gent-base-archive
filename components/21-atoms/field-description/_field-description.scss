@@ -6,7 +6,7 @@
   }
 
   position: relative;
-  padding: .625rem .625rem .625rem 3.125rem;
+  padding: .5rem .5rem .5rem 2.5rem;
   border-radius: $radius-1;
   font-size: .9rem;
   line-height: 1.1rem;
@@ -16,8 +16,8 @@
     @extend %icon-info-circle;
 
     position: absolute;
-    top: .625rem;
-    left: .9325rem;
+    top: .5rem;
+    left: .75rem;
     font-size: 1.25rem;
   }
 }
