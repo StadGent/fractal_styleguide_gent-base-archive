@@ -50,14 +50,14 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-    <div class="container ">
-      <div class="preview-container">
-        {% block content %}
+    <div class="container">
+      {% block content %}
+        <div class="preview-container">
           <div class="content-container">
             {{ yield | raw }}
           </div>
-        {% endblock %}
-      </div>
+        </div>
+      {% endblock %}
     </div>
   </body>
 </html>

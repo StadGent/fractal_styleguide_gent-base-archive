@@ -1,6 +1,15 @@
 # Styleguide Gent Base
 This style guide contains the SASS library and needed assets to be able to style a web application in the corporate identity for the city of Ghent..
 
+## Roadmap 
+### Style guide version 3.x
+* A major overhaul with an entirely new style for all components.
+* Probably a full CSS grid implementation throughout all the style guide components. 
+* We will probably drop jQuery in favor for native Javascript or another library.
+
+### Upcoming: 2.7
+* General changes and fixes to the style guide.
+
 ## Licenses 
 If you are building something for the City of Ghent (Stad Gent) or Digipolis, you can contact the web team at Digipolis or open an issue here to get the necessary licenses thar are required for your project.
 For more info on what licenses you need see below.

@@ -1,5 +1,8 @@
-.form-actions > {
-  a {
+.form-actions {
+  margin-top: 2rem;
+  clear: both;
+
+  > a {
     line-height: 2.4rem;
 
     &.delete {
@@ -7,8 +10,8 @@
     }
   }
 
-  input,
-  a {
+  > input,
+  > a {
     display: inline-block;
     margin: 0 1rem 0 0;
     float: left;
