@@ -16,8 +16,10 @@ All notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 * STIJ-170: Hide the label of the search molecule in the header organism.
 * STIJ-170: Add placeholder to search molecule inside the header organism.
 * STIJ-175: Added page wide image component.
+* STIJ-182: Fixed whitespace when previewing footer component in the style guide.
 * STIJ-186: Added header variant with breadcrumb and with a banner image.
 * STIJ-186: Added small fix to the buttons in the header.
+* STIJ-188: Fixed issue in gulp command js:dist.
 
 ### 2.6.19
 * STIJ-158: Changed datepicker date format to an English format.
