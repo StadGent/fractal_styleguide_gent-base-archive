@@ -96,6 +96,11 @@ label {
 }
 
 legend {
+  @include themify {
+    border-bottom: $fieldset-border;
+    color: $fieldset-color;
+  }
+
   width: 100%;
   margin-bottom: 1rem;
   padding-bottom: .4rem;
