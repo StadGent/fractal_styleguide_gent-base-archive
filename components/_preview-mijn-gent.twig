@@ -4,23 +4,10 @@
 
 {% block content %}
 
-  {% include '@header' with {
-    "search_input_placeholder": "Wat wilt u vinden?",
-    "search_submit_text": "Search",
-    "search_submit_modifier": "inline icon icon-search icon-only"
-  } %}
-  {% include '@breadcrumbs' with {
-    "items": [
-      "<a href='#'>Stad.gent</a>",
-      "<a href='#'>Overview</a>",
-      "<span>Overview</span>",
-      "<span>Overview</span>",
-      "<span>Page title</span>"
-    ]
-  } %}
+  {% include '@header--with-menu' %}
 
-  <div class="content-container">
-    Hover over the <strong>profile</strong> icon in the <strong>header</strong> to toggle the mijn-gent block.
+  <div class="content-container section--default">
+    <p>Hover over the <strong>profile</strong> icon in the <strong>header</strong> to toggle the mijn-gent block.</p>
   </div>
 {% endblock %}
 
