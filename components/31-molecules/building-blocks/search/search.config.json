@@ -3,7 +3,10 @@
   "status": "ready",
   "handle": "search",
   "context": {
-    "placeholder": "What are you looking for?",
+    "label": "What are you looking for?",
+    "for": "header-search",
+    "label_optional": "",
+    "placeholder": "",
     "modifier_search": "inline",
     "text": "Submit",
     "search_id": "header-search",

@@ -1,5 +1,6 @@
 <header class="header section--wrapper">
   <div class="content-container">
+
     <div id="logo" class="header-component">
       {% include '@logo' %}
     </div>
@@ -48,4 +49,12 @@
     "<span>Overview</span>",
     "<span>Page title</span>"
   ]
+} %}
+
+{% include '@page-wide-image' with {
+  "src": "https://via.placeholder.com/1600x420",
+  "alt_text": "Page wide image",
+  "modifier": "no-style",
+  "description": "Caption text comes here.",
+  "h2_text": "Page wide title"
 } %}

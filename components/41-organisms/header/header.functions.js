@@ -21,7 +21,7 @@
       var mobileHeader = $(this);
       var searchForm = mobileHeader.find('.form-search');
       var searchInput = mobileHeader.find('input[type="search"]');
-      var searchButton = searchForm.find('button');
+      var searchButton = searchForm.find('input[type="submit"]');
       var closeButton = mobileHeader.find('.close');
 
       /**
