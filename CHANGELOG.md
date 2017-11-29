@@ -10,6 +10,7 @@ All notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 * STIJ-1: Fixed whitespace issue for the gallery component.
 * STIJ-30: Fixed styling for select and multi select fields on iPad.
 * STIJ-39: Fixed component colors inside of sections, based on guidelines fron the City of Ghent.
+* STIJ-45: Changed jQuery UI datepicker format to a Dutch format.
 * STIJ-87: Added description field documentation.
 * STIJ-87: Refactored description field atom to use Themify mixin.
 * STIJ-89: Changed the documentation of an icon to English and update it a bit.
