@@ -20,6 +20,7 @@ All notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 * STIJ-186: Added header variant with breadcrumb and with a banner image.
 * STIJ-186: Added small fix to the buttons in the header.
 * STIJ-188: Fixed issue in gulp command js:dist.
+* STIJ-189: Fixed some style guide specific issues.
 
 ### 2.6.19
 * STIJ-158: Changed datepicker date format to an English format.
