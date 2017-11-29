@@ -66,6 +66,12 @@
   }
 
   &__content {
+    @include tablet {
+      background-image: url('#{$styleguide-dir}/img/svg/vignet-top.svg'), url('#{$styleguide-dir}/img/svg/vignet-right.svg'), url('#{$styleguide-dir}/img/svg/vignet-bottom.svg'), url('#{$styleguide-dir}/img/svg/vignet-left.svg');
+      background-repeat: no-repeat;
+      background-position: center top, center right, center bottom, center left;
+    }
+
     @include desktop {
       flex: 2;
     }
@@ -78,9 +84,6 @@
     flex-wrap: wrap;
     align-items: flex-start;
     min-height: 18rem;
-    background-image: url('#{$styleguide-dir}/img/svg/vignet-top.svg'), url('#{$styleguide-dir}/img/svg/vignet-right.svg'), url('#{$styleguide-dir}/img/svg/vignet-bottom.svg'), url('#{$styleguide-dir}/img/svg/vignet-left.svg');
-    background-repeat: no-repeat;
-    background-position: center top, center right, center bottom, center left;
   }
 
   &__form {
@@ -99,10 +102,14 @@
   }
 
   &__social-media {
+    @include tablet {
+      width: 50%;
+    }
+
     @include desktop {
-      flex: 1;
       width: 25%;
     }
+
 
     ul {
       display: flex;
