@@ -1,3 +1,5 @@
+@import '00-settings/vars';
+
 //
 // This file is a customization of the styleguide application.
 // This file is only applicable on stijlgids.stad.gent
@@ -40,9 +42,20 @@
 }
 
 h2.styleguide {
-  padding-left: .5rem;
+  padding: .25rem .5rem;
   border-bottom: 1px dotted #d0cccc;
   background: #efeded;
+
+  .section--wrapper &,
+  .section--inverse &,
+  .section--accent & {
+    background: $color-white;
+    color: $color-blue;
+  }
+
+  .section--wrapper & {
+    color: $color-darkest-blue;
+  }
 }
 
 .preview-container {
@@ -51,22 +64,32 @@ h2.styleguide {
   background-color: #fff;
   overflow: hidden;
 
-  .preview-inner-container {
-    display: inline-block;
-    width: 100%;
-    margin-bottom: 4.375rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px dotted #d0cccc;
-  }
-
-  .preview-inner-inner-container {
-    margin-bottom: 2.5rem;
-    padding-bottom: 2.5rem;
-  }
-
   .gallery {
     max-width: 388px;
   }
+}
+
+.preview-inner-container {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 4.375rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px dotted #d0cccc;
+
+  .section--wrapper &,
+  .section--inverse &,
+  .section--accent & {
+    border-bottom: 1px dotted $color-white;
+  }
+
+  .section--highlighted & {
+    border-bottom: 1px dotted $color-darkest-gray;
+  }
+}
+
+.preview-inner-inner-container {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 
