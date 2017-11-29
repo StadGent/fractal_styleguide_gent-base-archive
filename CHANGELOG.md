@@ -17,6 +17,7 @@ All notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 * STIJ-170: Hide the label of the search molecule in the header organism.
 * STIJ-170: Add placeholder to search molecule inside the header organism.
 * STIJ-175: Added page wide image component.
+* STIJ-177: Added newsletter block component.
 * STIJ-178: Added styling for inline form-items.
 * STIJ-178: Added address organism.
 * STIJ-182: Fixed whitespace when previewing footer component in the style guide.
