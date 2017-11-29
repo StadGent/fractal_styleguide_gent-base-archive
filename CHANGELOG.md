@@ -6,11 +6,6 @@ Refer to upcoming changes in our README.md under "Roadmap"
 ## Changes
 All notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
-### 2.7.0
-* STIJ-175: Added page wide image component.
-* STIJ-186: Added header variant with breadcrumb and with a banner image.
-* STIJ-186: Added small fix to the buttons in the header.
-
 ### 2.6.20
 * STIJ-1: Fixed whitespace issue for the gallery component.
 * STIJ-39: Fixed component colors inside of sections, based on guidelines fron the City of Ghent.
@@ -20,6 +15,9 @@ All notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 * STIJ-170: Added a label to the search molecule.
 * STIJ-170: Hide the label of the search molecule in the header organism.
 * STIJ-170: Add placeholder to search molecule inside the header organism.
+* STIJ-175: Added page wide image component.
+* STIJ-186: Added header variant with breadcrumb and with a banner image.
+* STIJ-186: Added small fix to the buttons in the header.
 
 ### 2.6.19
 * STIJ-158: Changed datepicker date format to an English format.
