@@ -1,7 +1,7 @@
 header.header {
   position: relative;
-  height: 2.7rem;
-  padding: .35rem 0;
+  min-height: 2.7rem;
+  padding: .35rem 0 0;
   font-size: .7rem;
 
   input,
@@ -14,6 +14,7 @@ header.header {
 
     > * {
       min-height: 100%;
+      max-height: 2.36rem;
       margin: 0 1rem 0 0;
       float: left;
       line-height: 2rem;
@@ -56,18 +57,27 @@ header.header {
       //
       &.header-search,
       &.header-search-mobile {
+        .form-label {
+          display: none;
+        }
+
         input[type="search"] {
           width: 10rem;
           margin: 0;
           font-size: .7rem;
         }
 
-        button {
+        input[type="submit"] {
           width: 2rem;
+          height: 2rem;
           padding-right: .5rem;
           padding-left: .5rem;
+          border: 0;
+          background: url('data:image/svg+xml;utf8,<svg fill="#ffffff" version="1.1" xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024"><title></title><g id="icomoon-ignore"></g><path d="M1020.587 914.773l-320.853-320.853c40.96-61.44 64.853-136.533 64.853-211.627 0-102.4-40.96-197.973-112.64-269.653s-167.253-112.64-269.653-112.64-197.973 40.96-269.653 112.64c-71.68 71.68-112.64 167.253-112.64 269.653s40.96 197.973 112.64 269.653 167.253 112.64 269.653 112.64c78.507 0 150.187-23.893 215.040-64.853l320.853 320.853c10.24 10.24 30.72 6.827 44.373-6.827l54.613-54.613c10.24-13.653 13.653-34.133 3.413-44.373zM382.293 658.773c-153.6 0-276.48-126.293-276.48-276.48s122.88-279.893 276.48-279.893 276.48 126.293 276.48 276.48-122.88 279.893-276.48 279.893z"></path></svg>') no-repeat center right;
+          background-size: 65%;
           font-size: 1rem;
           line-height: 1.8rem;
+          text-indent: -9999px;
         }
       }
 
@@ -81,7 +91,7 @@ header.header {
             float: left;
           }
 
-          button {
+          input[type="submit"] {
             float: left;
           }
         }
@@ -103,7 +113,7 @@ header.header {
           padding: .35rem $gutter-width/2;
           background-color: $color-darkest-blue;
 
-          button {
+          input[type="submit"] {
             position: absolute;
             top: .35rem;
             left: calc(75% - 2.35rem);
@@ -132,5 +142,22 @@ header.header {
       }
     }
   }
+}
+
+.header--main-menu {
+  @include tablet {
+    display: block;
+    width: 100%;
+    padding: .25rem 0;
+    background-color: $color-blue;
+    overflow: hidden;
+
+    li {
+      margin-right: 1rem;
+      float: left;
+    }
+  }
+
+  display: none;
 }
 
