@@ -9,6 +9,7 @@ All notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 ### 2.6.20
 * STIJ-1: Fixed whitespace issue for the gallery component.
 * STIJ-39: Fixed component colors inside of sections, based on guidelines fron the City of Ghent.
+* STIJ-45: Changed jQuery UI datepicker format to a Dutch format.
 * STIJ-89: Changed the documentation of an icon to English and update it a bit.
 * STIJ-106: Added search molecule documentation.
 * STIJ-170: Fixed search molecule bug where it was using the old button submit atom instead of the input type submit atom.

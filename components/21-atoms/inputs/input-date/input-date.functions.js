@@ -18,7 +18,7 @@
     loadDatepicker: function () {
       $(this).datepicker({
         showWeek: true,
-        dateFormat: 'yy-mm-dd'
+        altFormat: "dd-mm-yy"
       });
     }
   });
