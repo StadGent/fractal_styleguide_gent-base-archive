@@ -2,7 +2,6 @@
   "title": "Openinghours",
   "name": "openinghours",
   "status": "alpha",
-  "preview": "@preview",
   "handle": "openinghours",
   "default": "open-now",
   "variants": [
