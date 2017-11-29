@@ -36,14 +36,4 @@ footer[data-columns="4"] {
       width: auto;
     }
   }
-
-  .footer--column:last-child {
-    align-self: flex-end;
-    justify-self: flex-end;
-
-    @supports (display: grid) {
-      align-self: end;
-      justify-self: end;
-    }
-  }
 }

@@ -33,8 +33,9 @@ rules:
   no-debug: 2
   # We use sizes in rem followed by px for these
   no-duplicate-properties:
-    - 0
+    - 2
     - exclude:
+      - display
       - padding-left
       - padding-right
       - padding-top
