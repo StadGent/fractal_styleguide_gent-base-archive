@@ -16,9 +16,14 @@
    */
   function initMultiselectChosen() {
     var isIpad = navigator.userAgent.match(/iPad/i) != null;
+    var isIphone = navigator.userAgent.match(/iPhone/i) != null;
 
     if (isIpad === false) {
       $('.chosen-select').loadChosenSelect();
+    }
+
+    if (isIpad || isIphone) {
+      $('.chosen-select').addClass('no-chosen-select');
     }
   }
 
