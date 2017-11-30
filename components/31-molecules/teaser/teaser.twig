@@ -1,13 +1,22 @@
-<div class="teaser">
-    <div class="content">
-        <h3 id="uid2">Island title</h3>
+
+<div class="teaser ">
+    {% include '@image' with {
+    "src": teaser_image_src,
+    "alt_text": teaser_image_alt_text,
+    "modifier": "teaser__link"
+    } %}
+    <div class="teaser__content island">
+        <h3 id="{{ teaser_uid }}">{{ teaser_h3_title }}</h3>
 
         {% include '@paragraph' with {
-        'text': 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.'
+            'text': teaser_paragraph_text
         } %}
 
-        <a href="javascript:void(0);" class="teaser__read-more" aria-labelledby="uid2">lees meer</a>
+        {% include '@link' with {
+            'text': teaser_link_text,
+            'aria_labelledby': teaser_uid,
+            'link': teaser_link_link
+        } %}
     </div>
-    <a href="javascript:void(0);" class="teaser__overlay-link" tabindex="-1" aria-hidden="true"></a>
+    <a href="{{ teaser_link }}" class="teaser__overlay-link" tabindex="-1" aria-hidden="true"></a>
 </div>
-

@@ -1,5 +1,4 @@
 .teaser {
-
   position: relative;
 
   &__overlay-link {
@@ -8,6 +7,14 @@
     right: 0;
     bottom: 0;
     left: 0;
+  }
 
+  &__content {
+    margin: 0;
+    border: 1px solid $color-light-blue;
+  }
+
+  &__image {
+    width: 100%;
   }
 }
