@@ -10,8 +10,10 @@
   }
 
   &__content {
+    @include themify {
+      border: $teaser-border;
+    }
     margin: 0;
-    border: 1px solid $color-light-blue;
   }
 
   &__image {
