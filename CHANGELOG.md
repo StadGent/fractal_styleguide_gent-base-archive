@@ -6,7 +6,9 @@ Refer to upcoming changes in our README.md under "Roadmap"
 ## Changes
 All notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
-### 2.6.20
+### 2.7.0
+**IMPORTANT: Class .text-center has been removed**
+
 * STIJ-1: Fixed whitespace issue for the gallery component.
 * STIJ-30: Fixed styling for select and multi select fields on iPad.
 * STIJ-39: Fixed component colors inside of sections, based on guidelines fron the City of Ghent.
@@ -14,6 +16,8 @@ All notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 * STIJ-87: Added description field documentation.
 * STIJ-87: Refactored description field atom to use Themify mixin.
 * STIJ-89: Changed the documentation of an icon to English and update it a bit.
+* STIJ-96: Added paragraph atom documentation.
+* STIJ-96: Removed the paragraph variant that contains centered text, **it is not allowed by the City of Ghent**!
 * STIJ-100: Added variant for CTA links.
 * STIJ-100: Added CTA link documentation.
 * STIJ-106: Added search molecule documentation.
@@ -31,12 +35,8 @@ All notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 * STIJ-188: Fixed issue in gulp command js:dist.
 * STIJ-189: Fixed some style guide specific issues.
 
-## 2.7.0
-* STIJ-96: Added paragraph atom documentation.
-* STIJ-96: Removed the paragraph variant that contains centered text, **it is not allowed by the City of Ghent**!
-**IMPORTANT: Class .text-center has been removed**
 
-## 2.6.19
+### 2.6.19
 * STIJ-158: Changed datepicker date format to an English format.
 * STIJ-159: Removed button submit atom.
 * STIJ-159: Moved the submit button documentation to the input submit atom.
