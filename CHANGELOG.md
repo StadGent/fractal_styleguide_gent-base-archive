@@ -8,6 +8,7 @@ All notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
 ### 2.7.1
 * STIJ-193: Added figcaption atom and figure molecule.
+* STIJ-195: Added Git pre commit hook support in the gulpfile.
 
 ### 2.7.0
 **IMPORTANT: Class .text-center has been removed**
