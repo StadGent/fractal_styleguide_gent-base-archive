@@ -31,6 +31,11 @@ All notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 * STIJ-188: Fixed issue in gulp command js:dist.
 * STIJ-189: Fixed some style guide specific issues.
 
+## 2.7.0
+* STIJ-96: Added paragraph atom documentation.
+* STIJ-96: Removed the paragraph variant that contains centered text, **it is not allowed by the City of Ghent**!
+**IMPORTANT: Class .text-center has been removed**
+
 ## 2.6.19
 * STIJ-158: Changed datepicker date format to an English format.
 * STIJ-159: Removed button submit atom.
