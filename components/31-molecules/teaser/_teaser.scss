@@ -9,7 +9,7 @@
     left: 0;
   }
 
-  &__content {
+  &__content.island {
     @include themify {
       border: $teaser-border;
     }
