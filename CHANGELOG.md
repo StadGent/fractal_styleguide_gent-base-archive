@@ -7,17 +7,34 @@ Refer to upcoming changes in our README.md under "Roadmap"
 All notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
 ### 2.7.0
-* STIJ-175: Added page wide image component.
+**IMPORTANT: Class .text-center has been removed**
 
-### 2.6.20
 * STIJ-1: Fixed whitespace issue for the gallery component.
+* STIJ-30: Fixed styling for select and multi select fields on iPad.
 * STIJ-39: Fixed component colors inside of sections, based on guidelines fron the City of Ghent.
+* STIJ-45: Changed jQuery UI datepicker format to a Dutch format.
+* STIJ-87: Added description field documentation.
+* STIJ-87: Refactored description field atom to use Themify mixin.
 * STIJ-89: Changed the documentation of an icon to English and update it a bit.
+* STIJ-96: Added paragraph atom documentation.
+* STIJ-96: Removed the paragraph variant that contains centered text, **it is not allowed by the City of Ghent**!
+* STIJ-100: Added variant for CTA links.
+* STIJ-100: Added CTA link documentation.
 * STIJ-106: Added search molecule documentation.
 * STIJ-170: Fixed search molecule bug where it was using the old button submit atom instead of the input type submit atom.
 * STIJ-170: Added a label to the search molecule.
 * STIJ-170: Hide the label of the search molecule in the header organism.
 * STIJ-170: Add placeholder to search molecule inside the header organism.
+* STIJ-175: Added page wide image component.
+* STIJ-177: Added newsletter block component.
+* STIJ-178: Added styling for inline form-items.
+* STIJ-178: Added address organism.
+* STIJ-182: Fixed whitespace when previewing footer component in the style guide.
+* STIJ-186: Added header variant with breadcrumb and with a banner image.
+* STIJ-186: Added small fix to the buttons in the header.
+* STIJ-188: Fixed issue in gulp command js:dist.
+* STIJ-189: Fixed some style guide specific issues.
+
 
 ### 2.6.19
 * STIJ-158: Changed datepicker date format to an English format.
@@ -58,9 +75,9 @@ All notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
 ### 2.6.13
 * STIJ-112: Added footer documentation.
-* STIJ-149: The footer organism now has a different grid implementation. Through the use of a data-columns attribute 
+* STIJ-149: The footer organism now has a different grid implementation. Through the use of a data-columns attribute
 we made the grid styling flexible between 2, 3 or 4 columns.
-* STIJ-150: Changed social media links block. This now displays the social media links of Stad Ghent correctly. 
+* STIJ-150: Changed social media links block. This now displays the social media links of Stad Ghent correctly.
 
 ### 2.6.12
 * STIJ-147: Added changes to Chosen for multiselect fields. Chosen will now be disabled on iPad.
@@ -74,7 +91,7 @@ we made the grid styling flexible between 2, 3 or 4 columns.
 
 ### 2.6.9
 * STIJ-63: Made Fractal variants of paragraphs.
-* STIJ-63: Remove underlined text from paragraph examples, 
+* STIJ-63: Remove underlined text from paragraph examples,
 it is discouraged to use underlined text.
 * STIJ-131: Remove placeholders from all input type fields except search fields.
 * STIJ-25: Fixed status messages preview pages.
@@ -108,7 +125,7 @@ it is discouraged to use underlined text.
 * STIJ-35: Added bindings and functions for the Gallery component.
 
 ### 2.6.1
-* STIJ-2: 
+* STIJ-2:
     * Added default no-style styling to lists in the hamburger menu.
     * Fixed preview hamburger menu.
 * STIJ-34: Changed Gent info block title to h3.
@@ -122,13 +139,13 @@ it is discouraged to use underlined text.
 ### 2.5.1
 * STIJ-116: Minor change to the styling of the Form Steps molecule.
 
-### 2.5.0 
-* STIJ-76: 
+### 2.5.0
+* STIJ-76:
     * Added bindings and functions layer to all Javascript files.
-    * Added documentation for Javascript use and component Javascript. 
+    * Added documentation for Javascript use and component Javascript.
     * Refactored some Javascript code.
-* STIJ-116: 
+* STIJ-116:
     * Changed markup for the Form Steps molecule.
     * Changed styling for the Form Steps molecule.
-    * Added themify for the Form Steps molecule.    
+    * Added themify for the Form Steps molecule.
 

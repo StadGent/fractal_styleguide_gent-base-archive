@@ -46,6 +46,9 @@
 
   $cta-link-icon-border: map-get($colors, 'cta-link-icon-border') !global;
 
+  $field-description-background: map-get($colors, 'field-description-background') !global;
+  $field-description-color: map-get($colors, 'field-description-color') !global;
+
   $field-color: map-get($colors, 'field-color') !global;
   $field-background: map-get($colors, 'field-background') !global;
   $field-border: map-get($colors, 'field-border') !global;

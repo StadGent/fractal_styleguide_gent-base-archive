@@ -30,12 +30,6 @@
       }
     },
     {
-      "name": "centered-text",
-      "context": {
-        "modifier": "text-center"
-      }
-    },
-    {
       "name": "right-text",
       "context": {
         "modifier": "text-right"

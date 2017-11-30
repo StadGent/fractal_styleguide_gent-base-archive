@@ -25,6 +25,9 @@
 <div class="preview-inner-inner-container">
   <h2>Search</h2>
   {% include '@search' with {
+  "label": "What are you looking for?",
+  "for": "",
+  "label_optional": "",
   "search_id": "header-search",
   "search_name": "header-search",
   "placeholder": "What are you looking for?",
@@ -36,7 +39,7 @@
 
 <div class="preview-inner-inner-container">
   <h2>CTA link</h2>
-  {% include '@cta-link' with {
+  {% include '@cta-link--website' with {
     'title': 'Want more info?',
     'link_text': 'Visit our website',
     'modifier': 'link'
@@ -45,7 +48,7 @@
 
 <div class="preview-inner-inner-container">
   <h2>CTA document</h2>
-  {% include '@cta-link' with {
+  {% include '@cta-link--document' with {
     'title': 'Want more info?',
     'link_text': 'Download',
     'modifier': 'clip'
@@ -54,7 +57,7 @@
 
 <div class="preview-inner-inner-container">
   <h2>CTA form fill</h2>
-  {% include '@cta-link' with {
+  {% include '@cta-link--form-fill' with {
     'title': 'Fill in the form',
     'link_text': 'Fill in',
     'modifier': 'form-fill'
@@ -63,7 +66,7 @@
 
 <div class="preview-inner-inner-container">
   <h2>CTA email</h2>
-  {% include '@cta-link' with {
+  {% include '@cta-link--email' with {
     'title': 'Contact us by email',
     'link_text': 'Mail',
     'modifier': 'email'
@@ -72,7 +75,7 @@
 
 <div class="preview-inner-inner-container">
   <h2>CTA phone</h2>
-  {% include '@cta-link' with {
+  {% include '@cta-link--phone' with {
     'title': 'Contact us by phone',
     'link_text': 'Call us',
     'modifier': 'phone'
@@ -81,7 +84,7 @@
 
 <div class="preview-inner-inner-container">
   <h2>CTA location</h2>
-  {% include '@cta-link' with {
+  {% include '@cta-link--location' with {
     'title': 'Location',
     'link_text': 'Location',
     'modifier': 'loc'
