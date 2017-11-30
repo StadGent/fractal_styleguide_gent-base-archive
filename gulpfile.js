@@ -445,3 +445,10 @@ gulp.task('build', ['validate', 'compile']);
  *
  */
 gulp.task('publish', ['publish:npm']);
+
+/*
+ * Add a pre-commit hook task.
+ * - Tests JS and Style validation before commit.
+ */
+gulp.task('pre-commit', ['validate']);
+
