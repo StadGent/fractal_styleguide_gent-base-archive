@@ -19,10 +19,6 @@
         @include color-element-states($teaser-link-color, $teaser-link-color-hover);
       }
     }
-
-    &__overlay-link:hover ~ .teaser__content.island a {
-      color: $teaser-link-color-hover;
-    }
   }
 
   position: relative;
@@ -33,14 +29,17 @@
     right: 0;
     bottom: 0;
     left: 0;
-
-    &:hover ~ .teaser__content a {
-      text-decoration: $link-text-decoration-hover;
-    }
+    z-index: 1;
   }
 
   &__content {
     margin: 0;
+
+    a,
+    button {
+      position: relative;
+      z-index: 2;
+    }
   }
 
   &__image {
