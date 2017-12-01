@@ -1,0 +1,7 @@
+# pre-commit
+
+echo 'Testing the validity of your code...';
+
+# Ensure that code that isn't part of the prospective commit isn't tested within your pre-commit script
+# Test prospective commit
+gulp validate;
