@@ -3,14 +3,5 @@
 echo 'Testing the validity of your code...';
 
 # Ensure that code that isn't part of the prospective commit isn't tested within your pre-commit script
-git stash -q --keep-index
-
 # Test prospective commit
 gulp validate;
-
-RESULT=$?
-
-git stash pop -q
-
-[ $RESULT -ne 0 ] && exit 1
-exit 0
