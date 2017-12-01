@@ -1,27 +1,20 @@
-/**
- * @file
- * Implements a hamburger-menu button combined with
- * a slide-in panel for easy mobile navigation.
- *
- * @authors
- * Wim Vantomme
- * Bart Delrue
- *
- */
-(function ($) {
+var gent_styleguide = gent_styleguide || {};
+
+var hamburger_component = gent_styleguide.components = (function (context) {
   'use strict';
 
-  $.fn.extend({
+  /**
+   * Creates a hamburger menu object.
+   *
+   * @param {object} element DOM-element.
+   * @constructor
+   */
+  function HamburgerMenu(element) {
+    this.loadHamburgerMenu = function () {
 
-    /**
-     * Creates a jQuery extension function.
-     *
-     * @fires event:click
-     */
-    loadHamburgerMenu: function () {
-      var $drawer = $(this[0]).find('.hamburger-menu__drawer');
-      var $closeBtn = $drawer.find('.close');
-      var $overlay = $('.hamburger-menu__overlay');
+      var drawer = element.querySelector('.hamburger-menu__drawer');
+      var closeBtn = drawer.querySelector('.close');
+      var overlay = element.querySelector('.hamburger-menu__overlay');
       var trigger;
 
       if (typeof gent_styleguide === 'undefined') {
@@ -29,8 +22,8 @@
         return;
       }
 
-      // TabTrap doens't use jquery opbjects.
-      var tabTrap = new gent_styleguide.TabTrap($drawer[0]); // eslint-disable-line no-undef
+      var helper = new base.Helper();
+      var tabTrap = new base.TabTrap(drawer); // eslint-disable-line no-undef
 
       /**
        * Closes the hamburger menu
@@ -41,8 +34,9 @@
         if (e) {
           e.preventDefault();
         }
-        $drawer.removeClass('js-opened');
-        $overlay.removeClass('js-opened');
+        helper.removeClass(drawer, 'js-opened');
+        helper.removeClass(overlay, 'js-opened');
+
         document.removeEventListener('keydown', handleKeyboardInput);
         tabTrap.reset();
 
@@ -55,7 +49,7 @@
         // remove the menu from the tabindex
         // jquery .css() doesn't now 'important'
         setTimeout(function () {
-          $drawer.attr('style', 'display: none');
+          drawer.setAttribute('style', 'display: none');
         }, 500);
       };
 
@@ -71,11 +65,11 @@
 
         // add the menu to the tabindex
         // jquery .css() doesn't now 'important'
-        $drawer.attr('style', 'display: block');
+        drawer.setAttribute('style', 'display: block');
 
         setTimeout(function () {
-          $drawer.addClass('js-opened');
-          $overlay.addClass('js-opened');
+          helper.addClass(drawer, 'js-opened');
+          helper.addClass(overlay, 'js-opened');
         });
 
 
@@ -84,7 +78,7 @@
         trigger.setAttribute('aria-expanded', true);
 
         // set focus to the menu
-        $drawer.focus();
+        drawer.focus();
 
         // handle keyboard input
         document.addEventListener('keydown', handleKeyboardInput);
@@ -144,8 +138,10 @@
        *
        * @event click
        */
-      $('.hamburger-menu__toggle').on('click', open);
-
+      var toggle = element.querySelector('.hamburger-menu__toggle');
+      if (toggle) {
+        toggle.addEventListener('click', open);
+      }
 
       /**
        * Indicates that a user has clicked on the closeBtn hamburger menu
@@ -155,10 +151,17 @@
        *
        * @event click
        */
-      $closeBtn.add($overlay).on('click', close);
+      closeBtn.addEventListener('click', close);
+      overlay.addEventListener('click', close);
 
       // init the menu as closed on startup
       close();
-    }
-  });
-})(jQuery);
+
+    };
+  }
+
+  return {
+    HamburgerMenu: HamburgerMenu
+  };
+
+})(hamburger_component);

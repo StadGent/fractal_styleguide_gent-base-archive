@@ -1,10 +1,12 @@
-var gent_styleguide = (function () { // eslint-disable-line no-unused-vars
+var gent_styleguide = gent_styleguide || {};
+
+var base = gent_styleguide.base = (function () { // eslint-disable-line no-unused-vars
   'use strict';
 
   /**
-   * Generates a tabTrap object
+   * Generates a tabTrap object.
    *
-   * @param {object} container DOM-element
+   * @param {object} container DOM-element.
    * @constructor
    */
   function TabTrap(container) {
@@ -60,8 +62,44 @@ var gent_styleguide = (function () { // eslint-disable-line no-unused-vars
     this.hasFocusables = focusables && focusables.length > 0;
   }
 
+  /**
+   * Generates a Helper object.
+   *
+   * @constructor
+   */
+  function Helper() {
+
+    /**
+     * Removes a class from a DOM-element.
+     *
+     * @param {object} element DOM-element.
+     * @param [string] className A class name.
+     */
+    this.removeClass = function (element, className) {
+      if (element.classList) {
+        element.classList.remove(className);
+      }
+    };
+
+    /**
+     * Adds a class from a DOM-element.
+     *
+     * @param {object} element DOM-element.
+     * @param [string] className A class name.
+     */
+    this.addClass = function (element, className) {
+      if (element.classList) {
+        element.classList.add(className);
+      }
+      else {
+        element.classList += ' ' + className;
+      }
+    };
+  }
+
   return {
-    TabTrap: TabTrap
+    TabTrap: TabTrap,
+    Helper: Helper
   };
 
-})();
+})(base);

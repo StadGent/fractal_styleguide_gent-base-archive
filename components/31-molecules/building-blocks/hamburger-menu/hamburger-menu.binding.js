@@ -2,15 +2,16 @@
  * @file
  * Javascript binding of hamburger-menu.functions.js.
  */
-(function ($) {
+
+window.onload = (function () {
   'use strict';
 
-  $(window).on('load', function (e) {
-    var $hamburgerMenu = $('.hamburger-menu');
+  return function () {
+    var hamburgerMenu = document.querySelectorAll('.hamburger-menu');
 
-    if ($hamburgerMenu.length > 0) {
-      $hamburgerMenu.loadHamburgerMenu();
+    for (var i = hamburgerMenu.length; i--;) {
+      var menu = new hamburger_component.HamburgerMenu(hamburgerMenu[i]); // eslint-disable-line no-undef
+      menu.loadHamburgerMenu();
     }
-  });
-
-})(jQuery);
+  };
+})();
