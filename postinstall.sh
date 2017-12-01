@@ -9,5 +9,5 @@ if [ -d "./public" ]; then
   cp -R ./node_modules/jquery ./public/styleguide/vendor/jquery;
   cp -R ./node_modules/chosen-js ./public/styleguide/vendor/chosen-js;
 
-  ln -sf ./scripts/pre-commit ./.git/hooks/pre-commit
+  ln -sf  $PWD/scripts/pre-commit  $PWD/.git/hooks/pre-commit
 fi
