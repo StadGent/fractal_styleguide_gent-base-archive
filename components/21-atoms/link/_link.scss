@@ -1,4 +1,3 @@
-%a,
 a {
   @include themify {
     @include color-element-states($link-color, $link-color-hover);

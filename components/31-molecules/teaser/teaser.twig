@@ -10,13 +10,13 @@
     <h3 id="{{ teaser_uid }}">{{ teaser_h3_title }}</h3>
 
     {% include '@paragraph' with {
-    'text': teaser_paragraph_text
+      'text': teaser_paragraph_text
     } %}
 
     {% include '@link' with {
-    'text': teaser_link_text,
-    'aria_labelledby': teaser_uid,
-    'link': teaser_link_link
+      'text': teaser_link_text,
+      'aria_labelledby': teaser_uid,
+      'link': teaser_link_link
     } %}
   </div>
 </div>
