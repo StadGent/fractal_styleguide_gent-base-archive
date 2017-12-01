@@ -31,6 +31,8 @@
 
   $link-color: map-get($colors, 'link-color') !global;
   $link-color-hover: map-get($colors, 'link-color-hover') !global;
+  $link-text-decoration: map-get($colors, 'link-text-decoration') !global;
+  $link-text-decoration-hover: map-get($colors, 'link-text-decoration-hover') !global;
 
   $cta-link-background: map-get($colors, 'cta-link-background') !global;
   $cta-link-background-hover: map-get($colors, 'cta-link-background-hover') !global;
@@ -122,6 +124,12 @@
   $hamburger-menu-link-color-hover: map-get($colors, 'hamburger-menu-link-color-hover') !global;
 
   $teaser-border: map-get($colors, 'teaser-border') !global;
+  $teaser-background: map-get($colors, 'teaser-background') !global;
+  $teaser-heading-color: map-get($colors, 'teaser-heading-color') !global;
+  $teaser-text-color: map-get($colors, 'teaser-text-color') !global;
+  $teaser-link-color: map-get($colors, 'teaser-link-color') !global;
+  $teaser-link-color-active: map-get($colors, 'teaser-link-color-active') !global;
+  $teaser-link-color-hover: map-get($colors, 'teaser-link-color-hover') !global;
 }
 
 //

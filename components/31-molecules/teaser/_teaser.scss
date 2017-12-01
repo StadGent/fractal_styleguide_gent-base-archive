@@ -1,4 +1,30 @@
 .teaser {
+  @include themify {
+    &__content {
+      h3 {
+        color: $link-color;
+      }
+    }
+
+    &__content.island {
+      border: $teaser-border;
+      background: $teaser-background;
+      color: $teaser-text-color;
+
+      h3 {
+        color: $teaser-link-color;
+      }
+
+      a {
+        @include color-element-states($teaser-link-color, $teaser-link-color-hover);
+      }
+    }
+
+    &__overlay-link:hover ~ .teaser__content.island a {
+      color: $teaser-link-color-hover;
+    }
+  }
+
   position: relative;
 
   &__overlay-link {
@@ -7,12 +33,13 @@
     right: 0;
     bottom: 0;
     left: 0;
+
+    &:hover ~ .teaser__content a {
+      text-decoration: $link-text-decoration-hover;
+    }
   }
 
-  &__content.island {
-    @include themify {
-      border: $teaser-border;
-    }
+  &__content {
     margin: 0;
   }
 

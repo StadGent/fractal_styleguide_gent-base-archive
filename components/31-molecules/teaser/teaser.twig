@@ -1,4 +1,6 @@
-<div class="teaser ">
+<div class="teaser">
+  <a href="{{ teaser_link }}" class="teaser__overlay-link" tabindex="-1"
+     aria-hidden="true"></a>
   {% include '@image' with {
   "src": teaser_image_src,
   "alt_text": teaser_image_alt_text,
@@ -17,6 +19,4 @@
     'link': teaser_link_link
     } %}
   </div>
-  <a href="{{ teaser_link }}" class="teaser__overlay-link" tabindex="-1"
-     aria-hidden="true"></a>
 </div>
