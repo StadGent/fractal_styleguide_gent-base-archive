@@ -12,7 +12,6 @@
       $hamburgerMenu.loadHamburgerMenu();
     }
   });
-
   dd
 
 })(jQuery);
