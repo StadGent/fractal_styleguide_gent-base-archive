@@ -128,7 +128,6 @@ gent_styleguide.components.HamburgerMenu = function (element) {
    *
    * @event click
    */
-  var toggle = element.querySelector('.hamburger-menu__toggle');
   if (toggle) {
     toggle.addEventListener('click', open);
   }
