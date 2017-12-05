@@ -21,3 +21,7 @@ a {
     outline: 0;
   }
 }
+
+li > a {
+  text-decoration: none !important; // sass-lint:disable-line no-important
+}
