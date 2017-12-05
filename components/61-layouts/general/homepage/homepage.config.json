@@ -1,4 +1,5 @@
 {
   "title": "Homepage",
+  "preview": "@preview-without-padding",
   "status": "beta"
 }
