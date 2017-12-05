@@ -6,6 +6,9 @@ Refer to upcoming changes in our README.md under "Roadmap"
 ## Changes
 All notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
+### 2.7.1
+* STIJ-194: Updated preview layouts and added some building blocks.
+
 ### 2.7.0
 **IMPORTANT: Class .text-center has been removed**
 
