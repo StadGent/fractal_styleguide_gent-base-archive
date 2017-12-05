@@ -8,6 +8,7 @@ All notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
 ### 2.7.1
 * STIJ-193: Added figcaption atom and figure molecule.
+* STIJ-199: Removed some style guide specific preview templates that where not necessary anymore.
 
 ### 2.7.0
 **IMPORTANT: Class .text-center has been removed**
