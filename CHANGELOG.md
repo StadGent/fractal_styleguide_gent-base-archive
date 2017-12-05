@@ -7,6 +7,7 @@ Refer to upcoming changes in our README.md under "Roadmap"
 All notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
 ### 2.7.1
+* STIJ-170: Fixed a bug where the search icon in the header did not work for FF and IE.
 * STIJ-193: Added figcaption atom and figure molecule.
 * STIJ-199: Removed some style guide specific preview templates that where not necessary anymore.
 
