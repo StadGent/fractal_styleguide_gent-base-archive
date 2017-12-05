@@ -1,26 +1,4 @@
 .teaser {
-  @include themify {
-    &__content {
-      h3 {
-        color: $link-color;
-      }
-    }
-
-    &__content.island {
-      border: $teaser-border;
-      background: $teaser-background;
-      color: $teaser-text-color;
-
-      h3 {
-        color: $teaser-link-color;
-      }
-
-      a {
-        @include color-element-states($teaser-link-color, $teaser-link-color-hover);
-      }
-    }
-  }
-
   position: relative;
 
   &__overlay-link {
@@ -42,6 +20,11 @@
     button {
       position: relative;
       z-index: 2;
+    }
+
+    &--section {
+      @extend %island;
+      @extend %section--default;
     }
   }
 
