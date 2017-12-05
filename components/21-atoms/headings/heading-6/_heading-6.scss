@@ -5,7 +5,7 @@ h6,
     color: $heading-6-color;
 
     a {
-      @include color-element-states($heading-6-color, $heading-6-color-hover);
+      @include element-states($heading-6-color, $heading-6-color-hover);
     }
   }
   margin-bottom: .5rem;

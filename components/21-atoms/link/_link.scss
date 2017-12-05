@@ -1,23 +1,13 @@
 a {
   @include themify {
-    @include color-element-states($link-color, $link-color-hover);
+    @include element-states($link-color, $link-color-hover);
+    @include element-states(underline, none, $property: 'text-decoration');
   }
 
   transition: color .11s ease-in-out;
-  text-decoration: underline;
   cursor: pointer;
-
-  &:hover,
-  &:focus {
-    text-decoration: none;
-  }
 
   &:focus {
     outline: thin dotted;
-  }
-
-  &:hover,
-  &:active {
-    outline: 0;
   }
 }

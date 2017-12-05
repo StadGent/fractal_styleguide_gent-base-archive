@@ -5,7 +5,7 @@ h3,
     color: $heading-3-color;
 
     a {
-      @include color-element-states($heading-3-color, $heading-3-color-hover);
+      @include element-states($heading-3-color, $heading-3-color-hover);
     }
   }
   margin-bottom: 1rem;
