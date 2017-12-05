@@ -9,6 +9,7 @@ The description is always visible and is displayed under the field it describes.
 This is a themify enabled component. Please use the themify mixin as defined in [mixins](../../docs/mixins) to change the colorscheme of this description.
 
 ## Types
-This component has 2 types. Which one is used depends on the situation.
+This component has 3 types. Which one is used depends on the situation.
+* div (default)
 * caption
 * figcaption
