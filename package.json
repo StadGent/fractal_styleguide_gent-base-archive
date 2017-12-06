@@ -36,6 +36,7 @@
   "dependencies": {
     "breakpoint-sass": "^2.7.1",
     "chosen-js": "^1.8.2",
+    "gulp-inject": "^4.3.0",
     "lightgallery": "^1.6.3"
   }
 }
