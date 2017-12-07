@@ -7,7 +7,7 @@ This style guide contains the SASS library and needed assets to be able to style
 * Probably a full CSS grid implementation throughout all the style guide components. 
 * We will probably drop jQuery in favor for native Javascript or another library.
 
-### Upcoming: 2.7
+### Upcoming: 2.7.x
 * General changes and fixes to the style guide.
 
 ## Licenses 
@@ -35,7 +35,7 @@ When installing this package, you will get a directory structure like this.
 The build directory contains all SASS source files and all asset files needed to be able to style a web application in the corporate identity for the city of Ghent..
 
 ## Implementing this style guide in your own project
-This style guide aims to be technology independent. This means you should be able to use it inside your project with wathever technology you want.
+This style guide aims to be technology independent. This means you should be able to use it inside your project with any technology you want.
 It utilizes SASS to style its components, so you will have to use that in your project.
 
 ### Setup
@@ -65,6 +65,10 @@ Now, to use the style guide SASS partials you just need to import them into your
 
 Note: we use this structure to allow you to override anything you wish in your own custom project.
 The way to do this, is to add the imports above to your main SASS file and add imports of your own overriding files in between.
+
+If you don' need to be able to change the molecules for your project and instead just want to import the style guide
+and use it as it is, you can use the `main.scss` file instead of using the following approach.
+
 
 Example:
 ```
@@ -115,3 +119,12 @@ Example:
 </script>
 ```
 So in this example you would need to change the `kitId` to the ID you got from the web team of Digipolis.
+
+## Third party support
+
+### AngularJS CLI support (no SASS globbing)
+We provide a `main_cli.scss` file that is essentially the same as `main.scss`, but includes all SASS partials 
+the style guide needs without SASS globbing.
+
+#### IMPORTANT:
+We recommend using the `main_cli.scss` file only when you need to support Angular CLI.

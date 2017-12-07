@@ -168,7 +168,7 @@ gulp.task('styles:inject', function() {
  *  Sourcemaps (dev only!)
  *  Autoprefixer
  */
-gulp.task('styles:dist',  function() {
+gulp.task('styles:dist', function() {
   gulp.src('components/**/*.s+(a|c)ss')
     .pipe(sassGlob())
     .pipe(sassLint({
@@ -522,5 +522,3 @@ gulp.task('build', ['validate', 'compile']);
  *
  */
 gulp.task('publish', ['publish:npm']);
-
-
