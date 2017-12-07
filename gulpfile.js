@@ -80,6 +80,83 @@ var npm = require('npm');
 var fs = require('fs');
 var argv = require('yargs').argv;
 var bump = require('gulp-bump');
+var inject = require('gulp-inject');
+
+/*
+ *
+ * Inject SASS partial paths as imports in main_cli.scss.
+ *
+ */
+gulp.task('styles:inject', function() {
+  var injectSettingsFiles= gulp.src('components/00-settings/**/*.s+(a|c)ss', {read: false});
+  var injectMixinsFiles= gulp.src('components/01-mixins/**/*.s+(a|c)ss', {read: false});
+  var injectBaseFiles= gulp.src('components/11-base/**/*.s+(a|c)ss', {read: false});
+  var injectAtomsFiles= gulp.src('components/21-atoms/**/*.s+(a|c)ss', {read: false});
+  var injectMoleculesFiles= gulp.src('components/31-molecules/**/*.s+(a|c)ss', {read: false});
+  var injectOrganismsFiles= gulp.src('components/41-organisms/**/*.s+(a|c)ss', {read: false});
+
+  function transformFilepath(filepath) {
+    console.log(filepath);
+    return '@import "' + filepath + '";';
+  }
+
+  var injectSettingsOptions = {
+    transform: transformFilepath,
+    starttag: '// inject:settings',
+    endtag: '// endinject',
+    addRootSlash: false,
+    relative: true
+  };
+
+  var injectMixinsOptions = {
+    transform: transformFilepath,
+    starttag: '// inject:mixins',
+    endtag: '// endinject',
+    addRootSlash: false,
+    relative: true
+  };
+
+  var injectBaseOptions = {
+    transform: transformFilepath,
+    starttag: '// inject:base',
+    endtag: '// endinject',
+    addRootSlash: false,
+    relative: true
+  };
+
+  var injectAtomsOptions = {
+    transform: transformFilepath,
+    starttag: '// inject:atoms',
+    endtag: '// endinject',
+    addRootSlash: false,
+    relative: true
+  };
+
+  var injectMoleculesOptions = {
+    transform: transformFilepath,
+    starttag: '// inject:molecules',
+    endtag: '// endinject',
+    addRootSlash: false,
+    relative: true
+  };
+
+  var injectOrganismsOptions = {
+    transform: transformFilepath,
+    starttag: '// inject:organisms',
+    endtag: '// endinject',
+    addRootSlash: false,
+    relative: true
+  };
+
+  return gulp.src('components/main_cli.scss')
+      .pipe(inject(injectSettingsFiles, injectSettingsOptions))
+      .pipe(inject(injectMixinsFiles, injectMixinsOptions))
+      .pipe(inject(injectBaseFiles, injectBaseOptions))
+      .pipe(inject(injectAtomsFiles, injectAtomsOptions))
+      .pipe(inject(injectMoleculesFiles, injectMoleculesOptions))
+      .pipe(inject(injectOrganismsFiles, injectOrganismsOptions))
+      .pipe(gulp.dest('components/'));
+});
 
 /*
  *
@@ -120,7 +197,7 @@ gulp.task('styles:dist', function() {
  *  Autoprefixer
  *
  */
-gulp.task('styles:build', ['fractal:build'], function() {
+gulp.task('styles:build', ['styles:inject', 'fractal:build'], function() {
   gulp.src('components/**/*.s+(a|c)ss')
     .pipe(sassGlob())
     .pipe(sassLint({

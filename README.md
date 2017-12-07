@@ -7,7 +7,7 @@ This style guide contains the SASS library and needed assets to be able to style
 * Probably a full CSS grid implementation throughout all the style guide components. 
 * We will probably drop jQuery in favor for native Javascript or another library.
 
-### Upcoming: 2.7
+### Upcoming: 2.7.x
 * General changes and fixes to the style guide.
 
 ## Licenses 
@@ -35,7 +35,7 @@ When installing this package, you will get a directory structure like this.
 The build directory contains all SASS source files and all asset files needed to be able to style a web application in the corporate identity for the city of Ghent..
 
 ## Implementing this style guide in your own project
-This style guide aims to be technology independent. This means you should be able to use it inside your project with wathever technology you want.
+This style guide aims to be technology independent. This means you should be able to use it inside your project with any technology you want.
 It utilizes SASS to style its components, so you will have to use that in your project.
 
 ### Setup
@@ -54,36 +54,35 @@ Now, to use the style guide SASS partials you just need to import them into your
 ```
 @import 'node_modules/gent_styleguide/build/sass/00-settings/reset';
 @import 'node_modules/gent_styleguide/build/sass/00-settings/vars';
-@import 'node_modules/gent_styleguide/build/sass/02-mixins/**/*';
-@import 'node_modules/gent_styleguide/build/sass/02-sections/**/*';
+@import 'node_modules/gent_styleguide/build/sass/01-mixins/**/*';
 @import 'node_modules/gent_styleguide/build/sass/11-base/**/*';
 @import 'node_modules/gent_styleguide/build/sass/21-atoms/**/*';
 @import 'node_modules/gent_styleguide/build/sass/31-molecules/**/*';
 @import 'node_modules/gent_styleguide/build/sass/41-organisms/**/*';
-@import 'node_modules/gent_styleguide/build/sass/51-templates/**/*';
 ```
 
 Note: we use this structure to allow you to override anything you wish in your own custom project.
 The way to do this, is to add the imports above to your main SASS file and add imports of your own overriding files in between.
 
+If you don't need to be able to change the molecules for your project and instead just want to import the style guide
+and use it as it is, you can use the `main.scss` file instead of using the following approach.
+
+
 Example:
 ```
 @import 'node_modules/gent_styleguide/build/sass/00-settings/reset';
 @import 'node_modules/gent_styleguide/build/sass/00-settings/vars';
-@import '/sass/02-vars-overrides/**/*';
-@import 'node_modules/gent_styleguide/build/sass/02-mixins/**/*';
-@import '/sass/02-mixins-overrides/**/*';
-@import 'node_modules/gent_styleguide/build/sass/02-sections/**/*';
-@import '/sass/02-sections-overrides/**/*';
+@import '/sass/00-vars-overrides/**/*';
+@import 'node_modules/gent_styleguide/build/sass/01-mixins/**/*';
+@import '/sass/01-mixins-overrides/**/*';
 @import 'node_modules/gent_styleguide/build/sass/11-base/**/*';
-@import '/sass/02-base-overrides/**/*';
+@import '/sass/11-base-overrides/**/*';
 @import 'node_modules/gent_styleguide/build/sass/21-atoms/**/*';
-@import '/sass/02-atom-overrides/**/*';
+@import '/sass/21-atom-overrides/**/*';
 @import 'node_modules/gent_styleguide/build/sass/31-molecules/**/*';
-@import '/sass/02-molecule-overrides/**/*';
+@import '/sass/31-molecule-overrides/**/*';
 @import 'node_modules/gent_styleguide/build/sass/41-organisms/**/*';
-@import '/sass/02-organism-overrides/**/*';
-@import 'node_modules/gent_styleguide/build/sass/51-templates/**/*';
+@import '/sass/41-organism-overrides/**/*';
 ```
 
 Note: When using the style guide you will need to add breakpoint-sass as an includePath inside your gulpfile.js
@@ -115,3 +114,12 @@ Example:
 </script>
 ```
 So in this example you would need to change the `kitId` to the ID you got from the web team of Digipolis.
+
+## Third party support
+
+### AngularJS CLI support (no SASS globbing)
+We provide a `main_cli.scss` file that is essentially the same as `main.scss`, but includes all SASS partials 
+the style guide needs without SASS globbing.
+
+#### IMPORTANT:
+We recommend using the `main_cli.scss` file only when you need to support Angular CLI.

@@ -12,6 +12,7 @@ All notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 * STIJ-193: Added figcaption atom and figure molecule.
 * STIJ-194: Updated preview layouts and added some building blocks.
 * STIJ-199: Removed some style guide specific preview templates that where not necessary anymore.
+* STIJ-206: Added main_cli.scss file that creates the main sass file **without SASS globbing** to support Angular CLI.
 
 ### 2.7.0
 **IMPORTANT: Class .text-center has been removed**
