@@ -1,7 +1,7 @@
 %island,
 .island {
   @include themify {
-    border: 1px solid $color-light-blue;
+    border: $island-border;
   }
 
   margin: 1rem auto;
