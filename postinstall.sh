@@ -15,23 +15,26 @@ if [ -f components/main_cli.scss ]; then
   rm -f components/main_cli.scss
 fi
 
-touch components/main_cli.scss
+if [ -d "./components" ]; then
+  touch components/main_cli.scss
 
-echo "// inject:settings
-// endinject
+  echo "// inject:settings
+  // endinject
 
-// inject:mixins
-// endinject
+  // inject:mixins
+  // endinject
 
-// inject:base
-// endinject
+  // inject:base
+  // endinject
 
-// inject:atoms
-// endinject
+  // inject:atoms
+  // endinject
 
-// inject:molecules
-// endinject
+  // inject:molecules
+  // endinject
 
-// inject:organisms
-// endinject
-" >>  components/main_cli.scss
+  // inject:organisms
+  // endinject
+  " >>  components/main_cli.scss
+fi
+
