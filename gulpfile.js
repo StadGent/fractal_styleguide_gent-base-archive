@@ -96,7 +96,6 @@ gulp.task('styles:inject', function() {
   var injectOrganismsFiles= gulp.src('components/41-organisms/**/*.s+(a|c)ss', {read: false});
 
   function transformFilepath(filepath) {
-    console.log(filepath);
     return '@import "' + filepath + '";';
   }
 
