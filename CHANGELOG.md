@@ -6,6 +6,9 @@ Refer to upcoming changes in our README.md under "Roadmap"
 ## Changes
 All notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
+### 2.7.3
+Due to some issues with publishing to NPM we had to update to a new patch version without introducing new changes to the style guide.
+
 ### 2.7.2
 * STIJ-208: Removed console log and updated postinstall.sh script to generate main_cli.scss content.
 
