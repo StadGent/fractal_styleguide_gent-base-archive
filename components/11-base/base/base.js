@@ -20,13 +20,13 @@ gent_styleguide.TabTrap = function (container) {
    */
   function getFocusables(container) {
     var focusables = container
-      .querySelectorAll('a[href], ' +
-        'area[href], ' +
-        'input:not([disabled]):not([hidden]), ' +
-        'select:not([disabled]), ' +
-        'textarea:not([disabled]), ' +
-        'button:not([disabled]), ' +
-        '[tabindex="0"]');
+        .querySelectorAll('a[href], ' +
+            'area[href], ' +
+            'input:not([disabled]):not([hidden]), ' +
+            'select:not([disabled]), ' +
+            'textarea:not([disabled]), ' +
+            'button:not([disabled]), ' +
+            '[tabindex="0"]');
     return Array.prototype.slice.call(focusables);
   }
 
@@ -73,6 +73,8 @@ gent_styleguide.TabTrap = function (container) {
 gent_styleguide.helper = (function () {
   'use strict';
 
+  //todo document functions
+  //todo refactor or remove addClass, removeClass
   /**
    * Removes a class from a DOM-element.
    *
@@ -100,9 +102,26 @@ gent_styleguide.helper = (function () {
     }
   };
 
+  /**
+   * Adds an animation event to a DOM-element for
+   * mozilla, IE, chrome and opera
+   *
+   * @param {object} element DOM-element.
+   * @param {string} type geneneric name of the event.
+   * @param {function} next callback function for the event.
+   */
+  var prefixedAnimationEvent = function (element, type, next) {
+    var prefixes = ["webkit", "moz", "MS", "o", ""];
+
+    for (var i = prefixes.length; i--;) {
+      element.addEventListener(prefixes[i] + type, next);
+    }
+  };
+
   return {
     removeClass: removeClass,
-    addClass: addClass
+    addClass: addClass,
+    prefixedAnimationEvent: prefixedAnimationEvent
   };
 
 })();
