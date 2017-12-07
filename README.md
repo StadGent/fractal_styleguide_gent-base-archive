@@ -66,7 +66,7 @@ Now, to use the style guide SASS partials you just need to import them into your
 Note: we use this structure to allow you to override anything you wish in your own custom project.
 The way to do this, is to add the imports above to your main SASS file and add imports of your own overriding files in between.
 
-If you don' need to be able to change the molecules for your project and instead just want to import the style guide
+If you don't need to be able to change the molecules for your project and instead just want to import the style guide
 and use it as it is, you can use the `main.scss` file instead of using the following approach.
 
 
