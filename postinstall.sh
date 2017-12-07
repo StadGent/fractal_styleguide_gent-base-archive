@@ -10,6 +10,11 @@ if [ -d "./public" ]; then
   cp -R node_modules/chosen-js ./public/styleguide/vendor/chosen-js;
 fi
 
+
+if [ -f components/main_cli.scss ]; then
+  rm -f components/main_cli.scss
+fi
+
 touch components/main_cli.scss
 
 echo "// inject:settings
