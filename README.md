@@ -54,8 +54,7 @@ Now, to use the style guide SASS partials you just need to import them into your
 ```
 @import 'node_modules/gent_styleguide/build/sass/00-settings/reset';
 @import 'node_modules/gent_styleguide/build/sass/00-settings/vars';
-@import 'node_modules/gent_styleguide/build/sass/02-mixins/**/*';
-@import 'node_modules/gent_styleguide/build/sass/02-sections/**/*';
+@import 'node_modules/gent_styleguide/build/sass/01-mixins/**/*';
 @import 'node_modules/gent_styleguide/build/sass/11-base/**/*';
 @import 'node_modules/gent_styleguide/build/sass/21-atoms/**/*';
 @import 'node_modules/gent_styleguide/build/sass/31-molecules/**/*';
@@ -73,19 +72,17 @@ Example:
 ```
 @import 'node_modules/gent_styleguide/build/sass/00-settings/reset';
 @import 'node_modules/gent_styleguide/build/sass/00-settings/vars';
-@import '/sass/02-vars-overrides/**/*';
-@import 'node_modules/gent_styleguide/build/sass/02-mixins/**/*';
-@import '/sass/02-mixins-overrides/**/*';
-@import 'node_modules/gent_styleguide/build/sass/02-sections/**/*';
-@import '/sass/02-sections-overrides/**/*';
+@import '/sass/00-vars-overrides/**/*';
+@import 'node_modules/gent_styleguide/build/sass/01-mixins/**/*';
+@import '/sass/01-mixins-overrides/**/*';
 @import 'node_modules/gent_styleguide/build/sass/11-base/**/*';
-@import '/sass/02-base-overrides/**/*';
+@import '/sass/11-base-overrides/**/*';
 @import 'node_modules/gent_styleguide/build/sass/21-atoms/**/*';
-@import '/sass/02-atom-overrides/**/*';
+@import '/sass/21-atom-overrides/**/*';
 @import 'node_modules/gent_styleguide/build/sass/31-molecules/**/*';
-@import '/sass/02-molecule-overrides/**/*';
+@import '/sass/31-molecule-overrides/**/*';
 @import 'node_modules/gent_styleguide/build/sass/41-organisms/**/*';
-@import '/sass/02-organism-overrides/**/*';
+@import '/sass/41-organism-overrides/**/*';
 ```
 
 Note: When using the style guide you will need to add breakpoint-sass as an includePath inside your gulpfile.js
