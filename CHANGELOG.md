@@ -6,6 +6,9 @@ Refer to upcoming changes in our README.md under "Roadmap"
 ## Changes
 All notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
+### 2.7.2
+* STIJ-208: Removed main_cli.scss from .gitignore.
+
 ### 2.7.1
 * STIJ-170: Fixed a bug where the search icon in the header did not work for FF and IE.
 * STIJ-175: Added teaser and topic teaser molecules.
