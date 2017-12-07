@@ -60,7 +60,6 @@ Now, to use the style guide SASS partials you just need to import them into your
 @import 'node_modules/gent_styleguide/build/sass/21-atoms/**/*';
 @import 'node_modules/gent_styleguide/build/sass/31-molecules/**/*';
 @import 'node_modules/gent_styleguide/build/sass/41-organisms/**/*';
-@import 'node_modules/gent_styleguide/build/sass/51-templates/**/*';
 ```
 
 Note: we use this structure to allow you to override anything you wish in your own custom project.
@@ -87,7 +86,6 @@ Example:
 @import '/sass/02-molecule-overrides/**/*';
 @import 'node_modules/gent_styleguide/build/sass/41-organisms/**/*';
 @import '/sass/02-organism-overrides/**/*';
-@import 'node_modules/gent_styleguide/build/sass/51-templates/**/*';
 ```
 
 Note: When using the style guide you will need to add breakpoint-sass as an includePath inside your gulpfile.js
