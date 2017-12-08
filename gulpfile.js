@@ -80,6 +80,10 @@ var npm = require('npm');
 var fs = require('fs');
 var argv = require('yargs').argv;
 var bump = require('gulp-bump');
+var babelify = require('babelify');
+var browserify = require('browserify');
+var buffer = require('vinyl-buffer');
+var source_stream = require('vinyl-source-stream');
 
 /*
  *
@@ -179,12 +183,19 @@ gulp.task('styles:extract', ['fractal:build', 'styles:build', 'styles:dist'], fu
  *
  */
 gulp.task('js:dist', ['styles:dist'], function() {
-  gulp.src('components/**/*.js')
-    .pipe(rename({
-      dirname: '',
-      suffix: "-min"
-    }))
-    .pipe(gulp.dest('./public/styleguide/js/'));
+  var bundler = browserify({
+    debug: true
+  });
+  bundler.transform(babelify, { presets: ["es2015"] });
+
+  bundler.bundle()
+      .on('error', function (err) { console.error(err); })
+      .pipe(source_stream('public/styleguide/js/bundle.js'))
+      .pipe(buffer())
+      //.pipe(sourcemaps.init({ loadMaps: true }))
+      //.pipe(sourcemaps.write('./'))
+      .pipe(gulp.dest('./'));
+
 });
 
 /*
@@ -194,10 +205,13 @@ gulp.task('js:dist', ['styles:dist'], function() {
  */
 gulp.task('js:build', ['fractal:build'], function() {
   gulp.src('components/**/*.js')
+    .pipe(sourcemaps.init())
+    .pipe(babel())
     .pipe(rename({dirname: ''}))
     .pipe(minify({
       noSource: true
     }))
+    .pipe(sourcemaps.write("."))
     .pipe(gulp.dest('./build/styleguide/js/'));
 });
 

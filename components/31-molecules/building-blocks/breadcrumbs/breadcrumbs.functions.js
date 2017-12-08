@@ -7,7 +7,6 @@
 var gentStyleGuideBreadcrumb = {};
 
 (function ($) {
-  'use strict';
 
   /**
    * Replace the mobile breadcrumb of Gent base by our own.

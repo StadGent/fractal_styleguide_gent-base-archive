@@ -8,7 +8,6 @@
  *
  */
 (function ($) {
-  'use strict';
 
   $.fn.extend({
 

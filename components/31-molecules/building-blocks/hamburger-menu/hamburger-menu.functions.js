@@ -1,8 +1,9 @@
+import TabTrap from './base-min.js';
+
 var gent_styleguide = gent_styleguide || {};
 gent_styleguide.components = gent_styleguide.components || {};
 
 gent_styleguide.components.HamburgerMenu = function (element) {
-  'use strict';
 
   var drawer = element.querySelector('.hamburger-menu__drawer');
   var closeBtn = drawer.querySelector('.close');
@@ -10,12 +11,14 @@ gent_styleguide.components.HamburgerMenu = function (element) {
   var overlay = element.querySelector('.hamburger-menu__overlay');
   var trigger;
 
+
+
   if (typeof gent_styleguide === 'undefined') {
     console.error('You need to include base.js.'); // eslint-disable-line no-console
     return;
   }
 
-  var tabTrap = new gent_styleguide.TabTrap(drawer); // eslint-disable-line no-undef
+  var tabTrap = new TabTrap(drawer);
 
   /**
    * Closes the hamburger menu

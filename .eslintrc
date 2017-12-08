@@ -7,6 +7,13 @@
     "Drupal": true,
     "jQuery": true
   },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
   "rules": {
     // Errors.
     "array-bracket-spacing": [2, "never"],

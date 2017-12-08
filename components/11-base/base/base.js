@@ -6,11 +6,12 @@ var gent_styleguide = gent_styleguide || {};
  * @param {object} container DOM-element.
  * @constructor
  */
-gent_styleguide.TabTrap = function (container) {
-  'use strict';
-
-  var focusPosition = -1;
-  var focusables = getFocusables(container);
+export class TabTrap {
+  constructor(container) {
+    this.focusPosition = -1;
+    this.focusables = this.getFocusables(container);
+    this.hasFocusables = this.focusables && this.focusables.length > 0;
+  }
 
   /**
    * Returns all focusable elements within a given container.
@@ -18,63 +19,51 @@ gent_styleguide.TabTrap = function (container) {
    * @param {object} container hamburger DOM-element
    * @return {array} focusable elements
    */
-  function getFocusables(container) {
+  getFocusables(container) {
     var focusables = container
-        .querySelectorAll('a[href], ' +
-            'area[href], ' +
-            'input:not([disabled]):not([hidden]), ' +
-            'select:not([disabled]), ' +
-            'textarea:not([disabled]), ' +
-            'button:not([disabled]), ' +
-            '[tabindex="0"]');
+      .querySelectorAll('a[href], ' +
+        'area[href], ' +
+        'input:not([disabled]):not([hidden]), ' +
+        'select:not([disabled]), ' +
+        'textarea:not([disabled]), ' +
+        'button:not([disabled]), ' +
+        '[tabindex="0"]');
     return Array.prototype.slice.call(focusables);
   }
 
-  var next = function () {
-    if (++focusPosition > focusables.length - 1) {
-      focusPosition = 0;
+  next() {
+    if (++this.focusPosition > this.focusables.length - 1) {
+      this.focusPosition = 0;
     }
-    focusables[focusPosition].focus();
-  };
+    this.focusables[this.focusPosition].focus();
+  }
 
-  var back = function () {
-    if (--focusPosition < 0) {
-      focusPosition = focusables.length - 1;
+  back() {
+    if (--this.focusPosition < 0) {
+      this.focusPosition = this.focusables.length - 1;
     }
-    focusables[focusPosition].focus();
-  };
+    this.focusables[this.focusPosition].focus();
+  }
 
-  var home = function () {
-    focusPosition = 0;
-    focusables[focusPosition].focus();
-  };
+  home() {
+    this.focusPosition = 0;
+    this.focusables[this.focusPosition].focus();
+  }
 
-  var end = function () {
-    focusPosition = focusables.length - 1;
-    focusables[focusPosition].focus();
-  };
+  end() {
+    this.focusPosition = this.focusables.length - 1;
+    this.focusables[this.focusPosition].focus();
+  }
 
-  var reset = function () {
-    focusPosition = -1;
-  };
-
-  var hasFocusables = focusables && focusables.length > 0;
-
-  return {
-    next: next,
-    back: back,
-    home: home,
-    end: end,
-    reset: reset,
-    hasFocusables: hasFocusables
-  };
-};
+  reset() {
+    this.focusPosition = -1;
+  }
+}
 
 gent_styleguide.helper = (function () {
-  'use strict';
 
-  //todo document functions
-  //todo refactor or remove addClass, removeClass
+  // @todo document functions
+  // @todo refactor or remove addClass, removeClass
   /**
    * Removes a class from a DOM-element.
    *
@@ -111,7 +100,7 @@ gent_styleguide.helper = (function () {
    * @param {function} next callback function for the event.
    */
   var prefixedAnimationEvent = function (element, type, next) {
-    var prefixes = ["webkit", "moz", "MS", "o", ""];
+    var prefixes = ['webkit', 'moz', 'MS', 'o', ''];
 
     for (var i = prefixes.length; i--;) {
       element.addEventListener(prefixes[i] + type, next);
