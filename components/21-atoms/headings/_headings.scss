@@ -16,17 +16,17 @@ h5,
 h6,
 .h6,
 %h6 {
-  margin: 0;
+  margin: 2.5rem 0 0;
   font-style: normal;
   font-weight: 800;
   text-decoration: none;
 
+  a {
+    text-decoration: none !important; // eslint-disable-line no-important
+  }
+
   // Bypass the FOUT of typekit while loading asynchronously.
   .wf-loading & {
     visibility: hidden;
-  }
-
-  a {
-    text-decoration: none;
   }
 }

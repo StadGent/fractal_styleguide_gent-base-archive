@@ -5,9 +5,10 @@ h1,
     color: $heading-1-color;
 
     a {
-      @include color-element-states($heading-1-color, $heading-1-color-hover);
+      @include color-element-states($heading-1-link-color, $heading-1-link-color-hover);
     }
   }
+
   margin-bottom: 1.5rem;
   font-family: $heading-1-font-family;
   font-size: 1.6rem;

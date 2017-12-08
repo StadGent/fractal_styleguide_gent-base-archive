@@ -5,7 +5,7 @@ h4,
     color: $heading-4-color;
 
     a {
-      @include color-element-states($heading-4-color, $heading-4-color-hover);
+      @include color-element-states($heading-4-link-color, $heading-4-link-color-hover);
     }
   }
   margin-bottom: .75rem;

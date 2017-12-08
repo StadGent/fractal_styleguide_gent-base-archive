@@ -5,7 +5,7 @@ h2,
     color: $heading-2-color;
 
     a {
-      @include color-element-states($heading-2-color, $heading-2-color-hover);
+      @include color-element-states($heading-2-link-color, $heading-2-link-color-hover);
     }
   }
   margin-bottom: 1rem;
