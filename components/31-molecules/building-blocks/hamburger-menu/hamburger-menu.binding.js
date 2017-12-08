@@ -2,15 +2,13 @@
  * @file
  * Javascript binding of hamburger-menu.functions.js.
  */
-(function ($) {
+
+document.addEventListener('DOMContentLoaded', function () {
   'use strict';
 
-  $(window).on('load', function (e) {
-    var $hamburgerMenu = $('.hamburger-menu');
+  var hamburgerMenus = document.querySelectorAll('.hamburger-menu');
 
-    if ($hamburgerMenu.length > 0) {
-      $hamburgerMenu.loadHamburgerMenu();
-    }
-  });
-
-})(jQuery);
+  for (var i = hamburgerMenus.length; i--;) {
+    new gent_styleguide.components.HamburgerMenu(hamburgerMenus[i]); // eslint-disable-line no-undef
+  }
+});
