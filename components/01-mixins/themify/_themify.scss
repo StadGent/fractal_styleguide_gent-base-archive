@@ -32,6 +32,8 @@
 
   $link-color: map-get($colors, 'link-color') !global;
   $link-color-hover: map-get($colors, 'link-color-hover') !global;
+  $link-text-decoration: map-get($colors, 'link-text-decoration') !global;
+  $link-text-decoration-hover: map-get($colors, 'link-text-decoration-hover') !global;
 
   $cta-link-background: map-get($colors, 'cta-link-background') !global;
   $cta-link-background-hover: map-get($colors, 'cta-link-background-hover') !global;
@@ -121,6 +123,8 @@
   $hamburger-menu-link-color: map-get($colors, 'hamburger-menu-link-color') !global;
   $hamburger-menu-link-color-active: map-get($colors, 'hamburger-menu-link-color-active') !global;
   $hamburger-menu-link-color-hover: map-get($colors, 'hamburger-menu-link-color-hover') !global;
+
+  $island-border: map-get($colors, 'island-border') !global;
 }
 
 //
@@ -141,7 +145,8 @@
     }
 
     .section--#{$theme} &,
-    *[class*="section--"] .section--#{$theme} & {
+    *[class*="section--"] .section--#{$theme} &,
+    *[class*="section--"] %section--#{$theme} & {
       @content;
     }
   }

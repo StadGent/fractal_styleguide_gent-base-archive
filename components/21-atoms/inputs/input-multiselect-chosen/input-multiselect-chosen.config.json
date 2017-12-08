@@ -1,7 +1,6 @@
 {
   "title": "Input Multiselect with Chosen",
   "status": "ready",
-  "preview": "@preview-input-multiselect-chosen",
   "handle": "input-multiselect-chosen",
   "context": {
     "label": "Multiselect with Chosen",

@@ -1,16 +1,16 @@
 a {
   @include themify {
     @include color-element-states($link-color, $link-color-hover);
+    text-decoration: $link-text-decoration;
+
+    &:hover,
+    &:focus {
+      text-decoration: $link-text-decoration-hover;
+    }
   }
 
   transition: color .11s ease-in-out;
-  text-decoration: underline;
   cursor: pointer;
-
-  &:hover,
-  &:focus {
-    text-decoration: none;
-  }
 
   &:focus {
     outline: thin dotted;
@@ -20,4 +20,8 @@ a {
   &:active {
     outline: 0;
   }
+}
+
+li > a {
+  text-decoration: none !important; // sass-lint:disable-line no-important
 }

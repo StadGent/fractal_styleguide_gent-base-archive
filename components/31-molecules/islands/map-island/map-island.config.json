@@ -3,6 +3,5 @@
   "name": "Map island",
   "status": "beta",
   "hidden": true,
-  "preview": "@preview-map-island",
   "handle": "map-island"
 }

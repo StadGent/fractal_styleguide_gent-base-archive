@@ -135,6 +135,8 @@ $themes: (
 
     'link-color': $color-blue,
     'link-color-hover': $color-dark-blue,
+    'link-text-decoration': underline,
+    'link-text-decoration-hover': none,
 
     'cta-link-background': $color-lightest-blue,
     'cta-link-background-hover': $color-white,
@@ -225,6 +227,7 @@ $themes: (
     'hamburger-menu-link-color-active': $color-white,
     'hamburger-menu-link-color-hover': $color-white,
 
+    'island-border': 1px solid $color-light-blue,
   ),
   'accent': (
     'section-background': $color-blue,
@@ -253,6 +256,8 @@ $themes: (
 
     'link-color': $color-white,
     'link-color-hover': $color-white,
+    'link-text-decoration': underline,
+    'link-text-decoration-hover': none,
 
     'cta-link-background': $color-light-blue,
     'cta-link-background-hover': $color-white,
@@ -300,6 +305,8 @@ $themes: (
 
     'tag-background': $color-dark-gray,
     'tag-background-hover': $color-dark-gray,
+
+    'island-border': 1px solid $color-light-blue,
   ),
   'wrapper': (
     'section-background': $color-darkest-gray,
@@ -328,6 +335,8 @@ $themes: (
 
     'link-color': $color-white,
     'link-color-hover': $color-white,
+    'link-text-decoration': underline,
+    'link-text-decoration-hover': none,
 
     'cta-link-background': $color-darkest-gray,
     'cta-link-background-hover': $color-white,
@@ -375,6 +384,8 @@ $themes: (
 
     'tag-background': $color-blue,
     'tag-background-hover': $color-light-blue,
+
+    'island-border': 1px solid $color-light-blue,
   ),
   'highlighted': (
     'section-background': $color-orange,
@@ -403,6 +414,8 @@ $themes: (
 
     'link-color': $color-darkest-gray,
     'link-color-hover': $color-darkest-gray,
+    'link-text-decoration': underline,
+    'link-text-decoration-hover': none,
 
     'cta-link-background': $color-orange-light,
     'cta-link-background-hover': $color-orange-lighter,
@@ -450,6 +463,8 @@ $themes: (
 
     'tag-background': $color-dark-gray,
     'tag-background-hover': $color-dark-gray,
+
+    'island-border': 1px solid $color-light-blue,
   ),
   'inverse': (
     'section-background': $color-lightest-blue,
@@ -478,6 +493,8 @@ $themes: (
 
     'link-color': $color-darkest-gray,
     'link-color-hover': $color-darkest-gray,
+    'link-text-decoration': underline,
+    'link-text-decoration-hover': none,
 
     'cta-link-background': $color-white,
     'cta-link-background-hover': $color-lightest-gray,
@@ -523,6 +540,8 @@ $themes: (
 
     'tag-background': $color-dark-gray,
     'tag-background-hover': $color-dark-gray,
+
+    'island-border': 1px solid $color-light-blue,
   )
 ) !default;
 
