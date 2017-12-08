@@ -52,7 +52,9 @@
       <div class="row">
         <div class="col-tablet-4">
           <section class="island section--default">
-            <h2>Veelgevraagde info</h2>
+            {% include '@h2' with {
+              "h2_text": "Veelgevraagde info"
+            } %}
             {% include '@list' with {
               "modifier": "links",
               "items": [
@@ -108,6 +110,34 @@
       </div>
     </div>
 
+  </section>
+  <section class="section--default">
+    <div class="content-container">
+      {% include '@h2' with {
+        "h2_text": "Diensten & info"
+      } %}
+      {% include "@teaser-collection--topics" with {
+        "teaser_paragraph_text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, suscipit.",
+        "teaser_h3_title": "Title text ",
+        "teaser_link_text": "read more",
+        "teaser_link_link" : "javascript:void(0);"
+      } %}
+    </div>
+  </section>
+  <section class="section--inverse">
+    <div class="content-container">
+      {% include '@h2' with {
+        "h2_text": "Nieuws & evenementen"
+      } %}
+      {% include "@teaser-collection" with {
+        "teaser_image_src": "https://loremflickr.com/650/400/ghent?random=",
+        "teaser_image_alt_text": "alt text",
+        "teaser_paragraph_text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, suscipit.",
+        "teaser_h3_title": "Title text ",
+        "teaser_link_text": "read more",
+        "teaser_link_link" : "javascript:void(0);"
+      } %}
+    </div>
   </section>
 </div>
 
