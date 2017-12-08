@@ -6,6 +6,9 @@ Refer to upcoming changes in our README.md under "Roadmap"
 ## Changes
 All notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
+### 2.7.4
+* STIJ-210: Move some dependencies to devDependencies.
+
 ### 2.7.3
 Due to some issues with publishing to NPM we had to update to a new patch version without introducing new changes to the style guide.
 
