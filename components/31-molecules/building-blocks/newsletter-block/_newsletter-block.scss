@@ -1,9 +1,12 @@
 div.newsletter-block {
-  @include desktop {
-    display: flex;
+  .content-container {
+    @include desktop {
+      display: flex;
+    }
   }
 
-  padding: 2rem 1.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 
   .island {
     margin: 0;
