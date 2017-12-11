@@ -1,0 +1,21 @@
+{
+  "title": "Openinghours",
+  "name": "openinghours",
+  "status": "alpha",
+  "handle": "openinghours",
+  "default": "open-now",
+  "variants": [
+    {
+      "name": "open-now",
+      "title": "Open now"
+    },
+    {
+      "name": "week",
+      "title": "Open now"
+    },
+    {
+      "name": "month",
+      "title": "Open now"
+    }
+  ]
+}
