@@ -7,6 +7,8 @@ Refer to upcoming changes in our README.md under "Roadmap"
 All notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
 ### 2.7.4
+* STIJ-207: Fixed small issue for preview templates.
+* STIJ-208: Fixed bug in `postinstall.sh` script.
 * STIJ-210: Move some dependencies to devDependencies.
 * STIJ-211: Fixed newsletter block styling.
 
