@@ -2,11 +2,12 @@
  * @file
  */
 (function ($) {
-  'use strict';
-
-  $('.js-masonry').masonry({
-      columnWidth: 200,
-      itemSelector: '.teaser'
-  });
-
+  'use strict'
+    $(window).on('load', function (e) {
+        $('.js-masonry-layout').masonry({
+          itemSelector: 'li',
+          columnWidth: 'li',
+          percentPosition: true
+        });
+    });
 })(jQuery);
