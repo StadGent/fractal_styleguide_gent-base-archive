@@ -3,11 +3,8 @@ h5,
 %h5 {
   @include themify {
     color: $heading-5-color;
-
-    a {
-      @include color-element-states($heading-5-link-color, $heading-5-link-color-hover);
-    }
   }
+
   margin-bottom: .5rem;
   font-family: $heading-5-font-family;
 }

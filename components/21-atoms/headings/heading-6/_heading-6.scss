@@ -3,11 +3,8 @@ h6,
 %h6 {
   @include themify {
     color: $heading-6-color;
-
-    a {
-      @include color-element-states($heading-6-link-color, $heading-6-link-color-hover);
-    }
   }
+
   margin-bottom: .5rem;
   font-family: $heading-6-font-family;
   font-weight: 600;

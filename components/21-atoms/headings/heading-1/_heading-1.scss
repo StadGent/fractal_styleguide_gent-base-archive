@@ -3,10 +3,6 @@ h1,
 %h1 {
   @include themify {
     color: $heading-1-color;
-
-    a {
-      @include color-element-states($heading-1-link-color, $heading-1-link-color-hover);
-    }
   }
 
   margin-bottom: 1.5rem;
