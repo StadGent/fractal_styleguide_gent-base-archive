@@ -24,6 +24,7 @@ Due to some issues with publishing to NPM we had to update to a new patch versio
 * STIJ-193: Added figcaption atom and figure molecule.
 * STIJ-194: Updated preview layouts and added some building blocks.
 * STIJ-199: Removed some style guide specific preview templates that where not necessary anymore.
+* STIJ-205: Added deploy script for admins.
 * STIJ-206: Added main_cli.scss file that creates the main sass file **without SASS globbing** to support Angular CLI.
 
 ### 2.7.0
