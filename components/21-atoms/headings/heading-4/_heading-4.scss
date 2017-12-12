@@ -3,11 +3,8 @@ h4,
 %h4 {
   @include themify {
     color: $heading-4-color;
-
-    a {
-      @include color-element-states($heading-4-color, $heading-4-color-hover);
-    }
   }
+
   margin-bottom: .75rem;
   font-family: $heading-4-font-family;
 }
