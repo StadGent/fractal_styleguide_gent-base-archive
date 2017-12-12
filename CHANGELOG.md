@@ -7,6 +7,7 @@ Refer to upcoming changes in our README.md under "Roadmap"
 All notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
 ### 2.7.4
+* STIJ-210: Move some dependencies to devDependencies.
 * STIJ-211: Fixed newsletter block styling.
 
 ### 2.7.3
