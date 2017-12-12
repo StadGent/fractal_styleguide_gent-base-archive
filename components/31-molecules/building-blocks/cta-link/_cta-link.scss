@@ -44,6 +44,10 @@ a.cta-link {
   border-radius: $radius-2;
   text-decoration: none;
 
+  h3 {
+    margin-top: 0;
+  }
+
   .icon {
     position: absolute;
     top: 0;
