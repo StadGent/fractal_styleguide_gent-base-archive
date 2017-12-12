@@ -6,12 +6,26 @@ Refer to upcoming changes in our README.md under "Roadmap"
 ## Changes
 All notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
+### 2.7.4
+* STIJ-207: Fixed small issue for preview templates.
+* STIJ-208: Fixed bug in `postinstall.sh` script.
+* STIJ-210: Move some dependencies to devDependencies.
+* STIJ-211: Fixed newsletter block styling.
+
+### 2.7.3
+Due to some issues with publishing to NPM we had to update to a new patch version without introducing new changes to the style guide.
+
+### 2.7.2
+* STIJ-208: Removed console log and updated postinstall.sh script to generate main_cli.scss content.
+
 ### 2.7.1
 * STIJ-170: Fixed a bug where the search icon in the header did not work for FF and IE.
+* STIJ-175: Added teaser and topic teaser molecules.
 * STIJ-193: Added figcaption atom and figure molecule.
 * STIJ-194: Updated preview layouts and added some building blocks.
 * STIJ-199: Removed some style guide specific preview templates that where not necessary anymore.
 * STIJ-205: Added deploy script for admins.
+* STIJ-206: Added main_cli.scss file that creates the main sass file **without SASS globbing** to support Angular CLI.
 
 ### 2.7.0
 **IMPORTANT: Class .text-center has been removed**
