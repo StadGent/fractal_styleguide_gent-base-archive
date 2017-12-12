@@ -35,9 +35,21 @@ echo "Checking out latest development changes...";
 git checkout develop;
 git pull;
 
+# Check if gulp validates, otherwise terminate the script.
+gulp validate
+
+# Check output of gulp validate command.
+if [ $? -eq 0 ]
+then
+    echo "Code validation successful!"
+else
+    echo "You need to make sure your code validates before continuing!"
+    exit 1
+fi
+
 # Do a gulp build to build latest version of the style guide.
 #echo "Building latest style guide version...";
-#gulp build;
+gulp build
 
 # Check if type argument is not empty.
 if [ $# -eq 0 ]
