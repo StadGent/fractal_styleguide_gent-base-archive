@@ -12,6 +12,7 @@ All notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 * STIJ-208: Fixed bug in `postinstall.sh` script.
 * STIJ-210: Move some dependencies to devDependencies.
 * STIJ-211: Fixed newsletter block styling.
+* STIJ-214: Added preview template fixes after refactoring the heading atoms.
 
 ### 2.7.3
 Due to some issues with publishing to NPM we had to update to a new patch version without introducing new changes to the style guide.

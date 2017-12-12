@@ -2,6 +2,10 @@
 footer {
   padding: 1.5rem 0;
 
+  h3 {
+    margin-top: 0 !important; // sass-lint-disable no-important
+  }
+
   p {
     color: $color-gray;
   }
