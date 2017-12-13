@@ -7,7 +7,7 @@ Refer to upcoming changes in our README.md under "Roadmap"
 All notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
 ### Next release
-* STIJ-219: Added travis integration
+* STIJ-219: Added travis integration.
 
 ### 2.7.5
 * STIJ-216:
