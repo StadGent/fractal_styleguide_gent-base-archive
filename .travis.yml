@@ -13,6 +13,7 @@ cache: yarn
 matrix:
   fast_finish: true
   allow_failures:
+    - os: osx
     - env: "NODE_VERSION=4"
     - env: "NODE_VERSION=5"
     - env: "NODE_VERSION=7"
