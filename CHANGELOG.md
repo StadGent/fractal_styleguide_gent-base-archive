@@ -10,6 +10,7 @@ All notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 * STIJ-216:
     * Added masonry-layout library.
     * Added organism for masonry layout.
+* STIJ-217: Added validation check to version_tag.sh script.
 
 ### 2.7.4
 * STIJ-197: Added margin top to headings and fixed the color of links inside headings.
