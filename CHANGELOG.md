@@ -7,6 +7,9 @@ Refer to upcoming changes in our README.md under "Roadmap"
 All notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
 ### 2.7.5
+* STIJ-216:
+    * Added masonry-layout library.
+    * Added organism for masonry layout.
 * STIJ-217: Added validation check to version_tag.sh script.
 
 ### 2.7.4
