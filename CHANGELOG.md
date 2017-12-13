@@ -172,6 +172,8 @@ it is discouraged to use underlined text.
     * Changed markup for the Form Steps molecule.
     * Changed styling for the Form Steps molecule.
     * Added themify for the Form Steps molecule.
+
+### 2.7.5
 * STIJ-216:
     * Added masonry-layout library.
     * Added organism for masonry layout.
