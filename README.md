@@ -3,7 +3,7 @@ This style guide contains the SASS library and needed assets to be able to style
 
 [![NPM version](https://img.shields.io/npm/v/gent_styleguide.svg)](https://www.npmjs.com/package/gent_styleguide)
 [![Downloads](https://img.shields.io/npm/dt/gent_styleguide.svg)](https://www.npmjs.com/package/gent_styleguide)
-[![License](https://img.shields.io/npm/v/gent_styleguide.svg)](https://img.shields.io/github/license/digipolisgent/fractal_styleguide_gent-base.svg)
+[![License](https://img.shields.io/github/license/StadGent/fractal_styleguide_gent-base.svg)](https://www.npmjs.com/package/gent_styleguide)
 
 [![Build Status](https://travis-ci.org/StadGent/fractal_styleguide_gent-base.svg?branch=develop)](https://travis-ci.org/StadGent/fractal_styleguide_gent-base)
 
