@@ -43,26 +43,4 @@
   a {
     color: inherit;
   }
-
-  &__btn {
-    display: inline-block;
-    width: auto;
-    padding: 0;
-    background: transparent;
-    color: inherit;
-    font-variant: all-petite-caps;
-    text-decoration: underline;
-
-    &:hover,
-    &:focus,
-    &:active {
-      background: transparent;
-      color: inherit;
-      text-decoration: none;
-    }
-
-    &+.messages__btn {
-      margin-left: 1rem;
-    }
-  }
 }
