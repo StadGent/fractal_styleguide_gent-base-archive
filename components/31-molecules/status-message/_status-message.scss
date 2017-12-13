@@ -8,19 +8,19 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, .2);
 
   &::before {
+    @extend %icon-info-circle;
     display: block;
     margin-right: .5rem;
     margin-bottom: .5rem;
     font-family: gent-icons;
     font-size: 1rem;
-    content: '';
   }
 
   &--status {
     color: darken($color-green, 10%);
 
     &::before {
-      content: '\f05a';
+      @extend %icon-critical;
     }
   }
 
@@ -36,7 +36,7 @@
     color: darken($color-orange, 20%);
 
     &::before {
-      content: '\61';
+      @extend %icon-alert;
     }
   }
 
