@@ -6,6 +6,7 @@ This style guide contains the SASS library and needed assets to be able to style
 [![License](https://img.shields.io/github/license/StadGent/fractal_styleguide_gent-base.svg)](https://www.npmjs.com/package/gent_styleguide)
 
 [![Build Status](https://travis-ci.org/StadGent/fractal_styleguide_gent-base.svg?branch=develop)](https://travis-ci.org/StadGent/fractal_styleguide_gent-base)
+[![Maintainability](https://api.codeclimate.com/v1/badges/1aeba4d73f307d4583b9/maintainability)](https://codeclimate.com/github/StadGent/fractal_styleguide_gent-base/maintainability)
 
 ## Roadmap 
 ### Style guide version 3.x
