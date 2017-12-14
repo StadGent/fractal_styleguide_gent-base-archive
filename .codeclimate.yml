@@ -1,0 +1,21 @@
+version: "2"
+plugins:
+  git-legal:
+    enabled: true
+  duplication:
+    enabled: true
+    config:
+      languages:
+        javascript:
+  markdownlint:
+    enabled: true
+  fixme:
+    enabled: true
+  eslint:
+    enabled: true
+  scss-lint:
+    enabled: true
+exclude_patterns:
+- "**/.idea/**/*"
+- "**/build/**/*"
+- "**/public/**/*"
