@@ -8,6 +8,7 @@ All notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
 ### 2.7.6
 * STIJ-221: Removed header margin top again. We need to think of a better way to implement this.
+* STIJ-219: Added travis integration.
 
 ### 2.7.5
 * STIJ-216:
