@@ -6,8 +6,23 @@ Refer to upcoming changes in our README.md under "Roadmap"
 ## Changes
 All notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
+### 2.7.6
+* STIJ-221: Removed header margin top again. We need to think of a better way to implement this.
+* STIJ-219: Added travis integration.
+
+### 2.7.5
+* STIJ-216:
+    * Added masonry-layout library.
+    * Added organism for masonry layout.
+* STIJ-217: Added validation check to version_tag.sh script.
+
 ### 2.7.4
+* STIJ-197: Added margin top to headings and fixed the color of links inside headings.
+* STIJ-207: Fixed small issue for preview templates.
+* STIJ-208: Fixed bug in `postinstall.sh` script.
 * STIJ-210: Move some dependencies to devDependencies.
+* STIJ-211: Fixed newsletter block styling.
+* STIJ-214: Added preview template fixes after refactoring the heading atoms.
 
 ### 2.7.3
 Due to some issues with publishing to NPM we had to update to a new patch version without introducing new changes to the style guide.
@@ -21,7 +36,9 @@ Due to some issues with publishing to NPM we had to update to a new patch versio
 * STIJ-193: Added figcaption atom and figure molecule.
 * STIJ-194: Updated preview layouts and added some building blocks.
 * STIJ-199: Removed some style guide specific preview templates that where not necessary anymore.
+* STIJ-205: Added deploy script for admins.
 * STIJ-206: Added main_cli.scss file that creates the main sass file **without SASS globbing** to support Angular CLI.
+* STIJ-207: Added small fix for preview layouts.
 
 ### 2.7.0
 **IMPORTANT: Class .text-center has been removed**
