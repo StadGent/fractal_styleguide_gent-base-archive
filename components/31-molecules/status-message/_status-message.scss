@@ -8,31 +8,30 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, .2);
 
   &::before {
+    @extend %icon-base-css;
     @extend %icon-info-circle;
     display: block;
     margin-right: .5rem;
     margin-bottom: .5rem;
-    font-family: gent-icons;
-    font-size: 1rem;
   }
 
-  &--status {
+  &.messages--status {
     color: darken($color-green, 10%);
 
     &::before {
-      @extend %icon-critical;
+      @extend %icon-info-circle;
     }
   }
 
-  &--error {
+  &.messages--error {
     color: darken($color-red, 10%);
 
     &::before {
-      content: '\62';
+      @extend %icon-error;
     }
   }
 
-  &--warning {
+  &.messages--warning {
     color: darken($color-orange, 20%);
 
     &::before {
