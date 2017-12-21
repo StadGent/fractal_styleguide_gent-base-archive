@@ -82,6 +82,21 @@ var argv = require('yargs').argv;
 var bump = require('gulp-bump');
 var inject = require('gulp-inject');
 
+function _sassLint(failOnError) {
+  var cmd = gulp.src('components/**/*.s+(a|c)ss')
+    .pipe(sassGlob())
+    .pipe(sassLint({
+      configFile: './.sass-lint.yml'
+    }))
+    .pipe(sassLint.format());
+
+  if (failOnError) {
+    cmd.pipe(sassLint.failOnError());
+  }
+
+  return cmd;
+}
+
 /*
  *
  * Inject SASS partial paths as imports in main_cli.scss.
@@ -168,12 +183,7 @@ gulp.task('styles:inject', function() {
  *  Autoprefixer
  */
 gulp.task('styles:dist', function() {
-  gulp.src('components/**/*.s+(a|c)ss')
-    .pipe(sassGlob())
-    .pipe(sassLint({
-      configFile: './.sass-lint.yml'
-    }))
-    .pipe(sassLint.format())
+  _sassLint(false)
     .pipe(sourcemaps.init())
     .pipe(sass({
       outputStyle: 'nested',
@@ -197,13 +207,7 @@ gulp.task('styles:dist', function() {
  *
  */
 gulp.task('styles:build', ['styles:inject', 'fractal:build'], function() {
-  gulp.src('components/**/*.s+(a|c)ss')
-    .pipe(sassGlob())
-    .pipe(sassLint({
-      configFile: './.sass-lint.yml'
-    }))
-    .pipe(sassLint.format())
-    .pipe(sassLint.failOnError())
+  _sassLint(true)
     .pipe(sass({
       outputStyle: 'compressed',
       includePaths: ['node_modules/breakpoint-sass/stylesheets']
@@ -222,12 +226,7 @@ gulp.task('styles:build', ['styles:inject', 'fractal:build'], function() {
  *
  */
 gulp.task('styles:validate', function() {
-  return gulp.src('components/**/*.s+(a|c)ss')
-  .pipe(sassLint({
-    configFile: './.sass-lint.yml'
-  }))
-  .pipe(sassLint.format())
-  .pipe(sassLint.failOnError());
+  _sassLint(true);
 });
 
 /*
