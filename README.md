@@ -16,7 +16,7 @@ a web application in the corporate identity for the city of Ghent..
 
 * A major overhaul with an entirely new style for all components.
 * Probably a full CSS grid implementation throughout all the style guide
-components.
+  components.
 * We will probably drop jQuery in favor for native Javascript or another.
 
 ### Upcoming: 2.7.x
@@ -44,7 +44,7 @@ this repository for commercial purposes, should [pay for a license](http://sachi
 
 When installing this package, you will get a directory structure like this.
 
-```
+```nolang
 .
 ├── CHANGELOG.md
 ├── LICENSE
@@ -71,7 +71,7 @@ project.
 After installing the style guide through `npm install gent_styleguide` you''ll
 get a folder structure like this:
 
-```
+```nolang
 .
 ├── node_modules
 │   └── gent_styleguide
@@ -83,7 +83,7 @@ get a folder structure like this:
 Now, to use the style guide SASS partials you just need to import them into your
 main SASS file at the top so they get loaded before your own code.
 
-```
+```scss
 @import 'node_modules/gent_styleguide/build/sass/00-settings/reset';
 @import 'node_modules/gent_styleguide/build/sass/00-settings/vars';
 @import 'node_modules/gent_styleguide/build/sass/01-mixins/**/*';
@@ -105,7 +105,7 @@ following approach.
 
 Example:
 
-```
+```scss
 @import 'node_modules/gent_styleguide/build/sass/00-settings/reset';
 @import 'node_modules/gent_styleguide/build/sass/00-settings/vars';
 @import '/sass/00-vars-overrides/**/*';
@@ -126,7 +126,7 @@ includePath inside your gulpfile.js
 
 Example:
 
-```
+```javascript
     .pipe(sass({
       outputStyle: 'compressed',
       includePaths: ['node_modules/breakpoint-sass/stylesheets']
@@ -143,7 +143,7 @@ requesting a license / Typekit kit from the web team at Digipolis.
 
 Example:
 
-```
+```javascript
 <script>
   (function(d) {
     var config = {
@@ -151,7 +151,7 @@ Example:
           scriptTimeout: 3000,
           async: true
         },
-        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+"wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+="wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
   })(document);
 </script>
 ```

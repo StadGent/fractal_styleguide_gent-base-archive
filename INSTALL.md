@@ -14,7 +14,7 @@ Run `gulp` or `gulp watch` and go to [localhost:3000](http://localhost:3000).
 
 ## Publishing (Digipolis only)
 
-```
+```bash
 gulp publish --username=XXX --password=XXX --email=XXX
 ```
 

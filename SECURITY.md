@@ -17,8 +17,8 @@ confirmed, we will work on a solution following these steps:
 * Send an acknowledgement to the reporter
 * Work on a patch
 * Write a security announcement for this repository about the vulnerability.
-This will be posted as a wiki page and referenced from this file. It will
-contain at least the following:
+  This will be posted as a wiki page and referenced from this file. It will
+  contain at least the following:
   * a title that always include the "Security release" string
   * a description of the vulnerability
   * the affected versions
@@ -32,13 +32,13 @@ contain at least the following:
 * Update the security advisory list (see below)
 
 > Releases that include security issues should not be done on Saturday or
-Sunday, except if the vulnerability has been publicly posted.
+> Sunday, except if the vulnerability has been publicly posted.
 
 > While we are working on a patch, please do not reveal the issue publicly.
 
 > The resolution takes anywhere between a couple of days to a month depending on
-its complexity and the coordination with the downstream projects (see next
-paragraph).
+> its complexity and the coordination with the downstream projects (see next
+> paragraph).
 
 ## Security Advisories
 

@@ -15,6 +15,7 @@ plugins:
     enabled: true
 exclude_patterns:
 - "**/.idea/**/*"
+- "**/.github/**/*"
 - "**/build/**/*"
 - "**/public/**/*"
 - "**/node_modules/**/*"
