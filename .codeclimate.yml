@@ -2,6 +2,9 @@ version: "2"
 plugins:
   git-legal:
     enabled: true
+    config:
+      allow_affero_copyleft: true
+      allow_strong_copyleft: true
   duplication:
     enabled: true
     config:
@@ -18,4 +21,5 @@ exclude_patterns:
 - "**/.github/**/*"
 - "**/build/**/*"
 - "**/public/**/*"
-- "**/node_modules/**/*"
+- "**/node_modules/"
+- "**/yarn.lock"
