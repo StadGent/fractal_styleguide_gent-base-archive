@@ -114,4 +114,4 @@ To apply changes some steps need to be taken:
     `git commit -m 'Commit message here'`
     `git push`
   * Publish the package to NPM with
-    `gulp publish --username=XXX --password=XXX --email=XXX`
+    `gulp publish --username=*** --password=*** --email=***`
