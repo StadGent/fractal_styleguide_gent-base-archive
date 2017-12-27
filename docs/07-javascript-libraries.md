@@ -52,7 +52,7 @@ function!
 
 ### Usage
 
-```
+```javascript
 var tabTrap = new gent_styleguide.TabTrap(container);
 
 // handle keyboard input
