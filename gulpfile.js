@@ -1,18 +1,49 @@
 'use strict';
 
-var packageInfo = require('./package.json');
-var packageVersion = packageInfo.version;
+const packageInfo = require('./package.json');
+const packageVersion = packageInfo.version;
 
 /*
-* Require the path module
+* Node core modules.
 */
+const fs = require('fs');
 const path = require('path');
+
+/*
+* NPM based modules
+*/
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const sassGlob = require('gulp-sass-glob');
+const watch = require('gulp-watch');
+const sourcemaps = require('gulp-sourcemaps');
+const sassLint = require('gulp-sass-lint');
+const autoprefixer = require('gulp-autoprefixer');
+const cssnano = require('gulp-cssnano');
+const copy = require('gulp-contrib-copy');
+const rename = require('gulp-rename');
+const  eslint = require('gulp-eslint');
+const imagemin = require('gulp-imagemin');
+const pngquant = require('imagemin-pngquant');
+const es = require('event-stream');
+const minify = require('gulp-minify');
+const npm = require('npm');
+const bump = require('gulp-bump');
+const inject = require('gulp-inject');
+
+const yargs = require('yargs');
+
 
 /*
 * Require the Fractal module
 */
-const fractal = module.exports = require('@frctl/fractal').create();
+const fractal = require('@frctl/fractal').create();
 const logger = fractal.cli.console; // keep a reference to the fractal CLI console utility
+
+/**
+ * Require additional fractal modules
+ */
+const twigAdapter = require('@frctl/twig');
 
 /*
 * Give your project a title.
@@ -24,7 +55,6 @@ fractal.set('project.title', 'City of Ghent Style Guide - Version ' + packageVer
 */
 fractal.components.set('path', path.join(__dirname, 'components'));
 fractal.components.set('default.preview', '@preview');
-const twigAdapter = require('@frctl/twig');
 fractal.components.engine(twigAdapter);
 fractal.components.set('ext', '.twig');
 
@@ -61,45 +91,26 @@ fractal.web.set('static.path', path.join(__dirname, 'public'));
 fractal.web.set('static.mount', '');
 fractal.web.set('builder.dest', __dirname + '/build');
 
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var sassGlob = require('gulp-sass-glob');
-var watch = require('gulp-watch');
-var sourcemaps = require('gulp-sourcemaps');
-var sassLint = require('gulp-sass-lint');
-var autoprefixer = require('gulp-autoprefixer');
-var cssnano = require('gulp-cssnano');
-var copy = require('gulp-contrib-copy');
-var rename = require('gulp-rename');
-var  eslint = require('gulp-eslint');
-var imagemin = require('gulp-imagemin');
-var pngquant = require('imagemin-pngquant');
-var es = require('event-stream');
-var minify = require('gulp-minify');
-var npm = require('npm');
-var fs = require('fs');
-var argv = require('yargs').argv;
-var bump = require('gulp-bump');
-var inject = require('gulp-inject');
-
 /*
  *
  * Inject SASS partial paths as imports in main_cli.scss.
  *
  */
-gulp.task('styles:inject', function() {
-  var injectSettingsFiles= gulp.src('components/00-settings/**/*.s+(a|c)ss', {read: false});
-  var injectMixinsFiles= gulp.src('components/01-mixins/**/*.s+(a|c)ss', {read: false});
-  var injectBaseFiles= gulp.src('components/11-base/**/*.s+(a|c)ss', {read: false});
-  var injectAtomsFiles= gulp.src('components/21-atoms/**/*.s+(a|c)ss', {read: false});
-  var injectMoleculesFiles= gulp.src('components/31-molecules/**/*.s+(a|c)ss', {read: false});
-  var injectOrganismsFiles= gulp.src('components/41-organisms/**/*.s+(a|c)ss', {read: false});
+gulp.task('styles:inject', () => {
+  const injectSettingsFiles= gulp.src('components/00-settings/**/*.s+(a|c)ss', {read: false});
+  const injectMixinsFiles= gulp.src('components/01-mixins/**/*.s+(a|c)ss', {read: false});
+  const injectBaseFiles= gulp.src('components/11-base/**/*.s+(a|c)ss', {read: false});
+  const injectAtomsFiles= gulp.src('components/21-atoms/**/*.s+(a|c)ss', {read: false});
+  const injectMoleculesFiles= gulp.src('components/31-molecules/**/*.s+(a|c)ss', {read: false});
+  const injectOrganismsFiles= gulp.src('components/41-organisms/**/*.s+(a|c)ss', {read: false});
 
-  function transformFilepath(filepath) {
-    return '@import "' + filepath + '";';
-  }
+  // function transformFilepath(filepath) {
+  //   return '@import "' + filepath + '";';
+  // }
 
-  var injectSettingsOptions = {
+  var transformFilepath  = (filepath) => `@import "${filepath}";`;
+
+  const injectSettingsOptions = {
     transform: transformFilepath,
     starttag: '// inject:settings',
     endtag: '// endinject',
@@ -107,7 +118,7 @@ gulp.task('styles:inject', function() {
     relative: true
   };
 
-  var injectMixinsOptions = {
+  const injectMixinsOptions = {
     transform: transformFilepath,
     starttag: '// inject:mixins',
     endtag: '// endinject',
@@ -115,7 +126,7 @@ gulp.task('styles:inject', function() {
     relative: true
   };
 
-  var injectBaseOptions = {
+  const injectBaseOptions = {
     transform: transformFilepath,
     starttag: '// inject:base',
     endtag: '// endinject',
@@ -123,7 +134,7 @@ gulp.task('styles:inject', function() {
     relative: true
   };
 
-  var injectAtomsOptions = {
+  const injectAtomsOptions = {
     transform: transformFilepath,
     starttag: '// inject:atoms',
     endtag: '// endinject',
@@ -131,7 +142,7 @@ gulp.task('styles:inject', function() {
     relative: true
   };
 
-  var injectMoleculesOptions = {
+  const injectMoleculesOptions = {
     transform: transformFilepath,
     starttag: '// inject:molecules',
     endtag: '// endinject',
@@ -139,7 +150,7 @@ gulp.task('styles:inject', function() {
     relative: true
   };
 
-  var injectOrganismsOptions = {
+  const injectOrganismsOptions = {
     transform: transformFilepath,
     starttag: '// inject:organisms',
     endtag: '// endinject',
@@ -167,7 +178,7 @@ gulp.task('styles:inject', function() {
  *  Sourcemaps (dev only!)
  *  Autoprefixer
  */
-gulp.task('styles:dist', function() {
+gulp.task('styles:dist', () => {
   gulp.src('components/**/*.s+(a|c)ss')
     .pipe(sassGlob())
     .pipe(sassLint({
@@ -196,7 +207,7 @@ gulp.task('styles:dist', function() {
  *  Autoprefixer
  *
  */
-gulp.task('styles:build', ['styles:inject', 'fractal:build'], function() {
+gulp.task('styles:build', ['styles:inject', 'fractal:build'], () => {
   gulp.src('components/**/*.s+(a|c)ss')
     .pipe(sassGlob())
     .pipe(sassLint({
@@ -221,97 +232,93 @@ gulp.task('styles:build', ['styles:inject', 'fractal:build'], function() {
  * Validate SCSS files.
  *
  */
-gulp.task('styles:validate', function() {
-  return gulp.src('components/**/*.s+(a|c)ss')
+gulp.task('styles:validate', () =>
+  gulp.src('components/**/*.s+(a|c)ss')
   .pipe(sassLint({
     configFile: './.sass-lint.yml'
   }))
   .pipe(sassLint.format())
-  .pipe(sassLint.failOnError());
-});
+  .pipe(sassLint.failOnError())
+);
 
 /*
  *
  * Watch SCSS files For Changes.
  *
  */
-gulp.task('styles:watch', function() {
-  gulp.watch('./components/**/*.scss', ['styles:dist']);
-});
+gulp.task('styles:watch', () => gulp.watch('./components/**/*.scss', ['styles:dist']));
 
 /*
  *
  * Extract SCSS and their assets (like fonts) from the components folder.
  *
  */
-gulp.task('styles:extract', ['fractal:build', 'styles:build', 'styles:dist'], function() {
+gulp.task('styles:extract', ['fractal:build', 'styles:build', 'styles:dist'], () =>
   gulp.src('components/**/*.s+(a|c)ss')
     .pipe(gulp.dest('./build/styleguide/sass/'))
-});
+);
 
 /*
  *
  * Copy JS files during development.
  *
  */
-gulp.task('js:dist', ['styles:dist'], function() {
+gulp.task('js:dist', ['styles:dist'], () =>
   gulp.src('components/**/*.js')
     .pipe(rename({
       dirname: '',
       suffix: "-min"
     }))
-    .pipe(gulp.dest('./public/styleguide/js/'));
-});
+    .pipe(gulp.dest('./public/styleguide/js/'))
+);
 
 /*
  *
  * Copy JS files during Fractal build.
  *
  */
-gulp.task('js:build', ['fractal:build'], function() {
+gulp.task('js:build', ['fractal:build'], () =>
   gulp.src('components/**/*.js')
     .pipe(rename({dirname: ''}))
     .pipe(minify({
       noSource: true
     }))
-    .pipe(gulp.dest('./build/styleguide/js/'));
-});
+    .pipe(gulp.dest('./build/styleguide/js/'))
+);
 
 /*
  *
  * Validate JS files.
  *
  */
-gulp.task('js:validate', function() {
-  return gulp.src('components/**/*.js')
+gulp.task('js:validate', () =>
+  gulp.src('components/**/*.js')
     .pipe(eslint({
       configFile: './.eslintrc'
     }))
     .pipe(eslint.format())
-    .pipe(eslint.failAfterError());
-});
+    .pipe(eslint.failAfterError())
+);
 
 /*
  *
  * Watch JS files For Changes.
  *
  */
-gulp.task('js:watch', function() {
-  gulp.watch('./components/**/*.js', ['js:validate', 'js:dist']);
-});
+gulp.task('js:watch', () => gulp.watch('./components/**/*.js', ['js:validate', 'js:dist']));
 
 /*
  *
  * Minify images.
  *
  */
-gulp.task('images:minify', ['fractal:build', 'styles:build', 'styles:dist'], function(cb) {
+gulp.task('images:minify', ['fractal:build', 'styles:build', 'styles:dist'], (cb) =>
   gulp.src(['components/**/*.png','components/**/*.jpg','components/**/*.gif','components/**/*.jpeg', 'components/**/*.svg'])
     .pipe(imagemin({
       progressive: true,
       use: [pngquant()]
-    })).pipe(gulp.dest('build/styleguide/sass')).on('end', cb).on('error', cb);
-});
+    })).pipe(gulp.dest('build/styleguide/sass')).on('end', cb).on('error', cb)
+);
 
 /*
  * Start the Fractal server
@@ -322,14 +329,14 @@ gulp.task('images:minify', ['fractal:build', 'styles:build', 'styles:dist'], fun
  *
  * This task will also log any errors to the console.
  */
-gulp.task('fractal:start', function(){
+gulp.task('fractal:start', () => {
   const server = fractal.web.server({
     sync: true
   });
   server.on('error', err => logger.error(err.message));
   return server.start().then(() => {
     logger.success(`Fractal server is now running at ${server.url}`);
-  });
+  }).catch(() => logger.error('Fractal server failed to start'));
 });
 
 /*
@@ -341,39 +348,57 @@ gulp.task('fractal:start', function(){
  * The build destination will be the directory specified in the 'builder.dest'
  * configuration option set above.
  */
-gulp.task('fractal:build', function(){
+gulp.task('fractal:build', () => {
   const builder = fractal.web.builder();
   builder.on('progress', (completed, total) => logger.update(`Exported ${completed} of ${total} items`, 'info'));
   builder.on('error', err => logger.error(err.message));
   return builder.build().then(() => {
       logger.success('Fractal build completed!');
-  });
+  }).catch(() => logger.error('Fractal server failed to start'));
 });
 
 /*
  * Publish to the NPM public registry.
  */
-gulp.task('publish:npm', function(callback){
+gulp.task('publish:npm', (callback) => {
+
+  const argv = yargs
+    .options({
+      username: {
+        demand: true,
+        alias: 'u',
+        describe: 'NPM user name',
+        string: true
+      }
+    })
+    .options({
+      password: {
+        demand: true,
+        alias: 'p',
+        describe: 'NPM password',
+        string: true
+      }
+    })
+    .options({
+      email: {
+        demand: true,
+        alias: 'e',
+        describe: 'E-mail',
+        string: true
+      }
+    })
+    .help()
+    .alias( 'help', 'h')
+    .argv;
+
+
   var username = argv.username;
   var password = argv.password;
   var email = argv.email;
 
-  if (!username) {
-      var usernameError = new Error("Username is required as an argument --username exampleUsername");
-      return callback(usernameError);
-  }
-  if (!password) {
-      var passwordError = new Error("Password is required as an argument --password  examplepassword");
-      return callback(passwordError);
-  }
-  if (!email) {
-      var emailError = new Error("Email is required as an argument --email example@email.com");
-      return callback(emailError);
-  }
-
   var uri = "http://registry.npmjs.org/";
 
-  npm.load(null, function (loadError) {
+  npm.load(null, (loadError) => {
       if (loadError) {
           return callback(loadError);
       }
@@ -387,7 +412,7 @@ gulp.task('publish:npm', function(callback){
           auth: auth
       };
 
-    npm.registry.adduser(uri, addUserParams, function (addUserError, data, raw, res) {
+    npm.registry.adduser(uri, addUserParams, (addUserError, data, raw, res) => {
       if (addUserError) {
           return callback(addUserError);
       }
@@ -397,25 +422,24 @@ gulp.task('publish:npm', function(callback){
         if (packError) {
             return callback(packError);
         }
-        var fileName = metadata.name + '-' + metadata.version + '.tgz';
-        var bodyPath = require.resolve('./' + fileName);
-        var body = fs.createReadStream(bodyPath);
-        var publishParams = {
+        const fileName = metadata.name + '-' + metadata.version + '.tgz';
+        const bodyPath = require.resolve('./' + fileName);
+        const body = fs.createReadStream(bodyPath);
+        const publishParams = {
             metadata: metadata,
             access: 'public',
             body: body,
             auth: auth
         };
-        npm.registry.publish(uri, publishParams, function (publishError, resp) {
+        npm.registry.publish(uri, publishParams, (publishError, resp) => {
             if (publishError) {
                 return callback(publishError);
             }
-            console.log("Publish succesfull: " + JSON.stringify(resp));
+            console.log(`Publish succesfull: ${JSON.stringify(resp, undefined, 2)}`);
             return callback();
         });
       })
     });
-
   });
 });
 
