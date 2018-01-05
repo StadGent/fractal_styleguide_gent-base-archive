@@ -15,22 +15,18 @@ const path = require('path');
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const sassGlob = require('gulp-sass-glob');
-// const watch = require('gulp-watch');
 const sourcemaps = require('gulp-sourcemaps');
 const sassLint = require('gulp-sass-lint');
 const autoprefixer = require('gulp-autoprefixer');
 const cssnano = require('gulp-cssnano');
-// const copy = require('gulp-contrib-copy');
 const rename = require('gulp-rename');
 const eslint = require('gulp-eslint');
 const imagemin = require('gulp-imagemin');
 const pngquant = require('imagemin-pngquant');
-// const es = require('event-stream');
 const minify = require('gulp-minify');
 const npm = require('npm');
 const bump = require('gulp-bump');
 const inject = require('gulp-inject');
-
 const yargs = require('yargs');
 
 var _sassLint = (failOnError) => {
@@ -117,10 +113,6 @@ gulp.task('styles:inject', () => {
   const injectAtomsFiles = gulp.src('components/21-atoms/**/*.s+(a|c)ss', {read: false});
   const injectMoleculesFiles = gulp.src('components/31-molecules/**/*.s+(a|c)ss', {read: false});
   const injectOrganismsFiles = gulp.src('components/41-organisms/**/*.s+(a|c)ss', {read: false});
-
-  // function transformFilepath(filepath) {
-  //   return '@import "' + filepath + '";';
-  // }
 
   var transformFilepath = (filepath) => `@import "${filepath}";`;
 
@@ -244,7 +236,9 @@ gulp.task('styles:validate', () =>
  * Watch SCSS files For Changes.
  *
  */
-gulp.task('styles:watch', () => gulp.watch('./components/**/*.scss', ['styles:dist']));
+gulp.task('styles:watch', () =>
+  gulp.watch('./components/**/*.scss', ['styles:dist'])
+);
 
 /*
  *
@@ -303,7 +297,9 @@ gulp.task('js:validate', () =>
  * Watch JS files For Changes.
  *
  */
-gulp.task('js:watch', () => gulp.watch('./components/**/*.js', ['js:validate', 'js:dist']));
+gulp.task('js:watch', () =>
+  gulp.watch('./components/**/*.js', ['js:validate', 'js:dist'])
+);
 
 /*
  *
