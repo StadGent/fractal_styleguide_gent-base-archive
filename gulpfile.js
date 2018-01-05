@@ -15,17 +15,17 @@ const path = require('path');
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const sassGlob = require('gulp-sass-glob');
-const watch = require('gulp-watch');
+// const watch = require('gulp-watch');
 const sourcemaps = require('gulp-sourcemaps');
 const sassLint = require('gulp-sass-lint');
 const autoprefixer = require('gulp-autoprefixer');
 const cssnano = require('gulp-cssnano');
-const copy = require('gulp-contrib-copy');
+// const copy = require('gulp-contrib-copy');
 const rename = require('gulp-rename');
-const  eslint = require('gulp-eslint');
+const eslint = require('gulp-eslint');
 const imagemin = require('gulp-imagemin');
 const pngquant = require('imagemin-pngquant');
-const es = require('event-stream');
+// const es = require('event-stream');
 const minify = require('gulp-minify');
 const npm = require('npm');
 const bump = require('gulp-bump');
@@ -63,19 +63,19 @@ fractal.components.set('ext', '.twig');
 */
 fractal.components.set('statuses', {
   deprecated: {
-    label: "deprecated",
-    description: "Deprecated.",
-    color: "#dd5e01"
+    label: 'deprecated',
+    description: 'Deprecated.',
+    color: '#dd5e01'
   },
   beta: {
-    label: "beta",
-    description: "Work in progress. Implement with caution.",
-    color: "#ff9233"
+    label: 'beta',
+    description: 'Work in progress. Implement with caution.',
+    color: '#ff9233'
   },
   ready: {
-    label: "Ready",
-    description: "Ready to implement.",
-    color: "#29cc29"
+    label: 'Ready',
+    description: 'Ready to implement.',
+    color: '#29cc29'
   }
 });
 
@@ -97,18 +97,18 @@ fractal.web.set('builder.dest', __dirname + '/build');
  *
  */
 gulp.task('styles:inject', () => {
-  const injectSettingsFiles= gulp.src('components/00-settings/**/*.s+(a|c)ss', {read: false});
-  const injectMixinsFiles= gulp.src('components/01-mixins/**/*.s+(a|c)ss', {read: false});
-  const injectBaseFiles= gulp.src('components/11-base/**/*.s+(a|c)ss', {read: false});
-  const injectAtomsFiles= gulp.src('components/21-atoms/**/*.s+(a|c)ss', {read: false});
-  const injectMoleculesFiles= gulp.src('components/31-molecules/**/*.s+(a|c)ss', {read: false});
-  const injectOrganismsFiles= gulp.src('components/41-organisms/**/*.s+(a|c)ss', {read: false});
+  const injectSettingsFiles = gulp.src('components/00-settings/**/*.s+(a|c)ss', {read: false});
+  const injectMixinsFiles = gulp.src('components/01-mixins/**/*.s+(a|c)ss', {read: false});
+  const injectBaseFiles = gulp.src('components/11-base/**/*.s+(a|c)ss', {read: false});
+  const injectAtomsFiles = gulp.src('components/21-atoms/**/*.s+(a|c)ss', {read: false});
+  const injectMoleculesFiles = gulp.src('components/31-molecules/**/*.s+(a|c)ss', {read: false});
+  const injectOrganismsFiles = gulp.src('components/41-organisms/**/*.s+(a|c)ss', {read: false});
 
   // function transformFilepath(filepath) {
   //   return '@import "' + filepath + '";';
   // }
 
-  var transformFilepath  = (filepath) => `@import "${filepath}";`;
+  var transformFilepath = (filepath) => `@import "${filepath}";`;
 
   const injectSettingsOptions = {
     transform: transformFilepath,
@@ -159,13 +159,13 @@ gulp.task('styles:inject', () => {
   };
 
   return gulp.src('components/main_cli.scss')
-      .pipe(inject(injectSettingsFiles, injectSettingsOptions))
-      .pipe(inject(injectMixinsFiles, injectMixinsOptions))
-      .pipe(inject(injectBaseFiles, injectBaseOptions))
-      .pipe(inject(injectAtomsFiles, injectAtomsOptions))
-      .pipe(inject(injectMoleculesFiles, injectMoleculesOptions))
-      .pipe(inject(injectOrganismsFiles, injectOrganismsOptions))
-      .pipe(gulp.dest('components/'));
+    .pipe(inject(injectSettingsFiles, injectSettingsOptions))
+    .pipe(inject(injectMixinsFiles, injectMixinsOptions))
+    .pipe(inject(injectBaseFiles, injectBaseOptions))
+    .pipe(inject(injectAtomsFiles, injectAtomsOptions))
+    .pipe(inject(injectMoleculesFiles, injectMoleculesOptions))
+    .pipe(inject(injectOrganismsFiles, injectOrganismsOptions))
+    .pipe(gulp.dest('components/'));
 });
 
 /*
@@ -178,7 +178,7 @@ gulp.task('styles:inject', () => {
  *  Sourcemaps (dev only!)
  *  Autoprefixer
  */
-gulp.task('styles:dist', () => {
+gulp.task('styles:dist', () =>
   gulp.src('components/**/*.s+(a|c)ss')
     .pipe(sassGlob())
     .pipe(sassLint({
@@ -191,11 +191,11 @@ gulp.task('styles:dist', () => {
       includePaths: ['node_modules/breakpoint-sass/stylesheets']
     })).on('error', sass.logError)
     .pipe(autoprefixer({
-        browsers: ['last 5 versions']
+      browsers: ['last 5 versions']
     }))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('./public/css/'))
-});
+);
 
 /*
  *
@@ -207,7 +207,7 @@ gulp.task('styles:dist', () => {
  *  Autoprefixer
  *
  */
-gulp.task('styles:build', ['styles:inject', 'fractal:build'], () => {
+gulp.task('styles:build', ['styles:inject', 'fractal:build'], () =>
   gulp.src('components/**/*.s+(a|c)ss')
     .pipe(sassGlob())
     .pipe(sassLint({
@@ -220,12 +220,12 @@ gulp.task('styles:build', ['styles:inject', 'fractal:build'], () => {
       includePaths: ['node_modules/breakpoint-sass/stylesheets']
     })).on('error', sass.logError)
     .pipe(autoprefixer({
-        browsers: ['last 5 versions']
+      browsers: ['last 5 versions']
     }))
     .pipe(gulp.dest('./build/css/'))
     .pipe(cssnano())
     .pipe(gulp.dest('./build/css/'))
-});
+);
 
 /*
  *
@@ -234,11 +234,9 @@ gulp.task('styles:build', ['styles:inject', 'fractal:build'], () => {
  */
 gulp.task('styles:validate', () =>
   gulp.src('components/**/*.s+(a|c)ss')
-  .pipe(sassLint({
-    configFile: './.sass-lint.yml'
-  }))
-  .pipe(sassLint.format())
-  .pipe(sassLint.failOnError())
+    .pipe(sassLint({configFile: './.sass-lint.yml'}))
+    .pipe(sassLint.format())
+    .pipe(sassLint.failOnError())
 );
 
 /*
@@ -267,7 +265,7 @@ gulp.task('js:dist', ['styles:dist'], () =>
   gulp.src('components/**/*.js')
     .pipe(rename({
       dirname: '',
-      suffix: "-min"
+      suffix: '-min'
     }))
     .pipe(gulp.dest('./public/styleguide/js/'))
 );
@@ -313,7 +311,7 @@ gulp.task('js:watch', () => gulp.watch('./components/**/*.js', ['js:validate', '
  *
  */
 gulp.task('images:minify', ['fractal:build', 'styles:build', 'styles:dist'], (cb) =>
-  gulp.src(['components/**/*.png','components/**/*.jpg','components/**/*.gif','components/**/*.jpeg', 'components/**/*.svg'])
+  gulp.src(['components/**/*.png', 'components/**/*.jpg', 'components/**/*.gif', 'components/**/*.jpeg', 'components/**/*.svg'])
     .pipe(imagemin({
       progressive: true,
       use: [pngquant()]
@@ -353,7 +351,7 @@ gulp.task('fractal:build', () => {
   builder.on('progress', (completed, total) => logger.update(`Exported ${completed} of ${total} items`, 'info'));
   builder.on('error', err => logger.error(err.message));
   return builder.build().then(() => {
-      logger.success('Fractal build completed!');
+    logger.success('Fractal build completed!');
   }).catch(() => logger.error('Fractal server failed to start'));
 });
 
@@ -388,7 +386,7 @@ gulp.task('publish:npm', (callback) => {
       }
     })
     .help()
-    .alias( 'help', 'h')
+    .alias('help', 'h')
     .argv;
 
 
@@ -396,59 +394,57 @@ gulp.task('publish:npm', (callback) => {
   const password = argv.password;
   const email = argv.email;
 
-  const uri = "http://registry.npmjs.org/";
+  const uri = 'http://registry.npmjs.org/';
 
   npm.load(null, (loadError) => {
-      if (loadError) {
-          return callback(loadError);
-      }
-      const auth = {
-          username: username,
-          password: password,
-          email: email,
-          alwaysAuth: true
-      };
-      const addUserParams = {
-          auth: auth
-      };
+    if (loadError) {
+      return callback(loadError);
+    }
+    const auth = {
+      username: username,
+      password: password,
+      email: email,
+      alwaysAuth: true
+    };
+    const addUserParams = {
+      auth: auth
+    };
 
     npm.registry.adduser(uri, addUserParams, (addUserError, data, raw, res) => {
       if (addUserError) {
         return callback(addUserError);
       }
-      const metadata = require('./package.json');
+      let metadata = require('./package.json');
       metadata = JSON.parse(JSON.stringify(metadata));
       npm.commands.pack([], (packError) => {
         if (packError) {
-            return callback(packError);
+          return callback(packError);
         }
         const fileName = metadata.name + '-' + metadata.version + '.tgz';
         const bodyPath = require.resolve('./' + fileName);
         const body = fs.createReadStream(bodyPath);
         const publishParams = {
-            metadata: metadata,
-            access: 'public',
-            body: body,
-            auth: auth
+          metadata: metadata,
+          access: 'public',
+          body: body,
+          auth: auth
         };
         npm.registry.publish(uri, publishParams, (publishError, resp) => {
-            if (publishError) {
-                return callback(publishError);
-            }
-            console.log(`Publish succesfull: ${JSON.stringify(resp, undefined, 2)}`);
-            return callback();
+          if (publishError) {
+            return callback(publishError);
+          }
+          callback(`Publish succesfull: ${JSON.stringify(resp, undefined, 2)}`);
+          return callback();
         });
-      })
+      });
     });
   });
 });
-
 
 /*
  * Bump the version number of the package.
  */
 gulp.task('bump', () => {
-  const bumpType = '';
   const argv = yargs
     .options({
       type: {
@@ -456,17 +452,17 @@ gulp.task('bump', () => {
         alias: 't',
         describe: 'NPM user name',
         string: true,
-        choices:['prerelease', 'patch', 'minor', 'major']
+        choices: ['prerelease', 'patch', 'minor', 'major']
       }
     })
     .help()
-    .alias( 'help', 'h')
+    .alias('help', 'h')
     .argv;
 
   // Change version number of package.json file.
   gulp.src('./package.json')
     .pipe(bump({
-      type: bumpType
+      type: argv.type
     }))
     .pipe(gulp.dest('./'));
 });
