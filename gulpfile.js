@@ -33,6 +33,20 @@ const inject = require('gulp-inject');
 
 const yargs = require('yargs');
 
+var _sassLint = (failOnError) => {
+  var cmd = gulp.src('components/**/*.s+(a|c)ss')
+    .pipe(sassGlob())
+    .pipe(sassLint({
+      configFile: './.sass-lint.yml'
+    }))
+    .pipe(sassLint.format());
+
+  if (failOnError) {
+    cmd.pipe(sassLint.failOnError());
+  }
+
+  return cmd;
+};
 
 /*
 * Require the Fractal module
@@ -179,12 +193,7 @@ gulp.task('styles:inject', () => {
  *  Autoprefixer
  */
 gulp.task('styles:dist', () =>
-  gulp.src('components/**/*.s+(a|c)ss')
-    .pipe(sassGlob())
-    .pipe(sassLint({
-      configFile: './.sass-lint.yml'
-    }))
-    .pipe(sassLint.format())
+  _sassLint(false)
     .pipe(sourcemaps.init())
     .pipe(sass({
       outputStyle: 'nested',
@@ -208,13 +217,7 @@ gulp.task('styles:dist', () =>
  *
  */
 gulp.task('styles:build', ['styles:inject', 'fractal:build'], () =>
-  gulp.src('components/**/*.s+(a|c)ss')
-    .pipe(sassGlob())
-    .pipe(sassLint({
-      configFile: './.sass-lint.yml'
-    }))
-    .pipe(sassLint.format())
-    .pipe(sassLint.failOnError())
+  _sassLint(true)
     .pipe(sass({
       outputStyle: 'compressed',
       includePaths: ['node_modules/breakpoint-sass/stylesheets']
@@ -233,10 +236,7 @@ gulp.task('styles:build', ['styles:inject', 'fractal:build'], () =>
  *
  */
 gulp.task('styles:validate', () =>
-  gulp.src('components/**/*.s+(a|c)ss')
-    .pipe(sassLint({configFile: './.sass-lint.yml'}))
-    .pipe(sassLint.format())
-    .pipe(sassLint.failOnError())
+  _sassLint(true)
 );
 
 /*
