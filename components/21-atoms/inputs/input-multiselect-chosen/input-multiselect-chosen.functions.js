@@ -6,8 +6,9 @@
  * Gert-Jan Meire
  *
  */
+'use strict';
+
 (function ($) {
-  'use strict';
 
   $.fn.extend({
 
