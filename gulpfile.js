@@ -392,33 +392,33 @@ gulp.task('publish:npm', (callback) => {
     .argv;
 
 
-  var username = argv.username;
-  var password = argv.password;
-  var email = argv.email;
+  const username = argv.username;
+  const password = argv.password;
+  const email = argv.email;
 
-  var uri = "http://registry.npmjs.org/";
+  const uri = "http://registry.npmjs.org/";
 
   npm.load(null, (loadError) => {
       if (loadError) {
           return callback(loadError);
       }
-      var auth = {
+      const auth = {
           username: username,
           password: password,
           email: email,
           alwaysAuth: true
       };
-      var addUserParams = {
+      const addUserParams = {
           auth: auth
       };
 
     npm.registry.adduser(uri, addUserParams, (addUserError, data, raw, res) => {
       if (addUserError) {
-          return callback(addUserError);
+        return callback(addUserError);
       }
-      var metadata = require('./package.json');
+      const metadata = require('./package.json');
       metadata = JSON.parse(JSON.stringify(metadata));
-      npm.commands.pack([], function (packError) {
+      npm.commands.pack([], (packError) => {
         if (packError) {
             return callback(packError);
         }
@@ -447,34 +447,21 @@ gulp.task('publish:npm', (callback) => {
 /*
  * Bump the version number of the package.
  */
-gulp.task('bump', function(callback){
-  var type = argv.type;
-  var bumpType = '';
-
-  // Validation of the gulp arguments.
-  if (!type) {
-    var typeError = new Error("Type is required as an argument --type minor");
-      return callback(typeError);
-  }
-
-  // Determine type of versioning.
-  switch(type) {
-    case 'prerelease':
-      bumpType = 'prerelease';
-    break;
-    case 'patch':
-      bumpType = 'patch';
-    break;
-    case 'minor':
-      bumpType = 'minor';
-    break;
-    case 'major':
-      bumpType = 'major';
-    break;
-    default:
-      var typeError = new Error("Type is a requires one of four options: prerelease, patch, minor, major");
-      return callback(typeError);
-  }
+gulp.task('bump', () => {
+  const bumpType = '';
+  const argv = yargs
+    .options({
+      type: {
+        demand: true,
+        alias: 't',
+        describe: 'NPM user name',
+        string: true,
+        choices:['prerelease', 'patch', 'minor', 'major']
+      }
+    })
+    .help()
+    .alias( 'help', 'h')
+    .argv;
 
   // Change version number of package.json file.
   gulp.src('./package.json')
@@ -482,8 +469,6 @@ gulp.task('bump', function(callback){
       type: bumpType
     }))
     .pipe(gulp.dest('./'));
-
-  return callback();
 });
 
 /*
