@@ -6,10 +6,8 @@ Refer to upcoming changes in our README.md under "Roadmap"
 ## Changes
 All notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
-### Future release
-* STIJ-200:
-    * Added support for status messages.
-    * Changed close icon and added error icon.
+### 2.7.7
+* STIJ-235: Refactor form actions.
 
 ### 2.7.6
 * STIJ-221: Removed header margin top again. We need to think of a better way to implement this.
