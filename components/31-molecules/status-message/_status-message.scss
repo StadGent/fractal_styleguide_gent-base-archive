@@ -16,6 +16,7 @@
   }
 
   &.messages--status {
+    border-left: 1rem solid darken($color-green, 10%);
     color: darken($color-green, 10%);
 
     &::before {
@@ -24,6 +25,7 @@
   }
 
   &.messages--error {
+    border-left: 1rem solid darken($color-red, 10%);
     color: darken($color-red, 10%);
 
     &::before {
@@ -32,6 +34,7 @@
   }
 
   &.messages--warning {
+    border-left: 1rem solid darken($color-orange, 10%);
     color: darken($color-orange, 20%);
 
     &::before {
