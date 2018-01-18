@@ -5,7 +5,11 @@
     width: 100%;
 
     > .form-item {
-      @include make-desktop-column(6);
+      @include tablet {
+        width: 50%;
+      }
+
+      width: 100%;
     }
   }
 
