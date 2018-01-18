@@ -144,7 +144,9 @@ input[type='checkbox'] {
         margin-right: $gutter-width;
       }
 
-      &:nth-child(2n) {
+      width: 100%;
+
+      &:first-child {
         @include tablet {
           order: 2;
           width: 50%;

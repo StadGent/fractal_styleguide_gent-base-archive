@@ -24,37 +24,40 @@
             1. Describe your activity
           </legend>
 
-          {% include '@textfield'
-            with {
-              'label': 'Activity name',
-              'description': 'Enter a name for your activity.',
-              "field_error": 'Please enter a valid name for your activity.',
-              "field_description": 'We can identify you better through the name of your activity.'
-            }
-          %}
+          <div class="fieldset-wrapper">
+            {% include '@textfield'
+              with {
+                'label': 'Activity name',
+                'description': 'Enter a name for your activity.',
+                "field_error": 'Please enter a valid name for your activity.',
+                "field_description": 'We can identify you better through the name of your activity.'
+              }
+            %}
 
-          {% include '@textarea'
-            with {
-              'label': 'Describe your activity and it\'s purpose',
-              'description': 'Describe your activity and it\'s purpose.',
-              "field_error": 'Please shortly describe your activity.',
-              "field_description": 'A short and simplified description of your activity.'
-            }
-          %}
+            {% include '@textarea'
+              with {
+                'label': 'Describe your activity and it\'s purpose',
+                'description': 'Describe your activity and it\'s purpose.',
+                "field_error": 'Please shortly describe your activity.',
+                "field_description": 'A short and simplified description of your activity.'
+              }
+            %}
 
           <fieldset class="form-item">
             <legend>
               2. Is this a profit-oriented activity?
             </legend>
 
-            {% include '@field-description'
-              with {
-                "field_description": 'For profit purposes = the applicant of the room strives to make a profit, i.e. the proceeds of the activity exceed the costs associated with it.'
-              }
-            %}
-
+            <div class="fieldset-wrapper">
+              {% include '@field-description'
+                with {
+                  "field_description": 'For profit purposes = the applicant of the room strives to make a profit, i.e. the proceeds of the activity exceed the costs associated with it.'
+                }
+              %}
+            </div>
           </fieldset>
 
+          </div>
         </fieldset>
 
         {% include '@form-actions--default' %}
