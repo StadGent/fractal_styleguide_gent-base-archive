@@ -6,6 +6,9 @@ Refer to upcoming changes in our README.md under "Roadmap"
 ## Changes
 All notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
+### 2.7.8
+* STIJ-200: Refactor status messages.
+
 ### 2.7.7
 * STIJ-235: Refactor form actions.
 
