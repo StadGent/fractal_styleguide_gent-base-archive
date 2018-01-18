@@ -1,6 +1,12 @@
 .form-actions {
+  @include clearfix();
+
   margin-top: 2rem;
   clear: both;
+
+  > input {
+    @include btn-inlineblock();
+  }
 
   > a {
     line-height: 2.4rem;
@@ -14,7 +20,6 @@
   > a {
     display: inline-block;
     margin: 0 1rem 0 0;
-    float: left;
 
     &.right {
       margin: 0 0 0 1rem;
