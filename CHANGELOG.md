@@ -6,6 +6,9 @@ Refer to upcoming changes in our README.md under "Roadmap"
 ## Changes
 All notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
+### 2.8.0
+* STIJ-237: **IMPORTANT** Removed bootstrap grid styling for forms.
+
 ### 2.7.6
 * STIJ-221: Removed header margin top again. We need to think of a better way to implement this.
 * STIJ-219: Added travis integration.
