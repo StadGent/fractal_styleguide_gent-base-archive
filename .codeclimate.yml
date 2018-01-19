@@ -12,6 +12,8 @@ plugins:
         javascript:
   markdownlint:
     enabled: true
+    issue_override:
+      severity: minor
   fixme:
     enabled: true
   eslint:
