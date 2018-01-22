@@ -1,8 +1,9 @@
 /**
 * @file
 */
+'use strict';
+
 (function ($) {
-  'use strict';
   $(window).on('load', function (e) {
     $('.js-masonry-layout').masonry({
       itemSelector: 'li',

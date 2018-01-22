@@ -1,5 +1,6 @@
+'use strict';
+
 var gent_styleguide = (function () { // eslint-disable-line no-unused-vars
-  'use strict';
 
   /**
    * Generates a tabTrap object

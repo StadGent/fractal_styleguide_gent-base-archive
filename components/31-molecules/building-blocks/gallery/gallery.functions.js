@@ -6,9 +6,10 @@
  * Gert-Jan Meire
  *
  */
-(function ($) {
-  'use strict';
 
+'use strict';
+
+(function ($) {
   $.fn.extend({
 
     /**

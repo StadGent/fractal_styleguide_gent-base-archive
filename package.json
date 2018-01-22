@@ -33,7 +33,7 @@
     "Freya Van Daele",
     "Gert-Jan Meire"
   ],
-  "license": "ISC",
+  "license": "GPL-3.0",
   "dependencies": {
     "breakpoint-sass": "^2.7.1",
     "chosen-js": "^1.8.2",
