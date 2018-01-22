@@ -19,8 +19,6 @@ $color-white: #fff !default;
 $color-green: #4da22e !default;
 $color-red: #a31b00 !default;
 
-// Extra colors (currently used on stad.gent drupal 7 => to be standardized)
-// @TODO: Refactor?
 $color-white-blue: #c2e2f0 !default;
 $color-orange-light: #ffa927 !default;
 $color-orange-lighter: #ffbd5a !default;
@@ -186,20 +184,6 @@ $themes: (
 
     'form-steps-active-step-label': $color-blue,
     'form-steps-active-prefix-background': $color-blue,
-
-    'messages-status-background': lighten($color-green, 50),
-    'messages-status-color': $color-green,
-    'messages-status-border': 1px solid $color-green,
-
-    'messages-error-background': lighten($color-red, 50),
-    'messages-error-color': $color-red,
-    'messages-error-border': 1px solid $color-red,
-
-    'messages-warning-background': lighten($color-orange, 50),
-    'messages-warning-color': $color-orange,
-    'messages-warning-border': 1px solid $color-orange,
-
-    'messages-title-color': $color-darkest-gray,
 
     'hamburger-menu-background': $color-darkest-blue,
     'hamburger-menu-overlay-color': rgba(44, 63, 72, .6),

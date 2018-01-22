@@ -89,20 +89,6 @@
   $form-steps-active-step-label: map-get($colors, 'form-steps-active-step-label') !global;
   $form-steps-active-prefix-background: map-get($colors, 'form-steps-active-prefix-background') !global;
 
-  $messages-status-background: map-get($colors, 'messages-status-background') !global;
-  $messages-status-color: map-get($colors, 'messages-status-color') !global;
-  $messages-status-border: map-get($colors, 'messages-status-border') !global;
-
-  $messages-error-background: map-get($colors, 'messages-error-background') !global;
-  $messages-error-color: map-get($colors, 'messages-error-color') !global;
-  $messages-error-border: map-get($colors, 'messages-error-border') !global;
-
-  $messages-warning-background: map-get($colors, 'messages-warning-background') !global;
-  $messages-warning-color: map-get($colors, 'messages-warning-color') !global;
-  $messages-warning-border: map-get($colors, 'messages-warning-border') !global;
-
-  $messages-title-color: map-get($colors, 'messages-title-color') !global;
-
   $hamburger-menu-background: map-get($colors, 'hamburger-menu-background') !global;
   $hamburger-menu-overlay-color: map-get($colors, 'hamburger-menu-overlay-color') !global;
 
