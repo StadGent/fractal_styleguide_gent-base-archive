@@ -412,7 +412,7 @@ gulp.task('publish:npm', (callback) => {
       }
       let metadata = require('./package.json');
       metadata = JSON.parse(JSON.stringify(metadata));
-      npm.commands.pack([], (packError) => {
+      npm.commands.pack([], (packError) => { // eslint-disable-line max-nested-callbacks
         if (packError) {
           return callback(packError);
         }
@@ -425,11 +425,11 @@ gulp.task('publish:npm', (callback) => {
           body: body,
           auth: auth
         };
-        npm.registry.publish(uri, publishParams, (publishError, resp) => {
+        npm.registry.publish(uri, publishParams, (publishError, resp) => { // eslint-disable-line max-nested-callbacks
           if (publishError) {
             return callback(publishError);
           }
-          callback(`Publish succesfull: ${JSON.stringify(resp, undefined, 2)}`);
+          callback(`Publish succesfull: ${JSON.stringify(resp, null, 2)}`);
           return callback();
         });
       });
