@@ -16,6 +16,7 @@ Refer to upcoming changes in our README.md under "Roadmap"
 All notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
 ### 2.8.0
+
 * STIJ-198: Changed color-element-states() mixin to element-states() mixin.
 
 ### 2.7.8
