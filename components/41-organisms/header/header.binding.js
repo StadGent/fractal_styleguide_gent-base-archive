@@ -2,9 +2,10 @@
  * @file
  * Javascript binding of header.functions.js.
  */
-(function ($) {
-  'use strict';
 
+'use strict';
+
+(function ($) {
   $(window).on('load', function (e) {
     $('.header-search-mobile').loadMobileHeader();
     $('header.header .content-container').displaySiteName();

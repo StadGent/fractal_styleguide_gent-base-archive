@@ -2,9 +2,10 @@
  * @file
  * Javascript binding of breadcrumb.functions.js
  */
-(function ($) {
-  'use strict';
 
+'use strict';
+
+(function ($) {
   $(window).on('load', function (e) {
     this.gentStyleGuideBreadcrumb.updateMobileBreadcrumb();
   });
