@@ -3,6 +3,7 @@
 ## Roadmap
 
 Refer to upcoming changes in our README.md under "Roadmap"
+
 * STIJ-229 Refactored Gulp-file to ECMA-6
 * STIJ-229 Fixed gulp npm-install. Added --help support and argument checking through the yargs module.
 * STIJ-229 Fixed gulp build to support -h --help, option validation through Yargs.
@@ -13,9 +14,11 @@ Refer to upcoming changes in our README.md under "Roadmap"
 All notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
 ### 2.7.8
+
 * STIJ-200: Refactor status messages.
 
 ### 2.7.7
+
 * STIJ-235: Refactor form actions.
 
 ### 2.7.6
