@@ -3,7 +3,6 @@ ol {
   &.breadcrumb {
     display: none;
     margin-top: .5rem;
-    padding: 0;
     list-style: none;
 
     @media (min-width: $bp-tablet) {
@@ -13,11 +12,11 @@ ol {
     li {
       display: inline;
       margin-left: -.7rem;
-      padding: .4rem .7rem;
+      padding: 0 .7rem;
       font-size: .7rem;
 
       > * {
-        padding: .4rem .7rem;
+        padding: 0 .7rem;
       }
 
       a {
@@ -38,7 +37,12 @@ ol {
         font-weight: 700;
       }
 
+      &:first-of-type a {
+        padding-left: 0;
+      }
+
       &:last-of-type {
+        display: inline-block;
         font-weight: bold;
 
         &::after {
