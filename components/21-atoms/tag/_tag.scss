@@ -4,8 +4,8 @@
     color: $tag-color;
 
     @at-root a#{&} {
-      @include color-element-states($tag-background, $tag-background-hover, $property: "background");
-      @include color-element-states($tag-color, $tag-color-hover, $property: "color");
+      @include element-states($tag-background, $tag-background-hover, $property: "background");
+      @include element-states($tag-color, $tag-color-hover, $property: "color");
     }
   }
 
