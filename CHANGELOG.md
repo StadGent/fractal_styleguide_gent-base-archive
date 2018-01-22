@@ -11,6 +11,8 @@ All notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 ### 2.8.0
 
 * STIJ-198: Changed color-element-states() mixin to element-states() mixin.
+* STIJ-236: Fixed markup of breadcrumb + fixed an issue where the 
+  breadcrumb didn't wrap correctly.
 * STIJ-237: **IMPORTANT** Removed bootstrap grid styling for forms.
 
 ### 2.7.8

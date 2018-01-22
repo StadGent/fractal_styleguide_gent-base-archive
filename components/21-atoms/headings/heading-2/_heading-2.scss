@@ -5,7 +5,7 @@ h2,
     color: $heading-2-color;
 
     a {
-      @include element-states($heading-2-color, $heading-2-color-hover);
+      @include element-states($link-color, $link-color-hover);
     }
   }
 
