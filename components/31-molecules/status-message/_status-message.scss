@@ -1,34 +1,48 @@
 .messages {
-  @include themify {
-    &--status {
-      border: $messages-status-border;
-      background: $messages-status-background;
-      color: $messages-status-color;
-    }
+  max-width: 40rem;
+  margin-bottom: 1rem;
+  padding: .5rem 1rem;
+  border: 1px solid $color-light-blue;
+  border-radius: $radius-2;
+  background-color: $color-white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
 
-    &--error {
-      border: $messages-error-border;
-      background: $messages-error-background;
-      color: $messages-error-color;
-    }
+  &::before {
+    @extend %icon-base-css;
+    @extend %icon-info-circle;
+    display: block;
+    margin-right: .5rem;
+    margin-bottom: .5rem;
+  }
 
-    &--warning {
-      border: $messages-warning-border;
-      background: $messages-warning-background;
-      color: $messages-warning-color;
-    }
+  &.messages--status {
+    border-left: 1rem solid darken($color-green, 10%);
+    color: darken($color-green, 10%);
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      color: $messages-title-color;
+    &::before {
+      @extend %icon-info-circle;
     }
   }
 
-  margin-bottom: 1rem;
-  padding: .5rem 1rem;
-  border-radius: $radius-2;
+  &.messages--error {
+    border-left: 1rem solid darken($color-red, 10%);
+    color: darken($color-red, 10%);
+
+    &::before {
+      @extend %icon-error;
+    }
+  }
+
+  &.messages--warning {
+    border-left: 1rem solid darken($color-orange, 10%);
+    color: darken($color-orange, 20%);
+
+    &::before {
+      @extend %icon-alert;
+    }
+  }
+
+  a {
+    color: inherit;
+  }
 }
