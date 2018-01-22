@@ -1,18 +1,59 @@
 'use strict';
 
-var packageInfo = require('./package.json');
-var packageVersion = packageInfo.version;
+const packageInfo = require('./package.json');
+const packageVersion = packageInfo.version;
 
 /*
-* Require the path module
+* Node core modules.
 */
+const fs = require('fs');
 const path = require('path');
+
+/*
+* NPM based modules
+*/
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const sassGlob = require('gulp-sass-glob');
+const sourcemaps = require('gulp-sourcemaps');
+const sassLint = require('gulp-sass-lint');
+const autoprefixer = require('gulp-autoprefixer');
+const cssnano = require('gulp-cssnano');
+const rename = require('gulp-rename');
+const eslint = require('gulp-eslint');
+const imagemin = require('gulp-imagemin');
+const pngquant = require('imagemin-pngquant');
+const minify = require('gulp-minify');
+const npm = require('npm');
+const bump = require('gulp-bump');
+const inject = require('gulp-inject');
+const yargs = require('yargs');
+
+var _sassLint = (failOnError) => {
+  var cmd = gulp.src('components/**/*.s+(a|c)ss')
+    .pipe(sassGlob())
+    .pipe(sassLint({
+      configFile: './.sass-lint.yml'
+    }))
+    .pipe(sassLint.format());
+
+  if (failOnError) {
+    cmd.pipe(sassLint.failOnError());
+  }
+
+  return cmd;
+};
 
 /*
 * Require the Fractal module
 */
-const fractal = module.exports = require('@frctl/fractal').create();
+const fractal = require('@frctl/fractal').create();
 const logger = fractal.cli.console; // keep a reference to the fractal CLI console utility
+
+/**
+ * Require additional fractal modules
+ */
+const twigAdapter = require('@frctl/twig');
 
 /*
 * Give your project a title.
@@ -24,7 +65,6 @@ fractal.set('project.title', 'City of Ghent Style Guide - Version ' + packageVer
 */
 fractal.components.set('path', path.join(__dirname, 'components'));
 fractal.components.set('default.preview', '@preview');
-const twigAdapter = require('@frctl/twig');
 fractal.components.engine(twigAdapter);
 fractal.components.set('ext', '.twig');
 
@@ -33,19 +73,19 @@ fractal.components.set('ext', '.twig');
 */
 fractal.components.set('statuses', {
   deprecated: {
-    label: "deprecated",
-    description: "Deprecated.",
-    color: "#dd5e01"
+    label: 'deprecated',
+    description: 'Deprecated.',
+    color: '#dd5e01'
   },
   beta: {
-    label: "beta",
-    description: "Work in progress. Implement with caution.",
-    color: "#ff9233"
+    label: 'beta',
+    description: 'Work in progress. Implement with caution.',
+    color: '#ff9233'
   },
   ready: {
-    label: "Ready",
-    description: "Ready to implement.",
-    color: "#29cc29"
+    label: 'Ready',
+    description: 'Ready to implement.',
+    color: '#29cc29'
   }
 });
 
@@ -61,60 +101,22 @@ fractal.web.set('static.path', path.join(__dirname, 'public'));
 fractal.web.set('static.mount', '');
 fractal.web.set('builder.dest', __dirname + '/build');
 
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var sassGlob = require('gulp-sass-glob');
-var watch = require('gulp-watch');
-var sourcemaps = require('gulp-sourcemaps');
-var sassLint = require('gulp-sass-lint');
-var autoprefixer = require('gulp-autoprefixer');
-var cssnano = require('gulp-cssnano');
-var copy = require('gulp-contrib-copy');
-var rename = require('gulp-rename');
-var  eslint = require('gulp-eslint');
-var imagemin = require('gulp-imagemin');
-var pngquant = require('imagemin-pngquant');
-var es = require('event-stream');
-var minify = require('gulp-minify');
-var npm = require('npm');
-var fs = require('fs');
-var argv = require('yargs').argv;
-var bump = require('gulp-bump');
-var inject = require('gulp-inject');
-
-function _sassLint(failOnError) {
-  var cmd = gulp.src('components/**/*.s+(a|c)ss')
-    .pipe(sassGlob())
-    .pipe(sassLint({
-      configFile: './.sass-lint.yml'
-    }))
-    .pipe(sassLint.format());
-
-  if (failOnError) {
-    cmd.pipe(sassLint.failOnError());
-  }
-
-  return cmd;
-}
-
 /*
  *
  * Inject SASS partial paths as imports in main_cli.scss.
  *
  */
-gulp.task('styles:inject', function() {
-  var injectSettingsFiles= gulp.src('components/00-settings/**/*.s+(a|c)ss', {read: false});
-  var injectMixinsFiles= gulp.src('components/01-mixins/**/*.s+(a|c)ss', {read: false});
-  var injectBaseFiles= gulp.src('components/11-base/**/*.s+(a|c)ss', {read: false});
-  var injectAtomsFiles= gulp.src('components/21-atoms/**/*.s+(a|c)ss', {read: false});
-  var injectMoleculesFiles= gulp.src('components/31-molecules/**/*.s+(a|c)ss', {read: false});
-  var injectOrganismsFiles= gulp.src('components/41-organisms/**/*.s+(a|c)ss', {read: false});
+gulp.task('styles:inject', () => {
+  const injectSettingsFiles = gulp.src('components/00-settings/**/*.s+(a|c)ss', {read: false});
+  const injectMixinsFiles = gulp.src('components/01-mixins/**/*.s+(a|c)ss', {read: false});
+  const injectBaseFiles = gulp.src('components/11-base/**/*.s+(a|c)ss', {read: false});
+  const injectAtomsFiles = gulp.src('components/21-atoms/**/*.s+(a|c)ss', {read: false});
+  const injectMoleculesFiles = gulp.src('components/31-molecules/**/*.s+(a|c)ss', {read: false});
+  const injectOrganismsFiles = gulp.src('components/41-organisms/**/*.s+(a|c)ss', {read: false});
 
-  function transformFilepath(filepath) {
-    return '@import "' + filepath + '";';
-  }
+  var transformFilepath = (filepath) => `@import "${filepath}";`;
 
-  var injectSettingsOptions = {
+  const injectSettingsOptions = {
     transform: transformFilepath,
     starttag: '// inject:settings',
     endtag: '// endinject',
@@ -122,7 +124,7 @@ gulp.task('styles:inject', function() {
     relative: true
   };
 
-  var injectMixinsOptions = {
+  const injectMixinsOptions = {
     transform: transformFilepath,
     starttag: '// inject:mixins',
     endtag: '// endinject',
@@ -130,7 +132,7 @@ gulp.task('styles:inject', function() {
     relative: true
   };
 
-  var injectBaseOptions = {
+  const injectBaseOptions = {
     transform: transformFilepath,
     starttag: '// inject:base',
     endtag: '// endinject',
@@ -138,7 +140,7 @@ gulp.task('styles:inject', function() {
     relative: true
   };
 
-  var injectAtomsOptions = {
+  const injectAtomsOptions = {
     transform: transformFilepath,
     starttag: '// inject:atoms',
     endtag: '// endinject',
@@ -146,7 +148,7 @@ gulp.task('styles:inject', function() {
     relative: true
   };
 
-  var injectMoleculesOptions = {
+  const injectMoleculesOptions = {
     transform: transformFilepath,
     starttag: '// inject:molecules',
     endtag: '// endinject',
@@ -154,7 +156,7 @@ gulp.task('styles:inject', function() {
     relative: true
   };
 
-  var injectOrganismsOptions = {
+  const injectOrganismsOptions = {
     transform: transformFilepath,
     starttag: '// inject:organisms',
     endtag: '// endinject',
@@ -163,13 +165,13 @@ gulp.task('styles:inject', function() {
   };
 
   return gulp.src('components/main_cli.scss')
-      .pipe(inject(injectSettingsFiles, injectSettingsOptions))
-      .pipe(inject(injectMixinsFiles, injectMixinsOptions))
-      .pipe(inject(injectBaseFiles, injectBaseOptions))
-      .pipe(inject(injectAtomsFiles, injectAtomsOptions))
-      .pipe(inject(injectMoleculesFiles, injectMoleculesOptions))
-      .pipe(inject(injectOrganismsFiles, injectOrganismsOptions))
-      .pipe(gulp.dest('components/'));
+    .pipe(inject(injectSettingsFiles, injectSettingsOptions))
+    .pipe(inject(injectMixinsFiles, injectMixinsOptions))
+    .pipe(inject(injectBaseFiles, injectBaseOptions))
+    .pipe(inject(injectAtomsFiles, injectAtomsOptions))
+    .pipe(inject(injectMoleculesFiles, injectMoleculesOptions))
+    .pipe(inject(injectOrganismsFiles, injectOrganismsOptions))
+    .pipe(gulp.dest('components/'));
 });
 
 /*
@@ -182,7 +184,7 @@ gulp.task('styles:inject', function() {
  *  Sourcemaps (dev only!)
  *  Autoprefixer
  */
-gulp.task('styles:dist', function() {
+gulp.task('styles:dist', () =>
   _sassLint(false)
     .pipe(sourcemaps.init())
     .pipe(sass({
@@ -190,11 +192,11 @@ gulp.task('styles:dist', function() {
       includePaths: ['node_modules/breakpoint-sass/stylesheets']
     })).on('error', sass.logError)
     .pipe(autoprefixer({
-        browsers: ['last 5 versions']
+      browsers: ['last 5 versions']
     }))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('./public/css/'))
-});
+);
 
 /*
  *
@@ -206,111 +208,111 @@ gulp.task('styles:dist', function() {
  *  Autoprefixer
  *
  */
-gulp.task('styles:build', ['styles:inject', 'fractal:build'], function() {
+gulp.task('styles:build', ['styles:inject', 'fractal:build'], () =>
   _sassLint(true)
     .pipe(sass({
       outputStyle: 'compressed',
       includePaths: ['node_modules/breakpoint-sass/stylesheets']
     })).on('error', sass.logError)
     .pipe(autoprefixer({
-        browsers: ['last 5 versions']
+      browsers: ['last 5 versions']
     }))
     .pipe(gulp.dest('./build/css/'))
     .pipe(cssnano())
     .pipe(gulp.dest('./build/css/'))
-});
+);
 
 /*
  *
  * Validate SCSS files.
  *
  */
-gulp.task('styles:validate', function() {
-  _sassLint(true);
-});
+gulp.task('styles:validate', () =>
+  _sassLint(true)
+);
 
 /*
  *
  * Watch SCSS files For Changes.
  *
  */
-gulp.task('styles:watch', function() {
-  gulp.watch('./components/**/*.scss', ['styles:dist']);
-});
+gulp.task('styles:watch', () =>
+  gulp.watch('./components/**/*.scss', ['styles:dist'])
+);
 
 /*
  *
  * Extract SCSS and their assets (like fonts) from the components folder.
  *
  */
-gulp.task('styles:extract', ['fractal:build', 'styles:build', 'styles:dist'], function() {
+gulp.task('styles:extract', ['fractal:build', 'styles:build', 'styles:dist'], () =>
   gulp.src('components/**/*.s+(a|c)ss')
     .pipe(gulp.dest('./build/styleguide/sass/'))
-});
+);
 
 /*
  *
  * Copy JS files during development.
  *
  */
-gulp.task('js:dist', ['styles:dist'], function() {
+gulp.task('js:dist', ['styles:dist'], () =>
   gulp.src('components/**/*.js')
     .pipe(rename({
       dirname: '',
-      suffix: "-min"
+      suffix: '-min'
     }))
-    .pipe(gulp.dest('./public/styleguide/js/'));
-});
+    .pipe(gulp.dest('./public/styleguide/js/'))
+);
 
 /*
  *
  * Copy JS files during Fractal build.
  *
  */
-gulp.task('js:build', ['fractal:build'], function() {
+gulp.task('js:build', ['fractal:build'], () =>
   gulp.src('components/**/*.js')
     .pipe(rename({dirname: ''}))
     .pipe(minify({
       noSource: true
     }))
-    .pipe(gulp.dest('./build/styleguide/js/'));
-});
+    .pipe(gulp.dest('./build/styleguide/js/'))
+);
 
 /*
  *
  * Validate JS files.
  *
  */
-gulp.task('js:validate', function() {
-  return gulp.src('components/**/*.js')
+gulp.task('js:validate', () =>
+  gulp.src('components/**/*.js')
     .pipe(eslint({
       configFile: './.eslintrc'
     }))
     .pipe(eslint.format())
-    .pipe(eslint.failAfterError());
-});
+    .pipe(eslint.failAfterError())
+);
 
 /*
  *
  * Watch JS files For Changes.
  *
  */
-gulp.task('js:watch', function() {
-  gulp.watch('./components/**/*.js', ['js:validate', 'js:dist']);
-});
+gulp.task('js:watch', () =>
+  gulp.watch('./components/**/*.js', ['js:validate', 'js:dist'])
+);
 
 /*
  *
  * Minify images.
  *
  */
-gulp.task('images:minify', ['fractal:build', 'styles:build', 'styles:dist'], function(cb) {
-  gulp.src(['components/**/*.png','components/**/*.jpg','components/**/*.gif','components/**/*.jpeg', 'components/**/*.svg'])
+gulp.task('images:minify', ['fractal:build', 'styles:build', 'styles:dist'], (cb) =>
+  gulp.src(['components/**/*.png', 'components/**/*.jpg', 'components/**/*.gif', 'components/**/*.jpeg', 'components/**/*.svg'])
     .pipe(imagemin({
       progressive: true,
       use: [pngquant()]
-    })).pipe(gulp.dest('build/styleguide/sass')).on('end', cb).on('error', cb);
-});
+    })).pipe(gulp.dest('build/styleguide/sass')).on('end', cb).on('error', cb)
+);
 
 /*
  * Start the Fractal server
@@ -321,14 +323,14 @@ gulp.task('images:minify', ['fractal:build', 'styles:build', 'styles:dist'], fun
  *
  * This task will also log any errors to the console.
  */
-gulp.task('fractal:start', function(){
+gulp.task('fractal:start', () => {
   const server = fractal.web.server({
     sync: true
   });
   server.on('error', err => logger.error(err.message));
   return server.start().then(() => {
     logger.success(`Fractal server is now running at ${server.url}`);
-  });
+  }).catch(() => logger.error('Fractal server failed to start'));
 });
 
 /*
@@ -340,125 +342,125 @@ gulp.task('fractal:start', function(){
  * The build destination will be the directory specified in the 'builder.dest'
  * configuration option set above.
  */
-gulp.task('fractal:build', function(){
+gulp.task('fractal:build', () => {
   const builder = fractal.web.builder();
   builder.on('progress', (completed, total) => logger.update(`Exported ${completed} of ${total} items`, 'info'));
   builder.on('error', err => logger.error(err.message));
   return builder.build().then(() => {
-      logger.success('Fractal build completed!');
-  });
+    logger.success('Fractal build completed!');
+  }).catch(() => logger.error('Fractal server failed to start'));
 });
 
 /*
  * Publish to the NPM public registry.
  */
-gulp.task('publish:npm', function(callback){
-  var username = argv.username;
-  var password = argv.password;
-  var email = argv.email;
+gulp.task('publish:npm', (callback) => {
 
-  if (!username) {
-      var usernameError = new Error("Username is required as an argument --username exampleUsername");
-      return callback(usernameError);
-  }
-  if (!password) {
-      var passwordError = new Error("Password is required as an argument --password  examplepassword");
-      return callback(passwordError);
-  }
-  if (!email) {
-      var emailError = new Error("Email is required as an argument --email example@email.com");
-      return callback(emailError);
-  }
-
-  var uri = "http://registry.npmjs.org/";
-
-  npm.load(null, function (loadError) {
-      if (loadError) {
-          return callback(loadError);
+  const argv = yargs
+    .options({
+      username: {
+        demand: true,
+        alias: 'u',
+        describe: 'NPM user name',
+        string: true
       }
-      var auth = {
-          username: username,
-          password: password,
-          email: email,
-          alwaysAuth: true
-      };
-      var addUserParams = {
-          auth: auth
-      };
+    })
+    .options({
+      password: {
+        demand: true,
+        alias: 'p',
+        describe: 'NPM password',
+        string: true
+      }
+    })
+    .options({
+      email: {
+        demand: true,
+        alias: 'e',
+        describe: 'E-mail',
+        string: true
+      }
+    })
+    .help()
+    .alias('help', 'h')
+    .argv;
 
-    npm.registry.adduser(uri, addUserParams, function (addUserError, data, raw, res) {
+
+  const username = argv.username;
+  const password = argv.password;
+  const email = argv.email;
+
+  const uri = 'http://registry.npmjs.org/';
+
+  npm.load(null, (loadError) => {
+    if (loadError) {
+      return callback(loadError);
+    }
+    const auth = {
+      username: username,
+      password: password,
+      email: email,
+      alwaysAuth: true
+    };
+    const addUserParams = {
+      auth: auth
+    };
+
+    npm.registry.adduser(uri, addUserParams, (addUserError, data, raw, res) => {
       if (addUserError) {
-          return callback(addUserError);
+        return callback(addUserError);
       }
-      var metadata = require('./package.json');
+      let metadata = require('./package.json');
       metadata = JSON.parse(JSON.stringify(metadata));
-      npm.commands.pack([], function (packError) {
+      npm.commands.pack([], (packError) => {
         if (packError) {
-            return callback(packError);
+          return callback(packError);
         }
-        var fileName = metadata.name + '-' + metadata.version + '.tgz';
-        var bodyPath = require.resolve('./' + fileName);
-        var body = fs.createReadStream(bodyPath);
-        var publishParams = {
-            metadata: metadata,
-            access: 'public',
-            body: body,
-            auth: auth
+        const fileName = metadata.name + '-' + metadata.version + '.tgz';
+        const bodyPath = require.resolve('./' + fileName);
+        const body = fs.createReadStream(bodyPath);
+        const publishParams = {
+          metadata: metadata,
+          access: 'public',
+          body: body,
+          auth: auth
         };
-        npm.registry.publish(uri, publishParams, function (publishError, resp) {
-            if (publishError) {
-                return callback(publishError);
-            }
-            console.log("Publish succesfull: " + JSON.stringify(resp));
-            return callback();
+        npm.registry.publish(uri, publishParams, (publishError, resp) => {
+          if (publishError) {
+            return callback(publishError);
+          }
+          callback(`Publish succesfull: ${JSON.stringify(resp, undefined, 2)}`);
+          return callback();
         });
-      })
+      });
     });
-
   });
 });
-
 
 /*
  * Bump the version number of the package.
  */
-gulp.task('bump', function(callback){
-  var type = argv.type;
-  var bumpType = '';
-
-  // Validation of the gulp arguments.
-  if (!type) {
-    var typeError = new Error("Type is required as an argument --type minor");
-      return callback(typeError);
-  }
-
-  // Determine type of versioning.
-  switch(type) {
-    case 'prerelease':
-      bumpType = 'prerelease';
-    break;
-    case 'patch':
-      bumpType = 'patch';
-    break;
-    case 'minor':
-      bumpType = 'minor';
-    break;
-    case 'major':
-      bumpType = 'major';
-    break;
-    default:
-      var typeError = new Error("Type is a requires one of four options: prerelease, patch, minor, major");
-      return callback(typeError);
-  }
+gulp.task('bump', () => {
+  const argv = yargs
+    .options({
+      type: {
+        demand: true,
+        alias: 't',
+        describe: 'NPM user name',
+        string: true,
+        choices: ['prerelease', 'patch', 'minor', 'major']
+      }
+    })
+    .help()
+    .alias('help', 'h')
+    .argv;
 
   // Change version number of package.json file.
   gulp.src('./package.json')
     .pipe(bump({
-      type: bumpType
+      type: argv.type
     }))
     .pipe(gulp.dest('./'));
-
-  return callback();
 });
 
 /*

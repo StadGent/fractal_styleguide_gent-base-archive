@@ -6,9 +6,9 @@
  * Wim Vantomme
  *
  */
-(function ($) {
-  'use strict';
+'use strict';
 
+(function ($) {
   $.fn.extend({
 
     /**
