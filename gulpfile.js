@@ -184,19 +184,23 @@ gulp.task('styles:inject', () => {
  *  Sourcemaps (dev only!)
  *  Autoprefixer
  */
-gulp.task('styles:dist', () =>
+gulp.task('styles:dist', (callback) => {
   _sassLint(false)
     .pipe(sourcemaps.init())
     .pipe(sass({
       outputStyle: 'nested',
-      includePaths: ['node_modules/breakpoint-sass/stylesheets', 'node_modules/susy/sass']
+      includePaths: [
+        'node_modules/breakpoint-sass/stylesheets',
+        'node_modules/susy/sass'
+      ]
     })).on('error', sass.logError)
     .pipe(autoprefixer({
       browsers: ['last 5 versions']
     }))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./public/css/'))
-);
+    .pipe(gulp.dest('./public/css/'));
+  callback();
+});
 
 /*
  *
@@ -208,110 +212,136 @@ gulp.task('styles:dist', () =>
  *  Autoprefixer
  *
  */
-gulp.task('styles:build', ['styles:inject', 'fractal:build'], () =>
+gulp.task('styles:build', ['styles:inject', 'fractal:build'], (callback) => {
   _sassLint(true)
     .pipe(sass({
       outputStyle: 'compressed',
-      includePaths: ['node_modules/breakpoint-sass/stylesheets', 'node_modules/susy/sass']
+      includePaths: [
+        'node_modules/breakpoint-sass/stylesheets',
+        'node_modules/susy/sass'
+      ]
     })).on('error', sass.logError)
     .pipe(autoprefixer({
       browsers: ['last 5 versions']
     }))
     .pipe(gulp.dest('./build/css/'))
     .pipe(cssnano())
-    .pipe(gulp.dest('./build/css/'))
-);
+    .pipe(gulp.dest('./build/css/'));
+  callback();
+});
 
 /*
  *
  * Validate SCSS files.
  *
  */
-gulp.task('styles:validate', () =>
-  _sassLint(true)
-);
+gulp.task('styles:validate', (callback) => {
+  _sassLint(true);
+  callback();
+});
 
 /*
  *
  * Watch SCSS files For Changes.
  *
  */
-gulp.task('styles:watch', () =>
-  gulp.watch('./components/**/*.scss', ['styles:dist'])
-);
+gulp.task('styles:watch', (callback) => {
+  gulp.watch('./components/**/*.scss', ['styles:dist']);
+  callback();
+});
 
 /*
  *
  * Extract SCSS and their assets (like fonts) from the components folder.
  *
  */
-gulp.task('styles:extract', ['fractal:build', 'styles:build', 'styles:dist'], () =>
+gulp.task('styles:extract', [
+  'fractal:build',
+  'styles:build',
+  'styles:dist'
+], (callback) => {
   gulp.src('components/**/*.s+(a|c)ss')
-    .pipe(gulp.dest('./build/styleguide/sass/'))
-);
+    .pipe(gulp.dest('./build/styleguide/sass/'));
+  callback();
+});
 
 /*
  *
  * Copy JS files during development.
  *
  */
-gulp.task('js:dist', ['styles:dist'], () =>
+gulp.task('js:dist', ['styles:dist'], (callback) => {
   gulp.src('components/**/*.js')
     .pipe(rename({
       dirname: '',
       suffix: '-min'
     }))
-    .pipe(gulp.dest('./public/styleguide/js/'))
-);
+    .pipe(gulp.dest('./public/styleguide/js/'));
+  callback();
+});
 
 /*
  *
  * Copy JS files during Fractal build.
  *
  */
-gulp.task('js:build', ['fractal:build'], () =>
+gulp.task('js:build', ['fractal:build'], (callback) => {
   gulp.src('components/**/*.js')
     .pipe(rename({dirname: ''}))
     .pipe(minify({
       noSource: true
     }))
-    .pipe(gulp.dest('./build/styleguide/js/'))
-);
+    .pipe(gulp.dest('./build/styleguide/js/'));
+  callback();
+});
 
 /*
  *
  * Validate JS files.
  *
  */
-gulp.task('js:validate', () =>
+gulp.task('js:validate', (callback) => {
   gulp.src('components/**/*.js')
     .pipe(eslint({
       configFile: './.eslintrc'
     }))
     .pipe(eslint.format())
-    .pipe(eslint.failAfterError())
-);
+    .pipe(eslint.failAfterError());
+
+  callback();
+});
 
 /*
  *
  * Watch JS files For Changes.
  *
  */
-gulp.task('js:watch', () =>
-  gulp.watch('./components/**/*.js', ['js:validate', 'js:dist'])
-);
+gulp.task('js:watch', (callback) => {
+  gulp.watch('./components/**/*.js', ['js:validate', 'js:dist']);
+  callback();
+});
 
 /*
  *
  * Minify images.
  *
  */
-gulp.task('images:minify', ['fractal:build', 'styles:build', 'styles:dist'], (cb) =>
-  gulp.src(['components/**/*.png', 'components/**/*.jpg', 'components/**/*.gif', 'components/**/*.jpeg', 'components/**/*.svg'])
+gulp.task('images:minify', [
+  'fractal:build',
+  'styles:build',
+  'styles:dist'
+], (cb) =>
+  gulp.src([
+    'components/**/*.png',
+    'components/**/*.jpg',
+    'components/**/*.gif',
+    'components/**/*.jpeg',
+    'components/**/*.svg'
+  ])
     .pipe(imagemin({
       progressive: true,
       use: [pngquant()]
-    })).pipe(gulp.dest('build/styleguide/sass')).on('end', cb).on('error', cb)
+    })).pipe(gulp.dest('build/styleguide/sass'))
 );
 
 /*
@@ -344,7 +374,8 @@ gulp.task('fractal:start', () => {
  */
 gulp.task('fractal:build', () => {
   const builder = fractal.web.builder();
-  builder.on('progress', (completed, total) => logger.update(`Exported ${completed} of ${total} items`, 'info'));
+  // builder.on('progress', (completed, total) => logger.update(`Exported
+  // ${completed} of ${total} items`, 'info'));
   builder.on('error', err => logger.error(err.message));
   return builder.build().then(() => {
     logger.success('Fractal build completed!');
@@ -485,7 +516,10 @@ gulp.task('watch', ['default']);
  *  Used to only validate the SCSS and JS code.
  *
  */
-gulp.task('validate', ['styles:validate', 'js:validate']);
+gulp.task('validate', [
+  'styles:validate',
+  'js:validate'
+], callback => callback());
 
 /*
  *
@@ -493,13 +527,26 @@ gulp.task('validate', ['styles:validate', 'js:validate']);
  * Usage:
  *  gulp compile
  *  gulp compile:dev
- *    Add sourcemaps to the CSS files.
+ *  Add sourcemaps to the CSS files.
  *
  *  Used to compile production ready SCSS and JS code.
  *
  */
-gulp.task('compile', ['fractal:build', 'styles:build', 'styles:dist', 'styles:extract', 'js:build', 'js:dist', 'images:minify']);
-gulp.task('compile:dev', ['fractal:build', 'styles:dist', 'js:dist', 'images:minify']);
+gulp.task('compile', [
+  'fractal:build',
+  'styles:build',
+  'styles:dist',
+  'styles:extract',
+  'js:build',
+  'js:dist',
+  'images:minify'
+], callback => callback());
+gulp.task('compile:dev', [
+  'fractal:build',
+  'styles:dist',
+  'js:dist',
+  'images:minify'
+]);
 
 /*
  *
@@ -510,7 +557,10 @@ gulp.task('compile:dev', ['fractal:build', 'styles:dist', 'js:dist', 'images:min
  *  Used to validate and build production ready code.
  *
  */
-gulp.task('build', ['validate', 'compile']);
+gulp.task('build', ['validate', 'compile'], () => {
+  return gulp.src('components/**/*.s+(a|c)ss')
+    .pipe(gulp.dest('./build/styleguide/sass/'));
+});
 
 /*
  *
