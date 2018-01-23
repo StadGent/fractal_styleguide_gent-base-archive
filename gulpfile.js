@@ -31,11 +31,11 @@ const yargs = require('yargs');
 
 var _sassLint = (failOnError) => {
   var cmd = gulp.src('components/**/*.s+(a|c)ss')
-    .pipe(sassGlob())
-    .pipe(sassLint({
-      configFile: './.sass-lint.yml'
-    }))
-    .pipe(sassLint.format());
+      .pipe(sassGlob())
+      .pipe(sassLint({
+        configFile: './.sass-lint.yml'
+      }))
+      .pipe(sassLint.format());
 
   if (failOnError) {
     cmd.pipe(sassLint.failOnError());
@@ -48,7 +48,8 @@ var _sassLint = (failOnError) => {
 * Require the Fractal module
 */
 const fractal = require('@frctl/fractal').create();
-const logger = fractal.cli.console; // keep a reference to the fractal CLI console utility
+const logger = fractal.cli.console; // keep a reference to the fractal CLI
+                                    // console utility
 
 /**
  * Require additional fractal modules
@@ -165,13 +166,13 @@ gulp.task('styles:inject', () => {
   };
 
   return gulp.src('components/main_cli.scss')
-    .pipe(inject(injectSettingsFiles, injectSettingsOptions))
-    .pipe(inject(injectMixinsFiles, injectMixinsOptions))
-    .pipe(inject(injectBaseFiles, injectBaseOptions))
-    .pipe(inject(injectAtomsFiles, injectAtomsOptions))
-    .pipe(inject(injectMoleculesFiles, injectMoleculesOptions))
-    .pipe(inject(injectOrganismsFiles, injectOrganismsOptions))
-    .pipe(gulp.dest('components/'));
+      .pipe(inject(injectSettingsFiles, injectSettingsOptions))
+      .pipe(inject(injectMixinsFiles, injectMixinsOptions))
+      .pipe(inject(injectBaseFiles, injectBaseOptions))
+      .pipe(inject(injectAtomsFiles, injectAtomsOptions))
+      .pipe(inject(injectMoleculesFiles, injectMoleculesOptions))
+      .pipe(inject(injectOrganismsFiles, injectOrganismsOptions))
+      .pipe(gulp.dest('components/'));
 });
 
 /*
@@ -184,18 +185,20 @@ gulp.task('styles:inject', () => {
  *  Sourcemaps (dev only!)
  *  Autoprefixer
  */
-gulp.task('styles:dist', () =>
-  _sassLint(false)
-    .pipe(sourcemaps.init())
-    .pipe(sass({
-      outputStyle: 'nested',
-      includePaths: ['node_modules/breakpoint-sass/stylesheets', 'node_modules/susy/sass']
-    })).on('error', sass.logError)
-    .pipe(autoprefixer({
-      browsers: ['last 5 versions']
-    }))
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./public/css/'))
+gulp.task('styles:dist', (callback) => {
+      _sassLint(false)
+          .pipe(sourcemaps.init())
+          .pipe(sass({
+            outputStyle: 'nested',
+            includePaths: ['node_modules/breakpoint-sass/stylesheets', 'node_modules/susy/sass']
+          })).on('error', sass.logError)
+          .pipe(autoprefixer({
+            browsers: ['last 5 versions']
+          }))
+          .pipe(sourcemaps.write())
+          .pipe(gulp.dest('./public/css/'));
+      callback();
+    }
 );
 
 /*
@@ -208,18 +211,20 @@ gulp.task('styles:dist', () =>
  *  Autoprefixer
  *
  */
-gulp.task('styles:build', ['styles:inject', 'fractal:build'], () =>
-  _sassLint(true)
-    .pipe(sass({
-      outputStyle: 'compressed',
-      includePaths: ['node_modules/breakpoint-sass/stylesheets', 'node_modules/susy/sass']
-    })).on('error', sass.logError)
-    .pipe(autoprefixer({
-      browsers: ['last 5 versions']
-    }))
-    .pipe(gulp.dest('./build/css/'))
-    .pipe(cssnano())
-    .pipe(gulp.dest('./build/css/'))
+gulp.task('styles:build', ['styles:inject', 'fractal:build'], (callback) => {
+      _sassLint(true)
+          .pipe(sass({
+            outputStyle: 'compressed',
+            includePaths: ['node_modules/breakpoint-sass/stylesheets', 'node_modules/susy/sass']
+          })).on('error', sass.logError)
+          .pipe(autoprefixer({
+            browsers: ['last 5 versions']
+          }))
+          .pipe(gulp.dest('./build/css/'))
+          .pipe(cssnano())
+          .pipe(gulp.dest('./build/css/'));
+      callback();
+    }
 );
 
 /*
@@ -227,8 +232,10 @@ gulp.task('styles:build', ['styles:inject', 'fractal:build'], () =>
  * Validate SCSS files.
  *
  */
-gulp.task('styles:validate', () =>
-  _sassLint(true)
+gulp.task('styles:validate', (callback) => {
+      _sassLint(true);
+      callback();
+    }
 );
 
 /*
@@ -236,8 +243,10 @@ gulp.task('styles:validate', () =>
  * Watch SCSS files For Changes.
  *
  */
-gulp.task('styles:watch', () =>
-  gulp.watch('./components/**/*.scss', ['styles:dist'])
+gulp.task('styles:watch', (callback) => {
+      gulp.watch('./components/**/*.scss', ['styles:dist']);
+      callback();
+    }
 );
 
 /*
@@ -245,9 +254,11 @@ gulp.task('styles:watch', () =>
  * Extract SCSS and their assets (like fonts) from the components folder.
  *
  */
-gulp.task('styles:extract', ['fractal:build', 'styles:build', 'styles:dist'], () =>
-  gulp.src('components/**/*.s+(a|c)ss')
-    .pipe(gulp.dest('./build/styleguide/sass/'))
+gulp.task('styles:extract', ['fractal:build', 'styles:build', 'styles:dist'], (callback) => {
+      gulp.src('components/**/*.s+(a|c)ss')
+          .pipe(gulp.dest('./build/styleguide/sass/'));
+      callback();
+    }
 );
 
 /*
@@ -255,13 +266,15 @@ gulp.task('styles:extract', ['fractal:build', 'styles:build', 'styles:dist'], ()
  * Copy JS files during development.
  *
  */
-gulp.task('js:dist', ['styles:dist'], () =>
-  gulp.src('components/**/*.js')
-    .pipe(rename({
-      dirname: '',
-      suffix: '-min'
-    }))
-    .pipe(gulp.dest('./public/styleguide/js/'))
+gulp.task('js:dist', ['styles:dist'], (callback) => {
+      gulp.src('components/**/*.js')
+          .pipe(rename({
+            dirname: '',
+            suffix: '-min'
+          }))
+          .pipe(gulp.dest('./public/styleguide/js/'));
+      callback();
+    }
 );
 
 /*
@@ -269,13 +282,15 @@ gulp.task('js:dist', ['styles:dist'], () =>
  * Copy JS files during Fractal build.
  *
  */
-gulp.task('js:build', ['fractal:build'], () =>
-  gulp.src('components/**/*.js')
-    .pipe(rename({dirname: ''}))
-    .pipe(minify({
-      noSource: true
-    }))
-    .pipe(gulp.dest('./build/styleguide/js/'))
+gulp.task('js:build', ['fractal:build'], (callback) => {
+      gulp.src('components/**/*.js')
+          .pipe(rename({dirname: ''}))
+          .pipe(minify({
+            noSource: true
+          }))
+          .pipe(gulp.dest('./build/styleguide/js/'));
+      callback();
+    }
 );
 
 /*
@@ -283,13 +298,16 @@ gulp.task('js:build', ['fractal:build'], () =>
  * Validate JS files.
  *
  */
-gulp.task('js:validate', () =>
-  gulp.src('components/**/*.js')
-    .pipe(eslint({
-      configFile: './.eslintrc'
-    }))
-    .pipe(eslint.format())
-    .pipe(eslint.failAfterError())
+gulp.task('js:validate', (callback) => {
+      gulp.src('components/**/*.js')
+          .pipe(eslint({
+            configFile: './.eslintrc'
+          }))
+          .pipe(eslint.format())
+          .pipe(eslint.failAfterError());
+
+      callback();
+    }
 );
 
 /*
@@ -297,8 +315,10 @@ gulp.task('js:validate', () =>
  * Watch JS files For Changes.
  *
  */
-gulp.task('js:watch', () =>
-  gulp.watch('./components/**/*.js', ['js:validate', 'js:dist'])
+gulp.task('js:watch', (callback) => {
+      gulp.watch('./components/**/*.js', ['js:validate', 'js:dist']);
+      callback();
+    }
 );
 
 /*
@@ -307,11 +327,12 @@ gulp.task('js:watch', () =>
  *
  */
 gulp.task('images:minify', ['fractal:build', 'styles:build', 'styles:dist'], (cb) =>
-  gulp.src(['components/**/*.png', 'components/**/*.jpg', 'components/**/*.gif', 'components/**/*.jpeg', 'components/**/*.svg'])
-    .pipe(imagemin({
-      progressive: true,
-      use: [pngquant()]
-    })).pipe(gulp.dest('build/styleguide/sass')).on('end', cb).on('error', cb)
+        gulp.src(['components/**/*.png', 'components/**/*.jpg', 'components/**/*.gif', 'components/**/*.jpeg', 'components/**/*.svg'])
+            .pipe(imagemin({
+              progressive: true,
+              use: [pngquant()]
+            })).pipe(gulp.dest('build/styleguide/sass'))
+    //.on('end', cb).on('error', cb)
 );
 
 /*
@@ -344,7 +365,8 @@ gulp.task('fractal:start', () => {
  */
 gulp.task('fractal:build', () => {
   const builder = fractal.web.builder();
-  builder.on('progress', (completed, total) => logger.update(`Exported ${completed} of ${total} items`, 'info'));
+  // builder.on('progress', (completed, total) => logger.update(`Exported
+  // ${completed} of ${total} items`, 'info'));
   builder.on('error', err => logger.error(err.message));
   return builder.build().then(() => {
     logger.success('Fractal build completed!');
@@ -357,33 +379,33 @@ gulp.task('fractal:build', () => {
 gulp.task('publish:npm', (callback) => {
 
   const argv = yargs
-    .options({
-      username: {
-        demand: true,
-        alias: 'u',
-        describe: 'NPM user name',
-        string: true
-      }
-    })
-    .options({
-      password: {
-        demand: true,
-        alias: 'p',
-        describe: 'NPM password',
-        string: true
-      }
-    })
-    .options({
-      email: {
-        demand: true,
-        alias: 'e',
-        describe: 'E-mail',
-        string: true
-      }
-    })
-    .help()
-    .alias('help', 'h')
-    .argv;
+      .options({
+        username: {
+          demand: true,
+          alias: 'u',
+          describe: 'NPM user name',
+          string: true
+        }
+      })
+      .options({
+        password: {
+          demand: true,
+          alias: 'p',
+          describe: 'NPM password',
+          string: true
+        }
+      })
+      .options({
+        email: {
+          demand: true,
+          alias: 'e',
+          describe: 'E-mail',
+          string: true
+        }
+      })
+      .help()
+      .alias('help', 'h')
+      .argv;
 
 
   const username = argv.username;
@@ -442,25 +464,25 @@ gulp.task('publish:npm', (callback) => {
  */
 gulp.task('bump', () => {
   const argv = yargs
-    .options({
-      type: {
-        demand: true,
-        alias: 't',
-        describe: 'NPM user name',
-        string: true,
-        choices: ['prerelease', 'patch', 'minor', 'major']
-      }
-    })
-    .help()
-    .alias('help', 'h')
-    .argv;
+      .options({
+        type: {
+          demand: true,
+          alias: 't',
+          describe: 'NPM user name',
+          string: true,
+          choices: ['prerelease', 'patch', 'minor', 'major']
+        }
+      })
+      .help()
+      .alias('help', 'h')
+      .argv;
 
   // Change version number of package.json file.
   gulp.src('./package.json')
-    .pipe(bump({
-      type: argv.type
-    }))
-    .pipe(gulp.dest('./'));
+      .pipe(bump({
+        type: argv.type
+      }))
+      .pipe(gulp.dest('./'));
 });
 
 /*
@@ -485,7 +507,7 @@ gulp.task('watch', ['default']);
  *  Used to only validate the SCSS and JS code.
  *
  */
-gulp.task('validate', ['styles:validate', 'js:validate']);
+gulp.task('validate', ['styles:validate', 'js:validate'], callback => callback());
 
 /*
  *
@@ -498,7 +520,7 @@ gulp.task('validate', ['styles:validate', 'js:validate']);
  *  Used to compile production ready SCSS and JS code.
  *
  */
-gulp.task('compile', ['fractal:build', 'styles:build', 'styles:dist', 'styles:extract', 'js:build', 'js:dist', 'images:minify']);
+gulp.task('compile', ['fractal:build', 'styles:build', 'styles:dist', 'styles:extract', 'js:build', 'js:dist', 'images:minify'], callback => callback());
 gulp.task('compile:dev', ['fractal:build', 'styles:dist', 'js:dist', 'images:minify']);
 
 /*
@@ -510,7 +532,10 @@ gulp.task('compile:dev', ['fractal:build', 'styles:dist', 'js:dist', 'images:min
  *  Used to validate and build production ready code.
  *
  */
-gulp.task('build', ['validate', 'compile']);
+gulp.task('build', ['validate', 'compile'], () => {
+  return gulp.src('components/**/*.s+(a|c)ss')
+      .pipe(gulp.dest('./build/styleguide/sass/'))
+});
 
 /*
  *
