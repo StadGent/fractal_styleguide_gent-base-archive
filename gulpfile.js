@@ -559,7 +559,7 @@ gulp.task('compile:dev', [
  */
 gulp.task('build', ['validate', 'compile'], () => {
   return gulp.src('components/**/*.s+(a|c)ss')
-    .pipe(gulp.dest('./build/styleguide/sass/'))
+    .pipe(gulp.dest('./build/styleguide/sass/'));
 });
 
 /*
