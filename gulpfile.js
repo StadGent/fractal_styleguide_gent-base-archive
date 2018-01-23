@@ -185,23 +185,22 @@ gulp.task('styles:inject', () => {
  *  Autoprefixer
  */
 gulp.task('styles:dist', (callback) => {
-    _sassLint(false)
-      .pipe(sourcemaps.init())
-      .pipe(sass({
-        outputStyle: 'nested',
-        includePaths: [
-          'node_modules/breakpoint-sass/stylesheets',
-          'node_modules/susy/sass'
-        ]
-      })).on('error', sass.logError)
-      .pipe(autoprefixer({
-        browsers: ['last 5 versions']
-      }))
-      .pipe(sourcemaps.write())
-      .pipe(gulp.dest('./public/css/'));
-    callback();
-  }
-);
+  _sassLint(false)
+    .pipe(sourcemaps.init())
+    .pipe(sass({
+      outputStyle: 'nested',
+      includePaths: [
+        'node_modules/breakpoint-sass/stylesheets',
+        'node_modules/susy/sass'
+      ]
+    })).on('error', sass.logError)
+    .pipe(autoprefixer({
+      browsers: ['last 5 versions']
+    }))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('./public/css/'));
+  callback();
+});
 
 /*
  *
@@ -214,23 +213,22 @@ gulp.task('styles:dist', (callback) => {
  *
  */
 gulp.task('styles:build', ['styles:inject', 'fractal:build'], (callback) => {
-    _sassLint(true)
-      .pipe(sass({
-        outputStyle: 'compressed',
-        includePaths: [
-          'node_modules/breakpoint-sass/stylesheets',
-          'node_modules/susy/sass'
-        ]
-      })).on('error', sass.logError)
-      .pipe(autoprefixer({
-        browsers: ['last 5 versions']
-      }))
-      .pipe(gulp.dest('./build/css/'))
-      .pipe(cssnano())
-      .pipe(gulp.dest('./build/css/'));
-    callback();
-  }
-);
+  _sassLint(true)
+    .pipe(sass({
+      outputStyle: 'compressed',
+      includePaths: [
+        'node_modules/breakpoint-sass/stylesheets',
+        'node_modules/susy/sass'
+      ]
+    })).on('error', sass.logError)
+    .pipe(autoprefixer({
+      browsers: ['last 5 versions']
+    }))
+    .pipe(gulp.dest('./build/css/'))
+    .pipe(cssnano())
+    .pipe(gulp.dest('./build/css/'));
+  callback();
+});
 
 /*
  *
@@ -238,10 +236,9 @@ gulp.task('styles:build', ['styles:inject', 'fractal:build'], (callback) => {
  *
  */
 gulp.task('styles:validate', (callback) => {
-    _sassLint(true);
-    callback();
-  }
-);
+  _sassLint(true);
+  callback();
+});
 
 /*
  *
@@ -249,10 +246,9 @@ gulp.task('styles:validate', (callback) => {
  *
  */
 gulp.task('styles:watch', (callback) => {
-    gulp.watch('./components/**/*.scss', ['styles:dist']);
-    callback();
-  }
-);
+  gulp.watch('./components/**/*.scss', ['styles:dist']);
+  callback();
+});
 
 /*
  *
@@ -260,15 +256,14 @@ gulp.task('styles:watch', (callback) => {
  *
  */
 gulp.task('styles:extract', [
-    'fractal:build',
-    'styles:build',
-    'styles:dist'
-  ], (callback) => {
-    gulp.src('components/**/*.s+(a|c)ss')
-      .pipe(gulp.dest('./build/styleguide/sass/'));
-    callback();
-  }
-);
+  'fractal:build',
+  'styles:build',
+  'styles:dist'
+], (callback) => {
+  gulp.src('components/**/*.s+(a|c)ss')
+    .pipe(gulp.dest('./build/styleguide/sass/'));
+  callback();
+});
 
 /*
  *
@@ -276,15 +271,14 @@ gulp.task('styles:extract', [
  *
  */
 gulp.task('js:dist', ['styles:dist'], (callback) => {
-    gulp.src('components/**/*.js')
-      .pipe(rename({
-        dirname: '',
-        suffix: '-min'
-      }))
-      .pipe(gulp.dest('./public/styleguide/js/'));
-    callback();
-  }
-);
+  gulp.src('components/**/*.js')
+    .pipe(rename({
+      dirname: '',
+      suffix: '-min'
+    }))
+    .pipe(gulp.dest('./public/styleguide/js/'));
+  callback();
+});
 
 /*
  *
@@ -292,15 +286,14 @@ gulp.task('js:dist', ['styles:dist'], (callback) => {
  *
  */
 gulp.task('js:build', ['fractal:build'], (callback) => {
-    gulp.src('components/**/*.js')
-      .pipe(rename({dirname: ''}))
-      .pipe(minify({
-        noSource: true
-      }))
-      .pipe(gulp.dest('./build/styleguide/js/'));
-    callback();
-  }
-);
+  gulp.src('components/**/*.js')
+    .pipe(rename({dirname: ''}))
+    .pipe(minify({
+      noSource: true
+    }))
+    .pipe(gulp.dest('./build/styleguide/js/'));
+  callback();
+});
 
 /*
  *
@@ -308,16 +301,15 @@ gulp.task('js:build', ['fractal:build'], (callback) => {
  *
  */
 gulp.task('js:validate', (callback) => {
-    gulp.src('components/**/*.js')
-      .pipe(eslint({
-        configFile: './.eslintrc'
-      }))
-      .pipe(eslint.format())
-      .pipe(eslint.failAfterError());
+  gulp.src('components/**/*.js')
+    .pipe(eslint({
+      configFile: './.eslintrc'
+    }))
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError());
 
-    callback();
-  }
-);
+  callback();
+});
 
 /*
  *
@@ -325,10 +317,9 @@ gulp.task('js:validate', (callback) => {
  *
  */
 gulp.task('js:watch', (callback) => {
-    gulp.watch('./components/**/*.js', ['js:validate', 'js:dist']);
-    callback();
-  }
-);
+  gulp.watch('./components/**/*.js', ['js:validate', 'js:dist']);
+  callback();
+});
 
 /*
  *
@@ -336,22 +327,21 @@ gulp.task('js:watch', (callback) => {
  *
  */
 gulp.task('images:minify', [
-    'fractal:build',
-    'styles:build',
-    'styles:dist'
-  ], (cb) =>
-    gulp.src([
-      'components/**/*.png',
-      'components/**/*.jpg',
-      'components/**/*.gif',
-      'components/**/*.jpeg',
-      'components/**/*.svg'
-    ])
-      .pipe(imagemin({
-        progressive: true,
-        use: [pngquant()]
-      })).pipe(gulp.dest('build/styleguide/sass'))
-  //.on('end', cb).on('error', cb)
+  'fractal:build',
+  'styles:build',
+  'styles:dist'
+], (cb) =>
+  gulp.src([
+    'components/**/*.png',
+    'components/**/*.jpg',
+    'components/**/*.gif',
+    'components/**/*.jpeg',
+    'components/**/*.svg'
+  ])
+    .pipe(imagemin({
+      progressive: true,
+      use: [pngquant()]
+    })).pipe(gulp.dest('build/styleguide/sass'))
 );
 
 /*

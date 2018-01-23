@@ -10,8 +10,7 @@ All notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
 ### 2.8.1
 
-* STIJ-244: Fixed critical gulp build bug. 
-**IMPORTANT** Necessary fix for 2.8.0.
+* STIJ-244: Fixed critical gulp build bug. **IMPORTANT** Necessary fix for 2.8.0.
 
 ### 2.8.0
 
