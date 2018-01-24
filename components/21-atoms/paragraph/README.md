@@ -5,7 +5,7 @@ A paragraph has a certain behavior.
 * It should always have a width of 7/12 (except for mobile) based on the
   container.
   This means the container needs to make sure that paragraphs can never be
-  bigger than 7/12 of itself.
+  bigger then 7/12 of itself.
 * For a mobile layout a paragraph is always full width.
 * It always has a max-width of 40 rems on desktop.
 * A paragraph can **never** be centered!
