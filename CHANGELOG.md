@@ -8,6 +8,12 @@ Refer to upcoming changes in our README.md under "Roadmap"
 
 All notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
+### 2.8.2
+
+* STIJ-246: Added a mixin  and class `no-link-style` to make it possible
+  to override the link styling of certain blocks with `text-decoration: none;`.
+* STIJ-246: Give links that are styled like a button a `text-decoration: none;`.
+
 ### 2.8.1
 
 * STIJ-244: Fixed critical gulp build bug. **IMPORTANT** Necessary fix for 2.8.0.
