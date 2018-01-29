@@ -10,3 +10,4 @@ Headers create structure. They provide a quick way to scan the main sections of 
 * Use only one H1 per page.
 * Don’t skip headings: do not jump from H1 to H3, move from H1 to H2 and then to H3 instead.
 * Currently, only Headings 1 to 3 are used.
+
