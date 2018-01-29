@@ -8,6 +8,10 @@ Refer to upcoming changes in our README.md under "Roadmap"
 
 All notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
+### 2.8.2
+
+* STIJ-86: Added documentation for the description atom.
+
 ### 2.8.1
 
 * STIJ-244: Fixed critical gulp build bug. **IMPORTANT** Necessary fix for 2.8.0.
