@@ -8,6 +8,11 @@ Refer to upcoming changes in our README.md under "Roadmap"
 
 All notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
+### 2.8.2
+
+* STIJ-93: Added external link variant. This defines a class `.external-link` 
+  that provides a `::before` on the link and adds a new-tab icon.
+
 ### 2.8.1
 
 * STIJ-244: Fixed critical gulp build bug. **IMPORTANT** Necessary fix for 2.8.0.
