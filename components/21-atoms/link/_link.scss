@@ -11,6 +11,10 @@ a {
     outline: thin dotted;
   }
 
+  &.btn {
+    text-decoration: none !important; // sass-lint:disable-line no-important
+  }
+
   &.external-link {
     &::before {
       @extend %icon-base-css;
