@@ -1,7 +1,9 @@
 # CTA links
+
 A CTA link has a certain behavior.
 
-* It should always have a width based on the page container of 7/12. This means the container needs to make sure CTA links can never be bigger then 7/12 of itself.
+* It should always have a width based on the page container of 7/12. This means
+  the container needs to make sure CTA links can never be bigger then 7/12 of itself.
 * It always has a max-width 40 rems on desktop.
 * For a mobile layout a CTA link is always full width.
 

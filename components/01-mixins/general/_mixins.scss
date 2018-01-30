@@ -31,8 +31,8 @@
 //
 // Color element states like active, visited, hover and focus.
 //
-@mixin color-element-states($color, $color-hover, $property: "color") {
-  #{$property}: $color;
+@mixin element-states($state, $state-hover, $property: "color") {
+  #{$property}: $state;
 
   &:active,
   &:visited {
@@ -41,7 +41,7 @@
 
   &:hover,
   &:focus {
-    #{$property}: $color-hover;
+    #{$property}: $state-hover;
   }
 }
 

@@ -1,3 +1,10 @@
+@import 'susy';
+
+$susy: (
+  'columns': susy-repeat(12),
+  'gutters': $gutter-width,
+);
+
 %container,
 .container {
   @include clearfix();

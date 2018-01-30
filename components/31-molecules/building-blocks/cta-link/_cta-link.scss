@@ -1,7 +1,7 @@
 a.cta-link {
   @include themify {
-    @include color-element-states($cta-link-background, $cta-link-background-hover, $property: "background");
-    @include color-element-states($cta-link-border, $cta-link-border-hover, $property: "border");
+    @include element-states($cta-link-background, $cta-link-background-hover, $property: "background");
+    @include element-states($cta-link-border, $cta-link-border-hover, $property: "border");
 
     .title {
       color: $cta-link-title-color;
@@ -43,6 +43,10 @@ a.cta-link {
   transition-property: background, color, border;
   border-radius: $radius-2;
   text-decoration: none;
+
+  h3 {
+    margin-top: 0;
+  }
 
   .icon {
     position: absolute;

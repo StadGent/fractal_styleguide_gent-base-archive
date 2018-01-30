@@ -127,11 +127,7 @@ input[type='checkbox'] {
   margin-bottom: 1rem;
 
   .form-label {
-    @include make-row;
-
     > label {
-      @include make-mobile-column(12);
-
       @at-root .no-optional .label-optional {
         display: none;
       }
@@ -139,24 +135,34 @@ input[type='checkbox'] {
   }
 
   .form-columns {
-    @include make-row;
+    display: flex;
+    flex-wrap: wrap;
 
     .form-item-column {
-      @include make-mobile-column(12);
-      @include make-tablet-column(6);
-
-      .no-style & {
-        @include make-tablet-column(12);
+      @include tablet {
+        width: calc(50% - #{$gutter-width});
+        margin-right: $gutter-width;
       }
 
-      &:nth-child(1) {
+      width: 100%;
+
+      &:first-child {
         @include tablet {
-          float: right;
+          order: 2;
+          width: 50%;
+          margin-right: 0;
         }
       }
 
       &:last-child {
-        float: left;
+        @include tablet {
+          order: 1;
+        }
+      }
+
+      .no-style & {
+        // Make full width form.
+        width: 100%;
       }
     }
   }

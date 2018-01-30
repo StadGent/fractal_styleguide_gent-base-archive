@@ -10,27 +10,24 @@
   $section-text-color: map-get($colors, 'section-text-color') !global;
 
   $heading-1-color: map-get($colors, 'heading-1-color') !global;
-  $heading-1-color-hover: map-get($colors, 'heading-1-color-hover') !global;
 
   $heading-2-color: map-get($colors, 'heading-2-color') !global;
-  $heading-2-color-hover: map-get($colors, 'heading-2-color-hover') !global;
 
   $heading-3-color: map-get($colors, 'heading-3-color') !global;
-  $heading-3-color-hover: map-get($colors, 'heading-3-color-hover') !global;
 
   $heading-4-color: map-get($colors, 'heading-4-color') !global;
-  $heading-4-color-hover: map-get($colors, 'heading-4-color-hover') !global;
 
   $heading-5-color: map-get($colors, 'heading-5-color') !global;
-  $heading-5-color-hover: map-get($colors, 'heading-5-color-hover') !global;
 
   $heading-6-color: map-get($colors, 'heading-6-color') !global;
-  $heading-6-color-hover: map-get($colors, 'heading-6-color-hover') !global;
 
   $description-color: map-get($colors, 'description-color') !global;
+  $figcaption-color: map-get($colors, 'figcaption-color') !global;
 
   $link-color: map-get($colors, 'link-color') !global;
   $link-color-hover: map-get($colors, 'link-color-hover') !global;
+  $link-text-decoration: map-get($colors, 'link-text-decoration') !global;
+  $link-text-decoration-hover: map-get($colors, 'link-text-decoration-hover') !global;
 
   $cta-link-background: map-get($colors, 'cta-link-background') !global;
   $cta-link-background-hover: map-get($colors, 'cta-link-background-hover') !global;
@@ -92,20 +89,6 @@
   $form-steps-active-step-label: map-get($colors, 'form-steps-active-step-label') !global;
   $form-steps-active-prefix-background: map-get($colors, 'form-steps-active-prefix-background') !global;
 
-  $messages-status-background: map-get($colors, 'messages-status-background') !global;
-  $messages-status-color: map-get($colors, 'messages-status-color') !global;
-  $messages-status-border: map-get($colors, 'messages-status-border') !global;
-
-  $messages-error-background: map-get($colors, 'messages-error-background') !global;
-  $messages-error-color: map-get($colors, 'messages-error-color') !global;
-  $messages-error-border: map-get($colors, 'messages-error-border') !global;
-
-  $messages-warning-background: map-get($colors, 'messages-warning-background') !global;
-  $messages-warning-color: map-get($colors, 'messages-warning-color') !global;
-  $messages-warning-border: map-get($colors, 'messages-warning-border') !global;
-
-  $messages-title-color: map-get($colors, 'messages-title-color') !global;
-
   $hamburger-menu-background: map-get($colors, 'hamburger-menu-background') !global;
   $hamburger-menu-overlay-color: map-get($colors, 'hamburger-menu-overlay-color') !global;
 
@@ -120,6 +103,8 @@
   $hamburger-menu-link-color: map-get($colors, 'hamburger-menu-link-color') !global;
   $hamburger-menu-link-color-active: map-get($colors, 'hamburger-menu-link-color-active') !global;
   $hamburger-menu-link-color-hover: map-get($colors, 'hamburger-menu-link-color-hover') !global;
+
+  $island-border: map-get($colors, 'island-border') !global;
 }
 
 //
@@ -140,7 +125,8 @@
     }
 
     .section--#{$theme} &,
-    *[class*="section--"] .section--#{$theme} & {
+    *[class*="section--"] .section--#{$theme} &,
+    *[class*="section--"] %section--#{$theme} & {
       @content;
     }
   }

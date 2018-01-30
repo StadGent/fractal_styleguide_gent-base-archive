@@ -1,31 +1,59 @@
 .address-component {
-  .form-item {
-    @include make-mobile-column(12);
+  > .fieldset-wrapper {
+    display: flex;
+    flex-wrap: wrap;
 
-    &.address-street {
-      @include make-desktop-column(5);
-    }
+    .form-item {
 
-    &.address-number {
-      @include make-desktop-column(3);
-    }
+      .form-columns {
+        display: block;
+      }
 
-    &.address-box-number {
-      @include make-desktop-column(4);
-    }
+      @include tablet {
+        width: span(6);
+        margin-right: gutter();
+      }
 
-    &.address-postal-code {
-      @include make-desktop-column(3);
-      clear: left;
-    }
+      &.address-street {
+        @include tablet {
+          width: span(5);
+        }
+      }
 
-    &.address-city {
-      @include make-desktop-column(9);
-    }
+      &.address-number {
+        @include tablet {
+          width: span(3);
+        }
+      }
 
-    &.address-country,
-    &.address-nim {
-      clear: left;
+      &.address-box-number {
+        @include tablet {
+          width: span(4);
+        }
+      }
+
+      &.address-postal-code {
+        @include tablet {
+          width: span(3);
+        }
+      }
+
+      &.address-city {
+        @include tablet {
+          width: span(9);
+        }
+      }
+
+      &.address-firstname,
+      &.address-box-number,
+      &.address-city,
+      &.address-nim {
+        margin-right: 0;
+      }
     }
+  }
+
+  .form-columns .form-item-column {
+    width: 100% !important; // sass-lint:disable-line no-important
   }
 }

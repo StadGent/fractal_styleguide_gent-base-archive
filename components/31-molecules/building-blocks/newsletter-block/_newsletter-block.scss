@@ -1,12 +1,21 @@
-.newsletter-block {
-  @include desktop {
-    display: flex;
+div.newsletter-block {
+  .content-container {
+    @include desktop {
+      display: flex;
+    }
   }
 
-  padding: 2rem 1.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  h2,
+  h3 {
+    margin-top: 0;
+  }
 
   .island {
     margin: 0;
+    border: 0;
   }
 
   &__image {

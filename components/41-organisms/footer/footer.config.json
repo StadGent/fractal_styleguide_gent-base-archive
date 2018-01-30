@@ -1,6 +1,6 @@
 {
   "title": "Footer",
   "status": "ready",
-  "preview": "@preview-footer",
+  "preview": "@preview-without-padding",
   "name": "Footer"
 }
