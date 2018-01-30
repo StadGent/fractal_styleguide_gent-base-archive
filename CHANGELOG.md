@@ -10,6 +10,14 @@ All notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
 ### 2.8.2
 
+* STIJ-246: Added a mixin  and class `no-link-style` to make it possible
+  to override the link styling of certain blocks with `text-decoration: none;`.
+* STIJ-246: Give links that are styled like a button a `text-decoration: none;`.
+* STIJ-86: Added documentation for the description atom.
+* STIJ-93: Added external link variant. This defines a class `.external-link`
+  that provides a `::before` on the link and adds a new-tab icon.
+* STIJ-92: Updated the label atom documentation.
+* STIJ-88: Updated the heading atom documentation.
 * STIJ-96: Updated the paragraph atom documentation.
 
 ### 2.8.1
