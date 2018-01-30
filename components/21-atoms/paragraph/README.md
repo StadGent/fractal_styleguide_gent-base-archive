@@ -17,6 +17,5 @@ Examples of paragraphs are defined in paragraph variants:
 * <a href="{{path './paragraph--caption-text'}}">Paragraph - caption text</a>
 * <a href="{{path './paragraph--small-text'}}">Paragraph - small text</a>
 * <a href="{{path './paragraph--left-text'}}">Paragraph - left aligned text</a>
-* <a href="{{path './paragraph--right-text'}}">Paragraph - right aligned text
-</a>
+* <a href="{{path './paragraph--right-text'}}">Paragraph - right aligned text</a>
 
