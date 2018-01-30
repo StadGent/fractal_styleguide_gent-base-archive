@@ -8,8 +8,10 @@
  * Bart Delrue
  *
  */
+
+'use strict';
+
 (function ($) {
-  'use strict';
 
   $.fn.extend({
 

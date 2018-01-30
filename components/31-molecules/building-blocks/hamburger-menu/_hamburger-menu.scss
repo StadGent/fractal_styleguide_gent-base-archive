@@ -5,8 +5,9 @@
       color: $hamburger-menu-link-color;
 
       a {
-        @include color-element-states($hamburger-menu-link-color, $hamburger-menu-link-color-hover, $property: "color");
-        @include color-element-states($hamburger-menu-link-background, $hamburger-menu-link-background-hover, $property: "background-color");
+        @include element-states($hamburger-menu-link-color, $hamburger-menu-link-color-hover, $property: "color");
+        @include element-states($hamburger-menu-link-background, $hamburger-menu-link-background-hover, $property: "background-color");
+        @include element-states(0, thin dotted, $property: "outline");
 
         border-bottom: $hamburger-menu-link-border;
 
@@ -17,7 +18,7 @@
         }
 
         &.close {
-          @include color-element-states($hamburger-menu-link-color, $hamburger-menu-link-color-hover, $property: "color");
+          @include element-states($hamburger-menu-link-color, $hamburger-menu-link-color-hover, $property: "color");
         }
       }
     }

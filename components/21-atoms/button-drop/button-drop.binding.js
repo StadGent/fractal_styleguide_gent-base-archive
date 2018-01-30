@@ -2,9 +2,10 @@
  * @file
  * binding of button-drop.functions.js
  */
-(function ($) {
-  'use strict';
 
+'use strict';
+
+(function ($) {
   $(window).on('load', function (e) {
     $('.dropbutton-wrapper').dropButtonLoad();
   });

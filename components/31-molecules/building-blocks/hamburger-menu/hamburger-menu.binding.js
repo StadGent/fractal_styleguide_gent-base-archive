@@ -2,9 +2,10 @@
  * @file
  * Javascript binding of hamburger-menu.functions.js.
  */
-(function ($) {
-  'use strict';
 
+'use strict';
+
+(function ($) {
   $(window).on('load', function (e) {
     var $hamburgerMenu = $('.hamburger-menu');
 
