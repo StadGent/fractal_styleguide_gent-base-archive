@@ -19,6 +19,7 @@ All notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 * STIJ-92: Updated the label atom documentation.
 * STIJ-88: Updated the heading atom documentation.
 * STIJ-96: Updated the paragraph atom documentation.
+* STIJ-94: Updated the list atom documentation.
 
 ### 2.8.1
 
