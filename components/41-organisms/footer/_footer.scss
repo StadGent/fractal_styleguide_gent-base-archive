@@ -1,6 +1,10 @@
 // General footer styling.
-footer {
+footer.footer {
   padding: 1.5rem 0;
+
+  h3 {
+    margin-top: 0;
+  }
 
   p {
     color: $color-gray;
@@ -10,6 +14,10 @@ footer {
     @include tablet {
       margin-top: 6rem;
     }
+  }
+
+  .footer--column .island {
+    border: 0;
   }
 }
 

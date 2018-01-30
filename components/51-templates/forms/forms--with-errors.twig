@@ -1,4 +1,4 @@
-<h2 class="styleguide">Forms</h2>
+<h2 class="styleguide-title">Forms</h2>
 <div class="preview-inner-container">
   <form class="{{ modifier }}">
     <fieldset>
@@ -289,6 +289,8 @@
     %}
 
     </fieldset>
+
+    {% include '@address--address-with-errors' %}
 
     {% include '@form-actions--editor' %}
 

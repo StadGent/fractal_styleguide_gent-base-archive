@@ -19,14 +19,13 @@ h6,
   margin: 0;
   font-style: normal;
   font-weight: 800;
-  text-decoration: none;
+
+  a {
+    text-decoration: none !important; // sass-lint:disable-line no-important
+  }
 
   // Bypass the FOUT of typekit while loading asynchronously.
   .wf-loading & {
     visibility: hidden;
-  }
-
-  a {
-    text-decoration: none;
   }
 }

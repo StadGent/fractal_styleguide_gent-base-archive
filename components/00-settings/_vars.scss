@@ -19,8 +19,6 @@ $color-white: #fff !default;
 $color-green: #4da22e !default;
 $color-red: #a31b00 !default;
 
-// Extra colors (currently used on stad.gent drupal 7 => to be standardized)
-// @TODO: Refactor?
 $color-white-blue: #c2e2f0 !default;
 $color-orange-light: #ffa927 !default;
 $color-orange-lighter: #ffbd5a !default;
@@ -113,28 +111,19 @@ $themes: (
     'section-text-color': $color-dark-gray,
 
     'heading-1-color': $color-darkest-gray,
-    'heading-1-color-hover': $color-darkest-gray,
-
     'heading-2-color': $color-darkest-gray,
-    'heading-2-color-hover': $color-darkest-gray,
-
     'heading-3-color': $color-darkest-gray,
-    'heading-3-color-hover': $color-darkest-gray,
-
     'heading-4-color': $color-darkest-gray,
-    'heading-4-color-hover': $color-darkest-gray,
-
     'heading-5-color': $color-darkest-gray,
-    'heading-5-color-hover': $color-darkest-gray,
-
     'heading-6-color': $color-darkest-gray,
-    'heading-6-color-hover': $color-darkest-gray,
 
     'description-color': $color-gray,
     'figcaption-color': $color-gray,
 
     'link-color': $color-blue,
     'link-color-hover': $color-dark-blue,
+    'link-text-decoration': underline,
+    'link-text-decoration-hover': none,
 
     'cta-link-background': $color-lightest-blue,
     'cta-link-background-hover': $color-white,
@@ -196,20 +185,6 @@ $themes: (
     'form-steps-active-step-label': $color-blue,
     'form-steps-active-prefix-background': $color-blue,
 
-    'messages-status-background': lighten($color-green, 50),
-    'messages-status-color': $color-green,
-    'messages-status-border': 1px solid $color-green,
-
-    'messages-error-background': lighten($color-red, 50),
-    'messages-error-color': $color-red,
-    'messages-error-border': 1px solid $color-red,
-
-    'messages-warning-background': lighten($color-orange, 50),
-    'messages-warning-color': $color-orange,
-    'messages-warning-border': 1px solid $color-orange,
-
-    'messages-title-color': $color-darkest-gray,
-
     'hamburger-menu-background': $color-darkest-blue,
     'hamburger-menu-overlay-color': rgba(44, 63, 72, .6),
 
@@ -225,34 +200,26 @@ $themes: (
     'hamburger-menu-link-color-active': $color-white,
     'hamburger-menu-link-color-hover': $color-white,
 
+    'island-border': 1px solid $color-light-blue,
   ),
   'accent': (
     'section-background': $color-blue,
     'section-text-color': $color-white,
 
     'heading-1-color': $color-white,
-    'heading-1-color-hover': $color-white,
-
     'heading-2-color': $color-white,
-    'heading-2-color-hover': $color-white,
-
     'heading-3-color': $color-white,
-    'heading-3-color-hover': $color-white,
-
     'heading-4-color': $color-white,
-    'heading-4-color-hover': $color-white,
-
     'heading-5-color': $color-white,
-    'heading-5-color-hover': $color-white,
-
     'heading-6-color': $color-white,
-    'heading-6-color-hover': $color-white,
 
     'description-color': $color-white-blue,
     'figcaption-color': $color-gray,
 
     'link-color': $color-white,
     'link-color-hover': $color-white,
+    'link-text-decoration': underline,
+    'link-text-decoration-hover': none,
 
     'cta-link-background': $color-light-blue,
     'cta-link-background-hover': $color-white,
@@ -300,34 +267,27 @@ $themes: (
 
     'tag-background': $color-dark-gray,
     'tag-background-hover': $color-dark-gray,
+
+    'island-border': 1px solid $color-light-blue,
   ),
   'wrapper': (
     'section-background': $color-darkest-gray,
     'section-text-color': $color-white,
 
     'heading-1-color': $color-white,
-    'heading-1-color-hover': $color-white,
-
     'heading-2-color': $color-white,
-    'heading-2-color-hover': $color-white,
-
     'heading-3-color': $color-white,
-    'heading-3-color-hover': $color-white,
-
     'heading-4-color': $color-white,
-    'heading-4-color-hover': $color-white,
-
     'heading-5-color': $color-white,
-    'heading-5-color-hover': $color-white,
-
     'heading-6-color': $color-white,
-    'heading-6-color-hover': $color-white,
 
     'description-color': $color-gray,
     'figcaption-color': $color-gray,
 
     'link-color': $color-white,
     'link-color-hover': $color-white,
+    'link-text-decoration': underline,
+    'link-text-decoration-hover': none,
 
     'cta-link-background': $color-darkest-gray,
     'cta-link-background-hover': $color-white,
@@ -375,34 +335,27 @@ $themes: (
 
     'tag-background': $color-blue,
     'tag-background-hover': $color-light-blue,
+
+    'island-border': 1px solid $color-light-blue,
   ),
   'highlighted': (
     'section-background': $color-orange,
     'section-text-color': $color-darkest-gray,
 
     'heading-1-color': $color-darkest-gray,
-    'heading-1-color-hover': $color-darkest-gray,
-
     'heading-2-color': $color-darkest-gray,
-    'heading-2-color-hover': $color-darkest-gray,
-
     'heading-3-color': $color-darkest-gray,
-    'heading-3-color-hover': $color-darkest-gray,
-
     'heading-4-color': $color-darkest-gray,
-    'heading-4-color-hover': $color-darkest-gray,
-
     'heading-5-color': $color-darkest-gray,
-    'heading-5-color-hover': $color-darkest-gray,
-
     'heading-6-color': $color-darkest-gray,
-    'heading-6-color-hover': $color-darkest-gray,
 
     'description-color': $color-darkest-gray,
     'figcaption-color': $color-gray,
 
     'link-color': $color-darkest-gray,
     'link-color-hover': $color-darkest-gray,
+    'link-text-decoration': underline,
+    'link-text-decoration-hover': none,
 
     'cta-link-background': $color-orange-light,
     'cta-link-background-hover': $color-orange-lighter,
@@ -450,34 +403,27 @@ $themes: (
 
     'tag-background': $color-dark-gray,
     'tag-background-hover': $color-dark-gray,
+
+    'island-border': 1px solid $color-light-blue,
   ),
   'inverse': (
     'section-background': $color-lightest-blue,
     'section-text-color': $color-dark-gray,
 
     'heading-1-color': $color-darkest-gray,
-    'heading-1-color-hover': $color-darkest-gray,
-
     'heading-2-color': $color-darkest-gray,
-    'heading-2-color-hover': $color-darkest-gray,
-
     'heading-3-color': $color-darkest-gray,
-    'heading-3-color-hover': $color-darkest-gray,
-
     'heading-4-color': $color-darkest-gray,
-    'heading-4-color-hover': $color-darkest-gray,
-
     'heading-5-color': $color-darkest-gray,
-    'heading-5-color-hover': $color-darkest-gray,
-
     'heading-6-color': $color-darkest-gray,
-    'heading-6-color-hover': $color-darkest-gray,
 
     'description-color': $color-gray,
     'figcaption-color': $color-gray,
 
     'link-color': $color-darkest-gray,
     'link-color-hover': $color-darkest-gray,
+    'link-text-decoration': underline,
+    'link-text-decoration-hover': none,
 
     'cta-link-background': $color-white,
     'cta-link-background-hover': $color-lightest-gray,
@@ -523,6 +469,8 @@ $themes: (
 
     'tag-background': $color-dark-gray,
     'tag-background-hover': $color-dark-gray,
+
+    'island-border': 1px solid $color-light-blue,
   )
 ) !default;
 

@@ -1,5 +1,6 @@
+'use strict';
+
 (function ($) {
-  'use strict';
 
   /**
    * Invoked after after loading the initial page and after each AJAX request.

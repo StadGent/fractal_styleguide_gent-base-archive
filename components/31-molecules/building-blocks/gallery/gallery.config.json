@@ -2,6 +2,5 @@
   "title": "Gallery",
   "name": "Gallery",
   "status": "ready",
-  "preview": "@preview-gallery",
   "handle": "gallery"
 }
