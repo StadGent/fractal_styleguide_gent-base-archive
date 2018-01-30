@@ -18,6 +18,7 @@ All notable changes to `digipolisgent/fractal_styleguide_gent-base`.
   that provides a `::before` on the link and adds a new-tab icon.
 * STIJ-92: Updated the label atom documentation.
 * STIJ-88: Updated the heading atom documentation.
+* STIJ-96: Updated the paragraph atom documentation.
 
 ### 2.8.1
 
