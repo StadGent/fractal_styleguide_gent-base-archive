@@ -10,7 +10,7 @@ All notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
 ### 2.8.2
 
-* STIJ-93: Added external link variant. This defines a class `.external-link` 
+* STIJ-93: Added external link variant. This defines a class `.external-link`
   that provides a `::before` on the link and adds a new-tab icon.
 
 ### 2.8.1
