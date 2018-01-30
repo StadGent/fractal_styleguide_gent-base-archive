@@ -17,6 +17,7 @@ All notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 * STIJ-93: Added external link variant. This defines a class `.external-link`
   that provides a `::before` on the link and adds a new-tab icon.
 * STIJ-92: Updated the label atom documentation.
+* STIJ-88: Updated the heading atom documentation.
 
 ### 2.8.1
 
