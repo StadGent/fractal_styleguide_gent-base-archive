@@ -1,5 +1,5 @@
 .dg-default-block {
-   @include no-link-style;
+  @include no-link-style;
 
   h3 {
     @extend %h2;
