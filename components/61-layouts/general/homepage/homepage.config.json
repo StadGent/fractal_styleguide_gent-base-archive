@@ -1,5 +1,5 @@
 {
   "title": "Homepage",
-  "preview": "@preview-without-padding",
-  "status": "beta"
+  "status": "beta",
+  "preview": "@preview-without-padding"
 }
