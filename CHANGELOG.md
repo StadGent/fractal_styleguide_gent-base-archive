@@ -8,7 +8,7 @@ Refer to upcoming changes in our README.md under "Roadmap"
 
 All notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 
-### 2.8.2
+### 2.9.0
 
 * STIJ-246: Added a mixin  and class `no-link-style` to make it possible
   to override the link styling of certain blocks with `text-decoration: none;`.
@@ -20,6 +20,7 @@ All notable changes to `digipolisgent/fractal_styleguide_gent-base`.
 * STIJ-88: Updated the heading atom documentation.
 * STIJ-96: Updated the paragraph atom documentation.
 * STIJ-94: Updated the list atom documentation.
+* STIJ-250: Added small fix for empty teaser collection preview templates.
 
 ### 2.8.1
 
