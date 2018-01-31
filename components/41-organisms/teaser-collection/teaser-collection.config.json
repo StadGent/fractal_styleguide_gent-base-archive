@@ -1,6 +1,6 @@
 {
   "title": "Teaser collection",
-  "status": "beta",
+  "status": "ready",
   "name": "Teaser collection",
   "context": {
     "teaser_image_src": "https://loremflickr.com/650/400/ghent?random=",
