@@ -1,9 +1,9 @@
 # Image
 ## Accessibility
 * Each img element contains an alt attribute.
-* Each image wich conveys meaning conveys the same message in it's alt attribute.
-* If the image contains words that are important to understanding the content, the words are included in the text alternative.
+* Each image which conveys meaning conveys the same message in it's alt attribute.
 * If the image does not convey meaning, the alt attribute is empty.
+* If the image contains words that are important to understanding the content, the words are included in the text alternative.
 
 ## Desktop/tablet behavior
 
