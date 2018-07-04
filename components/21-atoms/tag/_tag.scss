@@ -19,7 +19,7 @@
 
     &:active,
     &:visited {
-      @content;
+      text-decoration: none;
     }
 
     &:hover,
